@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<eAdventure version="2">
+  <player>
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </player>
+  <character id="HombreEntrada" behaviour="first-action">
+    <resources name="Standing">
+      <asset type="standup" uri="assets/animation/Up.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/Up.eaa.xml" />
+      <asset type="standright" uri="assets/animation/Up.eaa.xml" />
+      <asset type="standleft" uri="assets/animation/Up.eaa.xml" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="ConversacionEntrada" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="Portero" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Up.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <inactive flag="PorteroHablado" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="ConversaciónPortero" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </character>
+  <scene id="Entrada" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Entrada.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="113" y="99" width="224" height="253" hasInfluenceArea="no" idTarget="Hall" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="TioHablado" />
+        </condition>
+        <not-effect>
+          <trigger-conversation idTarget="ConversacionEntrada" />
+          <condition />
+        </not-effect>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="HombreEntrada" x="548" y="480" scale="0.4258204" orientation="0" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Hall" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Hall.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="no" x="42" y="16" width="253" height="478" hasInfluenceArea="no" idTarget="SalaEspera" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <point x="223" y="180" />
+        <point x="220" y="17" />
+        <point x="292" y="16" />
+        <point x="295" y="180" />
+        <point x="208" y="494" />
+        <point x="42" y="494" />
+        <condition>
+          <active flag="PorteroHablado" />
+        </condition>
+        <not-effect>
+          <speak-player>Tal vez debería preguntar antes de subir</speak-player>
+          <condition />
+        </not-effect>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Portero" x="448" y="382" scale="0.2666926" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="SalaEspera" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/SalaEspera.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="Entrevista" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Entrevista.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <unity-scene id="Minijuego1" scene="Assets/ScenaMinijuego.unity" />
+  <slidescene id="CutSceneInicial" start="yes" idTarget="Entrada" destinyX="-2147483648" destinyY="2147483647" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="Inicio">
+      <asset type="slides" uri="assets/animation/PensamientosInterno.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <graph-conversation id="ConversacionEntrada">
+    <dialogue-node nodeindex="0" editor-x="99" editor-y="46">
+      <speak-char idTarget="HombreEntrada">
+        <resources name="No name" />
+        <text>Por fin alguien que alegra la vista por aquí.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="HombreEntrada">
+        <resources name="No name" />
+        <text>Deberíamos ir a tomar algo, pareces interesante.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="112" editor-y="265" x="112" y="265">
+      <speak-player>
+        <text>Lo que hay que aguantar</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Espero que este edificio no esté lleno de cromañones</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>&lt;Ignorar y entrar al edificio&gt;</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <effect>
+        <activate flag="TioHablado" />
+        <condition />
+      </effect>
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="687" editor-y="39">
+      <speak-char idTarget="HombreEntrada">
+        <resources name="No name" />
+        <text>Solo intentaba ser amable, no es para tanto...</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="706" editor-y="234">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Hall" x="375" y="421" transitionTime="1" transitionType="4" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="BucleEntrada">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="HombreEntrada">
+        <resources name="No name" />
+        <text>Solo intentaba ser amable, no es para tanto...</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversaciónPortero">
+    <dialogue-node nodeindex="0" editor-x="132" editor-y="64">
+      <speak-player>
+        <resources name="No name" />
+        <text>Venía a una entrevista de trabajo.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Portero">
+        <resources name="No name" />
+        <text>Las entrevistas de limpieza son en el edificio de en frente.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="PorteroHablado" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" showUserOption="yes" preListening="yes" editor-x="104" editor-y="275" x="104" y="275">
+      <speak-player>
+        <text>Pero tú eres tonto? (Matar con la mirada) </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Vale, creo que buscaré la sala por mi cuenta</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>En realidad, venía por el puesto de desarrollador junior</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="645" editor-y="25">
+      <speak-player>
+        <resources name="No name" />
+        <text>Es cierto, las entrevista de limpieza son allí.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="736" editor-y="263">
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="714" editor-y="454">
+      <speak-char idTarget="Portero">
+        <resources name="No name" />
+        <text>Ah vale, no lo pensé. Entonces es por allí. </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <object id="ItemId" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+</eAdventure>

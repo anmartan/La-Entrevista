@@ -145,6 +145,9 @@
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Created with target conversation: SalaEsperaBorde</documentation>
+        <condition>
+          <inactive flag="TioHablado" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="SalaEsperaBorde" />
           <condition />
@@ -152,6 +155,9 @@
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Created with target conversation: BucleBorde</documentation>
+        <condition>
+          <active flag="JefeEnfadado" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="BucleBorde" />
           <condition />
@@ -202,7 +208,7 @@
   <character id="RecursosHumanos" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/Down.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/Balta.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -230,11 +236,24 @@
     </description>
     <voice name="" synthesizeAlways="no" />
     <actions>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no" />
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: BroncaLlegasTarde</documentation>
+        <documentation>Bronca
+Tarde</documentation>
+        <condition>
+          <active flag="LlegasTarde" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="BroncaLlegasTarde" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Entrevista</documentation>
+        <condition>
+          <active flag="Entrevista" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="EntrevistaTrabajo" />
           <condition />
         </effect>
       </talk-to>
@@ -296,28 +315,62 @@
       <character-ref idTarget="Portero" x="448" y="321" scale="0.1733577" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="SalaEspera" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="SalaEspera" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/salaEspera.png" />
+      <asset type="background" uri="assets/background/SalaEspera.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="PuertaAbierta" x="569" y="418" scale="1.000479" layer="0" hasInfluenceArea="no">
+        <condition>
+          <active flag="PuertaAbierta" />
+        </condition>
+      </object-ref>
+    </objects>
     <characters>
-      <character-ref idTarget="HombreBorde" x="167" y="337" scale="0.2828418" orientation="2" layer="2" hasInfluenceArea="no">
+      <character-ref idTarget="HombreBorde" x="331" y="418" scale="0.3874087" orientation="2" layer="3" hasInfluenceArea="no">
         <condition>
           <inactive flag="LlegasTarde" />
         </condition>
       </character-ref>
-      <character-ref idTarget="HombreNoHabla" x="572" y="357" scale="0.3084259" orientation="2" layer="1" hasInfluenceArea="no">
+      <character-ref idTarget="HombreNoHabla" x="116" y="417" scale="0.3936997" orientation="2" layer="2" hasInfluenceArea="no">
         <condition>
           <inactive flag="LlegasTarde" />
         </condition>
       </character-ref>
-      <character-ref idTarget="RecursosHumanos" x="-90" y="377" scale="0.3183133" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="RecursosHumanos" x="566" y="418" scale="0.4327019" orientation="2" layer="1" hasInfluenceArea="no">
+        <condition>
+          <active flag="PuertaAbierta" />
+        </condition>
+      </character-ref>
     </characters>
+    <active-areas>
+      <active-area id="Puerta" rectangular="yes" x="460" y="29" width="218" height="381" hasInfluenceArea="no" behaviour="normal">
+        <condition>
+          <inactive flag="PuertaAbierta" />
+        </condition>
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <speak-player>Creo que es mejor esperar a que me llamen.</speak-player>
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
   </scene>
   <scene id="Entrevista" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -328,8 +381,11 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="Mesa" x="313" y="324" scale="1" layer="1" hasInfluenceArea="no" />
+    </objects>
     <characters>
-      <character-ref idTarget="RecursosHumanos" x="145" y="388" scale="0.3633446" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="RecursosHumanos" x="256" y="382" scale="0.3674692" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="PantallaFinal" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -343,7 +399,7 @@
     <default-initial-position x="400" y="450" />
   </scene>
   <unity-scene id="Minijuego1" scene="Assets/ScenaMinijuego.unity" />
-  <slidescene id="CutSceneInicial" start="yes" idTarget="Entrada" destinyX="-2147483648" destinyY="2147483647" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="CutSceneInicial" start="no" idTarget="Entrada" destinyX="-2147483648" destinyY="2147483647" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="Inicio">
@@ -468,6 +524,8 @@
         <effect>
           <activate flag="LlegasTarde" />
           <condition />
+          <activate flag="PuertaAbierta" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -501,23 +559,27 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="SalaEsperaBorde">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="37" editor-y="16">
       <speak-player>
         <resources name="No name" />
         <text>Hola, soy Juan. ¿Tú también vienes a la entrevista?</text>
       </speak-player>
       <condition />
       <child nodeindex="1" />
+      <effect>
+        <activate flag="TioBordeHablado" />
+        <condition />
+      </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="45" editor-y="295">
+    <dialogue-node nodeindex="1" editor-x="95" editor-y="237">
       <speak-player>
         <resources name="No name" />
-        <text>No me apetece mucho hablarle. ¿Le contesto?</text>
+        <text>&lt;&lt;No me apetece mucho hablarle. ¿Le contesto?&gt;&gt;</text>
       </speak-player>
       <condition />
       <child nodeindex="2" />
     </dialogue-node>
-    <option-node nodeindex="2" question="No me apetece mucho hablarle. ¿Le contesto?" keepShowing="yes" preListening="yes" editor-x="307" editor-y="248" x="307" y="248">
+    <option-node nodeindex="2" question="No me apetece mucho hablarle. ¿Le contesto?" keepShowing="yes" preListening="yes" editor-x="607" editor-y="42" x="607" y="42">
       <speak-player>
         <text>Ignorarle</text>
         <resources name="No name" />
@@ -530,12 +592,8 @@
       </speak-player>
       <condition />
       <child nodeindex="4" />
-      <effect>
-        <activate flag="TioBordeHablado" />
-        <condition />
-      </effect>
     </option-node>
-    <dialogue-node nodeindex="3" editor-x="334" editor-y="17">
+    <dialogue-node nodeindex="3" editor-x="1066" editor-y="41">
       <speak-char idTarget="HombreBorde">
         <resources name="No name" />
         <text>Entonces, ¿vienes por la entrevista?</text>
@@ -543,7 +601,7 @@
       <condition />
       <child nodeindex="2" />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="589" editor-y="326">
+    <dialogue-node nodeindex="4" editor-x="594" editor-y="320">
       <speak-char idTarget="HombreBorde">
         <resources name="No name" />
         <text>Lo que me faltaba...</text>
@@ -551,7 +609,7 @@
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
-    <option-node nodeindex="5" question="Lo que me faltaba..." preListening="yes" editor-x="588" editor-y="530" x="588" y="530">
+    <option-node nodeindex="5" question="Lo que me faltaba..." keepShowing="yes" preListening="yes" editor-x="1049" editor-y="283" x="1049" y="283">
       <speak-player>
         <text>¿A qué te refieres?</text>
         <resources name="No name" />
@@ -565,7 +623,7 @@
       <condition />
       <child nodeindex="6" />
     </option-node>
-    <dialogue-node nodeindex="6" editor-x="901" editor-y="559">
+    <dialogue-node nodeindex="6" editor-x="1476" editor-y="327">
       <speak-char idTarget="HombreBorde">
         <resources name="No name" />
         <text>Es evidente, si no, no estarías aquí. Con la nueva normativa, nosotros perdemos trabajo, luego queremos hablar de igualdad...</text>
@@ -573,7 +631,7 @@
       <condition />
       <child nodeindex="7" />
     </dialogue-node>
-    <option-node nodeindex="7" question="Es evidente, si no, no estarías aquí. Con la nueva normativa, nosotros perdemos trabajo, luego queremos hablar de igualdad..." keepShowing="yes" preListening="yes" editor-x="904" editor-y="775" x="904" y="775">
+    <option-node nodeindex="7" question="Es evidente, si no, no estarías aquí. Con la nueva normativa, nosotros perdemos trabajo, luego queremos hablar de igualdad..." keepShowing="yes" preListening="yes" editor-x="1306" editor-y="580" x="1306" y="580">
       <speak-player>
         <text>Otro tonto el día de hoy, y parecía imposible.</text>
         <resources name="No name" />
@@ -587,7 +645,7 @@
       <condition />
       <child nodeindex="9" />
     </option-node>
-    <dialogue-node nodeindex="8" editor-x="1248" editor-y="646">
+    <dialogue-node nodeindex="8" editor-x="1726" editor-y="870">
       <speak-char idTarget="HombreBorde">
         <resources name="No name" />
         <text>Oye, no me faltes el respeto que no te he dicho nada malo, solo digo la verdad. </text>
@@ -599,26 +657,27 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="9" editor-x="1890" editor-y="829">
+    <dialogue-node nodeindex="9" editor-x="2336" editor-y="864">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
-        <text>Dani, ¿verdad? Adelante</text>
+        <text>¿Alexis? Buenos días, por favor entre.</text>
       </speak-char>
       <condition />
-      <end-conversation>
-        <effect>
-          <deactivate flag="JefeEnfadado" />
-          <condition />
-        </effect>
-      </end-conversation>
+      <child nodeindex="11" />
+      <effect>
+        <deactivate flag="JefeEnfadado" />
+        <condition />
+        <activate flag="PuertaAbierta" />
+        <condition />
+      </effect>
     </dialogue-node>
-    <option-node nodeindex="10" question="Oye no me faltes el respeto..." preListening="yes" editor-x="1521" editor-y="519" x="1521" y="519">
+    <option-node nodeindex="10" keepShowing="yes" preListening="yes" editor-x="2006" editor-y="635" x="2006" y="635">
       <speak-player>
         <text>Yo considero la ignorancia una falta de respeto.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="11" />
+      <child nodeindex="12" />
       <speak-player>
         <text>Ignorarle</text>
         <resources name="No name" />
@@ -626,7 +685,19 @@
       <condition />
       <child nodeindex="9" />
     </option-node>
-    <dialogue-node nodeindex="11" editor-x="1884" editor-y="485">
+    <option-node nodeindex="11" keepShowing="yes" preListening="yes" editor-x="2740" editor-y="728" x="2740" y="728">
+      <speak-player>
+        <text>&lt;&lt;Pasar&gt;&gt;</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="13" />
+      <effect>
+        <activate flag="Entrevista" />
+        <condition />
+      </effect>
+    </option-node>
+    <dialogue-node nodeindex="12" editor-x="2373" editor-y="504">
       <speak-char idTarget="HombreBorde">
         <resources name="No name" />
         <text>Esto ya es el colmo. Voy a poner una queja contra ti y te vas a cagar</text>
@@ -637,7 +708,19 @@
         <text>¿Pero qué es este jaleo?</text>
       </speak-char>
       <condition />
-      <end-conversation />
+      <child nodeindex="9" />
+      <effect>
+        <activate flag="PuertaAbierta" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="13" editor-x="3007" editor-y="754">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Entrevista" x="334" y="288" transitionTime="0" transitionType="0" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="BucleBorde">
@@ -683,7 +766,7 @@
       <condition />
       <child nodeindex="2" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="805" editor-y="519">
+    <dialogue-node nodeindex="2" editor-x="736" editor-y="362">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>Venga, empecemos ya la entrevista</text>
@@ -698,12 +781,6 @@
       </speak-player>
       <condition />
       <child nodeindex="4" />
-      <speak-player>
-        <text>&lt;&lt;No pasar&gt;&gt;</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="2" />
     </option-node>
     <dialogue-node nodeindex="4" editor-x="1164" editor-y="165">
       <end-conversation>
@@ -839,9 +916,23 @@
       <child nodeindex="8" />
     </dialogue-node>
   </graph-conversation>
-  <object id="ItemId" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="Mesa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/Mesa.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="PuertaAbierta" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/PuertaAbierta.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>

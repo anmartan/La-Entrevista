@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment> Project Configuration </comment>
-<entry key="Simva.RefreshToken">eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2Y2IwZWFmNC1iOWM1LTQ0ZWQtODYzZC05ZGRjMWU5ZmEyODMifQ.eyJpYXQiOjE2MDU5OTUxNTcsImp0aSI6IjQxYzc4Y2NmLTkwOGUtNDA5My1hM2Y5LWNkNTMxMDZmYjI3YiIsImlzcyI6Imh0dHBzOi8vc3NvLnNpbXZhLmUtdWNtLmVzL2F1dGgvcmVhbG1zL3NpbXZhIiwiYXVkIjoiaHR0cHM6Ly9zc28uc2ltdmEuZS11Y20uZXMvYXV0aC9yZWFsbXMvc2ltdmEiLCJzdWIiOiIxODBmNzExZi1iZjE1LTRlNDQtYjNlYS05M2YwN2NiYTZkM2MiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoidWFkdmVudHVyZSIsInNlc3Npb25fc3RhdGUiOiI5ODllNjBlZi0xNDZmLTRiYjYtODAzYy00YjRlNjJhMzE5MmYiLCJzY29wZSI6Im9mZmxpbmVfYWNjZXNzIHByb2ZpbGUgZW1haWwifQ.ti8lfKybQ2UnyV38Go4iZTk3qt4L8RSe6WyzF8Q61ko</entry>
+<entry key="Simva.RefreshToken">eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2Y2IwZWFmNC1iOWM1LTQ0ZWQtODYzZC05ZGRjMWU5ZmEyODMifQ.eyJpYXQiOjE2MDYwNDgxNDAsImp0aSI6ImZkY2U1OTBjLTJkY2QtNDM5OS1iNGRiLWFmMjBhYzY1YWI4MSIsImlzcyI6Imh0dHBzOi8vc3NvLnNpbXZhLmUtdWNtLmVzL2F1dGgvcmVhbG1zL3NpbXZhIiwiYXVkIjoiaHR0cHM6Ly9zc28uc2ltdmEuZS11Y20uZXMvYXV0aC9yZWFsbXMvc2ltdmEiLCJzdWIiOiIxODBmNzExZi1iZjE1LTRlNDQtYjNlYS05M2YwN2NiYTZkM2MiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoidWFkdmVudHVyZSIsInNlc3Npb25fc3RhdGUiOiI5ODllNjBlZi0xNDZmLTRiYjYtODAzYy00YjRlNjJhMzE5MmYiLCJzY29wZSI6Im9mZmxpbmVfYWNjZXNzIHByb2ZpbGUgZW1haWwifQ.AcsmD2ZClzBSksxiGr-RPc5huMd0rXoIHT6xBMm_BMU</entry>
 <entry key="Chapter0.SceneId.X">2</entry>
 <entry key="Chapter0.SceneId.Y">3</entry>
+<entry key="Chapter0.Entrada.X">332</entry>
+<entry key="Chapter0.Entrada.Y">-52</entry>
+<entry key="Chapter0.Hall.X">328</entry>
+<entry key="Chapter0.Hall.Y">101</entry>
+<entry key="Chapter0.SalaEspera.X">328</entry>
+<entry key="Chapter0.SalaEspera.Y">268</entry>
+<entry key="Chapter0.PantallaFinal.X">-9</entry>
+<entry key="Chapter0.PantallaFinal.Y">268</entry>
+<entry key="Chapter0.Entrevista.X">16</entry>
+<entry key="Chapter0.Entrevista.Y">72</entry>
 </properties>
 

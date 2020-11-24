@@ -239,6 +239,29 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Entrevista</documentation>
+        <condition>
+          <active flag="Entrevista" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="EntrevistaTrabajo" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Tarde</documentation>
+        <condition>
+          <inactive flag="Entrevista" />
+          <active flag="LlegasTarde" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="LlegasTarde" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <scene id="Entrada" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -265,7 +288,7 @@
       <character-ref idTarget="HombreEntrada" x="548" y="480" scale="0.4258204" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Hall" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Hall" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -287,9 +310,7 @@
           <active flag="PorteroHablado" />
         </condition>
         <not-effect>
-          <activate flag="EscalerasPulsadas" />
-          <condition />
-          <trigger-conversation idTarget="ConversaciónPortero" />
+          <speak-player>&lt;&lt;Creo que debería preguntar antes de subir.&gt;&gt;</speak-player>
           <condition />
         </not-effect>
       </exit>
@@ -355,7 +376,7 @@
       </active-area>
     </active-areas>
   </scene>
-  <scene id="Entrevista" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Entrevista" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -470,18 +491,9 @@
     <dialogue-node nodeindex="0" editor-x="0" editor-y="9">
       <speak-char idTarget="Portero">
         <resources name="No name" />
-        <text>Perdone, pero no puede subir. Dígame, ¿qué busca?</text>
-      </speak-char>
-      <condition>
-        <active flag="EscalerasPulsadas" />
-      </condition>
-      <speak-char idTarget="Portero">
-        <resources name="No name" />
         <text>Buenos días, ¿necesita ayuda?</text>
       </speak-char>
-      <condition>
-        <inactive flag="EscalerasPulsadas" />
-      </condition>
+      <condition />
       <speak-player>
         <resources name="No name" />
         <text>Hola. Tengo una entrevista de trabajo en diez minutos. ¿Podría indicarme dónde debo ir?</text>
@@ -498,7 +510,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" showUserOption="yes" preListening="yes" editor-x="370" editor-y="39" x="370" y="39">
+    <option-node nodeindex="1" keepShowing="yes" showUserOption="yes" preListening="yes" editor-x="473" editor-y="35" x="473" y="35">
       <speak-player>
         <text>¿Lo dice en serio? &lt;&lt;Yo lo mato&gt;&gt;</text>
         <resources name="No name" />
@@ -518,7 +530,7 @@
       <condition />
       <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="365" editor-y="397">
+    <dialogue-node nodeindex="2" editor-x="488" editor-y="377">
       <speak-char idTarget="Portero">
         <resources name="No name" />
         <text>Claro. Por el pasillo de la izquierda, tercera puerta.</text>
@@ -542,12 +554,7 @@
         <text>Ah, vale, no lo había pensado. Por las escaleras, al final del pasillo.</text>
       </speak-char>
       <condition />
-      <end-conversation>
-        <effect>
-          <deactivate flag="LlegasTarde" />
-          <condition />
-        </effect>
-      </end-conversation>
+      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="SalaEsperaNoHabla">
@@ -653,9 +660,9 @@
       <condition />
       <child nodeindex="7" />
     </dialogue-node>
-    <option-node nodeindex="7" question="Es evidente, si no, no estarías aquí. Con la nueva normativa, nosotros perdemos trabajo, luego queremos hablar de igualdad..." keepShowing="yes" preListening="yes" editor-x="1559" editor-y="238" x="1559" y="238">
+    <option-node nodeindex="7" question="Es evidente, si no, no estarías aquí. Con la nueva normativa, nosotros perdemos trabajo, luego queremos hablar de igualdad..." keepShowing="yes" preListening="yes" editor-x="1560" editor-y="212" x="1560" y="212">
       <speak-player>
-        <text>¿Pero tú eres tonto?</text>
+        <text>¿Me lo dices en serio? Vaya ignorante.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -668,10 +675,6 @@
       </speak-player>
       <condition />
       <child nodeindex="9" />
-      <effect>
-        <activate flag="PuertaAbierta" />
-        <condition />
-      </effect>
     </option-node>
     <dialogue-node nodeindex="8" editor-x="1856" editor-y="216">
       <speak-char idTarget="HombreBorde">
@@ -680,20 +683,15 @@
       </speak-char>
       <condition />
       <child nodeindex="10" />
+    </dialogue-node>
+    <dialogue-node nodeindex="9" editor-x="2138" editor-y="521">
+      <child nodeindex="11" />
       <effect>
-        <deactivate flag="PuertaAbierta" />
+        <activate flag="PuertaAbierta" />
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="9" editor-x="2447" editor-y="455">
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>¿Alexis Fernández? Buenos días. Por favor, entre.</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="11" />
-    </dialogue-node>
-    <option-node nodeindex="10" keepShowing="yes" preListening="yes" editor-x="2128" editor-y="164" x="2128" y="164">
+    <option-node nodeindex="10" keepShowing="yes" preListening="yes" editor-x="2130" editor-y="157" x="2130" y="157">
       <speak-player>
         <text>¿Alguien te ha pedido esa opinión?</text>
         <resources name="No name" />
@@ -706,54 +704,127 @@
       </speak-player>
       <condition />
       <child nodeindex="9" />
-      <effect>
-        <activate flag="PuertaAbierta" />
-        <condition />
-      </effect>
     </option-node>
-    <option-node nodeindex="11" keepShowing="yes" preListening="yes" editor-x="2762" editor-y="314" x="2762" y="314">
-      <speak-player>
-        <text>&lt;&lt;Pasar&gt;&gt;</text>
+    <dialogue-node nodeindex="11" editor-x="2878" editor-y="484">
+      <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
-      </speak-player>
+        <text>Buenos días.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="RecursosHumanos">
+        <resources name="No name" />
+        <text>Es el turno de... ¿Alexis Fernández?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="RecursosHumanos">
+        <resources name="No name" />
+        <text>Por favor, pase.</text>
+      </speak-char>
       <condition />
       <child nodeindex="13" />
-      <effect>
-        <activate flag="Entrevista" />
-        <condition />
-      </effect>
-    </option-node>
-    <dialogue-node nodeindex="12" editor-x="2439" editor-y="149">
+    </dialogue-node>
+    <dialogue-node nodeindex="12" editor-x="2394" editor-y="148">
       <speak-char idTarget="HombreBorde">
         <resources name="No name" />
         <text>¿Pero a ti qué te pasa? Mira, seguro que no me van a dar el puesto, pero me voy a asegurar de que a ti tampoco.</text>
       </speak-char>
       <condition />
+      <child nodeindex="14" />
+      <effect>
+        <activate flag="PuertaAbierta" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <option-node nodeindex="13" keepShowing="yes" preListening="yes" editor-x="3198" editor-y="473" x="3198" y="473">
+      <speak-player>
+        <text>&lt;&lt;Pasar&gt;&gt;</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="15" />
+      <effect>
+        <activate flag="Entrevista" />
+        <condition />
+      </effect>
+    </option-node>
+    <dialogue-node nodeindex="14" editor-x="2679" editor-y="142">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
-        <text>¿Qué es este jaleo? ¿Es usted Alexis Fernández?</text>
+        <text>¿Qué es este jaleo?</text>
       </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>&lt;&lt;Mierda. Por culpa de este impresentable, ya me han fichado, Espero que me den una oportunidad, por lo menos.&gt;&gt;</text>
+        <text>&lt;&lt;Mierda. Por culpa de este impresentable, ya me han fichado. Espero tener una oportunidad.&gt;&gt;</text>
       </speak-player>
       <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Pase, es su turno.</text>
-      </speak-char>
-      <condition />
       <child nodeindex="11" />
-      <effect>
-        <activate flag="JefeEnfadado" />
-        <condition />
-      </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="13" editor-x="3141" editor-y="344">
+    <dialogue-node nodeindex="15" editor-x="3498" editor-y="506">
       <end-conversation>
         <effect>
           <trigger-scene idTarget="Entrevista" x="334" y="288" transitionTime="0" transitionType="0" />
+          <condition />
+          <trigger-conversation idTarget="EntradaEntrevista" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="LlegasTarde">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="RecursosHumanos">
+        <resources name="No name" />
+        <text>¿Alexis Fernández? Llega tarde.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="RecursosHumanos">
+        <resources name="No name" />
+        <text>Muy típico de ustedes.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="330" editor-y="76" x="330" y="76">
+      <speak-player>
+        <text>Mhmmm... ¿Podemos empezar ya?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Lo siento, no encontraba la sala.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="745" editor-y="77">
+      <speak-char idTarget="RecursosHumanos">
+        <resources name="No name" />
+        <text>Adelante, comencemos.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <option-node nodeindex="3" keepShowing="yes" preListening="yes" editor-x="1050" editor-y="92" x="1050" y="92">
+      <speak-player>
+        <text>&lt;&lt;Pasar.&gt;&gt;</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <effect>
+        <activate flag="Entrevista" />
+        <condition />
+      </effect>
+    </option-node>
+    <dialogue-node nodeindex="4" editor-x="1313" editor-y="87">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Entrevista" x="334" y="288" transitionTime="0" transitionType="0" />
+          <condition />
+          <wait-time time="1" />
           <condition />
           <trigger-conversation idTarget="EntradaEntrevista" />
           <condition />
@@ -765,34 +836,28 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
-        <text>Espero que esto no se convierta en costumbre.</text>
+        <text>Espero que esto no se convierta en costumbre. Aunque es típico de ustedes.</text>
       </speak-char>
       <condition>
-        <either>
-          <active flag="JefeEnfadado" />
-          <active flag="LlegasTarde" />
-        </either>
+        <active flag="LlegasTarde" />
       </condition>
       <speak-player>
         <resources name="No name" />
         <text>&lt;&lt;No hemos empezado del todo bien... Espero poder mejorar la imagen que tiene de mí.&gt;&gt;</text>
       </speak-player>
       <condition>
-        <either>
-          <active flag="LlegasTarde" />
-          <active flag="JefeEnfadado" />
-        </either>
+        <active flag="LlegasTarde" />
       </condition>
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="EntrevistaTrabajo">
+    <dialogue-node nodeindex="0" editor-x="55" editor-y="70">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>Tome asiento, por favor.</text>
       </speak-char>
       <condition />
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="EntrevistaTrabajo">
-    <dialogue-node nodeindex="0" editor-x="38" editor-y="76">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>Dígame, ¿le ha costado encontrar la oficina? ¿Conoces esta zona?</text>
@@ -826,7 +891,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="299" editor-y="77" x="299" y="77">
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="297" editor-y="79" x="297" y="79">
       <speak-player>
         <text>Bueno, mi sueño desde siempre ha sido trabajar con esta empresa. Por eso decidí estudiar Desarrollo de Videojuegos, para poder formar parte de muchos de los proyectos que se llevan a cabo aquí.</text>
         <resources name="No name" />
@@ -1006,14 +1071,6 @@
       <detailed>
       </detailed>
     </description>
-    <actions>
-      <use needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <trigger-conversation idTarget="EntrevistaTrabajo" />
-          <condition />
-        </effect>
-      </use>
-    </actions>
   </object>
   <object id="PuertaAbierta" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">

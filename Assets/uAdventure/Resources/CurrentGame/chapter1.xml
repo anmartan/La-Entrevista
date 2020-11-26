@@ -413,7 +413,7 @@
     <name>
     </name>
   </videoscene>
-  <videoscene canSkip="no" id="Final" start="no" next="go-back" class="accesible" type="cutscene">
+  <videoscene canSkip="no" id="Final" start="no" next="end-chapter" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -945,7 +945,7 @@
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
-    <option-node nodeindex="5" keepShowing="yes" preListening="yes" editor-x="1202" editor-y="93" x="1202" y="93">
+    <option-node nodeindex="5" keepShowing="yes" preListening="yes" editor-x="1202" editor-y="100" x="1202" y="100">
       <speak-player>
         <text>No, aún no he tenido la ocasión para trabajar en una empresa como esta, pero aprenderé rápidamente cuando se me brinde la oportunidad.</text>
         <resources name="No name" />
@@ -1402,7 +1402,6 @@
         <text>Estudiaremos su situación, y ya le llamaremos.</text>
       </speak-char>
       <condition>
-        <active flag="LlegasTarde" />
         <greater-than var="RespuestasMalas" value="2" />
         <less-equals-than var="RespuestasMalas" value="4" />
       </condition>

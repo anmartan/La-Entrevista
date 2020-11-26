@@ -288,7 +288,7 @@
       <character-ref idTarget="HombreEntrada" x="548" y="480" scale="0.4258204" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Hall" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Hall" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -403,7 +403,7 @@
     <default-initial-position x="400" y="450" />
   </scene>
   <unity-scene id="Minijuego1" scene="Assets/ScenaMinijuego.unity" />
-  <videoscene canSkip="no" id="Inicio" start="no" idTarget="Entrada" destinyX="-2147483648" destinyY="-2147483648" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+  <videoscene canSkip="no" id="Inicio" start="yes" idTarget="Entrada" destinyX="-2147483648" destinyY="-2147483648" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -413,15 +413,16 @@
     <name>
     </name>
   </videoscene>
-  <slidescene id="Final" start="no" next="go-back" class="accesible" type="cutscene">
+  <videoscene canSkip="no" id="Final" start="no" next="go-back" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="slides" uri="assets/animation/endScene.eaa.xml" />
+      <asset type="video" uri="assets/video/Final.mp4" />
+      <asset type="slides" uri="assets/special/EmptyAnimation" />
     </resources>
     <name>
     </name>
-  </slidescene>
+  </videoscene>
   <graph-conversation id="ConversacionEntrada">
     <dialogue-node nodeindex="0" editor-x="99" editor-y="46">
       <speak-char idTarget="HombreEntrada">
@@ -969,10 +970,10 @@
         <text>¿Cree que podrá hacerlo?</text>
       </speak-player>
       <condition />
-      <speak-player>
+      <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>¿O le supondrá un problema trabajar en este entorno?</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="7" />
     </dialogue-node>
@@ -992,12 +993,12 @@
     <dialogue-node nodeindex="8" editor-x="1935" editor-y="16">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
-        <text>Bueno, ya sabe. Un sector tan... competitivo como este no está hecho para todo el mundo.</text>
+        <text>Ya sabe. Un sector tan... competitivo como este no está hecho para todo el mundo.</text>
       </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Bueno, siempre que se trabaje con respeto, no creo que haya problemas.</text>
+        <text>Siempre que se trabaje con respeto, no creo que haya problemas.</text>
       </speak-player>
       <condition />
       <child nodeindex="9" />
@@ -1052,14 +1053,14 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>¿Cuántas personas estima que participaron y cuánto tiempo cree que se se tardo en hacer?</text>
+        <text>¿Cuántas personas estima que participaron y cuánto tiempo cree que se tardó en terminarlo?</text>
       </speak-player>
       <condition />
       <child nodeindex="12" />
     </dialogue-node>
-    <option-node nodeindex="12" keepShowing="yes" editor-x="2981" editor-y="86" x="2981" y="86">
+    <option-node nodeindex="12" keepShowing="yes" preListening="yes" editor-x="2981" editor-y="86" x="2981" y="86">
       <speak-player>
-        <text>La verdad que es un juego bastante grande, pero calculo que llevaría, por lo menos, cuatro años de desarrollo entre unas 2000 personas y muchos millones de dólares</text>
+        <text>La verdad que es un juego bastante grande, pero calculo que llevaría, por lo menos, cuatro años de desarrollo entre unas 2000 personas y muchos millones de dólares.</text>
       </speak-player>
       <condition />
       <child nodeindex="13" />
@@ -1240,7 +1241,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="21" keepShowing="yes" editor-x="4673" editor-y="109" x="4673" y="109">
+    <option-node nodeindex="21" keepShowing="yes" preListening="yes" editor-x="4673" editor-y="109" x="4673" y="109">
       <speak-player>
         <text>12.000 - 17.000</text>
       </speak-player>
@@ -1415,6 +1416,10 @@
       <end-conversation>
         <effect>
           <deactivate flag="PreguntaMalaRespondida" />
+          <condition />
+          <wait-time time="1" />
+          <condition />
+          <trigger-cutscene idTarget="Final" />
           <condition />
         </effect>
       </end-conversation>

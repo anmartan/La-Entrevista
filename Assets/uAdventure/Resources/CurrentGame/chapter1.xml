@@ -1109,7 +1109,7 @@
       <condition />
       <child nodeindex="15" />
     </dialogue-node>
-    <dialogue-node nodeindex="14" editor-x="2989" editor-y="391">
+    <dialogue-node nodeindex="14" editor-x="3052" editor-y="442">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>Inténtelo.</text>
@@ -1127,7 +1127,7 @@
       <condition />
       <child nodeindex="13" />
     </dialogue-node>
-    <option-node nodeindex="15" keepShowing="yes" preListening="yes" editor-x="3607" editor-y="108" x="3607" y="108">
+    <option-node nodeindex="15" keepShowing="yes" preListening="yes" editor-x="3590" editor-y="70" x="3590" y="70">
       <speak-player>
         <text>No entiendo qué tiene que ver esto con el trabajo...</text>
         <resources name="No name" />
@@ -1141,7 +1141,7 @@
       <condition />
       <child nodeindex="17" />
     </option-node>
-    <dialogue-node nodeindex="16" editor-x="3647" editor-y="451">
+    <dialogue-node nodeindex="16" editor-x="3701" editor-y="498">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>Como ya se imaginará, este puesto requiere mucha dedicación.</text>
@@ -1167,7 +1167,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="17" editor-x="3897" editor-y="145">
+    <dialogue-node nodeindex="17" editor-x="3854" editor-y="131">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>Ya sabe que hay reuniones con diferentes equipos, por lo que a veces es necesario desplazarse.</text>
@@ -1189,21 +1189,20 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="18" keepShowing="yes" preListening="yes" editor-x="4165" editor-y="113" x="4165" y="113">
+    <option-node nodeindex="18" keepShowing="yes" editor-x="4123" editor-y="102" x="4123" y="102">
       <speak-player>
-        <text>Ahora mismo, no tengo problemas con viajar.</text>
-        <resources name="No name" />
+        <text>Actualmente no tendría ningún inconveniente.</text>
       </speak-player>
       <condition />
       <child nodeindex="19" />
       <speak-player>
-        <text>Creo que esos son asuntos personales.</text>
+        <text>No tendría problemas en viajar cuando sea necesario.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="20" />
+      <child nodeindex="19" />
     </option-node>
-    <dialogue-node nodeindex="19" editor-x="4432" editor-y="132">
+    <dialogue-node nodeindex="19" editor-x="4425" editor-y="132">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>De acuerdo. Me gustaría preguntarle:</text>
@@ -1214,50 +1213,34 @@
         <text>¿Qué sueldo espera de un puesto como este?</text>
       </speak-char>
       <condition />
-      <child nodeindex="21" />
+      <child nodeindex="20" />
       <effect>
         <deactivate flag="PreguntaMalaRespondida" />
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="20" editor-x="3947" editor-y="449">
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>No es necesario que dé muchos detalles.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Solo necesitamos saber si viajar puede suponer un inconveniente.</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="18" />
-      <effect>
-        <increment var="RespuestasMalas" value="1" />
-        <condition>
-          <inactive flag="PreguntaMalaRespondida" />
-        </condition>
-        <activate flag="PreguntaMalaRespondida" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <option-node nodeindex="21" keepShowing="yes" preListening="yes" editor-x="4673" editor-y="109" x="4673" y="109">
+    <option-node nodeindex="20" keepShowing="yes" preListening="yes" editor-x="4673" editor-y="109" x="4673" y="109">
       <speak-player>
-        <text>12.000 - 17.000</text>
+        <text>16.000 - 20.000</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="21" />
+      <speak-player>
+        <text>20.000 - 26.000</text>
+        <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="22" />
-      <speak-player>
-        <text>15.000 - 20.000</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="23" />
     </option-node>
-    <dialogue-node nodeindex="22" editor-x="4965" editor-y="136">
+    <dialogue-node nodeindex="21" editor-x="4965" editor-y="136">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
-        <text>Perfecto. Disculpe la insistencia, pero...</text>
+        <text>Acabando de empezar y siendo tu caso, es un sueldo razonable...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="RecursosHumanos">
+        <resources name="No name" />
+        <text>Disculpe la insistencia, pero...</text>
       </speak-char>
       <condition />
       <speak-char idTarget="RecursosHumanos">
@@ -1265,13 +1248,13 @@
         <text>¿Cree que formará una familia en el futuro?</text>
       </speak-char>
       <condition />
-      <child nodeindex="24" />
+      <child nodeindex="23" />
       <effect>
         <deactivate flag="PreguntaMalaRespondida" />
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="23" editor-x="4592" editor-y="432">
+    <dialogue-node nodeindex="22" editor-x="4592" editor-y="432">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>¿Cómo ha calculado esa cifra?</text>
@@ -1292,7 +1275,7 @@
         <text>¿Qué cifra podría aceptar?</text>
       </speak-char>
       <condition />
-      <child nodeindex="21" />
+      <child nodeindex="20" />
       <effect>
         <increment var="RespuestasMalas" value="1" />
         <condition>
@@ -1302,21 +1285,21 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="24" keepShowing="yes" preListening="yes" editor-x="5296" editor-y="125" x="5296" y="125">
+    <option-node nodeindex="23" keepShowing="yes" preListening="yes" editor-x="5296" editor-y="125" x="5296" y="125">
       <speak-player>
         <text>En un futuro cercano, no.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="25" />
+      <child nodeindex="24" />
       <speak-player>
         <text>No sabría qué responder ahora mismo.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="26" />
+      <child nodeindex="25" />
     </option-node>
-    <dialogue-node nodeindex="25" editor-x="5608" editor-y="170">
+    <dialogue-node nodeindex="24" editor-x="5608" editor-y="170">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>Al hilo de esta pregunta...</text>
@@ -1327,13 +1310,13 @@
         <text>¿Qué le parecen las relaciones sentimentales entre compañeros de trabajo?</text>
       </speak-char>
       <condition />
-      <child nodeindex="27" />
+      <child nodeindex="26" />
       <effect>
         <deactivate flag="PreguntaMalaRespondida" />
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="26" editor-x="5090" editor-y="477">
+    <dialogue-node nodeindex="25" editor-x="5057" editor-y="460">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>Entiendo que no sea fácil de responder...</text>
@@ -1349,7 +1332,7 @@
         <text>Y a la hora de considerar su candidatura, necesitamos conocer su grado de dedicación.</text>
       </speak-char>
       <condition />
-      <child nodeindex="24" />
+      <child nodeindex="23" />
       <effect>
         <increment var="RespuestasMalas" value="1" />
         <condition>
@@ -1359,32 +1342,32 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="27" keepShowing="yes" preListening="yes" editor-x="5943" editor-y="127" x="5943" y="127">
+    <option-node nodeindex="26" keepShowing="yes" preListening="yes" editor-x="5943" editor-y="127" x="5943" y="127">
       <speak-player>
         <text>No tengo nada en contra, personalmente.</text>
       </speak-player>
       <condition />
-      <child nodeindex="28" />
+      <child nodeindex="27" />
       <speak-player>
         <text>Me parecen poco profesionales.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="28" />
+      <child nodeindex="27" />
       <speak-player>
         <text>Tengo pareja, así que no me lo he cuestionado.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="28" />
+      <child nodeindex="27" />
       <speak-player>
         <text>¿Mi respuesta va a influir en el resultado de la entrevista?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="29" />
+      <child nodeindex="28" />
     </option-node>
-    <dialogue-node nodeindex="28" editor-x="6411" editor-y="142">
+    <dialogue-node nodeindex="27" editor-x="6411" editor-y="142">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>De acuerdo. Pues hemos terminado.</text>
@@ -1423,7 +1406,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="29" editor-x="5834" editor-y="473">
+    <dialogue-node nodeindex="28" editor-x="5834" editor-y="473">
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>Como todas las demás preguntas, sí.</text>
@@ -1439,7 +1422,7 @@
         <text>Si puede, le agradecería que respondiese.</text>
       </speak-char>
       <condition />
-      <child nodeindex="27" />
+      <child nodeindex="26" />
       <effect>
         <increment var="RespuestasMalas" value="1" />
         <condition>

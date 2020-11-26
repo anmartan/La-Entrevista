@@ -33,7 +33,7 @@
   </player>
   <character id="HombreEntrada" behaviour="first-action">
     <resources name="Standing">
-      <asset type="standup" uri="assets/animation/Up.eaa.xml" />
+      <asset type="standup" uri="assets/animation/hombreEntrada.eaa.xml" />
       <asset type="standdown" uri="assets/animation/Up.eaa.xml" />
       <asset type="standright" uri="assets/animation/Up.eaa.xml" />
       <asset type="standleft" uri="assets/animation/Up.eaa.xml" />
@@ -87,7 +87,7 @@
   <character id="Portero" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/porteroDown.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/portero.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -129,7 +129,7 @@
   <character id="HombreBorde" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/Down.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/hombreBorde.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -172,7 +172,7 @@
   <character id="HombreNoHabla" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/georgiDown.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/hombreNoHabla.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -211,8 +211,8 @@
   </character>
   <character id="RecursosHumanos" behaviour="normal">
     <resources name="No name">
-      <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/Balta.eaa.xml" />
+      <asset type="standup" uri="assets/animation/recursosHumanosDePie.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/recursosHumanosSentado.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -285,7 +285,7 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="HombreEntrada" x="548" y="480" scale="0.4258204" orientation="0" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="HombreEntrada" x="498" y="484" scale="0.486969" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Hall" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -316,7 +316,7 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Portero" x="448" y="321" scale="0.1733577" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Portero" x="450" y="407" scale="0.2628161" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="SalaEspera" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -336,24 +336,24 @@
       </object-ref>
     </objects>
     <characters>
-      <character-ref idTarget="HombreBorde" x="331" y="418" scale="0.3874087" orientation="2" layer="3" hasInfluenceArea="no">
+      <character-ref idTarget="HombreBorde" x="332" y="447" scale="0.4638832" orientation="2" layer="3" hasInfluenceArea="no">
         <condition>
           <inactive flag="LlegasTarde" />
         </condition>
       </character-ref>
-      <character-ref idTarget="HombreNoHabla" x="116" y="417" scale="0.3936997" orientation="2" layer="2" hasInfluenceArea="no">
+      <character-ref idTarget="HombreNoHabla" x="149" y="493" scale="0.3340161" orientation="2" layer="2" hasInfluenceArea="no">
         <condition>
           <inactive flag="LlegasTarde" />
         </condition>
       </character-ref>
-      <character-ref idTarget="RecursosHumanos" x="566" y="418" scale="0.4327019" orientation="2" layer="1" hasInfluenceArea="no">
+      <character-ref idTarget="RecursosHumanos" x="580" y="448" scale="0.2856964" orientation="0" layer="1" hasInfluenceArea="no">
         <condition>
           <active flag="PuertaAbierta" />
         </condition>
       </character-ref>
     </characters>
     <active-areas>
-      <active-area id="Puerta" rectangular="yes" x="460" y="29" width="218" height="381" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="Puerta" rectangular="yes" x="457" y="25" width="224" height="391" hasInfluenceArea="no" behaviour="normal">
         <condition>
           <inactive flag="PuertaAbierta" />
         </condition>
@@ -386,10 +386,10 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Mesa" x="313" y="324" scale="1" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
     </objects>
     <characters>
-      <character-ref idTarget="RecursosHumanos" x="256" y="382" scale="0.3674692" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="RecursosHumanos" x="249" y="359" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="PantallaFinal" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">

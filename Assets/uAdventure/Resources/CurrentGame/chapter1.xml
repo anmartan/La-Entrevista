@@ -960,15 +960,15 @@
       <child nodeindex="6" />
     </option-node>
     <dialogue-node nodeindex="6" editor-x="1445" editor-y="123">
-      <speak-player>
+      <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>Bien. Se lo preguntaba porque me inquieta que no pueda adpatarse a este ambiente.</text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>¿Cree que podrá hacerlo?</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
@@ -1008,15 +1008,15 @@
       </effect>
     </dialogue-node>
     <dialogue-node nodeindex="9" editor-x="2205" editor-y="123">
-      <speak-player>
+      <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>Interesante... Sigamos.</text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>¿Por qué debería ser usted a quien contratemos?</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="10" />
     </dialogue-node>
@@ -1046,15 +1046,15 @@
         <text>Por supuesto. Me gustaría proponerle un pequeño juego:</text>
       </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>Intente estimar cuánto cree que costaría hacer un proyecto como GTA V, en dólares.</text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>¿Cuántas personas estima que participaron y cuánto tiempo cree que se tardó en terminarlo?</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="12" />
     </dialogue-node>
@@ -1322,10 +1322,10 @@
         <text>Al hilo de esta pregunta...</text>
       </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="RecursosHumanos">
         <resources name="No name" />
         <text>¿Qué le parecen las relaciones sentimentales entre compañeros de trabajo?</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="27" />
       <effect>

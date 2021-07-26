@@ -207,7 +207,7 @@
       </talk-to>
     </actions>
   </character>
-  <character id="RecursosHumanos" behaviour="normal">
+  <character id="AndresRRHH" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/animation/recursosHumanosDePie.eaa.xml" />
       <asset type="standdown" uri="assets/animation/recursosHumanosSentado.eaa.xml" />
@@ -243,10 +243,6 @@
         <condition>
           <active flag="Entrevista" />
         </condition>
-        <effect>
-          <trigger-conversation idTarget="EntrevistaTrabajo" />
-          <condition />
-        </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Tarde</documentation>
@@ -259,7 +255,45 @@
           <condition />
         </effect>
       </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: EntrevistaTrabajo</documentation>
+        <effect>
+          <trigger-conversation idTarget="EntrevistaTrabajo" />
+          <condition />
+        </effect>
+      </talk-to>
     </actions>
+  </character>
+  <character id="LuisaRRHH" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/LuisaUp.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/LuisaUp.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
   </character>
   <scene id="Hall" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -271,7 +305,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="no" x="42" y="16" width="253" height="478" hasInfluenceArea="no" idTarget="SalaEspera" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
+      <exit rectangular="no" x="42" y="16" width="253" height="478" hasInfluenceArea="no" idTarget="SalaEspera" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="5" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <point x="223" y="180" />
         <point x="220" y="17" />
@@ -306,9 +340,9 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Antonio" x="333" y="447" scale="0.4513716" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Antonio" x="333" y="450" scale="0.4513716" orientation="2" layer="0" hasInfluenceArea="no" />
       <character-ref idTarget="Jaime" x="150" y="495" scale="0.3340161" orientation="2" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Luis" x="350" y="450" scale="0.3475394" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Luis" x="340" y="450" scale="0.3475394" orientation="2" layer="2" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Entrevista" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -324,7 +358,8 @@
       <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
     </objects>
     <characters>
-      <character-ref idTarget="RecursosHumanos" x="249" y="359" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="PantallaFinal" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -744,7 +779,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="AntonioEntrevista" random="yes" keepShowing="yes" editor-x="290" editor-y="132" x="290" y="132">
+    <option-node nodeindex="1" question="AntonioEntrevista" random="yes" keepShowing="yes" preListening="yes" editor-x="290" editor-y="132" x="290" y="132">
       <speak-player>
         <text>Sí, a ver si tengo suerte. He hecho pocas entrevistas.</text>
         <resources name="No name" />
@@ -787,7 +822,7 @@
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
-    <option-node nodeindex="5" question="AntonioEspera" random="yes" keepShowing="yes" editor-x="1099" editor-y="146" x="1099" y="146">
+    <option-node nodeindex="5" question="AntonioEspera" random="yes" keepShowing="yes" preListening="yes" editor-x="1099" editor-y="146" x="1099" y="146">
       <speak-player>
         <text>¿Llevas esperando mucho tiempo? Estoy un poco de los nervios.</text>
         <resources name="No name" />
@@ -854,7 +889,7 @@
       <condition />
       <child nodeindex="10" />
     </dialogue-node>
-    <option-node nodeindex="10" question="AntonioTiempoCasa" random="yes" keepShowing="yes" editor-x="2037" editor-y="170" x="2037" y="170">
+    <option-node nodeindex="10" question="AntonioTiempoCasa" random="yes" keepShowing="yes" preListening="yes" editor-x="2037" editor-y="170" x="2037" y="170">
       <speak-player>
         <text>* Menudo personaje, venir para estar esperando... Mejor ni pregunto. *</text>
         <resources name="No name" />
@@ -904,7 +939,7 @@
       <condition />
       <child nodeindex="13" />
     </dialogue-node>
-    <option-node nodeindex="13" question="AntonioNovia" random="yes" keepShowing="yes" editor-x="2876" editor-y="232" x="2876" y="232">
+    <option-node nodeindex="13" question="AntonioNovia" random="yes" keepShowing="yes" preListening="yes" editor-x="2876" editor-y="232" x="2876" y="232">
       <speak-player>
         <text>Claro. Te entiendo.</text>
         <resources name="No name" />
@@ -919,603 +954,620 @@
       <child nodeindex="15" />
     </option-node>
     <dialogue-node nodeindex="14" editor-x="3177" editor-y="45">
-      <speak-player>
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
-        <text>
-        </text>
-      </speak-player>
+        <text>Que yo intento ayudar, pero no sirvo para esto.</text>
+      </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
-        <text>
-        </text>
-      </speak-player>
+        <text>Doy gracias todos los días por haber conocido a Nieves... ¡Es una santa!</text>
+      </speak-char>
       <condition />
-      <end-conversation />
+      <child nodeindex="16" />
     </dialogue-node>
     <dialogue-node nodeindex="15" editor-x="3181" editor-y="362">
-      <end-conversation />
+      <speak-char idTarget="Antonio">
+        <resources name="No name" />
+        <text>¡Qué va! Cada vez que intento ayudar, lo estropeo más.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antonio">
+        <resources name="No name" />
+        <text>Nieves es una santa por aguantarme.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antonio">
+        <resources name="No name" />
+        <text>No todo el mundo vale para todo. Yo, por ejemplo, no sirvo para planchar.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antonio">
+        <resources name="No name" />
+        <text>Seguro que en tu casa pasa lo mismo. Qué le vamos a hacer.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="16" />
+    </dialogue-node>
+    <dialogue-node nodeindex="16" editor-x="3530" editor-y="264">
+      <speak-char idTarget="Antonio">
+        <resources name="No name" />
+        <text>Bueno, parece que me llaman.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antonio">
+        <resources name="No name" />
+        <text>¡Un gusto conocerte!</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <move-npc idTarget="Antonio" x="1500" y="450" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="EntrevistaTrabajo">
-    <dialogue-node nodeindex="0" editor-x="31" editor-y="76">
-      <speak-char idTarget="RecursosHumanos">
+    <dialogue-node nodeindex="0" editor-x="41" editor-y="126">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Tome asiento, por favor.</text>
+        <text>Buenos días. Por favor, siéntate.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="RecursosHumanos">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Dígame, ¿le ha costado encontrar la oficina? ¿Conoces esta zona?</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>&lt;&lt;Hombre, si el portero me hubiese ayudado...&gt;&gt;</text>
-      </speak-player>
-      <condition>
-        <active flag="LlegasTarde" />
-      </condition>
-      <speak-player>
-        <resources name="No name" />
-        <text>No la conocía, pero me ha gustado recorrer el edificio. Es impresionante.</text>
-      </speak-player>
-      <condition>
-        <active flag="LlegasTarde" />
-      </condition>
-      <speak-player>
-        <resources name="No name" />
-        <text>No conocía el lugar, pero tienen un gran equipo que ha sabido guiarme hasta aquí.</text>
-      </speak-player>
-      <condition>
-        <inactive flag="LlegasTarde" />
-      </condition>
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Me alegra oírlo. Y dígame, ¿por qué le interesa este puesto?</text>
+        <text>¿Qué tal? Espero que no lleves mucho tiempo esperando.</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="251" editor-y="93" x="251" y="93">
+    <option-node nodeindex="1" question="RRHHInicial" random="yes" keepShowing="yes" preListening="yes" editor-x="318" editor-y="97" x="318" y="97">
       <speak-player>
-        <text>Bueno, mi sueño siempre ha sido trabajar con esta empresa. Por eso decidí estudiar Desarrollo de Videojuegos, para poder formar parte de muchos de los proyectos que se llevan a cabo aquí.</text>
+        <text>Estoy bien, gracias.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>Me apasiona programar y estudié Desarrollo de Videojuegos para tener esta oportunidad. Creo que mi perfil encajará a la perfección con la empresa.</text>
+        <text>Bueno, ha sido una mañana... peculiar.</text>
         <resources name="No name" />
       </speak-player>
-      <condition />
-      <child nodeindex="2" />
-    </option-node>
-    <dialogue-node nodeindex="2" editor-x="492" editor-y="109">
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Ahora que menciona sus estudios...</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>¿Por qué los escogió? </text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>¿Volvería a estudiar Desarrollo de Videojuegos?</text>
-      </speak-char>
       <condition />
       <child nodeindex="3" />
-    </dialogue-node>
-    <option-node nodeindex="3" keepShowing="yes" preListening="yes" editor-x="737" editor-y="91" x="737" y="91">
-      <speak-player>
-        <text>Por supuesto. Me ha permitido formarme en el campo de la Informática, sin perder un lado creativo. Lo volvería a hacer.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-      <speak-player>
-        <text>Claro. Desde siempre me han interesado muchos temas, como la Historia o la Física, pero los videojuegos han sido mi principal motivación. No cambiaría mis estudios.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="4" editor-x="979" editor-y="136">
-      <speak-char idTarget="RecursosHumanos">
+    <dialogue-node nodeindex="2" editor-x="585" editor-y="18">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>¿Tiene experiencia trabajando en el sector?</text>
+        <text>Me alegro.</text>
       </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="587" editor-y="250">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>¿Y eso? ¿Has tenido algún problema?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Ah, no, solo era un comentario.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Genial.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="871" editor-y="63">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Antes de continuar, me gustaría presentarnos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Yo soy Andrés Rodríguez y esta es mi compañera, Luisa.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Ambos trabajamos en el departamento de Recursos Humanos de esta empresa.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Somos los encargados de las entrevistas de hoy.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Por cierto... Luisa, ¿te importaría ser tú quien tome las notas?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Sabes que me encanta tu forma de escribir, porque tienes mejor letra que yo y tomas notas de forma mucho más organizada.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="LuisaRRHH">
+        <resources name="No name" />
+        <text>Como quieras...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="LuisaRRHH">
+        <resources name="No name" />
+        <text>Bueno, en primer lugar, nos gustaría saber...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>No te preocupes, Luisa. Ya hago yo las preguntas.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="LuisaRRHH">
+        <resources name="No name" />
+        <text>Murmura: "yi higui yi lis priguintis". Idiota.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Perdona, no te he oído. ¿Me dices algo?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="LuisaRRHH">
+        <resources name="No name" />
+        <text>Que... que me parece perfecto. Así me puedo concentrar en... tomar notas.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Perfecto.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="LuisaRRHH">
+        <resources name="No name" />
+        <text>Perfectísimo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Pues empecemos. Dinos, ¿por qué quieres trabajar con nosotros?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Quiero iniciar mi carrera profesional en esta empresa porque...</text>
+      </speak-player>
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
-    <option-node nodeindex="5" keepShowing="yes" preListening="yes" editor-x="1202" editor-y="100" x="1202" y="100">
+    <option-node nodeindex="5" question="RRHHTrabajarNosotros" random="yes" keepShowing="yes" editor-x="1299" editor-y="83" x="1299" y="83">
       <speak-player>
-        <text>No, aún no he tenido la ocasión para trabajar en una empresa como esta, pero aprenderé rápidamente cuando se me brinde la oportunidad.</text>
+        <text>Sé la reputación que tiene desarrollando programas innovadores. Creo que con mi formación, mi curiosidad e iniciativa podré contribuir en el diseño de los proyectos que tienen trazados para este año.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="6" />
       <speak-player>
-        <text>Como parte de mi formación, participé en varios proyectos pequeños, pero no he podido formar parte de un gran equipo todavía.</text>
+        <text>Es una gran oportunidad para aprender y creo que puedo aportar mucho al equipo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <speak-player>
+        <text>Acabo de terminar la carrera y estoy buscando una empresa para desarrollarme como profesional.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="6" />
     </option-node>
-    <dialogue-node nodeindex="6" editor-x="1445" editor-y="123">
-      <speak-char idTarget="RecursosHumanos">
+    <dialogue-node nodeindex="6" editor-x="1609" editor-y="114">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Bien. Se lo preguntaba porque me inquieta que no pueda adpatarse a este ambiente.</text>
+        <text>Somos una empresa con sedes en diferentes países, con las que colaboramos a menudo.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="RecursosHumanos">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>¿Cree que podrá hacerlo?</text>
+        <text>Por eso, necesitamos gente que se desenvuelva en otros idiomas.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="RecursosHumanos">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>¿O le supondrá un problema trabajar en este entorno?</text>
+        <text>¿Qué nivel de inglés tienes?</text>
       </speak-char>
       <condition />
       <child nodeindex="7" />
     </dialogue-node>
-    <option-node nodeindex="7" keepShowing="yes" preListening="yes" editor-x="1681" editor-y="93" x="1681" y="93">
+    <option-node nodeindex="7" question="RRHHNivelIngles" random="yes" keepShowing="yes" editor-x="1887" editor-y="85" x="1887" y="85">
       <speak-player>
-        <text>No entiendo muy bien a qué se refiere.</text>
+        <text>Tengo un nivel alto. Hace unos meses, obtuve el C1 mediante un examen de Cambridge.</text>
+        <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="8" />
       <speak-player>
-        <text>Bueno, como le decía, parte de mi formación ha sido trabajar en equipos. No siempre ha sido fácil, pero no he tenido problemas serios con nadie.</text>
+        <text>Tengo un nivel medio. Hace poco, obtuve el C1.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="9" />
-    </option-node>
-    <dialogue-node nodeindex="8" editor-x="1935" editor-y="16">
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Ya sabe. Un sector tan... competitivo como este no está hecho para todo el mundo.</text>
-      </speak-char>
-      <condition />
+      <child nodeindex="8" />
       <speak-player>
+        <text>Leo algunas cosillas en inglés y me defiendo al hablar y escribir.</text>
         <resources name="No name" />
-        <text>Siempre que se trabaje con respeto, no creo que haya problemas.</text>
       </speak-player>
       <condition />
-      <child nodeindex="9" />
-      <effect>
-        <increment var="RespuestasMalas" value="1" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="9" editor-x="2205" editor-y="123">
-      <speak-char idTarget="RecursosHumanos">
+      <child nodeindex="8" />
+    </option-node>
+    <dialogue-node nodeindex="8" editor-x="2181" editor-y="113">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Interesante... Sigamos.</text>
+        <text>Bien, bien.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="RecursosHumanos">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>¿Por qué debería ser usted a quien contratemos?</text>
+        <text>Como empresa centrada en el desarrollo de software, necesitamos gente que tenga cierta base programando.</text>
       </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>¿Cuál es su experiencia programando? ¿Qué lenguajes ha utilizado?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="9" />
+    </dialogue-node>
+    <option-node nodeindex="9" question="RRHHNivelProgramacion" random="yes" keepShowing="yes" editor-x="2476" editor-y="85" x="2476" y="85">
+      <speak-player>
+        <text>Desde que empecé la carrera, he desarrollado diferentes programas utilizando, principalmente, C++. También he trabajado otros lenguajes como Java y Javascript.</text>
+        <resources name="No name" />
+      </speak-player>
       <condition />
       <child nodeindex="10" />
-    </dialogue-node>
-    <option-node nodeindex="10" keepShowing="yes" preListening="yes" editor-x="2452" editor-y="95" x="2452" y="95">
       <speak-player>
-        <text>Creo que mis estudios y mi interés pueden sumar mucho valor a la empresa.</text>
+        <text>En la universidad participé en varios proyectos, que desarrollé utilizando lenguajes orientados a objetos.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="11" />
+      <child nodeindex="10" />
       <speak-player>
-        <text>Tengo una gran dedicación, y no me rindo ante las adversidades.</text>
+        <text>He tenido varias asignaturas de programación y, por tanto, he usado diferentes lenguajes.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="11" />
-      <speak-player>
-        <text>Creo que puedo aportar un punto de vista diferente, y mejorar el trabajo en equipo.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="11" />
+      <child nodeindex="10" />
     </option-node>
-    <dialogue-node nodeindex="11" editor-x="2704" editor-y="109">
-      <speak-char idTarget="RecursosHumanos">
+    <dialogue-node nodeindex="10" editor-x="2796" editor-y="126">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Por supuesto. Me gustaría proponerle un pequeño juego:</text>
+        <text>De acuerdo.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="RecursosHumanos">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Intente estimar cuánto cree que costaría hacer un proyecto como GTA V, en dólares.</text>
+        <text>También nos interesa saber si has utilizado algún sistema de control de versiones, como Git.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="RecursosHumanos">
+      <child nodeindex="11" />
+    </dialogue-node>
+    <option-node nodeindex="11" question="RRHHGit" random="yes" keepShowing="yes" editor-x="3069" editor-y="88" x="3069" y="88">
+      <speak-player>
+        <text>Por supuesto. Desde que empecé a desarrollar software, Git ha sido una herramienta esencial para trabajar en equipo, o a solas. Pueden echar un vistazo a todo mi trabajo de la carrera en mis repositorios.</text>
         <resources name="No name" />
-        <text>¿Cuántas personas estima que participaron y cuánto tiempo cree que se tardó en terminarlo?</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="12" />
-    </dialogue-node>
-    <option-node nodeindex="12" keepShowing="yes" preListening="yes" editor-x="2981" editor-y="86" x="2981" y="86">
       <speak-player>
-        <text>La verdad que es un juego bastante grande, pero calculo que llevaría, por lo menos, cuatro años de desarrollo entre unas 2000 personas y muchos millones de dólares.</text>
+        <text>Sí, todos mis proyectos universitarios tienen un repositorio en GitHub, para facilitar el trabajo en equipo.</text>
+        <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="13" />
+      <child nodeindex="12" />
       <speak-player>
-        <text>Mhmm... es difícil saberlo a priori.</text>
+        <text>Claro, lo he utilizado para las prácticas de la carrera.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="12" />
+    </option-node>
+    <dialogue-node nodeindex="12" editor-x="3346" editor-y="117">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Muy bien, Vamos a pasar a otro tipo de preguntas, menos técnicas.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>¿Dónde te ves de aquí a cinco años?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>¿Qué quieres conseguir?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="13" />
+    </dialogue-node>
+    <option-node nodeindex="13" question="RRHHObjetivos5Anos" random="yes" keepShowing="yes" editor-x="3594" editor-y="87" x="3594" y="87">
+      <speak-player>
+        <text>Me encantaría trabajar en proyectos que me apasionen y que me permitan seguir desarrollándome tanto profesional como personalmente.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="14" />
+      <speak-player>
+        <text>Me gustaría tener una buena base de experiencia que me permita seguir escalando profesionalmente.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="14" />
+      <speak-player>
+        <text>Es mucho tiempo, pueden pasar tantas cosas que no sé qué decir. Nunca me lo había planteado.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="14" />
     </option-node>
-    <dialogue-node nodeindex="13" editor-x="3301" editor-y="82">
-      <speak-char idTarget="RecursosHumanos">
+    <dialogue-node nodeindex="14" editor-x="4062" editor-y="126">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Me impresiona que alguien como usted tenga ese criterio. Le diré que GTA V costó un total de 265 millones de dólares.</text>
+        <text>Entiendo. Al hilo de esta pregunta...</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="RecursosHumanos">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>En su desarrollo, participaron más de mil personas y llevó en torno a cinco años, desde 2008 hasta 2013.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>¡Y eso sin contar el mantenimiento a posteriori que ha ido teniendo el juego a lo largo de los años!</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Es realmente impresionante.</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Desde luego. Me interesa saber también...</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>¿Dónde se ve dentro de unos años?</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>¿Cree, por ejemplo, que habrá formado una familia?</text>
+        <text>¿Tienes pareja?</text>
       </speak-char>
       <condition />
       <child nodeindex="15" />
     </dialogue-node>
-    <dialogue-node nodeindex="14" editor-x="3052" editor-y="442">
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Inténtelo.</text>
-      </speak-char>
-      <condition />
+    <option-node nodeindex="15" question="RRHHPareja" random="yes" keepShowing="yes" editor-x="4320" editor-y="86" x="4320" y="86">
       <speak-player>
-        <resources name="No name" />
-        <text>Pues yo diría que en tiempo, el juego habrá llevado unos seis años.</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Posiblemente hayan participado miles de personas y seguro que no baja de los 100 millones de dólares.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="13" />
-    </dialogue-node>
-    <option-node nodeindex="15" keepShowing="yes" preListening="yes" editor-x="3590" editor-y="70" x="3590" y="70">
-      <speak-player>
-        <text>No entiendo qué tiene que ver esto con el trabajo...</text>
+        <text>Sí, pero no va a impedir que me dedique de lleno a mi carrera profesional.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="16" />
       <speak-player>
-        <text>Me veo trabajando fielmente en esta empresa y, con suerte, en un puesto de importancia.</text>
+        <text>Sí, tengo pareja.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="16" />
+      <speak-player>
+        <text>¿Es esto relevante para el puesto?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="17" />
     </option-node>
-    <dialogue-node nodeindex="16" editor-x="3701" editor-y="498">
-      <speak-char idTarget="RecursosHumanos">
+    <dialogue-node nodeindex="16" editor-x="4609" editor-y="125">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Como ya se imaginará, este puesto requiere mucha dedicación.</text>
+        <text>Entonces, ¿tendrás disponibilidad para viajar? ¿O no?</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="RecursosHumanos">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Ya sabrá que a veces hay que hacer horas extra... </text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Necesitamos que nuestro equipo pueda dedicar todo el tiempo necesario para sacar los proyectos adelante.</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="15" />
-      <effect>
-        <increment var="RespuestasMalas" value="1" />
-        <condition>
-          <inactive flag="PreguntaMalaRespondida" />
-        </condition>
-        <activate flag="PreguntaMalaRespondida" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="17" editor-x="3854" editor-y="131">
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Ya sabe que hay reuniones con diferentes equipos, por lo que a veces es necesario desplazarse.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>La persona que ocupe este puesto tendrá que pasar, quizá, largos periodos de tiempo fuera de su hogar.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>¿Tiene algún compromiso por el que no pueda viajar?</text>
+        <text>Como empresa internacional, a veces es necesario enviar desarrolladores a otros países durante algunos días.</text>
       </speak-char>
       <condition />
       <child nodeindex="18" />
-      <effect>
-        <deactivate flag="PreguntaMalaRespondida" />
-        <condition />
-      </effect>
     </dialogue-node>
-    <option-node nodeindex="18" keepShowing="yes" preListening="yes" editor-x="4123" editor-y="102" x="4123" y="102">
+    <dialogue-node nodeindex="17" editor-x="4318" editor-y="407">
       <speak-player>
-        <text>Actualmente no tendría ningún inconveniente.</text>
+        <resources name="No name" />
+        <text>* No quiero faltarles el respeto... A ver qué respondo*</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="15" />
+    </dialogue-node>
+    <option-node nodeindex="18" question="RRHHViajar" random="yes" keepShowing="yes" editor-x="4868" editor-y="95" x="4868" y="95">
+      <speak-player>
+        <text>Por supuesto que la tengo. Siempre me gusta cumplir con mis compromisos, y el trabajo es de los más importantes para mí.</text>
+        <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="19" />
       <speak-player>
-        <text>No tendría problemas en viajar cuando sea necesario.</text>
+        <text>Tendría que estudiarlo pero, si es necesario, viajaría.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="19" />
     </option-node>
-    <dialogue-node nodeindex="19" editor-x="4425" editor-y="132">
-      <speak-char idTarget="RecursosHumanos">
+    <dialogue-node nodeindex="19" editor-x="5130" editor-y="111">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>De acuerdo. Me gustaría preguntarle:</text>
+        <text>Interesante. Déjame decirte que tienes una voz muy agradable, aunque quizá es demasiado suave.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="RecursosHumanos">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>¿Qué sueldo espera de un puesto como este?</text>
+        <text>Te lo digo porque me da miedo que no sepas hacerte valer ante tus compañeros cuando sea necesario.</text>
       </speak-char>
       <condition />
       <child nodeindex="20" />
-      <effect>
-        <deactivate flag="PreguntaMalaRespondida" />
-        <condition />
-      </effect>
     </dialogue-node>
-    <option-node nodeindex="20" keepShowing="yes" preListening="yes" editor-x="4673" editor-y="109" x="4673" y="109">
+    <option-node nodeindex="20" question="RRHHVozSuave" random="yes" keepShowing="yes" editor-x="5396" editor-y="71" x="5396" y="71">
       <speak-player>
-        <text>16.000 - 20.000</text>
+        <text>Cuando he aportado mis ideas a proyectos en los que he trabajado, he sabido argumentarlas sin tener que elevar mi tono.</text>
+        <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="21" />
       <speak-player>
-        <text>20.000 - 26.000</text>
+        <text>Si el resto de compañeros están dispuestos a escuchar mis ideas, no debería haber problemas.</text>
         <resources name="No name" />
       </speak-player>
+      <condition />
+      <child nodeindex="21" />
+      <speak-player>
+        <text>Es verdad que a veces no comparto todas las ideas que tengo, pero cuando lo hago, la gente suele escucharme.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="21" />
+    </option-node>
+    <dialogue-node nodeindex="21" editor-x="5696" editor-y="101">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Muy bien.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>También me gustaría decirte que creo que puedes aportar un toque único al equipo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Me parece que puedes aportar cierta humanidad y calidez al equipo.</text>
+      </speak-char>
       <condition />
       <child nodeindex="22" />
-    </option-node>
-    <dialogue-node nodeindex="21" editor-x="4965" editor-y="136">
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Acabando de empezar y siendo tu caso, es un sueldo razonable...</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Disculpe la insistencia, pero...</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>¿Cree que formará una familia en el futuro?</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="23" />
-      <effect>
-        <deactivate flag="PreguntaMalaRespondida" />
-        <condition />
-      </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="22" editor-x="4592" editor-y="432">
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>¿Cómo ha calculado esa cifra?</text>
-      </speak-char>
-      <condition />
+    <option-node nodeindex="22" question="RRHHCalidezHumanidad" random="yes" keepShowing="yes" editor-x="5947" editor-y="71" x="5947" y="71">
       <speak-player>
+        <text>Y no solo eso; tengo muchas ganas de empezar a dar mis ideas y demostrar mi capacidad técnica.</text>
         <resources name="No name" />
-        <text>Conozco algunos compañeros en el sector, y se mueven en ese rango.</text>
       </speak-player>
       <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Bueno... Será porque llevan más años... </text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>¿Qué cifra podría aceptar?</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="20" />
-      <effect>
-        <increment var="RespuestasMalas" value="1" />
-        <condition>
-          <inactive flag="PreguntaMalaRespondida" />
-        </condition>
-        <activate flag="PreguntaMalaRespondida" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <option-node nodeindex="23" keepShowing="yes" preListening="yes" editor-x="5296" editor-y="125" x="5296" y="125">
+      <child nodeindex="23" />
       <speak-player>
-        <text>En un futuro cercano, no.</text>
+        <text>Supongo que es importante fomentar un buen ambiente de trabajo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="23" />
+      <speak-player>
+        <text>Pensaba que el puesto era para desarrollar software, no para "aportar calidez".</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="24" />
-      <speak-player>
-        <text>No sabría qué responder ahora mismo.</text>
+    </option-node>
+    <dialogue-node nodeindex="23" editor-x="6219" editor-y="100">
+      <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
+        <text>Ya por último, quiero comentarte que este es un trabajo muy exigente.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>En el pasado, hemos tenido problemas con personas que, en los momentos de mayor presión, se derrumban,</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>¿No serás de estas personas que lloran bajo presión?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="25" />
+    </dialogue-node>
+    <dialogue-node nodeindex="24" editor-x="5947" editor-y="403">
+      <speak-player>
+        <resources name="No name" />
+        <text>* Mejor no digo nada... *</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="22" />
+    </dialogue-node>
+    <option-node nodeindex="25" question="RRHHLlorar" editor-x="6480" editor-y="71" x="6480" y="71">
+      <speak-player>
+        <text>Para nada. Ante situaciones de estrés, soy capaz de concentrarme y sacar el trabajo adelante.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="26" />
+      <speak-player>
+        <text>No creo que a nadie le guste trabajar bajo presión, pero tampoco tengo problemas con ello.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="26" />
+      <speak-player>
+        <text>Pero, ¿esto a qué viene?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="27" />
+    </option-node>
+    <dialogue-node nodeindex="26" editor-x="6769" editor-y="102">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>¡Ah! Casi lo olvido. Respecto al tema de viajar...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>¿Tienes algún familiar a tu cargo o tienes pensado tener hijos en los próximos años?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Ya sabes que a veces es difícil compatibilizar todo.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="28" />
+    </dialogue-node>
+    <dialogue-node nodeindex="27" editor-x="6479" editor-y="405">
+      <speak-player>
+        <resources name="No name" />
+        <text>* Menudas preguntas... A ver qué respondo. *</text>
       </speak-player>
       <condition />
       <child nodeindex="25" />
+    </dialogue-node>
+    <option-node nodeindex="28" editor-x="7050" editor-y="72" x="7050" y="72">
+      <speak-player>
+        <text>Como le decía antes, quiero centrarme totalmente en el trabajo. Aunque tenga familia, no me va a impedir trabajar correctamente.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="29" />
+      <speak-player>
+        <text>Como le decía antes, hay muchas cosas que pueden ocurrir, y no he pensado mucho en el futuro.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="29" />
+      <speak-player>
+        <text>¿Otra vez con esas?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="30" />
     </option-node>
-    <dialogue-node nodeindex="24" editor-x="5608" editor-y="170">
-      <speak-char idTarget="RecursosHumanos">
+    <dialogue-node nodeindex="29" editor-x="7569" editor-y="101">
+      <speak-player>
         <resources name="No name" />
-        <text>Al hilo de esta pregunta...</text>
-      </speak-char>
+        <text>Genial. Con esto, hemos terminado la entrevista.</text>
+      </speak-player>
       <condition />
-      <speak-char idTarget="RecursosHumanos">
+      <speak-player>
         <resources name="No name" />
-        <text>¿Qué le parecen las relaciones sentimentales entre compañeros de trabajo?</text>
-      </speak-char>
+        <text>Muchas gracias por tu tiempo.</text>
+      </speak-player>
       <condition />
-      <child nodeindex="26" />
-      <effect>
-        <deactivate flag="PreguntaMalaRespondida" />
-        <condition />
-      </effect>
+      <speak-player>
+        <resources name="No name" />
+        <text>Tendremos en cuenta tu candidatura, y te avisaremos cuando terminemos el proceso de entrevistas.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="25" editor-x="5057" editor-y="460">
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Entiendo que no sea fácil de responder...</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Pero ya sabe, este trabajo requiere un gran compromiso.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Y a la hora de considerar su candidatura, necesitamos conocer su grado de dedicación.</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="23" />
-      <effect>
-        <increment var="RespuestasMalas" value="1" />
-        <condition>
-          <inactive flag="PreguntaMalaRespondida" />
-        </condition>
-        <activate flag="PreguntaMalaRespondida" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <option-node nodeindex="26" keepShowing="yes" preListening="yes" editor-x="5943" editor-y="127" x="5943" y="127">
+    <dialogue-node nodeindex="30" editor-x="7058" editor-y="430">
       <speak-player>
-        <text>No tengo nada en contra, personalmente.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="27" />
-      <speak-player>
-        <text>Me parecen poco profesionales.</text>
         <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="27" />
-      <speak-player>
-        <text>Tengo pareja, así que no me lo he cuestionado.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="27" />
-      <speak-player>
-        <text>¿Mi respuesta va a influir en el resultado de la entrevista?</text>
-        <resources name="No name" />
+        <text>* Después de haber aguantado tanto, no voy a responder ahora así. Ya queda poco. *</text>
       </speak-player>
       <condition />
       <child nodeindex="28" />
-    </option-node>
-    <dialogue-node nodeindex="27" editor-x="6411" editor-y="142">
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>De acuerdo. Pues hemos terminado.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Nos interesa mucho un perfil como el suyo, así que, si lo quiere, el puesto es suyo.</text>
-      </speak-char>
-      <condition>
-        <less-equals-than var="RespuestasMalas" value="2" />
-      </condition>
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Estudiaremos su situación, y ya le llamaremos.</text>
-      </speak-char>
-      <condition>
-        <greater-than var="RespuestasMalas" value="2" />
-        <less-equals-than var="RespuestasMalas" value="4" />
-      </condition>
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Lamentablemente, no tiene el perfil que estamos buscando. Le deseo mucha suerte.</text>
-      </speak-char>
-      <condition>
-        <greater-than var="RespuestasMalas" value="4" />
-      </condition>
-      <end-conversation>
-        <effect>
-          <deactivate flag="PreguntaMalaRespondida" />
-          <condition />
-          <wait-time time="1" />
-          <condition />
-          <trigger-cutscene idTarget="Final" />
-          <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-    <dialogue-node nodeindex="28" editor-x="5834" editor-y="473">
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Como todas las demás preguntas, sí.</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>No entiendo qué tiene que ver esto con mis capacidades técnicas.</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="RecursosHumanos">
-        <resources name="No name" />
-        <text>Si puede, le agradecería que respondiese.</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="26" />
-      <effect>
-        <increment var="RespuestasMalas" value="1" />
-        <condition>
-          <inactive flag="PreguntaMalaRespondida" />
-        </condition>
-        <activate flag="PreguntaMalaRespondida" />
-        <condition />
-      </effect>
     </dialogue-node>
   </graph-conversation>
   <object id="Mesa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">

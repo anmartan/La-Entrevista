@@ -153,13 +153,6 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: SalaEsperaBorde</documentation>
-        <condition>
-          <inactive flag="TioBordeHablado" />
-        </condition>
-      </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: AntonioConversacion</documentation>
         <effect>
           <trigger-conversation idTarget="AntonioConversacion" />
           <condition />
@@ -237,37 +230,135 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
-    <actions>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Entrevista</documentation>
-        <condition>
-          <active flag="Entrevista" />
-        </condition>
-      </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Tarde</documentation>
-        <condition>
-          <inactive flag="Entrevista" />
-          <active flag="LlegasTarde" />
-        </condition>
-        <effect>
-          <trigger-conversation idTarget="LlegasTarde" />
-          <condition />
-        </effect>
-      </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: EntrevistaTrabajo</documentation>
-        <effect>
-          <trigger-conversation idTarget="EntrevistaTrabajo" />
-          <condition />
-        </effect>
-      </talk-to>
-    </actions>
   </character>
   <character id="LuisaRRHH" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/animation/LuisaUp.eaa.xml" />
       <asset type="standdown" uri="assets/animation/LuisaUp.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Hombre1" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Hombre1Down.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Mujer1" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Mujer1Down.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Hombre2" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Hombre2Down.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Hombre3" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Hombew3Down.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -339,11 +430,92 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="472" y="47" width="192" height="373" hasInfluenceArea="no" idTarget="Entrevista" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="717" y="-37" width="94" height="487" hasInfluenceArea="no" idTarget="SalaCafe" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
     <characters>
       <character-ref idTarget="Antonio" x="333" y="450" scale="0.4513716" orientation="2" layer="0" hasInfluenceArea="no" />
       <character-ref idTarget="Jaime" x="150" y="495" scale="0.3340161" orientation="2" layer="1" hasInfluenceArea="no" />
       <character-ref idTarget="Luis" x="340" y="450" scale="0.3475394" orientation="2" layer="2" hasInfluenceArea="no" />
     </characters>
+  </scene>
+  <scene id="SalaCafe" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/SalaCafe.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-167" y="-62" width="328" height="1376" hasInfluenceArea="no" idTarget="SalaEspera" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Hombre1" x="1659" y="1133" scale="1.4" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Mujer1" x="1412" y="1146" scale="1.306218" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre2" x="903" y="1120" scale="1" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre3" x="754" y="940" scale="0.7378676" orientation="2" layer="3" hasInfluenceArea="no" />
+    </characters>
+    <active-areas>
+      <active-area id="ConversacionHombreHombre" rectangular="no" x="603" y="623" width="480" height="516" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <trigger-conversation idTarget="GrupoHombresConversacion" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+        <point x="664" y="770" />
+        <point x="777" y="623" />
+        <point x="996" y="679" />
+        <point x="1081" y="775" />
+        <point x="1083" y="940" />
+        <point x="861" y="1139" />
+        <point x="777" y="1012" />
+        <point x="603" y="955" />
+      </active-area>
+      <active-area id="ConversacionHombreMujer" rectangular="no" x="1283" y="460" width="524" height="674" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <trigger-conversation idTarget="GrupoMujerHombresConversacion" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+        <point x="1360" y="465" />
+        <point x="1705" y="460" />
+        <point x="1807" y="785" />
+        <point x="1763" y="1134" />
+        <point x="1354" y="1129" />
+        <point x="1283" y="744" />
+      </active-area>
+    </active-areas>
   </scene>
   <scene id="Entrevista" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -361,6 +533,30 @@
       <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
       <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
     </characters>
+    <active-areas>
+      <active-area id="EntrevistaArea" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <trigger-conversation idTarget="EntrevistaTrabajo" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+        <point x="159" y="167" />
+        <point x="287" y="159" />
+        <point x="307" y="231" />
+        <point x="151" y="278" />
+      </active-area>
+    </active-areas>
   </scene>
   <scene id="PantallaFinal" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -1145,7 +1341,7 @@
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
-    <option-node nodeindex="5" question="RRHHTrabajarNosotros" random="yes" keepShowing="yes" editor-x="1299" editor-y="83" x="1299" y="83">
+    <option-node nodeindex="5" question="RRHHTrabajarNosotros" random="yes" keepShowing="yes" preListening="yes" editor-x="1299" editor-y="83" x="1299" y="83">
       <speak-player>
         <text>Sé la reputación que tiene desarrollando programas innovadores. Creo que con mi formación, mi curiosidad e iniciativa podré contribuir en el diseño de los proyectos que tienen trazados para este año.</text>
         <resources name="No name" />
@@ -1183,7 +1379,7 @@
       <condition />
       <child nodeindex="7" />
     </dialogue-node>
-    <option-node nodeindex="7" question="RRHHNivelIngles" random="yes" keepShowing="yes" editor-x="1887" editor-y="85" x="1887" y="85">
+    <option-node nodeindex="7" question="RRHHNivelIngles" random="yes" keepShowing="yes" preListening="yes" editor-x="1887" editor-y="85" x="1887" y="85">
       <speak-player>
         <text>Tengo un nivel alto. Hace unos meses, obtuve el C1 mediante un examen de Cambridge.</text>
         <resources name="No name" />
@@ -1221,7 +1417,7 @@
       <condition />
       <child nodeindex="9" />
     </dialogue-node>
-    <option-node nodeindex="9" question="RRHHNivelProgramacion" random="yes" keepShowing="yes" editor-x="2476" editor-y="85" x="2476" y="85">
+    <option-node nodeindex="9" question="RRHHNivelProgramacion" random="yes" keepShowing="yes" preListening="yes" editor-x="2476" editor-y="85" x="2476" y="85">
       <speak-player>
         <text>Desde que empecé la carrera, he desarrollado diferentes programas utilizando, principalmente, C++. También he trabajado otros lenguajes como Java y Javascript.</text>
         <resources name="No name" />
@@ -1254,7 +1450,7 @@
       <condition />
       <child nodeindex="11" />
     </dialogue-node>
-    <option-node nodeindex="11" question="RRHHGit" random="yes" keepShowing="yes" editor-x="3069" editor-y="88" x="3069" y="88">
+    <option-node nodeindex="11" question="RRHHGit" random="yes" keepShowing="yes" preListening="yes" editor-x="3069" editor-y="88" x="3069" y="88">
       <speak-player>
         <text>Por supuesto. Desde que empecé a desarrollar software, Git ha sido una herramienta esencial para trabajar en equipo, o a solas. Pueden echar un vistazo a todo mi trabajo de la carrera en mis repositorios.</text>
         <resources name="No name" />
@@ -1292,7 +1488,7 @@
       <condition />
       <child nodeindex="13" />
     </dialogue-node>
-    <option-node nodeindex="13" question="RRHHObjetivos5Anos" random="yes" keepShowing="yes" editor-x="3594" editor-y="87" x="3594" y="87">
+    <option-node nodeindex="13" question="RRHHObjetivos5Anos" random="yes" keepShowing="yes" preListening="yes" editor-x="3594" editor-y="87" x="3594" y="87">
       <speak-player>
         <text>Me encantaría trabajar en proyectos que me apasionen y que me permitan seguir desarrollándome tanto profesional como personalmente.</text>
         <resources name="No name" />
@@ -1325,7 +1521,7 @@
       <condition />
       <child nodeindex="15" />
     </dialogue-node>
-    <option-node nodeindex="15" question="RRHHPareja" random="yes" keepShowing="yes" editor-x="4320" editor-y="86" x="4320" y="86">
+    <option-node nodeindex="15" question="RRHHPareja" random="yes" keepShowing="yes" preListening="yes" editor-x="4320" editor-y="86" x="4320" y="86">
       <speak-player>
         <text>Sí, pero no va a impedir que me dedique de lleno a mi carrera profesional.</text>
         <resources name="No name" />
@@ -1366,7 +1562,7 @@
       <condition />
       <child nodeindex="15" />
     </dialogue-node>
-    <option-node nodeindex="18" question="RRHHViajar" random="yes" keepShowing="yes" editor-x="4868" editor-y="95" x="4868" y="95">
+    <option-node nodeindex="18" question="RRHHViajar" random="yes" keepShowing="yes" preListening="yes" editor-x="4868" editor-y="95" x="4868" y="95">
       <speak-player>
         <text>Por supuesto que la tengo. Siempre me gusta cumplir con mis compromisos, y el trabajo es de los más importantes para mí.</text>
         <resources name="No name" />
@@ -1393,7 +1589,7 @@
       <condition />
       <child nodeindex="20" />
     </dialogue-node>
-    <option-node nodeindex="20" question="RRHHVozSuave" random="yes" keepShowing="yes" editor-x="5396" editor-y="71" x="5396" y="71">
+    <option-node nodeindex="20" question="RRHHVozSuave" random="yes" keepShowing="yes" preListening="yes" editor-x="5396" editor-y="71" x="5396" y="71">
       <speak-player>
         <text>Cuando he aportado mis ideas a proyectos en los que he trabajado, he sabido argumentarlas sin tener que elevar mi tono.</text>
         <resources name="No name" />
@@ -1431,7 +1627,7 @@
       <condition />
       <child nodeindex="22" />
     </dialogue-node>
-    <option-node nodeindex="22" question="RRHHCalidezHumanidad" random="yes" keepShowing="yes" editor-x="5947" editor-y="71" x="5947" y="71">
+    <option-node nodeindex="22" question="RRHHCalidezHumanidad" random="yes" keepShowing="yes" preListening="yes" editor-x="5947" editor-y="71" x="5947" y="71">
       <speak-player>
         <text>Y no solo eso; tengo muchas ganas de empezar a dar mis ideas y demostrar mi capacidad técnica.</text>
         <resources name="No name" />
@@ -1477,7 +1673,7 @@
       <condition />
       <child nodeindex="22" />
     </dialogue-node>
-    <option-node nodeindex="25" question="RRHHLlorar" editor-x="6480" editor-y="71" x="6480" y="71">
+    <option-node nodeindex="25" question="RRHHLlorar" preListening="yes" editor-x="6480" editor-y="71" x="6480" y="71">
       <speak-player>
         <text>Para nada. Ante situaciones de estrés, soy capaz de concentrarme y sacar el trabajo adelante.</text>
         <resources name="No name" />
@@ -1523,7 +1719,7 @@
       <condition />
       <child nodeindex="25" />
     </dialogue-node>
-    <option-node nodeindex="28" editor-x="7050" editor-y="72" x="7050" y="72">
+    <option-node nodeindex="28" preListening="yes" editor-x="7050" editor-y="72" x="7050" y="72">
       <speak-player>
         <text>Como le decía antes, quiero centrarme totalmente en el trabajo. Aunque tenga familia, no me va a impedir trabajar correctamente.</text>
         <resources name="No name" />
@@ -1568,6 +1764,78 @@
       </speak-player>
       <condition />
       <child nodeindex="28" />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="GrupoHombresConversacion">
+    <dialogue-node nodeindex="0" editor-x="97" editor-y="65">
+      <speak-char idTarget="Hombre2">
+        <resources name="No name" />
+        <text>¿Has visto cómo está hoy la sala de reuniones?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre3">
+        <resources name="No name" />
+        <text>La verdad es que con la oferta de programador junior se está llenando esto de gente.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre2">
+        <resources name="No name" />
+        <text>Y no hay ni una tía.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre3">
+        <resources name="No name" />
+        <text>Normal. ¿Cuántas conoces que sepan programar?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre2">
+        <resources name="No name" />
+        <text>Alguna habrá, digo yo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre3">
+        <resources name="No name" />
+        <text>Además, casi mejor así. Que luego te distraes y no trabajas igual.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre2">
+        <resources name="No name" />
+        <text>Qué bruto eres, tío. Mejor, cállate.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre3">
+        <resources name="No name" />
+        <text>Sabes que tengo razón.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre2">
+        <resources name="No name" />
+        <text>Anda, volvamos a trabajar antes de que me plantee por qué somos amigos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre3">
+        <resources name="No name" />
+        <text>No tienes sentido del humor, ¿eh?</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <move-npc idTarget="Hombre2" x="-250" y="1120" />
+          <condition />
+          <move-npc idTarget="Hombre3" x="-250" y="940" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="GrupoMujerHombresConversacion">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>WIP: La conversación no existe todavía.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <object id="Mesa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">

@@ -6,15 +6,17 @@
 <entry key="Chapter0.SceneId.Y">3</entry>
 <entry key="Chapter0.Entrada.X">332</entry>
 <entry key="Chapter0.Entrada.Y">-52</entry>
-<entry key="Chapter0.Hall.X">282</entry>
-<entry key="Chapter0.Hall.Y">30</entry>
-<entry key="Chapter0.SalaEspera.X">281</entry>
-<entry key="Chapter0.SalaEspera.Y">203</entry>
-<entry key="Chapter0.PantallaFinal.X">-160</entry>
-<entry key="Chapter0.PantallaFinal.Y">95</entry>
-<entry key="Chapter0.Entrevista.X">289</entry>
-<entry key="Chapter0.Entrevista.Y">366</entry>
-<entry key="Chapter0.SalaCafe.X">556</entry>
-<entry key="Chapter0.SalaCafe.Y">135</entry>
+<entry key="Chapter0.Hall.X">-100</entry>
+<entry key="Chapter0.Hall.Y">286</entry>
+<entry key="Chapter0.SalaEspera.X">269</entry>
+<entry key="Chapter0.SalaEspera.Y">289</entry>
+<entry key="Chapter0.PantallaFinal.X">670</entry>
+<entry key="Chapter0.PantallaFinal.Y">276</entry>
+<entry key="Chapter0.Entrevista.X">306</entry>
+<entry key="Chapter0.Entrevista.Y">424</entry>
+<entry key="Chapter0.SalaCafe.X">190</entry>
+<entry key="Chapter0.SalaCafe.Y">10</entry>
+<entry key="Chapter0.Introduccion.X">-189</entry>
+<entry key="Chapter0.Introduccion.Y">13</entry>
 </properties>
 

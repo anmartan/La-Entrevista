@@ -386,17 +386,38 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <scene id="Introduccion" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Menu" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/IntroPlantilla.png" />
+      <asset type="background" uri="assets/background/Menu.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BotonJugar" x="1025" y="975" scale="1.895833" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonCreditos" x="1025" y="1185" scale="1.895833" layer="1" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="Introduccion0" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/On.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="PortalEmpleo" x="998" y="669" scale="0.9" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="IntroOff" x="960" y="1080" scale="1" layer="1" hasInfluenceArea="no" />
+    </objects>
     <active-areas>
-      <active-area id="Trigger" rectangular="yes" x="-50" y="-50" width="2000" height="1175" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="Trabajo0" rectangular="yes" x="639" y="257" width="704" height="313" hasInfluenceArea="no" behaviour="first-action">
+        <condition>
+          <active flag="PantallaEncendida" />
+        </condition>
         <description>
           <name>
           </name>
@@ -408,13 +429,175 @@
         <actions>
           <use needsGoTo="yes" keepDistance="35" not-effects="no">
             <effect>
-              <trigger-conversation idTarget="IntroduccionConversacion" />
+              <trigger-conversation idTarget="PortalEmpleo0" />
               <condition />
             </effect>
           </use>
         </actions>
       </active-area>
     </active-areas>
+  </scene>
+  <scene id="Introduccion1" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/On.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="PortalEmpleo" x="998" y="669" scale="0.9" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <active-areas>
+      <active-area id="Trabajo01" rectangular="yes" x="639" y="257" width="704" height="313" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <trigger-conversation idTarget="PortalEmpleo1" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="Introduccion1.5" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/On.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="PortalEmpleo" x="998" y="669" scale="0.9" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <active-areas>
+      <active-area id="Trabajo15" rectangular="yes" x="639" y="257" width="704" height="313" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <trigger-conversation idTarget="PortalEmpleo1.5" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="Introduccion2" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/On.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="PortalEmpleo" x="998" y="669" scale="0.9" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <active-areas>
+      <active-area id="Trabajo02" rectangular="yes" x="639" y="257" width="704" height="313" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <trigger-conversation idTarget="PortalEmpleo2" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="Introduccion3" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/On.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="PortalEmpleo" x="998" y="669" scale="0.9" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <active-areas>
+      <active-area id="Trabajo03" rectangular="yes" x="639" y="257" width="704" height="313" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <trigger-conversation idTarget="PortalEmpleo3" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="Introduccion4" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Off.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="OpcionInformatica" x="775" y="694" scale="0.2601764" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="OpcionAnalista" x="1206" y="693" scale="0.2363486" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="IntroOn" x="960" y="1080" scale="1" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="Creditos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Menu.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-22" y="-14" width="2063" height="1382" hasInfluenceArea="no" idTarget="Menu" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
   </scene>
   <scene id="Hall" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -1050,6 +1233,15 @@
       </active-area>
     </active-areas>
   </scene>
+  <slidescene id="PerfilGenerico" start="no" next="go-back" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/PerfilInicial.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
   <slidescene id="PerfilPeriodista" start="no" next="go-back" class="accesible" type="cutscene">
     <documentation>
     </documentation>
@@ -1072,55 +1264,446 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>
         <resources name="No name" />
-        <text>Acabo de terminar la carrera, y no podía haber salido mejor.</text>
+        <text>Acabo de terminar la carrera, y estoy buscando ofertas de empleo.</text>
       </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Hace poco estuve mirando ofertas de trabajo, y encontré algunas bastante interesantes.</text>
+        <text>Ahora que lo recuerdo, hace poco que me presenté a una candidatura. Fue bastante sencillo.</text>
       </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Hoy, tengo mi primera entrevista de trabajo. Espero que salga bien.</text>
+        <text>* Animación para hacer como que lo siguiente es un recuerdo *</text>
       </speak-player>
       <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PortalEmpleo0">
+    <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
       <speak-player>
         <resources name="No name" />
-        <text>¡No puedo esperar a conseguir mi primer empleo en el mundo del...</text>
+        <text>¿Qué formación tengo? Hmm, esa es fácil...</text>
       </speak-player>
       <condition />
       <child nodeindex="1" />
+      <effect>
+        <set-value var="ErroresPerfil" value="0" />
+        <condition />
+      </effect>
     </dialogue-node>
-    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="296" editor-y="38" x="296" y="38">
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="539" editor-y="89" x="539" y="89">
       <speak-player>
-        <text>desarrollo de software!</text>
+        <text>[Recordar cosas sobre mí]</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>periodismo!</text>
+        <text>Me he graduado en una carrera de Ciencias.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Me he graduado en una carrera de Humanidades.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>
+        <text>Tengo la E.S.O.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="879" editor-y="33">
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="PerfilGenerico" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1142" editor-y="193">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Introduccion1" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="PortalEmpleo1" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="883" editor-y="330">
+      <child nodeindex="3" />
+      <effect>
+        <increment var="ErroresPerfil" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PortalEmpleo1">
+    <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué idiomas hablo? Además del español, claro.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="476" editor-y="80" x="476" y="80">
+      <speak-player>
+        <text>[Recordar cosas sobre mí]</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Inglés, nivel C1</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Inglés y francés, ambos nivel básico.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>
+        <text>Inglés, nivel A2.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="879" editor-y="33">
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="PerfilGenerico" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1142" editor-y="193">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Introduccion1.5" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="PortalEmpleo1.5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="883" editor-y="330">
+      <child nodeindex="3" />
+      <effect>
+        <increment var="ErroresPerfil" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PortalEmpleo1.5">
+    <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Aptitudes técnicas? Puedo decir que se me da bien...</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="365" editor-y="71" x="365" y="71">
+      <speak-player>
+        <text>[Recordar cosas sobre mí]</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>La programación, el análisis de datos y el cálculo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>El dibujo y el manejo de herramientas de diseño.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>
+        <text>La ofimática y la contabilidad.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="722" editor-y="23">
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="PerfilGenerico" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1058" editor-y="108">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Introduccion2" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="PortalEmpleo2" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="721" editor-y="255">
+      <child nodeindex="3" />
+      <effect>
+        <increment var="ErroresPerfil" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PortalEmpleo2">
+    <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
+      <speak-player>
+        <resources name="No name" />
+        <text>Y otras habilidades. Aquí puedo poner...</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="365" editor-y="71" x="365" y="71">
+      <speak-player>
+        <text>[Recordar cosas sobre mí]</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Trabajo bajo presión y trabajo en equipo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Trabajo en equipo y creatividad.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>
+        <text>Capacidad de organización y resolución de problemas.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="722" editor-y="23">
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="PerfilGenerico" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1058" editor-y="108">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Introduccion3" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="PortalEmpleo3" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="721" editor-y="255">
+      <child nodeindex="3" />
+      <effect>
+        <increment var="ErroresPerfil" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PortalEmpleo3">
+    <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
+      <speak-player>
+        <resources name="No name" />
+        <text>Y por último, ¿qué tipo de disponibilidad tengo?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="539" editor-y="89" x="539" y="89">
+      <speak-player>
+        <text>[Recordar cosas sobre mí]</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Horaria y para viajar.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Horaria.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>
+        <text>De incorporación inmediata.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="847" editor-y="0">
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="PerfilGenerico" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1115" editor-y="157">
+      <speak-player>
+        <resources name="No name" />
+        <text>Parece que no ha encontrado ninguna oferta.</text>
+      </speak-player>
+      <condition>
+        <greater-equals-than var="ErroresPerfil" value="2" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Voy a revisar la información que me pedían.</text>
+      </speak-player>
+      <condition>
+        <greater-equals-than var="ErroresPerfil" value="2" />
+      </condition>
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Introduccion0" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition>
+            <greater-equals-than var="ErroresPerfil" value="2" />
+          </condition>
+          <trigger-conversation idTarget="PortalEmpleo0" />
+          <condition>
+            <greater-equals-than var="ErroresPerfil" value="2" />
+          </condition>
+          <trigger-scene idTarget="Introduccion4" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition>
+            <less-than var="ErroresPerfil" value="2" />
+          </condition>
+          <trigger-conversation idTarget="PortalEmpleo4" />
+          <condition>
+            <less-than var="ErroresPerfil" value="2" />
+          </condition>
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="847" editor-y="306">
+      <child nodeindex="3" />
+      <effect>
+        <increment var="ErroresPerfil" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PortalEmpleo4">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Parece que hay dos ofertas.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Una es para desarrollar software, y la otra como analista de datos.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿A cuál me presento?</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="EscogerEmpleoConversacion">
+    <dialogue-node nodeindex="0" editor-x="67" editor-y="20">
+      <speak-player>
+        <resources name="No name" />
+        <text>Creo que la idea de desarrollar software me gusta más.</text>
+      </speak-player>
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Creo que encajo mejor en el perfil de analista de datos.</text>
+      </speak-player>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="333" editor-y="3" x="333" y="3">
+      <speak-player>
+        <text>* Presentar mi candidatura *</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Mejor voy a pensarlo un poco más...</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="774" editor-y="39">
-      <end-conversation>
-        <effect>
-          <activate flag="Software" />
-          <condition />
-          <trigger-scene idTarget="Hall" x="375" y="421" transitionTime="5" transitionType="5" />
-          <condition />
-        </effect>
-      </end-conversation>
+    <dialogue-node nodeindex="2" editor-x="709" editor-y="28">
+      <child nodeindex="4" />
+      <effect>
+        <remove-element idTarget="OpcionInformatica" />
+        <condition />
+        <remove-element idTarget="OpcionAnalista" />
+        <condition />
+        <remove-element idTarget="IntroOn" />
+        <condition />
+      </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="802" editor-y="246">
+    <dialogue-node nodeindex="3" editor-x="762" editor-y="312">
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="965" editor-y="1">
+      <speak-player>
+        <resources name="No name" />
+        <text>* Animación para "salir" del recuerdo *</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Así encontré mi primera oferta de empleo.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Ahora, es el momento de ir a la entrevista.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>He estado practicando mucho, y nada me va a estropear esta oportunidad.</text>
+      </speak-player>
+      <condition />
       <end-conversation>
         <effect>
-          <deactivate flag="Software" />
-          <condition />
           <trigger-scene idTarget="Hall" x="375" y="421" transitionTime="5" transitionType="5" />
           <condition />
         </effect>
@@ -2760,7 +3343,157 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <object id="Mesa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="BotonJugar" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/button_jugar.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="Introduccion0" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="IntroduccionConversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="BotonCreditos" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/button_creditos.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="Creditos" x="400" y="450" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="IntroOff" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Off.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <remove-element idTarget="IntroOff" />
+          <condition />
+          <speak-player>Me han recomendado este portal de empleo varias veces.</speak-player>
+          <condition />
+          <speak-player>Puedes meter tus aptitudes, y te recomienda ofertas que se ajustan a tu curriculum. Veamos...</speak-player>
+          <condition />
+          <activate flag="PantallaEncendida" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="IntroOn" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/On.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="PortalEmpleo" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/PortalEmpleo.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="OpcionInformatica" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Coder.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <activate flag="Software" />
+          <condition />
+          <trigger-conversation idTarget="EscogerEmpleoConversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="OpcionAnalista" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Analyst.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <deactivate flag="Software" />
+          <condition />
+          <trigger-conversation idTarget="EscogerEmpleoConversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="Mesa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/Mesa.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />

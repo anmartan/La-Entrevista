@@ -14,8 +14,8 @@
 <entry key="Chapter0.PantallaFinal.Y">276</entry>
 <entry key="Chapter0.Entrevista.X">459</entry>
 <entry key="Chapter0.Entrevista.Y">391</entry>
-<entry key="Chapter0.SalaCafe.X">-135</entry>
-<entry key="Chapter0.SalaCafe.Y">-121</entry>
+<entry key="Chapter0.SalaCafe.X">-136</entry>
+<entry key="Chapter0.SalaCafe.Y">-126</entry>
 <entry key="Chapter0.Introduccion.X">-55</entry>
 <entry key="Chapter0.Introduccion.Y">270</entry>
 <entry key="Chapter0.Entrevista1.X">121</entry>
@@ -79,14 +79,20 @@
 <entry key="Chapter0.Introducción.X">-115</entry>
 <entry key="Chapter0.Introducción.Y">213</entry>
 <entry key="Chapter0.Introduccion0.X">-173</entry>
-<entry key="Chapter0.Introduccion0.Y">130</entry>
-<entry key="Chapter0.Introduccion1.X">-179</entry>
-<entry key="Chapter0.Introduccion1.Y">296</entry>
-<entry key="Chapter0.Introduccion2.X">208</entry>
-<entry key="Chapter0.Introduccion2.Y">95</entry>
-<entry key="Chapter0.Introduccion3.X">207</entry>
-<entry key="Chapter0.Introduccion3.Y">298</entry>
-<entry key="Chapter0.Introduccion4.X">589</entry>
-<entry key="Chapter0.Introduccion4.Y">94</entry>
+<entry key="Chapter0.Introduccion0.Y">128</entry>
+<entry key="Chapter0.Introduccion1.X">-177</entry>
+<entry key="Chapter0.Introduccion1.Y">132</entry>
+<entry key="Chapter0.Introduccion2.X">-174</entry>
+<entry key="Chapter0.Introduccion2.Y">142</entry>
+<entry key="Chapter0.Introduccion3.X">-171</entry>
+<entry key="Chapter0.Introduccion3.Y">137</entry>
+<entry key="Chapter0.Introduccion4.X">-168</entry>
+<entry key="Chapter0.Introduccion4.Y">137</entry>
+<entry key="Chapter0.Introduccion1.5.X">-177</entry>
+<entry key="Chapter0.Introduccion1.5.Y">131</entry>
+<entry key="Chapter0.PreguntasFinales.X">220</entry>
+<entry key="Chapter0.PreguntasFinales.Y">199</entry>
+<entry key="Chapter0.PreguntasFinales1.X">224</entry>
+<entry key="Chapter0.PreguntasFinales1.Y">201</entry>
 </properties>
 

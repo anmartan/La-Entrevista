@@ -386,7 +386,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <scene id="Menu" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Menu" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -1232,6 +1232,178 @@
         <point x="151" y="278" />
       </active-area>
     </active-areas>
+  </scene>
+  <scene id="PreguntasFinales" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/blur-photo.com_1628852890.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="Boton1" x="925" y="478" scale="1" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton3" x="614" y="854" scale="1" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton2" x="1451" y="494" scale="1" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton4" x="1176" y="855" scale="1" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonDerecha" x="1779" y="701" scale="0.25" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton0" x="376" y="462" scale="1" layer="1" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="PreguntasFinales1" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/blur-photo.com_1628852890.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="Boton6" x="992" y="555" scale="1" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton7" x="1540" y="559" scale="1" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton8" x="675" y="850" scale="1" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton9" x="1272" y="834" scale="1" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton5" x="464" y="531" scale="1" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonIzquierda" x="163" y="670" scale="0.25" layer="1" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="Pregunta0" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/BlurredHall.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Recepcionista" x="303" y="1313" scale="2.258064" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Pregunta1" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/SalaEspera.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Luis" x="340" y="450" scale="0.3475394" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Pregunta2" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/SalaEspera.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Jaime" x="261" y="915" scale="0.9703918" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Pregunta3" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/SalaEspera.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Antonio" x="263" y="952" scale="1.729457" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Pregunta4" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/SalaCafe.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Hombre2" x="1080" y="2198" scale="4.5" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre3" x="474" y="1448" scale="3.25" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Pregunta5" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/SalaCafe.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Hombre1" x="1474" y="2669" scale="5.5" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Mujer1" x="622" y="2892" scale="5.5" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Pregunta6" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Entrevista.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="AndresRRHH" x="375" y="959" scale="1.25" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="460" y="467" scale="0.35" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Pregunta7" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Entrevista.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="AndresRRHH" x="375" y="959" scale="1.25" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="460" y="467" scale="0.35" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Pregunta8" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Entrevista.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="AndresRRHH" x="375" y="959" scale="1.25" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="460" y="467" scale="0.35" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Pregunta9" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Entrevista.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="AndresRRHH" x="375" y="959" scale="1.25" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="460" y="467" scale="0.35" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <slidescene id="PerfilGenerico" start="no" next="go-back" class="accesible" type="cutscene">
     <documentation>
@@ -3313,7 +3485,7 @@
       <condition />
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Muchas gracias por tu tiempo.</text>
+        <text>Muchas gracias por tu tiempo, Alexandra.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="AndresRRHH">
@@ -3339,6 +3511,731 @@
           <condition>
             <active flag="Software" />
           </condition>
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Pregunta0Conversacion">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Vengo a una entrevista de trabajo.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Recepcionista">
+        <resources name="No name" />
+        <text>Las entrevistas para la vacante de auxiliar administrativo se están haciendo en la cuarta planta.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Recepcionista">
+        <resources name="No name" />
+        <text>Puedes coger el ascensor que hay al fondo.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué te parece raro en esta escena?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="QuizFinal0" random="yes" keepShowing="yes" preListening="yes" editor-x="336" editor-y="57" x="336" y="57">
+      <speak-player correct="true">
+        <text>Que el recepcionista asuma que te presentas para el puesto de secretaria.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Que nadie te acompañe al lugar donde se van a hacer las entrevistas.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Que haya entrevistas para tantos puestos de trabajo al mismo tiempo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="825" editor-y="23">
+      <speak-player>
+        <resources name="No name" />
+        <text>Correcto.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="818" editor-y="282">
+      <speak-player>
+        <resources name="No name" />
+        <text>La respuesta correcta era: que el recepcionista asuma que te presentas para el puesto de secretaria.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1134" editor-y="236">
+      <speak-player>
+        <resources name="No name" />
+        <text>Una forma habitual de sexismo es considerar que las mujeres no tienen la formación o el interés para presentarse a puestos de mayor cualificación.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Respondida0" />
+          <condition />
+          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Pregunta1Conversacion">
+    <dialogue-node nodeindex="0" editor-x="104" editor-y="40">
+      <speak-char idTarget="Luis">
+        <resources name="No name" />
+        <text>¡Hola! Ramón acaba de terminar su reunión.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Luis">
+        <resources name="No name" />
+        <text>Si quieres, puedo acompañarte a su despacho.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Creo que me ha confundido con otra persona.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Luis">
+        <resources name="No name" />
+        <text>Pensaba que era la pareja del CEO.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Luis">
+        <resources name="No name" />
+        <text>Bueno, pues nada. Suerte con esas entrevistas.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué te parece raro en esta escena?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="QuizFinal1" random="yes" keepShowing="yes" preListening="yes" editor-x="314" editor-y="56" x="314" y="56">
+      <speak-player correct="true">
+        <text>Que te confundan por la pareja del CEO.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Que no te pregunten a qué entrevista vienes.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Que se vaya sin despedirse.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="647" editor-y="9">
+      <speak-player>
+        <resources name="No name" />
+        <text>Correcto.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="646" editor-y="219">
+      <speak-player>
+        <resources name="No name" />
+        <text>La respuesta correcta era: que te confundan por la pareja del CEO.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="937" editor-y="94">
+      <speak-player>
+        <resources name="No name" />
+        <text>Una forma de sexismo es considerar que el único papel de las mujeres en las empresas STEM es el de visitar a sus parejas o familiares.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Respondida1" />
+          <condition />
+          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Pregunta2Conversacion">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Jaime">
+        <resources name="No name" />
+        <text>¿Qué problema va a haber? Es solo que cada vez tengo más claro que no me van a dar el puesto. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jaime">
+        <resources name="No name" />
+        <text>Mucha igualdad, pero luego todo es que si machismo, que si discriminación positiva,  que si tasas, que si ayudas a extranjeros, a minusválidos...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jaime">
+        <resources name="No name" />
+        <text>¿Y los que hemos estudiado pero somos normales? A la calle todos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jaime">
+        <resources name="No name" />
+        <text>Quedaros con el puesto. Paso de esperar.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué te parece raro en esta escena?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="QuizFinal2" random="yes" keepShowing="yes" preListening="yes" editor-x="327" editor-y="55" x="327" y="55">
+      <speak-player correct="true">
+        <text>Que el candidato piense que te van a contratar para mejorar la imagen de la empresa.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Que el candidato tenga tan poca confianza en sí mismo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Que el candidato se vaya antes de hacer la entrevista.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="656" editor-y="0">
+      <speak-player>
+        <resources name="No name" />
+        <text>Correcto.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="657" editor-y="194">
+      <speak-player>
+        <resources name="No name" />
+        <text>La respuesta correcta era: que el candidato piense que te van a contratar para mejorar la imagen de la empresa.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="937" editor-y="94">
+      <speak-player>
+        <resources name="No name" />
+        <text>Una de las formas de sexismo más habituales es pensar que una mujer ocupa un puesto de trabajo porque la empresa quiera mejorar su imagen, o porque haya que cumplir unos porcentajes de ocupación femenina.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Respondida2" />
+          <condition />
+          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Pregunta3Conversacion">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Antonio">
+        <resources name="No name" />
+        <text>Así no paso tanto tiempo en casa, y mi chica no tiene tanto tiempo para echarme la bronca.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antonio">
+        <resources name="No name" />
+        <text>No valgo para las tareas del hogar, a ella se le da mucho mejor.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antonio">
+        <resources name="No name" />
+        <text>Que yo intento ayudar, pero no sirvo para esto.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antonio">
+        <resources name="No name" />
+        <text>Seguro que en tu casa pasa lo mismo.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué te parece raro en esta escena?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="QuizFinal3" random="yes" keepShowing="yes" preListening="yes" editor-x="400" editor-y="44" x="400" y="44">
+      <speak-player>
+        <text>Que el candidato delegue su responsabilidad en la casa en su mujer.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Que el candidato disfrute yendo a entrevistas de trabajo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Que el candidato te cuente su vida sin conocerte de nada.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="796" editor-y="0">
+      <speak-player>
+        <resources name="No name" />
+        <text>Correcto.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="844" editor-y="220">
+      <speak-player>
+        <resources name="No name" />
+        <text>La respuesta correcta era: que el candidato delegue su responsabilidad en la casa en su mujer.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1272" editor-y="115">
+      <speak-player>
+        <resources name="No name" />
+        <text>Una forma habitual de sexismo es pensar que las tareas del hogar son responsabilidad de la mujer, y que si el hombre participa en ellas, está "ayudando" a la mujer.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Respondida3" />
+          <condition />
+          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Pregunta4Conversacion">
+    <dialogue-node nodeindex="0" editor-x="32" editor-y="41">
+      <speak-char idTarget="Hombre3">
+        <resources name="No name" />
+        <text>Se ha llenado esto de gente con la oferta de programador. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre2">
+        <resources name="No name" />
+        <text>Y ni una tía.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre3">
+        <resources name="No name" />
+        <text>Normal. ¿Cuántas conoces que sepan programar? Además, mejor así, que luego te distraes.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre2">
+        <resources name="No name" />
+        <text>Anda, volvamos a trabajar.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué te parece raro en esta escena?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="QuizFinal4" random="yes" keepShowing="yes" preListening="yes" editor-x="292" editor-y="35" x="292" y="35">
+      <speak-player>
+        <text>Que piensen que no hay mujeres que sepan programar.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Que haya tantos candidatos para el mismo puesto de trabajo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Que su descanso dure tan poco tiempo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="617" editor-y="11">
+      <speak-player>
+        <resources name="No name" />
+        <text>Correcto.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="634" editor-y="214">
+      <speak-player>
+        <resources name="No name" />
+        <text>La respuesta correcta era: que piensen que no hay mujeres que sepan programar.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="937" editor-y="94">
+      <speak-player>
+        <resources name="No name" />
+        <text>Una forma de sexismo es considerar que las mujeres no tienen conocimientos en los campos STEM, por falta de interés o capacidad.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Respondida4" />
+          <condition />
+          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Pregunta5Conversacion">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="QuizFinal5" random="yes" keepShowing="yes" preListening="yes" editor-x="331" editor-y="25" x="331" y="25">
+      <speak-player correct="true">
+        <text>WIP</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>WIP</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>WIP</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="724" editor-y="1">
+      <speak-player>
+        <resources name="No name" />
+        <text>Correcto.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="739" editor-y="195">
+      <speak-player>
+        <resources name="No name" />
+        <text>WIP</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1025" editor-y="96">
+      <speak-player>
+        <resources name="No name" />
+        <text>WIP</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Respondida5" />
+          <condition />
+          <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Pregunta6Conversacion">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Antes de continuar, me gustaría presentarnos. Yo soy Andrés y esta es Luisa.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Somos los encargados de las entrevistas de hoy.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Luisa, ¿te importaría ser tú quien tome las notas? Me encanta tu forma de escribir, tomas notas de forma mucho más organizada</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Ya hago yo las preguntas.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué te parece raro en esta escena?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="QuizFinal6" random="yes" keepShowing="yes" preListening="yes" editor-x="331" editor-y="25" x="331" y="25">
+      <speak-player correct="true">
+        <text>Que el rol de ella sea el de tomar notas y él se encargue de hacer la entrevista.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Que haya dos entrevistadores y no solo uno</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Que necesiten tomar notas de la entrevista si ya tienen tu CV</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="724" editor-y="1">
+      <speak-player>
+        <resources name="No name" />
+        <text>Correcto.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="724" editor-y="201">
+      <speak-player>
+        <resources name="No name" />
+        <text>La respuesta correcta era: que el rol de ella sea el de tomar notas y él se encargue de hacer la entrevista.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1025" editor-y="96">
+      <speak-player>
+        <resources name="No name" />
+        <text>Una forma de sexismo es delegar la responsabilidad del trabajo en el hombre, mientras que la mujer es la encargada de tomar notas, resumir el trabajo o escribir informes.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Respondida6" />
+          <condition />
+          <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Pregunta7Conversacion">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="QuizFinal7" random="yes" keepShowing="yes" preListening="yes" editor-x="331" editor-y="25" x="331" y="25">
+      <speak-player correct="true">
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="724" editor-y="1">
+      <speak-player>
+        <resources name="No name" />
+        <text>Correcto.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="724" editor-y="201">
+      <speak-player>
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1025" editor-y="96">
+      <speak-player>
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Respondida5" />
+          <condition />
+          <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Pregunta8Conversacion">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="QuizFinal8" random="yes" keepShowing="yes" preListening="yes" editor-x="331" editor-y="25" x="331" y="25">
+      <speak-player correct="true">
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="724" editor-y="1">
+      <speak-player>
+        <resources name="No name" />
+        <text>Correcto.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="724" editor-y="201">
+      <speak-player>
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1025" editor-y="96">
+      <speak-player>
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Respondida5" />
+          <condition />
+          <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Pregunta9Conversacion">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="QuizFinal9" random="yes" keepShowing="yes" preListening="yes" editor-x="331" editor-y="25" x="331" y="25">
+      <speak-player correct="true">
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="724" editor-y="1">
+      <speak-player>
+        <resources name="No name" />
+        <text>Correcto.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="724" editor-y="201">
+      <speak-player>
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1025" editor-y="96">
+      <speak-player>
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Respondida5" />
+          <condition />
+          <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -3507,4 +4404,332 @@
       </detailed>
     </description>
   </object>
+  <object id="Boton0" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/0.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="Respondida0" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Pregunta0" x="375" y="421" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="Pregunta0Conversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="Boton1" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/1.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="Respondida1" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Pregunta1" x="396" y="313" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="Pregunta1Conversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="Boton2" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/2.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="Respondida2" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Pregunta2" x="396" y="313" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="Pregunta2Conversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="Boton3" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/3.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="Respondida3" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Pregunta3" x="396" y="313" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="Pregunta3Conversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="Boton4" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/4.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="Respondida4" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Pregunta4" x="1024" y="920" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="Pregunta4Conversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="Boton5" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/5.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="Respondida5" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Pregunta5" x="1024" y="920" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="Pregunta5Conversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="Boton6" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/6.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="Respondida6" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Pregunta6" x="334" y="288" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="Pregunta6Conversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="Boton7" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/7.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="Respondida7" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Pregunta7" x="334" y="288" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="Pregunta7Conversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="Boton8" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/8.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="Respondida8" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Pregunta8" x="334" y="288" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="Pregunta8Conversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="Boton9" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/9.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="Respondida9" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Pregunta9" x="334" y="288" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="Pregunta9Conversacion" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="BotonIzquierda" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Left.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="BotonDerecha" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Right.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <atrezzoobject id="AtrezzoId">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Analyst.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
 </eAdventure>

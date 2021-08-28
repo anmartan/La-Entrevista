@@ -386,7 +386,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <scene id="Menu" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Menu" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -397,7 +397,8 @@
     <default-initial-position x="400" y="450" />
     <objects>
       <object-ref idTarget="BotonJugar" x="1025" y="975" scale="1.895833" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonCreditos" x="1025" y="1185" scale="1.895833" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonCreditos" x="1025" y="1185" scale="1.895833" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonPreguntas" x="1020" y="1342" scale="1.796053" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Introduccion0" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -588,16 +589,17 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/Menu.png" />
+      <asset type="background" uri="assets/background/MenuBlurred.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="-22" y="-14" width="2063" height="1382" hasInfluenceArea="no" idTarget="Menu" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
+    <objects>
+      <object-ref idTarget="BotonAtras" x="109" y="278" scale="0.15" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <atrezzo>
+      <atrezzo-ref idTarget="CreditosTexto" x="1236" y="1350" scale="1.161852" layer="1" />
+    </atrezzo>
   </scene>
   <scene id="Hall" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -1233,7 +1235,7 @@
       </active-area>
     </active-areas>
   </scene>
-  <scene id="PreguntasFinales" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="PreguntasFinales" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -1441,29 +1443,25 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Ahora que lo recuerdo, hace poco que me presenté a una candidatura. Fue bastante sencillo.</text>
+        <text>Tengo muchas ganas de empezar a trabajar, y demostrar lo que valgo.</text>
       </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>* Animación para hacer como que lo siguiente es un recuerdo *</text>
+        <text>Seguro que en internet encuentro alguna cosa interesante.</text>
       </speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PortalEmpleo0">
-    <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
+    <dialogue-node nodeindex="0" editor-x="162" editor-y="110">
       <speak-player>
         <resources name="No name" />
         <text>¿Qué formación tengo? Hmm, esa es fácil...</text>
       </speak-player>
       <condition />
       <child nodeindex="1" />
-      <effect>
-        <set-value var="ErroresPerfil" value="0" />
-        <condition />
-      </effect>
     </dialogue-node>
     <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="539" editor-y="89" x="539" y="89">
       <speak-player>
@@ -1509,12 +1507,13 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="883" editor-y="330">
-      <child nodeindex="3" />
-      <effect>
-        <increment var="ErroresPerfil" value="1" />
-        <condition />
-      </effect>
+    <dialogue-node nodeindex="4" editor-x="100" editor-y="437">
+      <speak-player>
+        <resources name="No name" />
+        <text>Parece que he hecho algo mal... No me deja continuar.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="0" />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PortalEmpleo1">
@@ -1570,12 +1569,13 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="883" editor-y="330">
-      <child nodeindex="3" />
-      <effect>
-        <increment var="ErroresPerfil" value="1" />
-        <condition />
-      </effect>
+    <dialogue-node nodeindex="4" editor-x="94" editor-y="447">
+      <speak-player>
+        <resources name="No name" />
+        <text>Vaya, parece que no hay ofertas. A lo mejor me he equivocado en algo...</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="0" />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PortalEmpleo1.5">
@@ -1631,12 +1631,13 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="721" editor-y="255">
-      <child nodeindex="3" />
-      <effect>
-        <increment var="ErroresPerfil" value="1" />
-        <condition />
-      </effect>
+    <dialogue-node nodeindex="4" editor-x="115" editor-y="430">
+      <speak-player>
+        <resources name="No name" />
+        <text>Si me preguntan en la entrevista, se van a dar cuenta de que es mentira. Vamos a ver...</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="0" />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PortalEmpleo2">
@@ -1648,7 +1649,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="365" editor-y="71" x="365" y="71">
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="290" editor-y="66" x="290" y="66">
       <speak-player>
         <text>[Recordar cosas sobre mí]</text>
         <resources name="No name" />
@@ -1674,7 +1675,7 @@
       <condition />
       <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="722" editor-y="23">
+    <dialogue-node nodeindex="2" editor-x="806" editor-y="13">
       <end-conversation>
         <effect>
           <trigger-cutscene idTarget="PerfilGenerico" />
@@ -1682,7 +1683,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="1058" editor-y="108">
+    <dialogue-node nodeindex="3" editor-x="794" editor-y="215">
       <end-conversation>
         <effect>
           <trigger-scene idTarget="Introduccion3" x="960" y="810" transitionTime="5" transitionType="5" />
@@ -1692,12 +1693,18 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="721" editor-y="255">
-      <child nodeindex="3" />
-      <effect>
-        <increment var="ErroresPerfil" value="1" />
-        <condition />
-      </effect>
+    <dialogue-node nodeindex="4" editor-x="98" editor-y="467">
+      <speak-player>
+        <resources name="No name" />
+        <text>Esto no es del todo cierto. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Venga, voy a poner mis puntos fuertes.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PortalEmpleo3">
@@ -1709,7 +1716,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="539" editor-y="89" x="539" y="89">
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="369" editor-y="72" x="369" y="72">
       <speak-player>
         <text>[Recordar cosas sobre mí]</text>
         <resources name="No name" />
@@ -1760,31 +1767,30 @@
       </condition>
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Introduccion0" x="960" y="810" transitionTime="5" transitionType="5" />
-          <condition>
-            <greater-equals-than var="ErroresPerfil" value="2" />
-          </condition>
-          <trigger-conversation idTarget="PortalEmpleo0" />
-          <condition>
-            <greater-equals-than var="ErroresPerfil" value="2" />
-          </condition>
           <trigger-scene idTarget="Introduccion4" x="960" y="810" transitionTime="5" transitionType="5" />
-          <condition>
-            <less-than var="ErroresPerfil" value="2" />
-          </condition>
+          <condition />
           <trigger-conversation idTarget="PortalEmpleo4" />
-          <condition>
-            <less-than var="ErroresPerfil" value="2" />
-          </condition>
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="847" editor-y="306">
-      <child nodeindex="3" />
-      <effect>
-        <increment var="ErroresPerfil" value="1" />
-        <condition />
-      </effect>
+    <dialogue-node nodeindex="4" editor-x="140" editor-y="445">
+      <speak-player>
+        <resources name="No name" />
+        <text>Esta información me parece bastante importante.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Voy a asegurarme de que lo he puesto bien.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué disponibilidad tengo?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PortalEmpleo4">
@@ -1856,22 +1862,17 @@
     <dialogue-node nodeindex="4" editor-x="965" editor-y="1">
       <speak-player>
         <resources name="No name" />
-        <text>* Animación para "salir" del recuerdo *</text>
+        <text>Parece que las entrevistas son esta misma semana.</text>
       </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Así encontré mi primera oferta de empleo.</text>
+        <text>Espero que todo vaya bien.</text>
       </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Ahora, es el momento de ir a la entrevista.</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>He estado practicando mucho, y nada me va a estropear esta oportunidad.</text>
+        <text>Llevo preparándome mucho tiempo, y nada me puede estropear esta oportunidad.</text>
       </speak-player>
       <condition />
       <end-conversation>
@@ -3477,7 +3478,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="600" editor-y="193">
+    <dialogue-node nodeindex="3" editor-x="607" editor-y="160">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>Genial. Con esto, hemos terminado la entrevista.</text>
@@ -3498,9 +3499,14 @@
         <text>De nuevo, nos gustaría agradecerte tu tiempo, y desearte un buen día.</text>
       </speak-char>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="601" editor-y="437">
+    <dialogue-node nodeindex="4" editor-x="614" editor-y="435">
       <end-conversation>
         <effect>
           <trigger-cutscene idTarget="PerfilPeriodista" />
@@ -4058,27 +4064,44 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Pregunta7Conversacion">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="37" editor-y="49">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Vamos a pasar a otro tipo de preguntas.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>¿Dónde te ves de aquí a cinco años?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Y al hilo de esta pregunta, ¿tienes pareja?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué te parece raro en esta escena?</text>
+      </speak-player>
+      <condition />
       <child nodeindex="1" />
     </dialogue-node>
     <option-node nodeindex="1" question="QuizFinal7" random="yes" keepShowing="yes" preListening="yes" editor-x="331" editor-y="25" x="331" y="25">
       <speak-player correct="true">
-        <text>
-        </text>
+        <text>Que te pidan información personal en una entrevista de trabajo.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>
-        </text>
+        <text>Que te pregunten por el futuro en una entrevista de trabajo.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="3" />
       <speak-player>
-        <text>
-        </text>
+        <text>Que no quieran saber el género de tu pareja</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -4095,8 +4118,7 @@
     <dialogue-node nodeindex="3" editor-x="724" editor-y="201">
       <speak-player>
         <resources name="No name" />
-        <text>
-        </text>
+        <text>La respuesta correcta era: que te pidan información personal en una entrevista de trabajo.</text>
       </speak-player>
       <condition />
       <child nodeindex="4" />
@@ -4104,13 +4126,12 @@
     <dialogue-node nodeindex="4" editor-x="1025" editor-y="96">
       <speak-player>
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Una de las formas de sexismo en las entrevistas de trabajo es preguntar a las mujeres si tienen pareja, o si quieren formar una familia. </text>
       </speak-player>
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="Respondida5" />
+          <activate flag="Respondida7" />
           <condition />
           <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
           <condition />
@@ -4119,27 +4140,49 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Pregunta8Conversacion">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="65" editor-y="32">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Déjame decirte que tienes una voz muy agradable, pero demasiado suave.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Me da miedo que no sepas hacerte valer ante tus compañeros.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>También creo que puedes aportar humanidad y calidez al equipo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Por cierto, ¿no serás de las que lloran bajo presión?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué te parece raro en esta escena?</text>
+      </speak-player>
+      <condition />
       <child nodeindex="1" />
     </dialogue-node>
     <option-node nodeindex="1" question="QuizFinal8" random="yes" keepShowing="yes" preListening="yes" editor-x="331" editor-y="25" x="331" y="25">
       <speak-player correct="true">
-        <text>
-        </text>
+        <text>Que tengan en cuenta lo agradable que eres para un puesto técnico.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>
-        </text>
+        <text>Que tengas que hablar con tus compañeros en las horas de trabajo.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="3" />
       <speak-player>
-        <text>
-        </text>
+        <text>Que el equipo necesite alguien aportando humanidad para trabajar correctamente. </text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -4156,8 +4199,7 @@
     <dialogue-node nodeindex="3" editor-x="724" editor-y="201">
       <speak-player>
         <resources name="No name" />
-        <text>
-        </text>
+        <text>La respuesta correcta era: que tengan en cuenta lo agradable que eres para un puesto técnico.</text>
       </speak-player>
       <condition />
       <child nodeindex="4" />
@@ -4165,13 +4207,12 @@
     <dialogue-node nodeindex="4" editor-x="1025" editor-y="96">
       <speak-player>
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Una forma de sexismo es considerar a las mujeres que presentan su candidatura para un puesto por sus cualidades, y no por su capacidad para desarrollar el trabajo.</text>
       </speak-player>
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="Respondida5" />
+          <activate flag="Respondida8" />
           <condition />
           <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
           <condition />
@@ -4181,26 +4222,43 @@
   </graph-conversation>
   <graph-conversation id="Pregunta9Conversacion">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>¡Ah! Casi lo olvido.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>¿Tienes algún familiar a tu cargo o tienes pensado tener hijos en los próximos años?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Ya sabes que a veces es difícil compatibilizar todo.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué te parece raro en esta escena?</text>
+      </speak-player>
+      <condition />
       <child nodeindex="1" />
     </dialogue-node>
     <option-node nodeindex="1" question="QuizFinal9" random="yes" keepShowing="yes" preListening="yes" editor-x="331" editor-y="25" x="331" y="25">
       <speak-player correct="true">
-        <text>
-        </text>
+        <text>Que asuman que serás la encargada de cuidar a los niños o personas mayores.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>
-        </text>
+        <text>Que casi se le olvide preguntar sobre este tema.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="3" />
       <speak-player>
-        <text>
-        </text>
+        <text>Que te pregunten por la compatibilización al final de la entrevista.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -4217,8 +4275,7 @@
     <dialogue-node nodeindex="3" editor-x="724" editor-y="201">
       <speak-player>
         <resources name="No name" />
-        <text>
-        </text>
+        <text>La respuesta correcta era: que asuman que serás la encargada de cuidar a los niños o personas mayores.</text>
       </speak-player>
       <condition />
       <child nodeindex="4" />
@@ -4226,13 +4283,12 @@
     <dialogue-node nodeindex="4" editor-x="1025" editor-y="96">
       <speak-player>
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Una forma de sexismo habitual en las entrevistas de trabajo es asumir que el cuidado de los hijos o personas dependientes es responsabilidad de la mujer, y que afectará al rendimiento laboral de la candidata.</text>
       </speak-player>
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="Respondida5" />
+          <activate flag="Respondida9" />
           <condition />
           <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
           <condition />
@@ -4718,9 +4774,53 @@
       </use>
     </actions>
   </object>
-  <atrezzoobject id="AtrezzoId">
+  <object id="BotonAtras" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/Analyst.png" />
+      <asset type="image" uri="assets/image/Left.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="Menu" x="1024" y="1023" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="BotonPreguntas" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/button_preguntas.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <atrezzoobject id="CreditosTexto">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Creditos.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>

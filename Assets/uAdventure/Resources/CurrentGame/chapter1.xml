@@ -262,10 +262,10 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <character id="Hombre1" behaviour="normal">
+  <character id="Rebeca" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/Hombre1Down.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/Mujer2Down.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -297,6 +297,37 @@
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/Mujer1Down.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Hombre1" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Hombre1Down.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -611,7 +642,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="no" x="42" y="16" width="253" height="478" hasInfluenceArea="no" idTarget="SalaEspera" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="5" not-effects="yes">
+      <exit rectangular="no" x="42" y="16" width="253" height="478" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="5" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <point x="223" y="180" />
         <point x="220" y="17" />
@@ -636,17 +667,42 @@
       <character-ref idTarget="Recepcionista" x="450" y="407" scale="0.2628161" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="SalaEspera" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Pasillo" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/SalaEspera.jpg" />
+      <asset type="background" uri="assets/background/Pasillo (1).png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="472" y="47" width="192" height="373" hasInfluenceArea="no" idTarget="SalaEntrevistas0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
+      <exit rectangular="yes" x="-82" y="-59" width="146" height="849" hasInfluenceArea="no" idTarget="SalaCafe" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <activate flag="SalaCafeVisitada" />
+          <condition />
+        </effect>
+      </exit>
+      <exit rectangular="yes" x="818" y="-28" width="402" height="614" hasInfluenceArea="no" idTarget="SalaEspera" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Luis" x="538" y="772" scale="0.5998735" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="SalaEspera" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Espera.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="787" y="24" width="273" height="555" hasInfluenceArea="no" idTarget="SalaEntrevistas0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="SalaCafeVisitada" />
@@ -656,19 +712,17 @@
           <condition />
         </not-effect>
       </exit>
-      <exit rectangular="yes" x="717" y="-37" width="94" height="487" hasInfluenceArea="no" idTarget="SalaCafe" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-61" y="-18" width="219" height="681" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
-        <effect>
-          <activate flag="SalaCafeVisitada" />
-          <condition />
-        </effect>
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Antonio" x="333" y="450" scale="0.4513716" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="Jaime" x="150" y="495" scale="0.3340161" orientation="2" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Luis" x="340" y="450" scale="0.3475394" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Antonio" x="502" y="688" scale="0.6694986" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Jaime" x="308" y="757" scale="0.4954306" orientation="2" layer="2" hasInfluenceArea="no" />
     </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="Puerta" x="913" y="633" scale="0.3415191" layer="0" />
+    </atrezzo>
   </scene>
   <scene id="SalaCafe" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -680,18 +734,22 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-167" y="-62" width="328" height="1376" hasInfluenceArea="no" idTarget="SalaEspera" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-167" y="-62" width="328" height="1376" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Hombre1" x="1659" y="1133" scale="1.4" orientation="2" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Mujer1" x="1412" y="1146" scale="1.306218" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre2" x="903" y="1120" scale="1" orientation="2" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre3" x="754" y="940" scale="0.7378676" orientation="2" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre1" x="2500" y="1349" scale="1.985096" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Mujer1" x="1684" y="1209" scale="1.843072" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre2" x="903" y="1120" scale="1" orientation="2" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre3" x="754" y="940" scale="0.7378676" orientation="2" layer="4" hasInfluenceArea="no" />
+      <character-ref idTarget="Rebeca" x="1488" y="1163" scale="1.966999" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
     <active-areas>
       <active-area id="ConversacionHombreHombre" rectangular="no" x="603" y="623" width="480" height="516" hasInfluenceArea="no" behaviour="first-action">
+        <condition>
+          <inactive flag="HombresEscuchados" />
+        </condition>
         <description>
           <name>
           </name>
@@ -717,7 +775,10 @@
         <point x="777" y="1012" />
         <point x="603" y="955" />
       </active-area>
-      <active-area id="ConversacionHombreMujer" rectangular="no" x="1283" y="460" width="524" height="674" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="ConversacionHombreMujer" rectangular="no" x="1302" y="250" width="524" height="927" hasInfluenceArea="no" behaviour="first-action">
+        <condition>
+          <inactive flag="MujeresEscuchadas" />
+        </condition>
         <description>
           <name>
           </name>
@@ -729,17 +790,17 @@
         <actions>
           <use needsGoTo="yes" keepDistance="35" not-effects="no">
             <effect>
-              <trigger-conversation idTarget="GrupoMujerHombresConversacion" />
+              <trigger-conversation idTarget="GrupoMujeresHombreConversacion" />
               <condition />
             </effect>
           </use>
         </actions>
-        <point x="1360" y="465" />
-        <point x="1705" y="460" />
-        <point x="1807" y="785" />
-        <point x="1763" y="1134" />
-        <point x="1354" y="1129" />
-        <point x="1283" y="744" />
+        <point x="1389" y="338" />
+        <point x="1714" y="250" />
+        <point x="1826" y="599" />
+        <point x="1767" y="1177" />
+        <point x="1412" y="1104" />
+        <point x="1302" y="558" />
       </active-area>
     </active-areas>
   </scene>
@@ -1235,40 +1296,50 @@
       </active-area>
     </active-areas>
   </scene>
+  <scene id="Espejo" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Espejo.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
   <scene id="PreguntasFinales" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/blur-photo.com_1628852890.jpg" />
+      <asset type="background" uri="assets/background/EspejoBlurred.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Boton1" x="925" y="478" scale="1" layer="5" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton3" x="614" y="854" scale="1" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton2" x="1451" y="494" scale="1" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton4" x="1176" y="855" scale="1" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonDerecha" x="1779" y="701" scale="0.25" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton0" x="376" y="462" scale="1" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton1" x="985" y="508" scale="1.066667" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton3" x="652" y="909" scale="1.066667" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton2" x="1546" y="525" scale="1.066667" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton4" x="1251" y="909" scale="1.066667" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonDerecha" x="1896" y="746" scale="0.2666667" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton0" x="399" y="491" scale="1.066667" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="PreguntasFinales1" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/blur-photo.com_1628852890.jpg" />
+      <asset type="background" uri="assets/background/EspejoBlurred.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Boton6" x="992" y="555" scale="1" layer="5" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton7" x="1540" y="559" scale="1" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton8" x="675" y="850" scale="1" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton9" x="1272" y="834" scale="1" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton5" x="464" y="531" scale="1" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonIzquierda" x="163" y="670" scale="0.25" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton6" x="1058" y="592" scale="1.066667" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton7" x="1642" y="596" scale="1.066667" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton8" x="720" y="906" scale="1.066667" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton9" x="1356" y="889" scale="1.066667" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton5" x="494" y="566" scale="1.066667" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonIzquierda" x="173" y="714" scale="0.2666667" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Pregunta0" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1347,8 +1418,9 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Hombre1" x="1474" y="2669" scale="5.5" orientation="2" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Mujer1" x="622" y="2892" scale="5.5" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre1" x="1758" y="2351" scale="4.702252" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Mujer1" x="1056" y="2543" scale="4.485393" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Rebeca" x="504" y="2677" scale="6.003794" orientation="2" layer="2" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta6" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1430,6 +1502,19 @@
     </documentation>
     <resources name="No name">
       <asset type="slides" uri="assets/animation/PerfilInformaticoSlides.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="CaminoCasa" start="no" idTarget="Espejo" destinyX="-2147483648" destinyY="2147483647" transitionTime="5" transitionType="5" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <effect>
+      <trigger-conversation idTarget="EspejoConversacion" />
+      <condition />
+    </effect>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/mins30.eaa.xml" />
     </resources>
     <name>
     </name>
@@ -1736,7 +1821,7 @@
       <condition />
       <child nodeindex="4" />
       <speak-player>
-        <text>De incorporación inmediata.</text>
+        <text>Para viajar.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -1750,21 +1835,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="1115" editor-y="157">
-      <speak-player>
-        <resources name="No name" />
-        <text>Parece que no ha encontrado ninguna oferta.</text>
-      </speak-player>
-      <condition>
-        <greater-equals-than var="ErroresPerfil" value="2" />
-      </condition>
-      <speak-player>
-        <resources name="No name" />
-        <text>Voy a revisar la información que me pedían.</text>
-      </speak-player>
-      <condition>
-        <greater-equals-than var="ErroresPerfil" value="2" />
-      </condition>
+    <dialogue-node nodeindex="3" editor-x="1019" editor-y="204">
       <end-conversation>
         <effect>
           <trigger-scene idTarget="Introduccion4" x="960" y="810" transitionTime="5" transitionType="5" />
@@ -2070,7 +2141,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Luis" x="1500" y="450" />
+          <move-npc idTarget="Luis" x="1500" y="772" />
           <condition />
         </effect>
       </end-conversation>
@@ -2167,7 +2238,7 @@
       <condition />
       <speak-char idTarget="Jaime">
         <resources name="No name" />
-        <text>Pero también están las tasas que cumplir, y las ayudas que dan a las empresas.</text>
+        <text>Pero también están las cuotas que cumplir, y las ayudas que dan a las empresas.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Jaime">
@@ -2177,7 +2248,7 @@
       <condition />
       <child nodeindex="6" />
     </dialogue-node>
-    <option-node nodeindex="6" question="JaimeTasas" random="yes" keepShowing="yes" preListening="yes" editor-x="1608" editor-y="123" x="1608" y="123">
+    <option-node nodeindex="6" question="JaimeCuotas" random="yes" keepShowing="yes" preListening="yes" editor-x="1608" editor-y="123" x="1608" y="123">
       <speak-player>
         <text>* No me gusta por dónde está yendo la conversación, voy a callarme. *</text>
         <resources name="No name" />
@@ -2199,27 +2270,7 @@
       <condition />
       <speak-char idTarget="Jaime">
         <resources name="No name" />
-        <text>Mucha igualdad, pero luego todo es que si machismo, que si discriminación positiva, que si tasas, que si ayudas a extranjeros, a minusválidos...</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="Jaime">
-        <resources name="No name" />
-        <text>Que si ahora quiero tres maricas en mi empresa.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="Jaime">
-        <resources name="No name" />
-        <text>Que si necesitamos dos niñas para el puesto.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="Jaime">
-        <resources name="No name" />
-        <text>Que si la imagen mejora al poner un moro...</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="Jaime">
-        <resources name="No name" />
-        <text>Las malditas tasas.</text>
+        <text>Mucha igualdad, pero luego todo es que si machismo, que si discriminación positiva, que si cuotas, que si ayudas a extranjeros, a minusválidos...</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Jaime">
@@ -2239,7 +2290,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Jaime" x="-250" y="495" />
+          <move-npc idTarget="Jaime" x="-250" y="757" />
           <condition />
         </effect>
       </end-conversation>
@@ -2487,7 +2538,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Antonio" x="1500" y="450" />
+          <move-npc idTarget="Antonio" x="1500" y="688" />
           <condition />
         </effect>
       </end-conversation>
@@ -2551,18 +2602,143 @@
           <condition />
           <move-npc idTarget="Hombre3" x="-250" y="940" />
           <condition />
+          <activate flag="HombresEscuchados" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="GrupoMujerHombresConversacion">
+  <graph-conversation id="GrupoMujeresHombreConversacion">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Rebeca">
+        <resources name="No name" />
+        <text>¿Cómo llevas el proyecto?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>La verdad es que estoy  teniendo algunos problemas para encontrar todos los números primos en una lista. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Rebeca">
+        <resources name="No name" />
+        <text>Lo primero que se me ocurre es que puedes utilizar la criba de Eratóstenes.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Rebeca">
+        <resources name="No name" />
+        <text>No es el  proceso más rápido, pero te aseguro que funciona.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>Supongo que sí, pero es verdad que puede llegar a ser demasiado lento.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>Seguiré pensando en otras soluciones, porque no creo que esa me valga.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="MujeresEscuchadas" />
+        <condition />
+        <move-npc idTarget="Hombre1" x="1830" y="1225" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="286" editor-y="57">
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>¡Ah! Mira, por ahí anda Carlos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>¡Hola, Carlos!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre1">
+        <resources name="No name" />
+        <text>¡Hey! ¿Qué tal, chicas? Casi no os veo. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre1">
+        <resources name="No name" />
+        <text>¿De qué estabais hablando?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>Pues le estaba comentando a Rebeca que no sé cómo encontrar todos los números primos en una lista.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre1">
+        <resources name="No name" />
+        <text>¡Ah!  ¡Qué interesante! ¿Conoces la criba de Eratóstenes?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre1">
+        <resources name="No name" />
+        <text>Para que tú lo entiendas, con ese algoritmo vas descartando todos los números que no son primos, y te quedan los primos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Rebeca">
+        <resources name="No name" />
+        <text>Eso le estaba comentando, pero parece que no es la solución que  buscaba.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>Bueno, estaba buscando  una segunda opinión.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre1">
+        <resources name="No name" />
+        <text>Pues parece que hemos pensado en lo mismo. Si lo que quieres es otra solución, a lo mejor Roberto te puede ayudar. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre1">
+        <resources name="No name" />
+        <text>Si quieres le pregunto y te comento lo que me diga.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>No, no hace falta. Voy a  probar tu solución, Carlos. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>Solo quería asegurarme de que la solución era válida.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre1">
+        <resources name="No name" />
+        <text>Si Rebeca te da una solución, seguramente sea mejor que la mía. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre1">
+        <resources name="No name" />
+        <text>Con todos los años que lleva trabajando aquí, sabe más que ninguno de nosotros.</text>
+      </speak-char>
+      <condition />
       <speak-player>
         <resources name="No name" />
-        <text>WIP: La conversación no existe todavía.</text>
+        <text>En fin, nos vemos en otro momento. Ya me contarás si te ha servido mi consejo.</text>
       </speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <move-npc idTarget="Mujer1" x="2500" y="1359" />
+          <condition />
+          <move-npc idTarget="Hombre1" x="2300" y="1359" />
+          <condition />
+          <move-npc idTarget="Rebeca" x="2750" y="1500" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Entrevista0">
@@ -3501,7 +3677,13 @@
       <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
+          <trigger-scene idTarget="SalaEspera" x="550" y="465" transitionTime="5" transitionType="5" />
+          <condition />
+          <speak-player>Ha sido... toda una experiencia.</speak-player>
+          <condition />
+          <speak-player>Debería volver a casa.</speak-player>
+          <condition />
+          <trigger-cutscene idTarget="CaminoCasa" />
           <condition />
         </effect>
       </end-conversation>
@@ -3517,6 +3699,26 @@
           <condition>
             <active flag="Software" />
           </condition>
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="EspejoConversacion">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>*Reflexión sobre la entrevista*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Ahora que lo pienso, ha habido algunos momentos raros, como...</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="PreguntasFinales" x="1024" y="864" transitionTime="0" transitionType="0" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -3928,23 +4130,53 @@
   </graph-conversation>
   <graph-conversation id="Pregunta5Conversacion">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>Tengo algunos problemas para encontrar todos los números primos en una lista. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre1">
+        <resources name="No name" />
+        <text>¿Conoces la criba de Eratóstenes?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Rebeca">
+        <resources name="No name" />
+        <text>Eso le estaba comentando, pero parece que no es la solución que  buscaba.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>Voy a probar tu solución, Carlos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hombre1">
+        <resources name="No name" />
+        <text>Si Rebeca te da una solución, seguramente sea mejor que la mía. Sabe más que ninguno de nosotros.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué te parece raro en esta escena?</text>
+      </speak-player>
+      <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="QuizFinal5" random="yes" keepShowing="yes" preListening="yes" editor-x="331" editor-y="25" x="331" y="25">
+    <option-node nodeindex="1" question="QuizFinal5" random="yes" keepShowing="yes" preListening="yes" editor-x="339" editor-y="49" x="339" y="49">
       <speak-player correct="true">
-        <text>WIP</text>
+        <text>Que la solución de Rebeca solo se tenga en cuenta cuando la comenta su compañero.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>WIP</text>
+        <text>Que la mujer no conozca ese algoritmo.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="3" />
       <speak-player>
-        <text>WIP</text>
+        <text>Que Rebeca lleve tanto tiempo trabajando en la empresa.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -3961,15 +4193,15 @@
     <dialogue-node nodeindex="3" editor-x="739" editor-y="195">
       <speak-player>
         <resources name="No name" />
-        <text>WIP</text>
+        <text>La respuesta correcta era: que la solución de Rebeca solo se tenga en cuenta cuando la comenta Carlos.</text>
       </speak-player>
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="1025" editor-y="96">
+    <dialogue-node nodeindex="4" editor-x="1138" editor-y="358">
       <speak-player>
         <resources name="No name" />
-        <text>WIP</text>
+        <text>Explicación que no he puesto porque no entiendo el formato que queremos.</text>
       </speak-player>
       <condition />
       <end-conversation>
@@ -4821,6 +5053,30 @@
   <atrezzoobject id="CreditosTexto">
     <resources name="No name">
       <asset type="image" uri="assets/image/Creditos.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Puerta">
+    <resources name="Cerrada">
+      <condition>
+        <inactive flag="SalaCafeVisitada" />
+      </condition>
+      <asset type="image" uri="assets/image/Closed.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="Abierta">
+      <condition>
+        <active flag="SalaCafeVisitada" />
+      </condition>
+      <asset type="image" uri="assets/image/Open.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>

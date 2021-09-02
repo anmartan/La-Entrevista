@@ -469,6 +469,39 @@
       </active-area>
     </active-areas>
   </scene>
+  <scene id="Introduccion0.5" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/On.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="PortalEmpleo" x="998" y="669" scale="0.9" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <active-areas>
+      <active-area id="Trabajo01-624" rectangular="yes" x="639" y="257" width="704" height="313" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <trigger-conversation idTarget="PortalEmpleo0.5" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
   <scene id="Introduccion1" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -1359,39 +1392,39 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/SalaEspera.jpg" />
+      <asset type="background" uri="assets/background/Pasillo (1).png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Luis" x="340" y="450" scale="0.3475394" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Luis" x="625" y="1238" scale="0.9884149" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta2" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/SalaEspera.jpg" />
+      <asset type="background" uri="assets/background/Espera.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Jaime" x="261" y="915" scale="0.9703918" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Jaime" x="433" y="1552" scale="1.713634" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta3" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/SalaEspera.jpg" />
+      <asset type="background" uri="assets/background/Espera.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Antonio" x="263" y="952" scale="1.729457" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Antonio" x="465" y="1339" scale="2.5" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta4" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1479,6 +1512,19 @@
       <character-ref idTarget="LuisaRRHH" x="460" y="467" scale="0.35" orientation="2" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
+  <slidescene id="PerfilIntroduccion" start="no" idTarget="Introduccion0.5" destinyX="-2147483648" destinyY="-2147483648" transitionTime="5" transitionType="5" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <effect>
+      <trigger-conversation idTarget="PortalEmpleo0.5" />
+      <condition />
+    </effect>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/PerfilInicial.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
   <slidescene id="PerfilGenerico" start="no" next="go-back" class="accesible" type="cutscene">
     <documentation>
     </documentation>
@@ -1540,49 +1586,63 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PortalEmpleo0">
-    <dialogue-node nodeindex="0" editor-x="162" editor-y="110">
+    <dialogue-node nodeindex="0" editor-x="36" editor-y="131">
       <speak-player>
         <resources name="No name" />
-        <text>¿Qué formación tengo? Hmm, esa es fácil...</text>
+        <text>Parece que hay que responder varias preguntas.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Menos mal que he preparado todo lo que puedo necesitar.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Me he hecho este currículum por si necesito usarlo. Por ejemplo...</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Qué formación tengo?</text>
       </speak-player>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
     <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="539" editor-y="89" x="539" y="89">
       <speak-player>
-        <text>[Recordar cosas sobre mí]</text>
+        <text>[Mirar mi CV]</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="2" />
-      <speak-player>
-        <text>Me he graduado en una carrera de Ciencias.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="3" />
-      <speak-player>
-        <text>Me he graduado en una carrera de Humanidades.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-      <speak-player>
-        <text>Tengo la E.S.O.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="879" editor-y="33">
+    <dialogue-node nodeindex="2" editor-x="965" editor-y="120">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="PerfilGenerico" />
+          <trigger-cutscene idTarget="PerfilIntroduccion" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="1142" editor-y="193">
+  </graph-conversation>
+  <graph-conversation id="PortalEmpleo0.5">
+    <dialogue-node nodeindex="0" editor-x="36" editor-y="131">
+      <speak-player>
+        <resources name="No name" />
+        <text>¡Ahí está! "Grado en STEM".</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Esta pregunta era fácil, pero puede que esto se complique.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Siempre que lo necesite, puedo mirar mi CV. ¡No quiero liarla!</text>
+      </speak-player>
+      <condition />
       <end-conversation>
         <effect>
           <trigger-scene idTarget="Introduccion1" x="960" y="810" transitionTime="5" transitionType="5" />
@@ -1591,14 +1651,6 @@
           <condition />
         </effect>
       </end-conversation>
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="100" editor-y="437">
-      <speak-player>
-        <resources name="No name" />
-        <text>Parece que he hecho algo mal... No me deja continuar.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="0" />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PortalEmpleo1">
@@ -1801,7 +1853,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="369" editor-y="72" x="369" y="72">
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="388" editor-y="28" x="388" y="28">
       <speak-player>
         <text>[Recordar cosas sobre mí]</text>
         <resources name="No name" />
@@ -1815,13 +1867,13 @@
       <condition />
       <child nodeindex="3" />
       <speak-player>
-        <text>Horaria.</text>
+        <text>Horaria, pero no me gusta viajar.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="4" />
       <speak-player>
-        <text>Para viajar.</text>
+        <text>Para viajar, pero por las tardes estoy ocupada.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -2630,6 +2682,15 @@
         <text>No es el  proceso más rápido, pero te aseguro que funciona.</text>
       </speak-char>
       <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="MujeresEscuchadas" />
+        <condition />
+        <move-npc idTarget="Hombre1" x="1830" y="1225" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="526" editor-y="30">
       <speak-char idTarget="Mujer1">
         <resources name="No name" />
         <text>Supongo que sí, pero es verdad que puede llegar a ser demasiado lento.</text>
@@ -2640,15 +2701,6 @@
         <text>Seguiré pensando en otras soluciones, porque no creo que esa me valga.</text>
       </speak-char>
       <condition />
-      <child nodeindex="1" />
-      <effect>
-        <activate flag="MujeresEscuchadas" />
-        <condition />
-        <move-npc idTarget="Hombre1" x="1830" y="1225" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="286" editor-y="57">
       <speak-char idTarget="Mujer1">
         <resources name="No name" />
         <text>¡Ah! Mira, por ahí anda Carlos.</text>
@@ -4594,7 +4646,7 @@
           <condition />
           <speak-player>Me han recomendado este portal de empleo varias veces.</speak-player>
           <condition />
-          <speak-player>Puedes meter tus aptitudes, y te recomienda ofertas que se ajustan a tu curriculum. Veamos...</speak-player>
+          <speak-player>Puedes meter tus aptitudes, y te recomienda ofertas que se ajustan a tu currículum. Veamos...</speak-player>
           <condition />
           <activate flag="PantallaEncendida" />
           <condition />
@@ -4738,7 +4790,7 @@
           <inactive flag="Respondida1" />
         </condition>
         <effect>
-          <trigger-scene idTarget="Pregunta1" x="396" y="313" transitionTime="5" transitionType="5" />
+          <trigger-scene idTarget="Pregunta1" x="640" y="540" transitionTime="5" transitionType="5" />
           <condition />
           <trigger-conversation idTarget="Pregunta1Conversacion" />
           <condition />

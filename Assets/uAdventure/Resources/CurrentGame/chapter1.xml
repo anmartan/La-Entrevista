@@ -417,7 +417,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <scene id="Menu" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Menu" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -428,7 +428,8 @@
     <default-initial-position x="400" y="450" />
     <objects>
       <object-ref idTarget="BotonJugar" x="1025" y="975" scale="1.895833" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonCreditos" x="1025" y="1185" scale="1.895833" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonCreditos" x="1025" y="1185" scale="1.895833" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonPreguntas" x="1028" y="1349" scale="1.796053" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Introduccion0" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -699,7 +700,7 @@
       <character-ref idTarget="Recepcionista" x="450" y="407" scale="0.2628161" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Pasillo" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Pasillo" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -737,7 +738,7 @@
       <exit rectangular="yes" x="787" y="24" width="273" height="555" hasInfluenceArea="no" idTarget="SalaEntrevistas0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
-          <active flag="SalaCafeVisitada" />
+          <greater-equals-than var="PersonajesHablados" value="4" />
         </condition>
         <not-effect>
           <speak-player>*Todavía no es la hora que me habían indicado. Podría ver qué más cosas hay por el edificio. *</speak-player>
@@ -1661,7 +1662,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="476" editor-y="80" x="476" y="80">
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="485" editor-y="31" x="485" y="31">
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
@@ -1675,7 +1676,7 @@
       <condition />
       <child nodeindex="3" />
       <speak-player>
-        <text>Inglés, nivel C1</text>
+        <text>Inglés, nivel C1.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -2028,7 +2029,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="538" editor-y="37" x="538" y="37">
+    <option-node nodeindex="1" question="RecepcionistaEntrevista" keepShowing="yes" preListening="yes" editor-x="538" editor-y="37" x="538" y="37">
       <speak-player>
         <text>Perdón, ¿cómo dice?</text>
         <resources name="No name" />
@@ -2056,7 +2057,7 @@
       <condition />
       <speak-char idTarget="Recepcionista">
         <resources name="No name" />
-        <text>Las entrevistas para secretaria son en la cuarta planta, como le decía.</text>
+        <text>Las entrevistas para auxiliar administrativo son en la cuarta planta, como le decía.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Recepcionista">
@@ -2343,6 +2344,12 @@
         <effect>
           <move-npc idTarget="Jaime" x="-2500" y="692" />
           <condition />
+          <increment var="PersonajesHablados" value="1" />
+          <condition />
+          <trigger-conversation idTarget="HoraEntrevista" />
+          <condition>
+            <greater-equals-than var="PersonajesHablados" value="4" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -2540,7 +2547,7 @@
       <condition />
       <child nodeindex="15" />
     </option-node>
-    <dialogue-node nodeindex="14" editor-x="3177" editor-y="45">
+    <dialogue-node nodeindex="14" editor-x="3125" editor-y="41">
       <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>Que yo intento ayudar, pero no sirvo para esto.</text>
@@ -2591,6 +2598,12 @@
         <effect>
           <move-npc idTarget="Antonio" x="1500" y="688" />
           <condition />
+          <increment var="PersonajesHablados" value="1" />
+          <condition />
+          <trigger-conversation idTarget="HoraEntrevista" />
+          <condition>
+            <greater-equals-than var="PersonajesHablados" value="4" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -2655,17 +2668,32 @@
           <condition />
           <activate flag="HombresEscuchados" />
           <condition />
+          <increment var="PersonajesHablados" value="1" />
+          <condition />
+          <trigger-conversation idTarget="HoraEntrevista" />
+          <condition>
+            <greater-equals-than var="PersonajesHablados" value="4" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="GrupoMujeresHombreConversacion">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="63" editor-y="52">
       <speak-char idTarget="Rebeca">
         <resources name="No name" />
         <text>¿Cómo llevas el proyecto?</text>
       </speak-char>
       <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="MujeresEscuchadas" />
+        <condition />
+        <move-npc idTarget="Hombre1" x="1915" y="1237" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="390" editor-y="46">
       <speak-char idTarget="Mujer1">
         <resources name="No name" />
         <text>La verdad es que estoy  teniendo algunos problemas para encontrar todos los números primos en una lista. </text>
@@ -2681,15 +2709,9 @@
         <text>No es el  proceso más rápido, pero te aseguro que funciona.</text>
       </speak-char>
       <condition />
-      <child nodeindex="1" />
-      <effect>
-        <activate flag="MujeresEscuchadas" />
-        <condition />
-        <move-npc idTarget="Hombre1" x="1915" y="1237" />
-        <condition />
-      </effect>
+      <child nodeindex="2" />
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="526" editor-y="30">
+    <dialogue-node nodeindex="2" editor-x="667" editor-y="20">
       <speak-char idTarget="Mujer1">
         <resources name="No name" />
         <text>Supongo que sí, pero es verdad que puede llegar a ser demasiado lento.</text>
@@ -2788,8 +2810,29 @@
           <condition />
           <move-npc idTarget="Rebeca" x="27500" y="1500" />
           <condition />
+          <increment var="PersonajesHablados" value="1" />
+          <condition />
+          <trigger-conversation idTarget="HoraEntrevista" />
+          <condition>
+            <greater-equals-than var="PersonajesHablados" value="4" />
+          </condition>
         </effect>
       </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="HoraEntrevista">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Vaya, parece que ya es la hora de hacer la entrevista.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Mejor será que entre cuanto antes.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Entrevista0">
@@ -3575,7 +3618,7 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Entrevista10">
-    <dialogue-node nodeindex="0" editor-x="20" editor-y="196">
+    <dialogue-node nodeindex="0" editor-x="0" editor-y="174">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>Ya por último, quiero comentarte que este es un trabajo muy exigente.</text>
@@ -3588,12 +3631,12 @@
       <condition />
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>¿No serás de estas personas que lloran bajo presión?</text>
+        <text>¿No serás de estas personas que se derrumban al trabajar bajo presión?</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="RRHHLlorar" keepShowing="yes" preListening="yes" editor-x="286" editor-y="218" x="286" y="218">
+    <option-node nodeindex="1" question="RRHHDerrumbarse" keepShowing="yes" preListening="yes" editor-x="286" editor-y="218" x="286" y="218">
       <speak-player>
         <text>Pero, ¿esto a qué viene?</text>
         <resources name="No name" />
@@ -3889,7 +3932,7 @@
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="1128" editor-y="189">
+    <dialogue-node nodeindex="4" editor-x="1237" editor-y="123">
       <speak-player>
         <resources name="No name" />
         <text>¡Auxiliar administrativo, dice!</text>
@@ -3897,7 +3940,7 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Después de tantos años estudiando Informática, me confunden con una secretaria.</text>
+        <text>Tantos años estudiando Informática, y no se ha planteado que pueda dedicarme a un puesto técnico.</text>
       </speak-player>
       <condition />
       <speak-player>
@@ -3910,6 +3953,8 @@
           <activate flag="Respondida0" />
           <condition />
           <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+          <increment var="PreguntasRespondidas" value="1" />
           <condition />
         </effect>
       </end-conversation>
@@ -4011,6 +4056,8 @@
           <condition />
           <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
           <condition />
+          <increment var="PreguntasRespondidas" value="1" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4100,6 +4147,8 @@
           <activate flag="Respondida2" />
           <condition />
           <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+          <increment var="PreguntasRespondidas" value="1" />
           <condition />
         </effect>
       </end-conversation>
@@ -4201,6 +4250,8 @@
           <condition />
           <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
           <condition />
+          <increment var="PreguntasRespondidas" value="1" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4300,6 +4351,8 @@
           <activate flag="Respondida4" />
           <condition />
           <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+          <increment var="PreguntasRespondidas" value="1" />
           <condition />
         </effect>
       </end-conversation>
@@ -4411,6 +4464,8 @@
           <condition />
           <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
           <condition />
+          <increment var="PreguntasRespondidas" value="1" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4511,6 +4566,8 @@
           <condition />
           <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
           <condition />
+          <increment var="PreguntasRespondidas" value="1" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4601,6 +4658,8 @@
           <condition />
           <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
           <condition />
+          <increment var="PreguntasRespondidas" value="1" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4624,7 +4683,7 @@
       <condition />
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Por cierto, ¿no serás de las que lloran bajo presión?</text>
+        <text>Por cierto, ¿no serás de las que se derrumban bajo presión?</text>
       </speak-char>
       <condition />
       <speak-player>
@@ -4677,7 +4736,7 @@
     <dialogue-node nodeindex="4" editor-x="960" editor-y="97">
       <speak-player>
         <resources name="No name" />
-        <text>¿Que si lloro bajo presión? ¿Que tengo una voz "suave"? No tengo comentarios.</text>
+        <text>¿Que si me derrumbo bajo presión? ¿Que tengo una voz "suave"? No tengo comentarios.</text>
       </speak-player>
       <condition />
       <speak-player>
@@ -4695,6 +4754,8 @@
           <activate flag="Respondida8" />
           <condition />
           <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+          <increment var="PreguntasRespondidas" value="1" />
           <condition />
         </effect>
       </end-conversation>
@@ -4726,7 +4787,7 @@
     </dialogue-node>
     <option-node nodeindex="1" question="QuizFinal9" random="yes" keepShowing="yes" preListening="yes" editor-x="331" editor-y="25" x="331" y="25">
       <speak-player correct="true">
-        <text>Que asuman que serás la encargada de cuidar a tus familiares o personas mayores.</text>
+        <text>Que asuman que serás la encargada de cuidar a tus familiares y personas mayores.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -4756,7 +4817,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="724" editor-y="201">
+    <dialogue-node nodeindex="3" editor-x="725" editor-y="213">
       <speak-player>
         <resources name="No name" />
         <text>La respuesta correcta era: que asuman que serás la encargada de cuidar a los niños o personas mayores.</text>
@@ -4780,6 +4841,8 @@
           <activate flag="Respondida9" />
           <condition />
           <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+          <increment var="PreguntasRespondidas" value="1" />
           <condition />
         </effect>
       </end-conversation>
@@ -5409,7 +5472,7 @@
   </object>
   <object id="BotonIzquierda" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/Left.png" />
+      <asset type="image" uri="assets/image/LeftArrow.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -5431,7 +5494,7 @@
   </object>
   <object id="BotonDerecha" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/Right.png" />
+      <asset type="image" uri="assets/image/RightArrow.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -5453,7 +5516,7 @@
   </object>
   <object id="BotonAtras" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/Left.png" />
+      <asset type="image" uri="assets/image/LeftArrow.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -5512,14 +5575,14 @@
   <atrezzoobject id="Puerta">
     <resources name="Cerrada">
       <condition>
-        <inactive flag="SalaCafeVisitada" />
+        <less-than var="PersonajesHablados" value="4" />
       </condition>
       <asset type="image" uri="assets/image/Closed.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <resources name="Abierta">
       <condition>
-        <active flag="SalaCafeVisitada" />
+        <greater-equals-than var="PersonajesHablados" value="4" />
       </condition>
       <asset type="image" uri="assets/image/Open.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -5533,4 +5596,26 @@
       </detailed>
     </description>
   </atrezzoobject>
+  <completable id="EsperaEntrevista" repeatable="false" type="completable">
+    <start-milestone type="SCENE" targetId="Menu" />
+    <end-milestone type="SCENE" targetId="SalaEntrevistas0" />
+    <progress type="SUM" />
+    <score type="VARIABLE" method="SINGLE" id="Score" />
+  </completable>
+  <completable id="Entrevista" repeatable="false" type="completable">
+    <start-milestone type="SCENE" targetId="SalaEntrevistas0" />
+    <end-milestone type="SCENE" targetId="CaminoCasa" />
+    <progress type="SUM" />
+    <score type="VARIABLE" method="SINGLE" id="Score" />
+  </completable>
+  <completable id="PreguntasFinalesAnalytics" repeatable="false" type="completable">
+    <start-milestone type="SCENE" targetId="Espejo" />
+    <end-milestone type="CONDITION">
+      <condition>
+        <equals var="PreguntasRespondidas" value="10" />
+      </condition>
+    </end-milestone>
+    <progress type="SUM" />
+    <score type="VARIABLE" method="SINGLE" id="Score" />
+  </completable>
 </eAdventure>

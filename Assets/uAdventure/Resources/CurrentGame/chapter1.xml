@@ -417,7 +417,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <scene id="Menu" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Menu" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -700,7 +700,7 @@
       <character-ref idTarget="Recepcionista" x="450" y="407" scale="0.2628161" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Pasillo" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Pasillo" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -712,10 +712,6 @@
     <exits>
       <exit rectangular="yes" x="-82" y="-59" width="146" height="849" hasInfluenceArea="no" idTarget="SalaCafe" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
-        <effect>
-          <activate flag="SalaCafeVisitada" />
-          <condition />
-        </effect>
       </exit>
       <exit rectangular="yes" x="818" y="-28" width="402" height="614" hasInfluenceArea="no" idTarget="SalaEspera" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
@@ -3857,7 +3853,12 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Bueno, él y todos, en general. Menudo día. No me puedo creer que haya escuchado cosas como estas...</text>
+        <text>Bueno, él y todos, en general. Menudo día. No me puedo creer que haya escuchado tantas cosas.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>A ver si soy capaz de acordarme de todas...</text>
       </speak-player>
       <condition />
       <end-conversation>
@@ -3956,6 +3957,14 @@
           <condition />
           <increment var="PreguntasRespondidas" value="1" />
           <condition />
+          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
+          <trigger-conversation idTarget="ReflexionFinal" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4058,6 +4067,14 @@
           <condition />
           <increment var="PreguntasRespondidas" value="1" />
           <condition />
+          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
+          <trigger-conversation idTarget="ReflexionFinal" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4150,6 +4167,14 @@
           <condition />
           <increment var="PreguntasRespondidas" value="1" />
           <condition />
+          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
+          <trigger-conversation idTarget="ReflexionFinal" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4252,6 +4277,14 @@
           <condition />
           <increment var="PreguntasRespondidas" value="1" />
           <condition />
+          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
+          <trigger-conversation idTarget="ReflexionFinal" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4354,6 +4387,14 @@
           <condition />
           <increment var="PreguntasRespondidas" value="1" />
           <condition />
+          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
+          <trigger-conversation idTarget="ReflexionFinal" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4466,6 +4507,14 @@
           <condition />
           <increment var="PreguntasRespondidas" value="1" />
           <condition />
+          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
+          <trigger-conversation idTarget="ReflexionFinal" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4568,6 +4617,14 @@
           <condition />
           <increment var="PreguntasRespondidas" value="1" />
           <condition />
+          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
+          <trigger-conversation idTarget="ReflexionFinal" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4660,6 +4717,14 @@
           <condition />
           <increment var="PreguntasRespondidas" value="1" />
           <condition />
+          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
+          <trigger-conversation idTarget="ReflexionFinal" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4757,6 +4822,14 @@
           <condition />
           <increment var="PreguntasRespondidas" value="1" />
           <condition />
+          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
+          <trigger-conversation idTarget="ReflexionFinal" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4844,6 +4917,49 @@
           <condition />
           <increment var="PreguntasRespondidas" value="1" />
           <condition />
+          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
+          <trigger-conversation idTarget="ReflexionFinal" />
+          <condition>
+            <greater-equals-than var="PreguntasRespondidas" value="10" />
+          </condition>
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ReflexionFinal">
+    <dialogue-node nodeindex="0" editor-x="66" editor-y="48">
+      <speak-player>
+        <resources name="No name" />
+        <text>Vaya día me ha tocado vivir.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Tengo que reconocer que no es lo más habitual encontrar todas estas situaciones, pero cuando pasan...</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Aunque la gente no se dé cuenta, los comentarios que hacemos todos los días pueden ser sexistas.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Por eso es tan importante pensar en lo que estamos diciendo, y corregir los comentarios que sean discriminatorios.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Las mujeres merecemos el mismo respeto que los hombres, y somos capaces de conseguir lo mismo que ellos.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Creditos" x="1024" y="1023" transitionTime="2500" transitionType="5" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4867,6 +4983,62 @@
           <trigger-scene idTarget="Introduccion0" x="960" y="810" transitionTime="5" transitionType="5" />
           <condition />
           <trigger-conversation idTarget="IntroduccionConversacion" />
+          <condition />
+          <deactivate flag="0Correcto" />
+          <condition />
+          <deactivate flag="1Correcto" />
+          <condition />
+          <deactivate flag="2Correcto" />
+          <condition />
+          <deactivate flag="3Correcto" />
+          <condition />
+          <deactivate flag="4Correcto" />
+          <condition />
+          <deactivate flag="5Correcto" />
+          <condition />
+          <deactivate flag="6Correcto" />
+          <condition />
+          <deactivate flag="7Correcto" />
+          <condition />
+          <deactivate flag="8Correcto" />
+          <condition />
+          <deactivate flag="9Correcto" />
+          <condition />
+          <deactivate flag="HombresEscuchados" />
+          <condition />
+          <deactivate flag="MujeresEscuchadas" />
+          <condition />
+          <deactivate flag="PantallaEncendida" />
+          <condition />
+          <deactivate flag="PorteroHablado" />
+          <condition />
+          <deactivate flag="Software" />
+          <condition />
+          <deactivate flag="Respondida0" />
+          <condition />
+          <deactivate flag="Respondida1" />
+          <condition />
+          <deactivate flag="Respondida2" />
+          <condition />
+          <deactivate flag="Respondida3" />
+          <condition />
+          <deactivate flag="Respondida4" />
+          <condition />
+          <deactivate flag="Respondida5" />
+          <condition />
+          <deactivate flag="Respondida6" />
+          <condition />
+          <deactivate flag="Respondida7" />
+          <condition />
+          <deactivate flag="Respondida8" />
+          <condition />
+          <deactivate flag="Respondida9" />
+          <condition />
+          <set-value var="PersonajesHablados" value="0" />
+          <condition />
+          <set-value var="PreguntasRespondidas" value="0" />
+          <condition />
+          <set-value var="Score" value="0" />
           <condition />
         </effect>
       </use>

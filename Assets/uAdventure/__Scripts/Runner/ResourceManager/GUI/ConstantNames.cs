@@ -29,7 +29,7 @@ namespace uAdventure.Runner
                     //################# SPANISH #################
 
                     Lang spanish = new Lang();
-                    spanish.Actions = new string[] { "Examinar", "Agarrar", "Dar a", "Usar con", "Usar", "Personalizada", "Interacción Personalizada", "Hablar con", "Arrastrar a" };
+                    spanish.Actions = new string[] { "Examinar", "Agarrar", "Dar a", "Usar con", "Usar", "Personalizada", "Interacción Personalizada", "Hablar", "Arrastrar a" };
 
                     languages.Add("ES", spanish);
 

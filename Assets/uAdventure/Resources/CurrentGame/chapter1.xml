@@ -34,7 +34,7 @@
   <character id="Recepcionista" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/portero.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/RecepcionistaAnim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -85,7 +85,7 @@
   <character id="Luis" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/LuisLookingDown.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/LuisAnim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -124,7 +124,7 @@
   <character id="Antonio" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/hombreBorde.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/AntonioAnim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -163,7 +163,7 @@
   <character id="Jaime" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/hombreNoHabla.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/JaimeAnim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -202,8 +202,8 @@
   </character>
   <character id="AndresRRHH" behaviour="normal">
     <resources name="No name">
-      <asset type="standup" uri="assets/animation/recursosHumanosDePie.eaa.xml" />
-      <asset type="standdown" uri="assets/animation/recursosHumanosSentado.eaa.xml" />
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/AndresAnim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -230,11 +230,19 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="EntrevistaIntro" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="LuisaRRHH" behaviour="normal">
     <resources name="No name">
-      <asset type="standup" uri="assets/animation/LuisaUp.eaa.xml" />
-      <asset type="standdown" uri="assets/animation/LuisaUp.eaa.xml" />
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/LuisaAnim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -261,11 +269,19 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="EntrevistaIntro" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="Rebeca" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/Mujer2Down.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/RebecaAnim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -296,7 +312,7 @@
   <character id="Mujer1" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/Mujer1Down.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/Mujer1Anim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -324,10 +340,10 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <character id="Hombre1" behaviour="normal">
+  <character id="Carlos" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/Hombre1Down.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/CarlosAnim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -358,7 +374,7 @@
   <character id="Hombre2" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/Hombre2Down.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/Hombre2Anim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -389,7 +405,7 @@
   <character id="Hombre3" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/Hombew3Down.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/Hombre3Anim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -428,11 +444,11 @@
     <default-initial-position x="400" y="450" />
     <objects>
       <object-ref idTarget="BotonJugar" x="1025" y="975" scale="1.895833" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonCreditos" x="1025" y="1185" scale="1.895833" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonPreguntas" x="1028" y="1349" scale="1.796053" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonCreditos" x="1025" y="1185" scale="1.895833" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonPreguntas" x="1028" y="1349" scale="1.796053" layer="2" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Introduccion0" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Introduccion" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -441,14 +457,10 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="PortalEmpleo" x="998" y="669" scale="0.9" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="IntroOff" x="960" y="1080" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
     <active-areas>
-      <active-area id="Trabajo0" rectangular="yes" x="639" y="257" width="704" height="313" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="AreaPantalla" rectangular="yes" x="577" y="182" width="831" height="536" hasInfluenceArea="no" behaviour="first-action">
         <condition>
-          <active flag="PantallaEncendida" />
+          <inactive flag="PantallaEncendida" />
         </condition>
         <description>
           <name>
@@ -461,180 +473,27 @@
         <actions>
           <use needsGoTo="yes" keepDistance="35" not-effects="no">
             <effect>
-              <trigger-conversation idTarget="PortalEmpleo0" />
+              <activate flag="PantallaEncendida" />
+              <condition />
+              <trigger-scene idTarget="Introduccion" x="960" y="810" transitionTime="5" transitionType="5" />
+              <condition />
+              <trigger-conversation idTarget="PortalEmpleoIntro" />
               <condition />
             </effect>
           </use>
         </actions>
       </active-area>
     </active-areas>
+    <atrezzo>
+      <atrezzo-ref idTarget="PortalEmpleo" x="998" y="593" scale="0.65" layer="0" />
+      <atrezzo-ref idTarget="PantallaOff" x="960" y="1080" scale="1" layer="1">
+        <condition>
+          <inactive flag="PantallaEncendida" />
+        </condition>
+      </atrezzo-ref>
+    </atrezzo>
   </scene>
-  <scene id="Introduccion0.5" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/On.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="PortalEmpleo" x="998" y="669" scale="0.9" layer="0" hasInfluenceArea="no" />
-    </objects>
-    <active-areas>
-      <active-area id="Trabajo01-624" rectangular="yes" x="639" y="257" width="704" height="313" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="PortalEmpleo0.5" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="Introduccion1" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/On.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="PortalEmpleo" x="998" y="669" scale="0.9" layer="0" hasInfluenceArea="no" />
-    </objects>
-    <active-areas>
-      <active-area id="Trabajo01" rectangular="yes" x="639" y="257" width="704" height="313" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="PortalEmpleo1" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="Introduccion1.5" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/On.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="PortalEmpleo" x="998" y="669" scale="0.9" layer="0" hasInfluenceArea="no" />
-    </objects>
-    <active-areas>
-      <active-area id="Trabajo15" rectangular="yes" x="639" y="257" width="704" height="313" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="PortalEmpleo1.5" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="Introduccion2" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/On.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="PortalEmpleo" x="998" y="669" scale="0.9" layer="0" hasInfluenceArea="no" />
-    </objects>
-    <active-areas>
-      <active-area id="Trabajo02" rectangular="yes" x="639" y="257" width="704" height="313" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="PortalEmpleo2" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="Introduccion3" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/On.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="PortalEmpleo" x="998" y="669" scale="0.9" layer="0" hasInfluenceArea="no" />
-    </objects>
-    <active-areas>
-      <active-area id="Trabajo03" rectangular="yes" x="639" y="257" width="704" height="313" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="PortalEmpleo3" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="Introduccion4" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="IntroduccionOfertas" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -646,8 +505,14 @@
     <objects>
       <object-ref idTarget="OpcionInformatica" x="775" y="694" scale="0.2601764" layer="2" hasInfluenceArea="no" />
       <object-ref idTarget="OpcionAnalista" x="1206" y="693" scale="0.2363486" layer="1" hasInfluenceArea="no" />
-      <object-ref idTarget="IntroOn" x="960" y="1080" scale="1" layer="0" hasInfluenceArea="no" />
     </objects>
+    <atrezzo>
+      <atrezzo-ref idTarget="PantallaOn" x="960" y="1080" scale="1" layer="0">
+        <condition>
+          <active flag="PantallaEncendida" />
+        </condition>
+      </atrezzo-ref>
+    </atrezzo>
   </scene>
   <scene id="Creditos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -691,7 +556,7 @@
           <condition />
         </post-effect>
         <not-effect>
-          <speak-player>&lt;&lt;Creo que debería preguntar antes de subir.&gt;&gt;</speak-player>
+          <speak-player>Creo que debería preguntar antes de subir.</speak-player>
           <condition />
         </not-effect>
       </exit>
@@ -731,7 +596,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="787" y="24" width="273" height="555" hasInfluenceArea="no" idTarget="SalaEntrevistas0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
+      <exit rectangular="yes" x="787" y="24" width="273" height="555" hasInfluenceArea="no" idTarget="SalaEntrevistas" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <greater-equals-than var="PersonajesHablados" value="4" />
@@ -768,7 +633,7 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Hombre1" x="2649" y="1550" scale="1.380869" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Carlos" x="2649" y="1550" scale="1.380869" orientation="2" layer="1" hasInfluenceArea="no" />
       <character-ref idTarget="Mujer1" x="1732" y="1235" scale="1.308521" orientation="2" layer="2" hasInfluenceArea="no" />
       <character-ref idTarget="Hombre2" x="903" y="1120" scale="1" orientation="2" layer="3" hasInfluenceArea="no" />
       <character-ref idTarget="Hombre3" x="754" y="940" scale="0.7378676" orientation="2" layer="4" hasInfluenceArea="no" />
@@ -833,7 +698,7 @@
       </active-area>
     </active-areas>
   </scene>
-  <scene id="SalaEntrevistas0" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="SalaEntrevistas" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -842,488 +707,10 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
     <characters>
-      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="AndresRRHH" x="248" y="368" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="269" y="246" scale="0.07329915" orientation="2" layer="1" hasInfluenceArea="no" />
     </characters>
-    <active-areas>
-      <active-area id="EntrevistaArea" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="Entrevista0" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-        <point x="159" y="167" />
-        <point x="287" y="159" />
-        <point x="307" y="231" />
-        <point x="151" y="278" />
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="SalaEntrevistas1" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Entrevista.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
-    <characters>
-      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
-    </characters>
-    <active-areas>
-      <active-area id="EntrevistaArea1" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="Entrevista1" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-        <point x="159" y="167" />
-        <point x="287" y="159" />
-        <point x="307" y="231" />
-        <point x="151" y="278" />
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="SalaEntrevistas2" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Entrevista.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
-    <characters>
-      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
-    </characters>
-    <active-areas>
-      <active-area id="EntrevistaArea2" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="Entrevista2" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-        <point x="159" y="167" />
-        <point x="287" y="159" />
-        <point x="307" y="231" />
-        <point x="151" y="278" />
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="SalaEntrevistas3" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Entrevista.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
-    <characters>
-      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
-    </characters>
-    <active-areas>
-      <active-area id="EntrevistaArea3" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="Entrevista3" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-        <point x="159" y="167" />
-        <point x="287" y="159" />
-        <point x="307" y="231" />
-        <point x="151" y="278" />
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="SalaEntrevistas4" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Entrevista.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
-    <characters>
-      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
-    </characters>
-    <active-areas>
-      <active-area id="EntrevistaArea4" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="Entrevista4" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-        <point x="159" y="167" />
-        <point x="287" y="159" />
-        <point x="307" y="231" />
-        <point x="151" y="278" />
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="SalaEntrevistas5" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Entrevista.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
-    <characters>
-      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
-    </characters>
-    <active-areas>
-      <active-area id="EntrevistaArea5" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="Entrevista5" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-        <point x="159" y="167" />
-        <point x="287" y="159" />
-        <point x="307" y="231" />
-        <point x="151" y="278" />
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="SalaEntrevistas6" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Entrevista.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
-    <characters>
-      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
-    </characters>
-    <active-areas>
-      <active-area id="EntrevistaArea6" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="Entrevista6" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-        <point x="159" y="167" />
-        <point x="287" y="159" />
-        <point x="307" y="231" />
-        <point x="151" y="278" />
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="SalaEntrevistas7" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Entrevista.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
-    <characters>
-      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
-    </characters>
-    <active-areas>
-      <active-area id="EntrevistaArea7" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="Entrevista7" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-        <point x="159" y="167" />
-        <point x="287" y="159" />
-        <point x="307" y="231" />
-        <point x="151" y="278" />
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="SalaEntrevistas8" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Entrevista.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
-    <characters>
-      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
-    </characters>
-    <active-areas>
-      <active-area id="EntrevistaArea8" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="Entrevista8" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-        <point x="159" y="167" />
-        <point x="287" y="159" />
-        <point x="307" y="231" />
-        <point x="151" y="278" />
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="SalaEntrevistas9" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Entrevista.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
-    <characters>
-      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
-    </characters>
-    <active-areas>
-      <active-area id="EntrevistaArea9" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="Entrevista9" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-        <point x="159" y="167" />
-        <point x="287" y="159" />
-        <point x="307" y="231" />
-        <point x="151" y="278" />
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="SalaEntrevistas10" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Entrevista.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
-    <characters>
-      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
-    </characters>
-    <active-areas>
-      <active-area id="EntrevistaArea10" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="Entrevista10" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-        <point x="159" y="167" />
-        <point x="287" y="159" />
-        <point x="307" y="231" />
-        <point x="151" y="278" />
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="SalaEntrevistas11" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Entrevista.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Mesa" x="311" y="323" scale="1" layer="1" hasInfluenceArea="no" />
-    </objects>
-    <characters>
-      <character-ref idTarget="AndresRRHH" x="241" y="367" scale="0.2668706" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="264" y="251" scale="0.07329915" orientation="2" layer="2" hasInfluenceArea="no" />
-    </characters>
-    <active-areas>
-      <active-area id="EntrevistaArea11" rectangular="no" x="151" y="159" width="156" height="119" hasInfluenceArea="no" behaviour="first-action">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-conversation idTarget="Entrevista11" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-        <point x="159" y="167" />
-        <point x="287" y="159" />
-        <point x="307" y="231" />
-        <point x="151" y="278" />
-      </active-area>
-    </active-areas>
   </scene>
   <scene id="Espejo" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -1447,7 +834,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Hombre1" x="1758" y="2351" scale="4.702252" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Carlos" x="1758" y="2351" scale="4.702252" orientation="2" layer="1" hasInfluenceArea="no" />
       <character-ref idTarget="Mujer1" x="1056" y="2543" scale="4.485393" orientation="2" layer="0" hasInfluenceArea="no" />
       <character-ref idTarget="Rebeca" x="504" y="2677" scale="6.003794" orientation="2" layer="2" hasInfluenceArea="no" />
     </characters>
@@ -1508,42 +895,143 @@
       <character-ref idTarget="LuisaRRHH" x="460" y="467" scale="0.35" orientation="2" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <slidescene id="PerfilIntroduccion" start="no" idTarget="Introduccion0.5" destinyX="-2147483648" destinyY="-2147483648" transitionTime="5" transitionType="5" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="PerfilGenerico" start="no" idTarget="Introduccion" destinyX="-2147483648" destinyY="-2147483648" transitionTime="5" transitionType="5" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <effect>
-      <trigger-conversation idTarget="PortalEmpleo0.5" />
-      <condition />
+      <trigger-conversation idTarget="PortalEmpleo0" />
+      <condition>
+        <equals var="IntroPregunta" value="0" />
+      </condition>
+      <trigger-conversation idTarget="PortalEmpleo1" />
+      <condition>
+        <equals var="IntroPregunta" value="1" />
+      </condition>
+      <trigger-conversation idTarget="PortalEmpleo2" />
+      <condition>
+        <equals var="IntroPregunta" value="2" />
+      </condition>
+      <trigger-conversation idTarget="PortalEmpleo3" />
+      <condition>
+        <equals var="IntroPregunta" value="3" />
+      </condition>
+      <trigger-conversation idTarget="PortalEmpleo4" />
+      <condition>
+        <equals var="IntroPregunta" value="4" />
+      </condition>
     </effect>
     <resources name="No name">
-      <asset type="slides" uri="assets/animation/PerfilInicial.eaa.xml" />
+      <asset type="slides" uri="assets/animation/PerfilGenericoAnim.eaa.xml" />
     </resources>
     <name>
     </name>
   </slidescene>
-  <slidescene id="PerfilGenerico" start="no" next="go-back" class="accesible" type="cutscene">
+  <slidescene id="PerfilAnalista" start="no" idTarget="SalaEntrevistas" destinyX="-2147483648" destinyY="-2147483648" transitionTime="5" transitionType="5" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
+    <effect>
+      <trigger-conversation idTarget="Entrevista0" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="0" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista1" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="1" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista2" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="2" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista3" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="3" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista4" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="4" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista5" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="5" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista6" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="6" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista7" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="7" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista8" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="8" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista9" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="9" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista10" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="10" />
+      </condition>
+    </effect>
     <resources name="No name">
-      <asset type="slides" uri="assets/animation/PerfilInicial.eaa.xml" />
+      <asset type="slides" uri="assets/animation/PerfilAnalistaAnim.eaa.xml" />
     </resources>
     <name>
     </name>
   </slidescene>
-  <slidescene id="PerfilPeriodista" start="no" next="go-back" class="accesible" type="cutscene">
+  <slidescene id="PerfilInformatica" start="no" idTarget="SalaEntrevistas" destinyX="-2147483648" destinyY="-2147483648" transitionTime="5" transitionType="5" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
+    <effect>
+      <trigger-conversation idTarget="Entrevista0" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="0" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista1" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="1" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista2" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="2" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista3" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="3" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista4" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="4" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista5" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="5" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista6" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="6" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista7" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="7" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista8" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="8" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista9" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="9" />
+      </condition>
+      <trigger-conversation idTarget="Entrevista10" />
+      <condition>
+        <equals var="EntrevistaPregunta" value="10" />
+      </condition>
+    </effect>
     <resources name="No name">
-      <asset type="slides" uri="assets/animation/PerfilSlide.eaa.xml" />
-    </resources>
-    <name>
-    </name>
-  </slidescene>
-  <slidescene id="PerfilInformatica" start="no" next="go-back" class="accesible" type="cutscene">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="slides" uri="assets/animation/PerfilInformaticoSlides.eaa.xml" />
+      <asset type="slides" uri="assets/animation/PerfilInformaticoAnim.eaa.xml" />
     </resources>
     <name>
     </name>
@@ -1556,7 +1044,7 @@
       <condition />
     </effect>
     <resources name="No name">
-      <asset type="slides" uri="assets/animation/mins30.eaa.xml" />
+      <asset type="slides" uri="assets/animation/CaminoCasaAnim.eaa.xml" />
     </resources>
     <name>
     </name>
@@ -1581,8 +1069,18 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="PortalEmpleo0">
+  <graph-conversation id="PortalEmpleoIntro">
     <dialogue-node nodeindex="0" editor-x="36" editor-y="131">
+      <speak-player>
+        <resources name="No name" />
+        <text>Me han recomendado este portal de empleo varias veces.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Puedes meter tus aptitudes, y te recomienda ofertas que se ajustan a tu currículum. Veamos...</text>
+      </speak-player>
+      <condition />
       <speak-player>
         <resources name="No name" />
         <text>Parece que hay que responder varias preguntas.</text>
@@ -1616,13 +1114,13 @@
     <dialogue-node nodeindex="2" editor-x="965" editor-y="120">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="PerfilIntroduccion" />
+          <trigger-cutscene idTarget="PerfilGenerico" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="PortalEmpleo0.5">
+  <graph-conversation id="PortalEmpleo0">
     <dialogue-node nodeindex="0" editor-x="36" editor-y="131">
       <speak-player>
         <resources name="No name" />
@@ -1641,7 +1139,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Introduccion1" x="960" y="810" transitionTime="5" transitionType="5" />
+          <increment var="IntroPregunta" value="1" />
           <condition />
           <trigger-conversation idTarget="PortalEmpleo1" />
           <condition />
@@ -1703,15 +1201,15 @@
     <dialogue-node nodeindex="4" editor-x="1142" editor-y="193">
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Introduccion1.5" x="960" y="810" transitionTime="5" transitionType="5" />
+          <increment var="IntroPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="PortalEmpleo1.5" />
+          <trigger-conversation idTarget="PortalEmpleo2" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="PortalEmpleo1.5">
+  <graph-conversation id="PortalEmpleo2">
     <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
       <speak-player>
         <resources name="No name" />
@@ -1765,15 +1263,15 @@
     <dialogue-node nodeindex="4" editor-x="1058" editor-y="108">
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Introduccion2" x="960" y="810" transitionTime="5" transitionType="5" />
+          <increment var="IntroPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="PortalEmpleo2" />
+          <trigger-conversation idTarget="PortalEmpleo3" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="PortalEmpleo2">
+  <graph-conversation id="PortalEmpleo3">
     <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
       <speak-player>
         <resources name="No name" />
@@ -1832,15 +1330,15 @@
     <dialogue-node nodeindex="4" editor-x="794" editor-y="215">
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Introduccion3" x="960" y="810" transitionTime="5" transitionType="5" />
+          <increment var="IntroPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="PortalEmpleo3" />
+          <trigger-conversation idTarget="PortalEmpleo4" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="PortalEmpleo3">
+  <graph-conversation id="PortalEmpleo4">
     <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
       <speak-player>
         <resources name="No name" />
@@ -1886,9 +1384,11 @@
     <dialogue-node nodeindex="3" editor-x="1019" editor-y="204">
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Introduccion4" x="960" y="810" transitionTime="5" transitionType="5" />
+          <increment var="IntroPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="PortalEmpleo4" />
+          <trigger-scene idTarget="IntroduccionOfertas" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="PortalEmpleoFinal" />
           <condition />
         </effect>
       </end-conversation>
@@ -1912,7 +1412,7 @@
       <child nodeindex="1" />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="PortalEmpleo4">
+  <graph-conversation id="PortalEmpleoFinal">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>
         <resources name="No name" />
@@ -1965,20 +1465,27 @@
       <child nodeindex="3" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="709" editor-y="28">
-      <child nodeindex="4" />
-      <effect>
-        <remove-element idTarget="OpcionInformatica" />
-        <condition />
-        <remove-element idTarget="OpcionAnalista" />
-        <condition />
-        <remove-element idTarget="IntroOn" />
-        <condition />
-      </effect>
+      <end-conversation>
+        <effect>
+          <remove-element idTarget="OpcionInformatica" />
+          <condition />
+          <remove-element idTarget="OpcionAnalista" />
+          <condition />
+          <deactivate flag="PantallaEncendida" />
+          <condition />
+          <trigger-scene idTarget="IntroduccionOfertas" x="960" y="810" transitionTime="5" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="IntroduccionEmpleo" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="762" editor-y="312">
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="965" editor-y="1">
+  </graph-conversation>
+  <graph-conversation id="IntroduccionEmpleo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>
         <resources name="No name" />
         <text>Parece que las entrevistas son esta misma semana.</text>
@@ -2251,7 +1758,7 @@
       <condition />
       <child nodeindex="3" />
     </dialogue-node>
-    <option-node nodeindex="3" question="JaimePuesto" random="yes" keepShowing="yes" preListening="yes" editor-x="877" editor-y="83" x="877" y="83">
+    <option-node nodeindex="3" question="JaimePuesto" random="yes" keepShowing="yes" preListening="yes" editor-x="845" editor-y="61" x="845" y="61">
       <speak-player>
         <text>Bueno, somos muchos candidatos, pero también hay mucha demanda. Si no tenemos suerte aquí, podemos probar en otros sitios.</text>
         <resources name="No name" />
@@ -2265,7 +1772,7 @@
       <condition />
       <child nodeindex="5" />
     </option-node>
-    <dialogue-node nodeindex="4" editor-x="1132" editor-y="79">
+    <dialogue-node nodeindex="4" editor-x="1288" editor-y="67">
       <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Supongo que eso es verdad. Pero no creo que yo tenga opciones.</text>
@@ -2676,20 +2183,20 @@
   </graph-conversation>
   <graph-conversation id="GrupoMujeresHombreConversacion">
     <dialogue-node nodeindex="0" editor-x="63" editor-y="52">
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="MujeresEscuchadas" />
+        <condition />
+        <move-npc idTarget="Carlos" x="1915" y="1237" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="361" editor-y="42">
       <speak-char idTarget="Rebeca">
         <resources name="No name" />
         <text>¿Cómo llevas el proyecto?</text>
       </speak-char>
       <condition />
-      <child nodeindex="1" />
-      <effect>
-        <activate flag="MujeresEscuchadas" />
-        <condition />
-        <move-npc idTarget="Hombre1" x="1915" y="1237" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="390" editor-y="46">
       <speak-char idTarget="Mujer1">
         <resources name="No name" />
         <text>La verdad es que estoy  teniendo algunos problemas para encontrar todos los números primos en una lista. </text>
@@ -2728,12 +2235,12 @@
         <text>¡Hola, Carlos!</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Hombre1">
+      <speak-char idTarget="Carlos">
         <resources name="No name" />
         <text>¡Hey! ¿Qué tal, chicas? Casi no os veo. </text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Hombre1">
+      <speak-char idTarget="Carlos">
         <resources name="No name" />
         <text>¿De qué estabais hablando?</text>
       </speak-char>
@@ -2743,12 +2250,12 @@
         <text>Pues le estaba comentando a Rebeca que no sé cómo encontrar todos los números primos en una lista.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Hombre1">
+      <speak-char idTarget="Carlos">
         <resources name="No name" />
         <text>¡Ah!  ¡Qué interesante! ¿Conoces la criba de Eratóstenes?</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Hombre1">
+      <speak-char idTarget="Carlos">
         <resources name="No name" />
         <text>Para que tú lo entiendas, con ese algoritmo vas descartando todos los números que no son primos, y te quedan los primos.</text>
       </speak-char>
@@ -2763,12 +2270,12 @@
         <text>Bueno, estaba buscando  una segunda opinión.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Hombre1">
+      <speak-char idTarget="Carlos">
         <resources name="No name" />
         <text>Pues parece que hemos pensado en lo mismo. Si lo que quieres es otra solución, a lo mejor Roberto te puede ayudar. </text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Hombre1">
+      <speak-char idTarget="Carlos">
         <resources name="No name" />
         <text>Si quieres le pregunto y te comento lo que me diga.</text>
       </speak-char>
@@ -2783,12 +2290,12 @@
         <text>Solo quería asegurarme de que la solución era válida.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Hombre1">
+      <speak-char idTarget="Carlos">
         <resources name="No name" />
         <text>Si Rebeca te da una solución, seguramente sea mejor que la mía. </text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Hombre1">
+      <speak-char idTarget="Carlos">
         <resources name="No name" />
         <text>Con todos los años que lleva trabajando aquí, sabe más que ninguno de nosotros.</text>
       </speak-char>
@@ -2802,7 +2309,7 @@
         <effect>
           <move-npc idTarget="Mujer1" x="25000" y="1359" />
           <condition />
-          <move-npc idTarget="Hombre1" x="23000" y="1359" />
+          <move-npc idTarget="Carlos" x="23000" y="1359" />
           <condition />
           <move-npc idTarget="Rebeca" x="27500" y="1500" />
           <condition />
@@ -2831,7 +2338,7 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista0">
+  <graph-conversation id="EntrevistaIntro">
     <dialogue-node nodeindex="0" editor-x="41" editor-y="126">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -2956,26 +2463,21 @@
         <text>Perfectísimo.</text>
       </speak-char>
       <condition />
-      <child nodeindex="5" />
-    </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="1182" editor-y="141">
-      <end-conversation>
-        <effect>
-          <trigger-scene idTarget="SalaEntrevistas1" x="334" y="288" transitionTime="5" transitionType="5" />
-          <condition />
-          <trigger-conversation idTarget="Entrevista1" />
-          <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="Entrevista1">
-    <dialogue-node nodeindex="0" editor-x="7" editor-y="97">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>Genial, pues empecemos.</text>
       </speak-char>
       <condition />
+      <end-conversation>
+        <effect>
+          <trigger-conversation idTarget="Entrevista0" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Entrevista0">
+    <dialogue-node nodeindex="0" editor-x="7" editor-y="137">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>Dinos, ¿por qué quieres trabajar con nosotros?</text>
@@ -2988,7 +2490,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="RRHHTrabajarNosotros" keepShowing="yes" preListening="yes" editor-x="253" editor-y="61" x="253" y="61">
+    <option-node nodeindex="1" question="RRHHTrabajarNosotros" keepShowing="yes" preListening="yes" editor-x="247" editor-y="53" x="247" y="53">
       <speak-player>
         <text>Sé la reputación que tiene desarrollando programas innovadores. Creo que con mi formación, mi curiosidad e iniciativa podré contribuir en el diseño de los proyectos que tienen trazados para este año.</text>
         <resources name="No name" />
@@ -3010,34 +2512,41 @@
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>Acabo de terminar la carrera y estoy buscando una empresa para desarrollarme como profesional.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="602" editor-y="45">
+    <dialogue-node nodeindex="2" editor-x="806" editor-y="31">
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="SalaEntrevistas2" x="334" y="288" transitionTime="5" transitionType="5" />
+          <increment var="EntrevistaPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="Entrevista2" />
+          <trigger-conversation idTarget="Entrevista1" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="601" editor-y="257">
+    <dialogue-node nodeindex="3" editor-x="544" editor-y="146">
+      <child nodeindex="2" />
+      <effect>
+        <increment var="ErroresEntrevista" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="571" editor-y="375">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="PerfilPeriodista" />
+          <trigger-cutscene idTarget="PerfilAnalista" />
           <condition>
             <inactive flag="Software" />
           </condition>
@@ -3049,7 +2558,7 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista2">
+  <graph-conversation id="Entrevista1">
     <dialogue-node nodeindex="0" editor-x="59" editor-y="72">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -3068,7 +2577,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="RRHHNivelIngles" keepShowing="yes" preListening="yes" editor-x="312" editor-y="20" x="312" y="20">
+    <option-node nodeindex="1" question="RRHHNivelIngles" keepShowing="yes" preListening="yes" editor-x="303" editor-y="66" x="303" y="66">
       <speak-player>
         <text>Tengo un nivel alto. Hace unos meses, obtuve el C1 mediante un examen de Cambridge.</text>
         <resources name="No name" />
@@ -3080,34 +2589,46 @@
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>Leo algunas cosillas en inglés y me defiendo al hablar y escribir.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="652" editor-y="42">
+    <dialogue-node nodeindex="2" editor-x="907" editor-y="46">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Bien, bien.</text>
+      </speak-char>
+      <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="SalaEntrevistas3" x="334" y="288" transitionTime="5" transitionType="5" />
+          <increment var="EntrevistaPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="Entrevista3" />
+          <trigger-conversation idTarget="Entrevista2" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="652" editor-y="248">
+    <dialogue-node nodeindex="3" editor-x="591" editor-y="150">
+      <child nodeindex="2" />
+      <effect>
+        <increment var="ErroresEntrevista" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="593" editor-y="341">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="PerfilPeriodista" />
+          <trigger-cutscene idTarget="PerfilAnalista" />
           <condition>
             <inactive flag="Software" />
           </condition>
@@ -3119,13 +2640,8 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista3">
+  <graph-conversation id="Entrevista2">
     <dialogue-node nodeindex="0" editor-x="48" editor-y="60">
-      <speak-char idTarget="AndresRRHH">
-        <resources name="No name" />
-        <text>Bien, bien.</text>
-      </speak-char>
-      <condition />
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>Como empresa centrada en el desarrollo de software, necesitamos gente que tenga cierta base programando.</text>
@@ -3150,34 +2666,46 @@
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>He tenido varias asignaturas de programación y, por tanto, he usado diferentes lenguajes.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="581" editor-y="4">
+    <dialogue-node nodeindex="2" editor-x="859" editor-y="0">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>De acuerdo.</text>
+      </speak-char>
+      <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="SalaEntrevistas4" x="334" y="288" transitionTime="5" transitionType="5" />
+          <increment var="EntrevistaPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="Entrevista4" />
+          <trigger-conversation idTarget="Entrevista3" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="584" editor-y="216">
+    <dialogue-node nodeindex="3" editor-x="598" editor-y="120">
+      <child nodeindex="2" />
+      <effect>
+        <increment var="ErroresEntrevista" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="595" editor-y="310">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="PerfilPeriodista" />
+          <trigger-cutscene idTarget="PerfilAnalista" />
           <condition>
             <inactive flag="Software" />
           </condition>
@@ -3189,13 +2717,8 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista4">
+  <graph-conversation id="Entrevista3">
     <dialogue-node nodeindex="0" editor-x="11" editor-y="144">
-      <speak-char idTarget="AndresRRHH">
-        <resources name="No name" />
-        <text>De acuerdo.</text>
-      </speak-char>
-      <condition />
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>También nos interesa saber si has utilizado algún sistema de control de versiones, como Git.</text>
@@ -3215,34 +2738,46 @@
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>Claro, lo he utilizado para las prácticas de la carrera.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="559" editor-y="76">
+    <dialogue-node nodeindex="2" editor-x="825" editor-y="23">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Muy bien. Vamos a pasar a otro tipo de preguntas, menos técnicas.</text>
+      </speak-char>
+      <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="SalaEntrevistas5" x="334" y="288" transitionTime="5" transitionType="5" />
+          <increment var="EntrevistaPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="Entrevista5" />
+          <trigger-conversation idTarget="Entrevista4" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="555" editor-y="270">
+    <dialogue-node nodeindex="3" editor-x="588" editor-y="177">
+      <child nodeindex="2" />
+      <effect>
+        <increment var="ErroresEntrevista" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="578" editor-y="384">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="PerfilPeriodista" />
+          <trigger-cutscene idTarget="PerfilAnalista" />
           <condition>
             <inactive flag="Software" />
           </condition>
@@ -3254,13 +2789,8 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista5">
+  <graph-conversation id="Entrevista4">
     <dialogue-node nodeindex="0" editor-x="13" editor-y="112">
-      <speak-char idTarget="AndresRRHH">
-        <resources name="No name" />
-        <text>Muy bien. Vamos a pasar a otro tipo de preguntas, menos técnicas.</text>
-      </speak-char>
-      <condition />
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>¿Dónde te ves de aquí a cinco años?</text>
@@ -3285,34 +2815,46 @@
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>Es mucho tiempo, pueden pasar tantas cosas que no sé qué decir. Nunca me lo había planteado.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="525" editor-y="98">
+    <dialogue-node nodeindex="2" editor-x="841" editor-y="44">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Entiendo. </text>
+      </speak-char>
+      <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="SalaEntrevistas6" x="334" y="288" transitionTime="5" transitionType="5" />
+          <increment var="EntrevistaPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="Entrevista6" />
+          <trigger-conversation idTarget="Entrevista5" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="524" editor-y="286">
+    <dialogue-node nodeindex="3" editor-x="527" editor-y="138">
+      <child nodeindex="2" />
+      <effect>
+        <increment var="ErroresEntrevista" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="529" editor-y="334">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="PerfilPeriodista" />
+          <trigger-cutscene idTarget="PerfilAnalista" />
           <condition>
             <inactive flag="Software" />
           </condition>
@@ -3324,11 +2866,11 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista6">
+  <graph-conversation id="Entrevista5">
     <dialogue-node nodeindex="0" editor-x="0" editor-y="128">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Entiendo. Al hilo de esta pregunta...</text>
+        <text>Al hilo de esta pregunta...</text>
       </speak-char>
       <condition />
       <speak-char idTarget="AndresRRHH">
@@ -3378,28 +2920,25 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="618" editor-y="145">
+    <dialogue-node nodeindex="3" editor-x="686" editor-y="112">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>Genial, es importante ganar experiencia cuando se es joven.</text>
       </speak-char>
       <condition />
-      <child nodeindex="4" />
+      <child nodeindex="6" />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="913" editor-y="246">
+    <dialogue-node nodeindex="4" editor-x="690" editor-y="302">
+      <child nodeindex="6" />
+      <effect>
+        <increment var="ErroresEntrevista" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1067" editor-y="452">
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="SalaEntrevistas7" x="334" y="288" transitionTime="5" transitionType="5" />
-          <condition />
-          <trigger-conversation idTarget="Entrevista7" />
-          <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="912" editor-y="436">
-      <end-conversation>
-        <effect>
-          <trigger-cutscene idTarget="PerfilPeriodista" />
+          <trigger-cutscene idTarget="PerfilAnalista" />
           <condition>
             <inactive flag="Software" />
           </condition>
@@ -3410,8 +2949,18 @@
         </effect>
       </end-conversation>
     </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="1058" editor-y="247">
+      <end-conversation>
+        <effect>
+          <increment var="EntrevistaPregunta" value="1" />
+          <condition />
+          <trigger-conversation idTarget="Entrevista6" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista7">
+  <graph-conversation id="Entrevista6">
     <dialogue-node nodeindex="0" editor-x="18" editor-y="51">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -3437,28 +2986,35 @@
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="560" editor-y="9">
+    <dialogue-node nodeindex="2" editor-x="840" editor-y="0">
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="SalaEntrevistas8" x="334" y="288" transitionTime="5" transitionType="5" />
+          <increment var="EntrevistaPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="Entrevista8" />
+          <trigger-conversation idTarget="Entrevista7" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="556" editor-y="212">
+    <dialogue-node nodeindex="3" editor-x="547" editor-y="80">
+      <child nodeindex="2" />
+      <effect>
+        <increment var="ErroresEntrevista" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="798" editor-y="217">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="PerfilPeriodista" />
+          <trigger-cutscene idTarget="PerfilAnalista" />
           <condition>
             <inactive flag="Software" />
           </condition>
@@ -3470,7 +3026,7 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista8">
+  <graph-conversation id="Entrevista7">
     <dialogue-node nodeindex="0" editor-x="38" editor-y="130">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -3496,34 +3052,46 @@
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>Es verdad que a veces no comparto todas las ideas que tengo, pero cuando lo hago, la gente suele escucharme.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="570" editor-y="91">
+    <dialogue-node nodeindex="2" editor-x="745" editor-y="25">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Muy bien.</text>
+      </speak-char>
+      <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="SalaEntrevistas9" x="334" y="288" transitionTime="5" transitionType="5" />
+          <increment var="EntrevistaPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="Entrevista9" />
+          <trigger-conversation idTarget="Entrevista8" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="570" editor-y="287">
+    <dialogue-node nodeindex="3" editor-x="515" editor-y="160">
+      <child nodeindex="2" />
+      <effect>
+        <increment var="ErroresEntrevista" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="746" editor-y="314">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="PerfilPeriodista" />
+          <trigger-cutscene idTarget="PerfilAnalista" />
           <condition>
             <inactive flag="Software" />
           </condition>
@@ -3535,13 +3103,8 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista9">
+  <graph-conversation id="Entrevista8">
     <dialogue-node nodeindex="0" editor-x="37" editor-y="115">
-      <speak-char idTarget="AndresRRHH">
-        <resources name="No name" />
-        <text>Muy bien.</text>
-      </speak-char>
-      <condition />
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>También me gustaría decirte que creo que puedes aportar un toque único al equipo.</text>
@@ -3572,13 +3135,13 @@
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="4" />
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="4" />
+      <child nodeindex="5" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="315" editor-y="18">
       <speak-player>
@@ -3588,20 +3151,27 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="686" editor-y="98">
+    <dialogue-node nodeindex="3" editor-x="878" editor-y="180">
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="SalaEntrevistas10" x="334" y="288" transitionTime="5" transitionType="5" />
+          <increment var="EntrevistaPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="Entrevista10" />
+          <trigger-conversation idTarget="Entrevista9" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="689" editor-y="328">
+    <dialogue-node nodeindex="4" editor-x="602" editor-y="314">
+      <child nodeindex="3" />
+      <effect>
+        <increment var="ErroresEntrevista" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="601" editor-y="538">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="PerfilPeriodista" />
+          <trigger-cutscene idTarget="PerfilAnalista" />
           <condition>
             <inactive flag="Software" />
           </condition>
@@ -3613,7 +3183,7 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista10">
+  <graph-conversation id="Entrevista9">
     <dialogue-node nodeindex="0" editor-x="0" editor-y="174">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -3650,13 +3220,13 @@
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="4" />
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="4" />
+      <child nodeindex="5" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="287" editor-y="0">
       <speak-player>
@@ -3666,20 +3236,32 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="541" editor-y="245">
+    <dialogue-node nodeindex="3" editor-x="825" editor-y="227">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>¡Ah! Casi lo olvido. Respecto al tema de viajar...</text>
+      </speak-char>
+      <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="SalaEntrevistas11" x="334" y="288" transitionTime="5" transitionType="5" />
+          <increment var="EntrevistaPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="Entrevista11" />
+          <trigger-conversation idTarget="Entrevista10" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="540" editor-y="438">
+    <dialogue-node nodeindex="4" editor-x="552" editor-y="346">
+      <child nodeindex="3" />
+      <effect>
+        <increment var="ErroresEntrevista" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="558" editor-y="541">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="PerfilPeriodista" />
+          <trigger-cutscene idTarget="PerfilAnalista" />
           <condition>
             <inactive flag="Software" />
           </condition>
@@ -3691,13 +3273,8 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista11">
+  <graph-conversation id="Entrevista10">
     <dialogue-node nodeindex="0" editor-x="43" editor-y="244">
-      <speak-char idTarget="AndresRRHH">
-        <resources name="No name" />
-        <text>¡Ah! Casi lo olvido. Respecto al tema de viajar...</text>
-      </speak-char>
-      <condition />
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>¿Tienes algún familiar a tu cargo o tienes pensado tener hijos en los próximos años?</text>
@@ -3728,13 +3305,13 @@
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="4" />
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="4" />
+      <child nodeindex="5" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="315" editor-y="15">
       <speak-player>
@@ -3744,7 +3321,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="607" editor-y="160">
+    <dialogue-node nodeindex="3" editor-x="995" editor-y="171">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>Genial. Con esto, hemos terminado la entrevista.</text>
@@ -3757,14 +3334,45 @@
       <condition />
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
+        <text>No puedo adelantarle mucha más información, pero he de decirte que puedes encajar muy bien en el puesto. </text>
+      </speak-char>
+      <condition>
+        <less-equals-than var="ErroresEntrevista" value="2" />
+      </condition>
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
         <text>Tendremos en cuenta tu candidatura, y te avisaremos cuando terminemos el proceso de entrevistas.</text>
       </speak-char>
-      <condition />
+      <condition>
+        <greater-than var="ErroresEntrevista" value="2" />
+        <less-equals-than var="ErroresEntrevista" value="7" />
+      </condition>
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Creo que con lo que hemos visto, no terminas de encajar en el puesto que estamos buscando. </text>
+      </speak-char>
+      <condition>
+        <greater-than var="ErroresEntrevista" value="7" />
+      </condition>
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Pero nos guardamos tu CV por si hubiera otro puesto que encajara mejor.</text>
+      </speak-char>
+      <condition>
+        <greater-than var="ErroresEntrevista" value="7" />
+      </condition>
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>De nuevo, nos gustaría agradecerte tu tiempo, y desearte un buen día.</text>
       </speak-char>
       <condition />
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>En las proximas semanas nos pondremos en contacto contigo.</text>
+      </speak-char>
+      <condition>
+        <less-equals-than var="ErroresEntrevista" value="7" />
+      </condition>
       <end-conversation>
         <effect>
           <trigger-scene idTarget="SalaEspera" x="550" y="465" transitionTime="5" transitionType="5" />
@@ -3778,10 +3386,17 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="614" editor-y="435">
+    <dialogue-node nodeindex="4" editor-x="630" editor-y="343">
+      <child nodeindex="3" />
+      <effect>
+        <increment var="ErroresEntrevista" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="630" editor-y="528">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="PerfilPeriodista" />
+          <trigger-cutscene idTarget="PerfilAnalista" />
           <condition>
             <inactive flag="Software" />
           </condition>
@@ -4406,7 +4021,7 @@
         <text>Tengo algunos problemas para encontrar todos los números primos en una lista. </text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Hombre1">
+      <speak-char idTarget="Carlos">
         <resources name="No name" />
         <text>¿Conoces la criba de Eratóstenes?</text>
       </speak-char>
@@ -4421,7 +4036,7 @@
         <text>Voy a probar tu solución, Carlos.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Hombre1">
+      <speak-char idTarget="Carlos">
         <resources name="No name" />
         <text>Si Rebeca te da una solución, seguramente sea mejor que la mía. Sabe más que ninguno de nosotros.</text>
       </speak-char>
@@ -4980,7 +4595,7 @@
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <trigger-scene idTarget="Introduccion0" x="960" y="810" transitionTime="5" transitionType="5" />
+          <trigger-scene idTarget="Introduccion" x="960" y="810" transitionTime="5" transitionType="5" />
           <condition />
           <trigger-conversation idTarget="IntroduccionConversacion" />
           <condition />
@@ -5040,6 +4655,8 @@
           <condition />
           <set-value var="Score" value="0" />
           <condition />
+          <set-value var="ErroresEntrevista" value="0" />
+          <condition />
         </effect>
       </use>
     </actions>
@@ -5066,51 +4683,9 @@
       </use>
     </actions>
   </object>
-  <object id="IntroOff" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/Off.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <actions>
-      <use needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <remove-element idTarget="IntroOff" />
-          <condition />
-          <speak-player>Me han recomendado este portal de empleo varias veces.</speak-player>
-          <condition />
-          <speak-player>Puedes meter tus aptitudes, y te recomienda ofertas que se ajustan a tu currículum. Veamos...</speak-player>
-          <condition />
-          <activate flag="PantallaEncendida" />
-          <condition />
-        </effect>
-      </use>
-    </actions>
-  </object>
   <object id="IntroOn" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/On.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-  </object>
-  <object id="PortalEmpleo" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/PortalEmpleo.jpg" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -5169,20 +4744,6 @@
         </effect>
       </use>
     </actions>
-  </object>
-  <object id="Mesa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/Mesa.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
   </object>
   <object id="Boton0" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
@@ -5768,14 +5329,56 @@
       </detailed>
     </description>
   </atrezzoobject>
+  <atrezzoobject id="PortalEmpleo">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/PortalEmpleo.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="PantallaOff">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Off.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="PantallaOn">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/On.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
   <completable id="EsperaEntrevista" repeatable="false" type="completable">
     <start-milestone type="SCENE" targetId="Menu" />
-    <end-milestone type="SCENE" targetId="SalaEntrevistas0" />
+    <end-milestone type="SCENE" targetId="SalaEntrevistas" />
     <progress type="SUM" />
     <score type="VARIABLE" method="SINGLE" id="Score" />
   </completable>
   <completable id="Entrevista" repeatable="false" type="completable">
-    <start-milestone type="SCENE" targetId="SalaEntrevistas0" />
+    <start-milestone type="SCENE" targetId="SalaEntrevistas" />
     <end-milestone type="SCENE" targetId="CaminoCasa" />
     <progress type="SUM" />
     <score type="VARIABLE" method="SINGLE" id="Score" />

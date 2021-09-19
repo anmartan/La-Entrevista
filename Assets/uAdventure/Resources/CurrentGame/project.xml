@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment> Project Configuration </comment>
-<entry key="Simva.RefreshToken">eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2Y2IwZWFmNC1iOWM1LTQ0ZWQtODYzZC05ZGRjMWU5ZmEyODMifQ.eyJpYXQiOjE2MDYzOTg4MjAsImp0aSI6IjdmOGU1YzUwLTcwNWEtNDFkNy05NjQ5LTEzZGY5OGU3ZWViNCIsImlzcyI6Imh0dHBzOi8vc3NvLnNpbXZhLmUtdWNtLmVzL2F1dGgvcmVhbG1zL3NpbXZhIiwiYXVkIjoiaHR0cHM6Ly9zc28uc2ltdmEuZS11Y20uZXMvYXV0aC9yZWFsbXMvc2ltdmEiLCJzdWIiOiIxODBmNzExZi1iZjE1LTRlNDQtYjNlYS05M2YwN2NiYTZkM2MiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoidWFkdmVudHVyZSIsInNlc3Npb25fc3RhdGUiOiI5ODllNjBlZi0xNDZmLTRiYjYtODAzYy00YjRlNjJhMzE5MmYiLCJzY29wZSI6Im9mZmxpbmVfYWNjZXNzIHByb2ZpbGUgZW1haWwifQ.epInSmbGKz_wYBMu9BQ-ADPu7r8NelskDyT2B7hAFug</entry>
+<entry key="Simva.RefreshToken">eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2Y2IwZWFmNC1iOWM1LTQ0ZWQtODYzZC05ZGRjMWU5ZmEyODMifQ.eyJpYXQiOjE2MzIwNjA5NTcsImp0aSI6IjRiNzJlNzJmLWU4ZWYtNDY2MC05Nzc3LTg3MTk5ZDQ2MDFhNyIsImlzcyI6Imh0dHBzOi8vc3NvLnNpbXZhLmUtdWNtLmVzL2F1dGgvcmVhbG1zL3NpbXZhIiwiYXVkIjoiaHR0cHM6Ly9zc28uc2ltdmEuZS11Y20uZXMvYXV0aC9yZWFsbXMvc2ltdmEiLCJzdWIiOiI2MDIwYjU4Ni0wODk1LTRkZDEtODM3Yy01MjBhY2Q3NDk2ODgiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoidWFkdmVudHVyZSIsInNlc3Npb25fc3RhdGUiOiI5ZjU2YTFkYi0xNWI5LTRlZGEtODFjZC1mMWJlNDJmMzM5NWEiLCJzY29wZSI6Im9mZmxpbmVfYWNjZXNzIHByb2ZpbGUgZW1haWwifQ.1FyfyqkZbPeAccyAv1enLM1zKqE-J8TPoUxCmaim9Lo</entry>
 <entry key="Chapter0.SceneId.X">2</entry>
 <entry key="Chapter0.SceneId.Y">3</entry>
 <entry key="Chapter0.Entrada.X">332</entry>
@@ -16,8 +16,8 @@
 <entry key="Chapter0.Entrevista.Y">391</entry>
 <entry key="Chapter0.SalaCafe.X">-136</entry>
 <entry key="Chapter0.SalaCafe.Y">-126</entry>
-<entry key="Chapter0.Introduccion.X">-55</entry>
-<entry key="Chapter0.Introduccion.Y">270</entry>
+<entry key="Chapter0.Introduccion.X">-262</entry>
+<entry key="Chapter0.Introduccion.Y">252</entry>
 <entry key="Chapter0.Entrevista1.X">121</entry>
 <entry key="Chapter0.Entrevista1.Y">406</entry>
 <entry key="Chapter0.Entrevista2.X">-33</entry>
@@ -72,10 +72,10 @@
 <entry key="Chapter0.SalaEntrevistas10.Y">520</entry>
 <entry key="Chapter0.SalaEntrevistas11.X">664</entry>
 <entry key="Chapter0.SalaEntrevistas11.Y">524</entry>
-<entry key="Chapter0.Menu.X">348</entry>
-<entry key="Chapter0.Menu.Y">-77</entry>
-<entry key="Chapter0.Creditos.X">767</entry>
-<entry key="Chapter0.Creditos.Y">-75</entry>
+<entry key="Chapter0.Menu.X">628</entry>
+<entry key="Chapter0.Menu.Y">-57</entry>
+<entry key="Chapter0.Creditos.X">761</entry>
+<entry key="Chapter0.Creditos.Y">75</entry>
 <entry key="Chapter0.Introducción.X">-115</entry>
 <entry key="Chapter0.Introducción.Y">213</entry>
 <entry key="Chapter0.Introduccion0.X">-173</entry>
@@ -90,9 +90,17 @@
 <entry key="Chapter0.Introduccion4.Y">137</entry>
 <entry key="Chapter0.Introduccion1.5.X">-177</entry>
 <entry key="Chapter0.Introduccion1.5.Y">131</entry>
-<entry key="Chapter0.PreguntasFinales.X">596</entry>
-<entry key="Chapter0.PreguntasFinales.Y">200</entry>
-<entry key="Chapter0.PreguntasFinales1.X">614</entry>
-<entry key="Chapter0.PreguntasFinales1.Y">202</entry>
+<entry key="Chapter0.PreguntasFinales.X">662</entry>
+<entry key="Chapter0.PreguntasFinales.Y">407</entry>
+<entry key="Chapter0.PreguntasFinales1.X">726</entry>
+<entry key="Chapter0.PreguntasFinales1.Y">406</entry>
+<entry key="Chapter0.IntroduccionOfertas.X">-262</entry>
+<entry key="Chapter0.IntroduccionOfertas.Y">443</entry>
+<entry key="Chapter0.Espejo.X">599</entry>
+<entry key="Chapter0.Espejo.Y">410</entry>
+<entry key="Chapter0.Pregunta4.X">144</entry>
+<entry key="Chapter0.Pregunta4.Y">396</entry>
+<entry key="Chapter0.Pregunta5.X">37</entry>
+<entry key="Chapter0.Pregunta5.Y">-29</entry>
 </properties>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment> Project Configuration </comment>
-<entry key="Simva.RefreshToken">eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2Y2IwZWFmNC1iOWM1LTQ0ZWQtODYzZC05ZGRjMWU5ZmEyODMifQ.eyJpYXQiOjE2MzIwNjA5NTcsImp0aSI6IjRiNzJlNzJmLWU4ZWYtNDY2MC05Nzc3LTg3MTk5ZDQ2MDFhNyIsImlzcyI6Imh0dHBzOi8vc3NvLnNpbXZhLmUtdWNtLmVzL2F1dGgvcmVhbG1zL3NpbXZhIiwiYXVkIjoiaHR0cHM6Ly9zc28uc2ltdmEuZS11Y20uZXMvYXV0aC9yZWFsbXMvc2ltdmEiLCJzdWIiOiI2MDIwYjU4Ni0wODk1LTRkZDEtODM3Yy01MjBhY2Q3NDk2ODgiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoidWFkdmVudHVyZSIsInNlc3Npb25fc3RhdGUiOiI5ZjU2YTFkYi0xNWI5LTRlZGEtODFjZC1mMWJlNDJmMzM5NWEiLCJzY29wZSI6Im9mZmxpbmVfYWNjZXNzIHByb2ZpbGUgZW1haWwifQ.1FyfyqkZbPeAccyAv1enLM1zKqE-J8TPoUxCmaim9Lo</entry>
+<entry key="Simva.RefreshToken">eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2Y2IwZWFmNC1iOWM1LTQ0ZWQtODYzZC05ZGRjMWU5ZmEyODMifQ.eyJpYXQiOjE2MzIxMzM1MTAsImp0aSI6IjMyYjkzOWQ3LTg3NjUtNDM0ZC1iNzQ4LTQzYjE1NGVhMGMzYyIsImlzcyI6Imh0dHBzOi8vc3NvLnNpbXZhLmUtdWNtLmVzL2F1dGgvcmVhbG1zL3NpbXZhIiwiYXVkIjoiaHR0cHM6Ly9zc28uc2ltdmEuZS11Y20uZXMvYXV0aC9yZWFsbXMvc2ltdmEiLCJzdWIiOiI2MDIwYjU4Ni0wODk1LTRkZDEtODM3Yy01MjBhY2Q3NDk2ODgiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoidWFkdmVudHVyZSIsInNlc3Npb25fc3RhdGUiOiI5ZjU2YTFkYi0xNWI5LTRlZGEtODFjZC1mMWJlNDJmMzM5NWEiLCJzY29wZSI6Im9mZmxpbmVfYWNjZXNzIHByb2ZpbGUgZW1haWwifQ.j4d0pWwq0tfo0TSjNrvT30kFqCtXOCU7qS8u3-_sdiE</entry>
 <entry key="Chapter0.SceneId.X">2</entry>
 <entry key="Chapter0.SceneId.Y">3</entry>
 <entry key="Chapter0.Entrada.X">332</entry>
@@ -72,10 +72,10 @@
 <entry key="Chapter0.SalaEntrevistas10.Y">520</entry>
 <entry key="Chapter0.SalaEntrevistas11.X">664</entry>
 <entry key="Chapter0.SalaEntrevistas11.Y">524</entry>
-<entry key="Chapter0.Menu.X">628</entry>
-<entry key="Chapter0.Menu.Y">-57</entry>
-<entry key="Chapter0.Creditos.X">761</entry>
-<entry key="Chapter0.Creditos.Y">75</entry>
+<entry key="Chapter0.Menu.X">408</entry>
+<entry key="Chapter0.Menu.Y">-33</entry>
+<entry key="Chapter0.Creditos.X">648</entry>
+<entry key="Chapter0.Creditos.Y">113</entry>
 <entry key="Chapter0.Introducción.X">-115</entry>
 <entry key="Chapter0.Introducción.Y">213</entry>
 <entry key="Chapter0.Introduccion0.X">-173</entry>

@@ -445,7 +445,8 @@
     <objects>
       <object-ref idTarget="BotonJugar" x="1025" y="975" scale="1.895833" layer="0" hasInfluenceArea="no" />
       <object-ref idTarget="BotonCreditos" x="1025" y="1185" scale="1.895833" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonPreguntas" x="1028" y="1349" scale="1.796053" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonPreguntas" x="1024" y="1348" scale="1.796053" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="Borrar" x="1500" y="1095" scale="1" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Introduccion" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -518,7 +519,7 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/MenuBlurred.jpg" />
+      <asset type="background" uri="assets/background/MenuBlurred.png" />
     </resources>
     <name>
     </name>
@@ -526,9 +527,6 @@
     <objects>
       <object-ref idTarget="BotonAtras" x="109" y="278" scale="0.15" layer="0" hasInfluenceArea="no" />
     </objects>
-    <atrezzo>
-      <atrezzo-ref idTarget="CreditosTexto" x="1236" y="1350" scale="1.161852" layer="1" />
-    </atrezzo>
   </scene>
   <scene id="Hall" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -569,22 +567,62 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/Pasillo (1).png" />
+      <asset type="background" uri="assets/background/Pasillo.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-82" y="-59" width="146" height="849" hasInfluenceArea="no" idTarget="SalaCafe" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-79" y="-57" width="141" height="824" hasInfluenceArea="no" idTarget="SalaCafe" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="818" y="-28" width="402" height="614" hasInfluenceArea="no" idTarget="SalaEspera" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="781" y="49" width="390" height="596" hasInfluenceArea="no" idTarget="SalaEspera" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Luis" x="538" y="772" scale="0.5998735" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Luis" x="522" y="749" scale="0.5823772" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
+    <active-areas>
+      <active-area id="FlechaReuniones" rectangular="yes" x="250" y="143" width="74" height="74" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <speak-player>Al final del pasillo está la sala de reuniones.</speak-player>
+              <condition />
+              <speak-player>He oído que las entrevistas de trabajo son por ahí.</speak-player>
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+      <active-area id="FlechaCafe" rectangular="yes" x="250" y="282" width="74" height="74" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <speak-player>La cafetería está por la izquierda... Podría investigar.</speak-player>
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
   </scene>
   <scene id="SalaEspera" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -628,19 +666,19 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-167" y="-62" width="328" height="1376" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1767" y="-45" width="328" height="1376" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Carlos" x="2649" y="1550" scale="1.380869" orientation="2" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Mujer1" x="1732" y="1235" scale="1.308521" orientation="2" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre2" x="903" y="1120" scale="1" orientation="2" layer="3" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre3" x="754" y="940" scale="0.7378676" orientation="2" layer="4" hasInfluenceArea="no" />
-      <character-ref idTarget="Rebeca" x="1541" y="1185" scale="1.520025" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Carlos" x="2412" y="1569" scale="1.380869" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Mujer1" x="586" y="1172" scale="1.308521" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre2" x="1464" y="1096" scale="1" orientation="2" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre3" x="1236" y="959" scale="0.7378676" orientation="2" layer="4" hasInfluenceArea="no" />
+      <character-ref idTarget="Rebeca" x="344" y="1191" scale="1.520025" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
     <active-areas>
-      <active-area id="ConversacionHombreHombre" rectangular="no" x="603" y="623" width="480" height="516" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="ConversacionHombreHombre" rectangular="no" x="1094" y="656" width="565" height="437" hasInfluenceArea="no" behaviour="first-action">
         <condition>
           <inactive flag="HombresEscuchados" />
         </condition>
@@ -660,16 +698,16 @@
             </effect>
           </use>
         </actions>
-        <point x="664" y="770" />
-        <point x="777" y="623" />
-        <point x="996" y="679" />
-        <point x="1081" y="775" />
-        <point x="1083" y="940" />
-        <point x="861" y="1139" />
-        <point x="777" y="1012" />
-        <point x="603" y="955" />
+        <point x="1176" y="765" />
+        <point x="1272" y="656" />
+        <point x="1574" y="678" />
+        <point x="1659" y="799" />
+        <point x="1649" y="894" />
+        <point x="1427" y="1093" />
+        <point x="1289" y="974" />
+        <point x="1094" y="954" />
       </active-area>
-      <active-area id="ConversacionHombreMujer" rectangular="no" x="1398" y="528" width="454" height="701" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="ConversacionHombreMujer" rectangular="no" x="216" y="502" width="458" height="670" hasInfluenceArea="no" behaviour="first-action">
         <condition>
           <inactive flag="MujeresEscuchadas" />
         </condition>
@@ -689,12 +727,12 @@
             </effect>
           </use>
         </actions>
-        <point x="1497" y="528" />
-        <point x="1721" y="536" />
-        <point x="1852" y="647" />
-        <point x="1819" y="1229" />
-        <point x="1456" y="1156" />
-        <point x="1398" y="666" />
+        <point x="282" y="561" />
+        <point x="580" y="502" />
+        <point x="674" y="626" />
+        <point x="637" y="1154" />
+        <point x="282" y="1172" />
+        <point x="216" y="686" />
       </active-area>
     </active-areas>
   </scene>
@@ -942,7 +980,7 @@
       <condition>
         <equals var="EntrevistaPregunta" value="2" />
       </condition>
-      <trigger-conversation idTarget="Entrevista3" />
+      <trigger-conversation idTarget="Entrevista3Analista" />
       <condition>
         <equals var="EntrevistaPregunta" value="3" />
       </condition>
@@ -997,7 +1035,7 @@
       <condition>
         <equals var="EntrevistaPregunta" value="2" />
       </condition>
-      <trigger-conversation idTarget="Entrevista3" />
+      <trigger-conversation idTarget="Entrevista3Informatica" />
       <condition>
         <equals var="EntrevistaPregunta" value="3" />
       </condition>
@@ -1532,7 +1570,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="1" question="RecepcionistaEntrevista" keepShowing="yes" preListening="yes" editor-x="538" editor-y="37" x="538" y="37">
+    <option-node nodeindex="1" question="RecepcionistaEntrevista" random="yes" keepShowing="yes" preListening="yes" editor-x="227" editor-y="288" x="227" y="288">
       <speak-player>
         <text>Perdón, ¿cómo dice?</text>
         <resources name="No name" />
@@ -1549,10 +1587,20 @@
         <text>Creo que no me he explicado. Vengo por el puesto de programador.</text>
         <resources name="No name" />
       </speak-player>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <child nodeindex="4" />
+      <speak-player>
+        <text>Creo que no me he explicado. Vengo por el puesto de analista.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="536" editor-y="384">
+    <dialogue-node nodeindex="2" editor-x="370" editor-y="8">
       <speak-char idTarget="Recepcionista">
         <resources name="No name" />
         <text>Tenemos varios puestos vacantes.</text>
@@ -1580,7 +1628,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="817" editor-y="32">
+    <dialogue-node nodeindex="3" editor-x="910" editor-y="135">
       <speak-player>
         <resources name="No name" />
         <text>* Creo que tendré que buscar por mi cuenta... Idiota. *</text>
@@ -1588,7 +1636,7 @@
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="820" editor-y="239">
+    <dialogue-node nodeindex="4" editor-x="887" editor-y="351">
       <speak-char idTarget="Recepcionista">
         <resources name="No name" />
         <text>* Se sorprende *</text>
@@ -1863,7 +1911,16 @@
         <resources name="No name" />
         <text>Perdona, ¿también has venido a la entrevista de programador junior?</text>
       </speak-player>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Perdona, ¿también has venido a la entrevista de analista de datos?</text>
+      </speak-player>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>Sí, a ver qué tal se me da.</text>
@@ -2112,7 +2169,7 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="GrupoHombresConversacion">
-    <dialogue-node nodeindex="0" editor-x="97" editor-y="65">
+    <dialogue-node nodeindex="0" editor-x="68" editor-y="44">
       <speak-char idTarget="Hombre2">
         <resources name="No name" />
         <text>¿Has visto cómo está hoy la sala de reuniones?</text>
@@ -2122,7 +2179,16 @@
         <resources name="No name" />
         <text>La verdad es que con la oferta de programador junior se está llenando esto de gente.</text>
       </speak-char>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <speak-char idTarget="Hombre3">
+        <resources name="No name" />
+        <text>La verdad es que con la oferta de analista junior se está llenando esto de gente.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <speak-char idTarget="Hombre2">
         <resources name="No name" />
         <text>Y no hay ni una tía.</text>
@@ -2132,7 +2198,16 @@
         <resources name="No name" />
         <text>Normal. ¿Cuántas conoces que sepan programar?</text>
       </speak-char>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <speak-char idTarget="Hombre3">
+        <resources name="No name" />
+        <text>Normal. ¿Cuántas conoces que sepan matemáticas?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <speak-char idTarget="Hombre2">
         <resources name="No name" />
         <text>Alguna habrá, digo yo.</text>
@@ -2165,9 +2240,9 @@
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Hombre2" x="-2500" y="1120" />
+          <move-npc idTarget="Hombre2" x="2500" y="1120" />
           <condition />
-          <move-npc idTarget="Hombre3" x="-2500" y="940" />
+          <move-npc idTarget="Hombre3" x="2500" y="940" />
           <condition />
           <activate flag="HombresEscuchados" />
           <condition />
@@ -2187,11 +2262,11 @@
       <effect>
         <activate flag="MujeresEscuchadas" />
         <condition />
-        <move-npc idTarget="Carlos" x="1915" y="1237" />
+        <move-npc idTarget="Carlos" x="800" y="1195" />
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="361" editor-y="42">
+    <dialogue-node nodeindex="1" editor-x="320" editor-y="23">
       <speak-char idTarget="Rebeca">
         <resources name="No name" />
         <text>¿Cómo llevas el proyecto?</text>
@@ -2199,25 +2274,43 @@
       <condition />
       <speak-char idTarget="Mujer1">
         <resources name="No name" />
-        <text>La verdad es que estoy  teniendo algunos problemas para encontrar todos los números primos en una lista. </text>
+        <text>La verdad es que estoy teniendo algunos problemas para encontrar todos los números primos en una lista. </text>
       </speak-char>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>La verdad es que estoy teniendo algunos problemas para calcular las probabilidades de que cierto evento ocurra.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <speak-char idTarget="Rebeca">
         <resources name="No name" />
         <text>Lo primero que se me ocurre es que puedes utilizar la criba de Eratóstenes.</text>
       </speak-char>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
       <speak-char idTarget="Rebeca">
         <resources name="No name" />
-        <text>No es el  proceso más rápido, pero te aseguro que funciona.</text>
+        <text>Lo primero que se me ocurre es que hagas una aproximación normal.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
+      <speak-char idTarget="Rebeca">
+        <resources name="No name" />
+        <text>No es el proceso más eficiente, pero te aseguro que funciona.</text>
       </speak-char>
       <condition />
       <child nodeindex="2" />
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="667" editor-y="20">
+    <dialogue-node nodeindex="2" editor-x="626" editor-y="15">
       <speak-char idTarget="Mujer1">
         <resources name="No name" />
-        <text>Supongo que sí, pero es verdad que puede llegar a ser demasiado lento.</text>
+        <text>Supongo que sí, pero es verdad que quizá no es la mejor solución.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Mujer1">
@@ -2249,25 +2342,52 @@
         <resources name="No name" />
         <text>Pues le estaba comentando a Rebeca que no sé cómo encontrar todos los números primos en una lista.</text>
       </speak-char>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Pues le estaba comentando a Rebeca que no sé cómo calcular cierta probabilidad, en este caso.</text>
+      </speak-player>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <speak-char idTarget="Carlos">
         <resources name="No name" />
         <text>¡Ah!  ¡Qué interesante! ¿Conoces la criba de Eratóstenes?</text>
       </speak-char>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
       <speak-char idTarget="Carlos">
         <resources name="No name" />
-        <text>Para que tú lo entiendas, con ese algoritmo vas descartando todos los números que no son primos, y te quedan los primos.</text>
+        <text>Con ese algoritmo vas descartando todos los números que no son primos, y te quedan los primos.</text>
       </speak-char>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <speak-char idTarget="Carlos">
+        <resources name="No name" />
+        <text>¡Ah!  ¡Qué interesante! ¿Sabes hacer una aproximación normal?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
+      <speak-char idTarget="Carlos">
+        <resources name="No name" />
+        <text>Con eso te puedes sacar unos resultados bastante fiables para lo que estás intentando hacer.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <speak-char idTarget="Rebeca">
         <resources name="No name" />
-        <text>Eso le estaba comentando, pero parece que no es la solución que  buscaba.</text>
+        <text>Eso le estaba comentando, pero parece que no es la solución que buscaba.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Mujer1">
         <resources name="No name" />
-        <text>Bueno, estaba buscando  una segunda opinión.</text>
+        <text>Bueno, estaba buscando una segunda opinión.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Carlos">
@@ -2282,7 +2402,7 @@
       <condition />
       <speak-char idTarget="Mujer1">
         <resources name="No name" />
-        <text>No, no hace falta. Voy a  probar tu solución, Carlos. </text>
+        <text>No, no hace falta. Voy a probar tu solución, Carlos. </text>
       </speak-char>
       <condition />
       <speak-char idTarget="Mujer1">
@@ -2307,11 +2427,11 @@
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Mujer1" x="25000" y="1359" />
+          <move-npc idTarget="Mujer1" x="12500" y="1359" />
           <condition />
-          <move-npc idTarget="Carlos" x="23000" y="1359" />
+          <move-npc idTarget="Carlos" x="12300" y="1359" />
           <condition />
-          <move-npc idTarget="Rebeca" x="27500" y="1500" />
+          <move-npc idTarget="Rebeca" x="12750" y="1500" />
           <condition />
           <increment var="PersonajesHablados" value="1" />
           <condition />
@@ -2490,7 +2610,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="RRHHTrabajarNosotros" keepShowing="yes" preListening="yes" editor-x="247" editor-y="53" x="247" y="53">
+    <option-node nodeindex="1" question="RRHHTrabajarNosotros" keepShowing="yes" preListening="yes" editor-x="0" editor-y="571" x="0" y="571">
       <speak-player>
         <text>Sé la reputación que tiene desarrollando programas innovadores. Creo que con mi formación, mi curiosidad e iniciativa podré contribuir en el diseño de los proyectos que tienen trazados para este año.</text>
         <resources name="No name" />
@@ -2500,7 +2620,7 @@
       </condition>
       <child nodeindex="2" />
       <speak-player>
-        <text>Sé el alcance que tiene a nivel nacional. Creo que mi formación, mi curiosidad e iniciativa podrán ayudar a conocer y difundir las noticias de cada momento.</text>
+        <text>Sé el alcance que tiene a nivel nacional. Creo que mi formación, mi curiosidad e iniciativa podré contribuir a obtener resultados fiables para cada proyecto en el que trabajemos.</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -2646,7 +2766,16 @@
         <resources name="No name" />
         <text>Como empresa centrada en el desarrollo de software, necesitamos gente que tenga cierta base programando.</text>
       </speak-char>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Aunque no seamos una empresa centrada en el desarrollo de software, necesitamos gente que tenga cierta base programando.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>¿Cuál es su experiencia programando? ¿Qué lenguajes ha utilizado?</text>
@@ -2654,12 +2783,22 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="RRHHNivelProgramacion" keepShowing="yes" preListening="yes" editor-x="307" editor-y="23" x="307" y="23">
+    <option-node nodeindex="1" question="RRHHNivelProgramacion" keepShowing="yes" preListening="yes" editor-x="273" editor-y="49" x="273" y="49">
       <speak-player>
         <text>Desde que empecé la carrera, he desarrollado diferentes programas utilizando, principalmente, C++. También he trabajado otros lenguajes como Java y Javascript.</text>
         <resources name="No name" />
       </speak-player>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Desde que empecé la carrera, he desarrollado diferentes programas utilizando Python.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <child nodeindex="2" />
       <speak-player>
         <text>En la universidad participé en varios proyectos, que desarrollé utilizando lenguajes orientados a objetos.</text>
@@ -2690,19 +2829,25 @@
         <effect>
           <increment var="EntrevistaPregunta" value="1" />
           <condition />
-          <trigger-conversation idTarget="Entrevista3" />
-          <condition />
+          <trigger-conversation idTarget="Entrevista3Informatica" />
+          <condition>
+            <active flag="Software" />
+          </condition>
+          <trigger-conversation idTarget="Entrevista3Analista" />
+          <condition>
+            <inactive flag="Software" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="598" editor-y="120">
+    <dialogue-node nodeindex="3" editor-x="584" editor-y="183">
       <child nodeindex="2" />
       <effect>
         <increment var="ErroresEntrevista" value="1" />
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="595" editor-y="310">
+    <dialogue-node nodeindex="4" editor-x="578" editor-y="382">
       <end-conversation>
         <effect>
           <trigger-cutscene idTarget="PerfilAnalista" />
@@ -2717,7 +2862,7 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista3">
+  <graph-conversation id="Entrevista3Informatica">
     <dialogue-node nodeindex="0" editor-x="11" editor-y="144">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -2735,6 +2880,78 @@
       <child nodeindex="2" />
       <speak-player>
         <text>Sí, todos mis proyectos universitarios tienen un repositorio en GitHub, para facilitar el trabajo en equipo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Claro, lo he utilizado para las prácticas de la carrera.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>[Mirar mi CV]</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="825" editor-y="23">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>Muy bien. Vamos a pasar a otro tipo de preguntas, menos técnicas.</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="EntrevistaPregunta" value="1" />
+          <condition />
+          <trigger-conversation idTarget="Entrevista4" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="588" editor-y="177">
+      <child nodeindex="2" />
+      <effect>
+        <increment var="ErroresEntrevista" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="578" editor-y="384">
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="PerfilAnalista" />
+          <condition>
+            <inactive flag="Software" />
+          </condition>
+          <trigger-cutscene idTarget="PerfilInformatica" />
+          <condition>
+            <active flag="Software" />
+          </condition>
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Entrevista3Analista">
+    <dialogue-node nodeindex="0" editor-x="11" editor-y="144">
+      <speak-char idTarget="AndresRRHH">
+        <resources name="No name" />
+        <text>También nos interesa saber si has trabajado con bases de datos, y si has desarrollado alguna.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="RRHHBasesDatos" keepShowing="yes" preListening="yes" editor-x="278" editor-y="138" x="278" y="138">
+      <speak-player>
+        <text>Por supuesto. Desde que empecé a estudiar, las bases de datos han sido una herramienta esencial para recoger y clasificar datos. Me alegra decir que he podido crear alguna, aunque no fuera la más completa.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Sí, todos mis trabajos universitarios los hice con bases de datos, para facilitar la recogida de datos.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -3117,12 +3334,22 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="RRHHCalidezHumanidad" keepShowing="yes" preListening="yes" editor-x="314" editor-y="209" x="314" y="209">
+    <option-node nodeindex="1" question="RRHHCalidezHumanidad" keepShowing="yes" preListening="yes" editor-x="308" editor-y="267" x="308" y="267">
       <speak-player>
         <text>Pensaba que el puesto era para desarrollar software, no para "aportar calidez".</text>
         <resources name="No name" />
       </speak-player>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Pensaba que el puesto era para analizar datos, no para "aportar calidez".</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <child nodeindex="2" />
       <speak-player>
         <text>Y no solo eso; tengo muchas ganas de empezar a dar mis ideas y demostrar mi capacidad técnica.</text>
@@ -3417,7 +3644,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="309" editor-y="169" x="309" y="169">
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="309" editor-y="169" x="309" y="169">
       <speak-player>
         <text>Bastante bien, creo que la he clavado.</text>
       </speak-player>
@@ -3528,27 +3755,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="825" editor-y="23">
-      <speak-player>
-        <resources name="No name" />
-        <text>Correcto.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-      <effect>
-        <activate flag="0Correcto" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="818" editor-y="282">
-      <speak-player>
-        <resources name="No name" />
-        <text>La respuesta correcta era: que el recepcionista asuma que te presentas para el puesto de secretaria.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="1237" editor-y="123">
+    <dialogue-node nodeindex="2" editor-x="1034" editor-y="53">
       <speak-player>
         <resources name="No name" />
         <text>¡Auxiliar administrativo, dice!</text>
@@ -3558,10 +3765,19 @@
         <resources name="No name" />
         <text>Tantos años estudiando Informática, y no se ha planteado que pueda dedicarme a un puesto técnico.</text>
       </speak-player>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
       <speak-player>
         <resources name="No name" />
-        <text>Ni siquiera me ha preguntado a qué oferta me presentaba. ¿Qué pasa, que las mujeres no podemos entender de ordenadores?</text>
+        <text>Tantos años estudiando Matemáticas, y no se ha planteado que pueda dedicarme a un puesto técnico.</text>
+      </speak-player>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Ni siquiera me ha preguntado a qué oferta me presentaba. ¿Qué pasa, que las mujeres no podemos entender de ciencias?</text>
       </speak-player>
       <condition />
       <end-conversation>
@@ -3582,6 +3798,14 @@
           </condition>
         </effect>
       </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="644" editor-y="262">
+      <speak-player>
+        <resources name="No name" />
+        <text>No... creo que me chirría más que me confundiese con una secretaria.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Pregunta1Conversacion">
@@ -3638,27 +3862,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="647" editor-y="9">
-      <speak-player>
-        <resources name="No name" />
-        <text>Correcto.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-      <effect>
-        <activate flag="1Correcto" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="638" editor-y="212">
-      <speak-player>
-        <resources name="No name" />
-        <text>La respuesta correcta era: que te confundan por la pareja del CEO.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="937" editor-y="94">
+    <dialogue-node nodeindex="2" editor-x="937" editor-y="94">
       <speak-player>
         <resources name="No name" />
         <text>¡La pareja del CEO! ¿No se esperaba que viniese a una entrevista de trabajo?</text>
@@ -3692,6 +3896,14 @@
           </condition>
         </effect>
       </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="653" editor-y="272">
+      <speak-player>
+        <resources name="No name" />
+        <text>Eso fue raro, sí, pero más raro fue que me confundiese con la pareja del CEO.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Pregunta2Conversacion">
@@ -3743,27 +3955,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="656" editor-y="0">
-      <speak-player>
-        <resources name="No name" />
-        <text>Correcto.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-      <effect>
-        <activate flag="2Correcto" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="657" editor-y="194">
-      <speak-player>
-        <resources name="No name" />
-        <text>La respuesta correcta era: que el candidato piense que te van a contratar para mejorar la imagen de la empresa.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="937" editor-y="94">
+    <dialogue-node nodeindex="2" editor-x="937" editor-y="94">
       <speak-player>
         <resources name="No name" />
         <text>Lo dice como si las cuotas fueran un sinónimo de "contratamos a cualquier mujer que pase por la puerta".</text>
@@ -3792,6 +3984,14 @@
           </condition>
         </effect>
       </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="634" editor-y="160">
+      <speak-player>
+        <resources name="No name" />
+        <text>No, ahora que lo pienso, lo raro es que pensase que me iban a contratar para mejorar la imagen de la empresa.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Pregunta3Conversacion">
@@ -3824,7 +4024,7 @@
       <child nodeindex="1" />
     </dialogue-node>
     <option-node nodeindex="1" question="QuizFinal3" random="yes" keepShowing="yes" preListening="yes" editor-x="400" editor-y="44" x="400" y="44">
-      <speak-player>
+      <speak-player correct="true">
         <text>Que el candidato delegue su responsabilidad en la casa en su mujer.</text>
         <resources name="No name" />
       </speak-player>
@@ -3843,27 +4043,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="796" editor-y="0">
-      <speak-player>
-        <resources name="No name" />
-        <text>Correcto.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-      <effect>
-        <activate flag="3Correcto" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="844" editor-y="220">
-      <speak-player>
-        <resources name="No name" />
-        <text>La respuesta correcta era: que el candidato delegue su responsabilidad en la casa en su mujer.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="1139" editor-y="61">
+    <dialogue-node nodeindex="2" editor-x="1139" editor-y="61">
       <speak-player>
         <resources name="No name" />
         <text>Que "ayuda" a su novia, dice. ¿A qué?</text>
@@ -3903,14 +4083,31 @@
         </effect>
       </end-conversation>
     </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="753" editor-y="202">
+      <speak-player>
+        <resources name="No name" />
+        <text>Bueno, eso y que el candidato delegue su responsabilidad en la casa en su mujer.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Pregunta4Conversacion">
-    <dialogue-node nodeindex="0" editor-x="32" editor-y="41">
+    <dialogue-node nodeindex="0" editor-x="49" editor-y="6">
       <speak-char idTarget="Hombre3">
         <resources name="No name" />
         <text>Se ha llenado esto de gente con la oferta de programador. </text>
       </speak-char>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <speak-char idTarget="Hombre3">
+        <resources name="No name" />
+        <text>Se ha llenado esto de gente con la oferta de analista. </text>
+      </speak-char>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <speak-char idTarget="Hombre2">
         <resources name="No name" />
         <text>Y ni una tía.</text>
@@ -3920,7 +4117,16 @@
         <resources name="No name" />
         <text>Normal. ¿Cuántas conoces que sepan programar? Además, mejor así, que luego te distraes.</text>
       </speak-char>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <speak-char idTarget="Hombre3">
+        <resources name="No name" />
+        <text>Normal. ¿Cuántas conoces que sepan matemáticas? Además, mejor así, que luego te distraes.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <speak-char idTarget="Hombre2">
         <resources name="No name" />
         <text>Anda, volvamos a trabajar.</text>
@@ -3933,12 +4139,22 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="QuizFinal4" random="yes" keepShowing="yes" preListening="yes" editor-x="292" editor-y="35" x="292" y="35">
-      <speak-player>
+    <option-node nodeindex="1" question="QuizFinal4" random="yes" keepShowing="yes" preListening="yes" editor-x="318" editor-y="33" x="318" y="33">
+      <speak-player correct="true">
         <text>Que piensen que no hay mujeres que sepan programar.</text>
         <resources name="No name" />
       </speak-player>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <child nodeindex="2" />
+      <speak-player correct="true">
+        <text>Que piensen que no hay mujeres que sepan matemáticas.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <child nodeindex="2" />
       <speak-player>
         <text>Que haya tantos candidatos para el mismo puesto de trabajo.</text>
@@ -3953,27 +4169,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="617" editor-y="11">
-      <speak-player>
-        <resources name="No name" />
-        <text>Correcto.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-      <effect>
-        <activate flag="4Correcto" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="634" editor-y="214">
-      <speak-player>
-        <resources name="No name" />
-        <text>La respuesta correcta era: que piensen que no hay mujeres que sepan programar.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="998" editor-y="83">
+    <dialogue-node nodeindex="2" editor-x="1045" editor-y="67">
       <speak-player>
         <resources name="No name" />
         <text>¿Cómo se pueden decir tantas cosas mal en tan poco tiempo?</text>
@@ -3981,7 +4177,7 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>¿Que no hay mujeres que sepan programar? Somos muchísimas, aunque no se nos dan las oportunidades que merecemos.</text>
+        <text>¿Que no hay mujeres preparadas? Somos muchísimas, aunque no se nos dan las oportunidades que merecemos.</text>
       </speak-player>
       <condition />
       <speak-player>
@@ -4013,19 +4209,54 @@
         </effect>
       </end-conversation>
     </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="681" editor-y="220">
+      <speak-player>
+        <resources name="No name" />
+        <text>Lo realmente indignante es que piensen que no hay mujeres que sepan programar.</text>
+      </speak-player>
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Lo realmente indignante es que piensen que no hay mujeres que sepan matemáticas.</text>
+      </speak-player>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
+      <child nodeindex="2" />
+    </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Pregunta5Conversacion">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="0" editor-y="59">
       <speak-char idTarget="Mujer1">
         <resources name="No name" />
         <text>Tengo algunos problemas para encontrar todos los números primos en una lista. </text>
       </speak-char>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
       <speak-char idTarget="Carlos">
         <resources name="No name" />
         <text>¿Conoces la criba de Eratóstenes?</text>
       </speak-char>
-      <condition />
+      <condition>
+        <active flag="Software" />
+      </condition>
+      <speak-char idTarget="Mujer1">
+        <resources name="No name" />
+        <text>Tengo algunos problemas para calcular estas probabilidades.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
+      <speak-char idTarget="Carlos">
+        <resources name="No name" />
+        <text>¿Sabes hacer una aproximación normal?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Software" />
+      </condition>
       <speak-char idTarget="Rebeca">
         <resources name="No name" />
         <text>Eso le estaba comentando, pero parece que no es la solución que  buscaba.</text>
@@ -4048,7 +4279,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="QuizFinal5" random="yes" keepShowing="yes" preListening="yes" editor-x="339" editor-y="49" x="339" y="49">
+    <option-node nodeindex="1" question="QuizFinal5" random="yes" keepShowing="yes" preListening="yes" editor-x="402" editor-y="98" x="402" y="98">
       <speak-player correct="true">
         <text>Que la solución de Rebeca solo se tenga en cuenta cuando la comenta su compañero.</text>
         <resources name="No name" />
@@ -4056,7 +4287,7 @@
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>Que la mujer no conozca ese algoritmo.</text>
+        <text>Que la mujer no conozca esa solución.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -4068,27 +4299,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="724" editor-y="1">
-      <speak-player>
-        <resources name="No name" />
-        <text>Correcto.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-      <effect>
-        <activate flag="5Correcto" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="739" editor-y="195">
-      <speak-player>
-        <resources name="No name" />
-        <text>La respuesta correcta era: que la solución de Rebeca solo se tenga en cuenta cuando la comenta Carlos.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="991" editor-y="85">
+    <dialogue-node nodeindex="2" editor-x="991" editor-y="85">
       <speak-player>
         <resources name="No name" />
         <text>¡Ay, Rebeca! ¡Cuántas veces he estado en tu situación!</text>
@@ -4133,6 +4344,14 @@
         </effect>
       </end-conversation>
     </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="695" editor-y="259">
+      <speak-player>
+        <resources name="No name" />
+        <text>Aunque ahora que lo pienso, es casi peor que la solución de Rebeca solo se tenga en cuenta cuando la comenta Carlos.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Pregunta6Conversacion">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
@@ -4163,7 +4382,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="QuizFinal6" random="yes" keepShowing="yes" preListening="yes" editor-x="331" editor-y="25" x="331" y="25">
+    <option-node nodeindex="1" question="QuizFinal6" random="yes" keepShowing="yes" preListening="yes" editor-x="376" editor-y="70" x="376" y="70">
       <speak-player correct="true">
         <text>Que el rol de ella sea el de tomar notas y él se encargue de hacer la entrevista.</text>
         <resources name="No name" />
@@ -4183,27 +4402,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="724" editor-y="1">
-      <speak-player>
-        <resources name="No name" />
-        <text>Correcto.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-      <effect>
-        <activate flag="6Correcto" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="724" editor-y="201">
-      <speak-player>
-        <resources name="No name" />
-        <text>La respuesta correcta era: que el rol de ella sea el de tomar notas y él se encargue de hacer la entrevista.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="1025" editor-y="96">
+    <dialogue-node nodeindex="2" editor-x="1025" editor-y="96">
       <speak-player>
         <resources name="No name" />
         <text>¿"Los encargados" de la entrevista? Pero si solo me ha preguntado él.</text>
@@ -4243,9 +4442,17 @@
         </effect>
       </end-conversation>
     </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="701" editor-y="262">
+      <speak-player>
+        <resources name="No name" />
+        <text>Ahora me pregunto... ¿Por qué el rol de ella es el de tomar notas?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Pregunta7Conversacion">
-    <dialogue-node nodeindex="0" editor-x="37" editor-y="49">
+    <dialogue-node nodeindex="0" editor-x="53" editor-y="25">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>Vamos a pasar a otro tipo de preguntas.</text>
@@ -4288,27 +4495,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="724" editor-y="1">
-      <speak-player>
-        <resources name="No name" />
-        <text>Correcto.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-      <effect>
-        <activate flag="7Correcto" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="724" editor-y="201">
-      <speak-player>
-        <resources name="No name" />
-        <text>La respuesta correcta era: que te pidan información personal en una entrevista de trabajo.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="1025" editor-y="96">
+    <dialogue-node nodeindex="2" editor-x="1025" editor-y="96">
       <speak-player>
         <resources name="No name" />
         <text>¿Que si tengo pareja? ¿Qué es esto, una entrevista de trabajo o una app de citas?</text>
@@ -4343,9 +4530,17 @@
         </effect>
       </end-conversation>
     </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="660" editor-y="238">
+      <speak-player>
+        <resources name="No name" />
+        <text>En realidad, eso de pedirme información personal en una entrevista... No lo veo del todo bien.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Pregunta8Conversacion">
-    <dialogue-node nodeindex="0" editor-x="65" editor-y="32">
+    <dialogue-node nodeindex="0" editor-x="57" editor-y="10">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>Déjame decirte que tienes una voz muy agradable, pero demasiado suave.</text>
@@ -4393,27 +4588,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="724" editor-y="1">
-      <speak-player>
-        <resources name="No name" />
-        <text>Correcto.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-      <effect>
-        <activate flag="8Correcto" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="724" editor-y="201">
-      <speak-player>
-        <resources name="No name" />
-        <text>La respuesta correcta era: que tengan en cuenta lo agradable que eres para un puesto técnico.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="960" editor-y="97">
+    <dialogue-node nodeindex="2" editor-x="960" editor-y="97">
       <speak-player>
         <resources name="No name" />
         <text>¿Que si me derrumbo bajo presión? ¿Que tengo una voz "suave"? No tengo comentarios.</text>
@@ -4448,9 +4623,17 @@
         </effect>
       </end-conversation>
     </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="651" editor-y="211">
+      <speak-player>
+        <resources name="No name" />
+        <text>No, me he equivocado. Lo raro es que tengan en cuenta que soy "agradable", si me estoy presentando a un puesto técnico.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Pregunta9Conversacion">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="24" editor-y="36">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
         <text>¡Ah! Casi lo olvido.</text>
@@ -4473,7 +4656,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="QuizFinal9" random="yes" keepShowing="yes" preListening="yes" editor-x="331" editor-y="25" x="331" y="25">
+    <option-node nodeindex="1" question="QuizFinal9" random="yes" keepShowing="yes" preListening="yes" editor-x="369" editor-y="20" x="369" y="20">
       <speak-player correct="true">
         <text>Que asuman que serás la encargada de cuidar a tus familiares y personas mayores.</text>
         <resources name="No name" />
@@ -4493,27 +4676,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="724" editor-y="1">
-      <speak-player>
-        <resources name="No name" />
-        <text>Correcto.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-      <effect>
-        <activate flag="9Correcto" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="725" editor-y="213">
-      <speak-player>
-        <resources name="No name" />
-        <text>La respuesta correcta era: que asuman que serás la encargada de cuidar a los niños o personas mayores.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="1025" editor-y="96">
+    <dialogue-node nodeindex="2" editor-x="1025" editor-y="96">
       <speak-player>
         <resources name="No name" />
         <text>Tener hijos, cuidar de mayores... ¿Qué le importa a esta gente si lo hago o no?</text>
@@ -4542,6 +4705,14 @@
           </condition>
         </effect>
       </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="691" editor-y="178">
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Y qué me dices de que asuman que seré la encargada de cuidar a los niños o personas mayores?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="ReflexionFinal">
@@ -4579,6 +4750,30 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
+  <object id="Borrar" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/0.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <activate flag="Software" />
+          <condition />
+          <trigger-scene idTarget="SalaCafe" x="1024" y="920" transitionTime="5" transitionType="5" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
   <object id="BotonJugar" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/button_jugar.png" />
@@ -4598,26 +4793,6 @@
           <trigger-scene idTarget="Introduccion" x="960" y="810" transitionTime="5" transitionType="5" />
           <condition />
           <trigger-conversation idTarget="IntroduccionConversacion" />
-          <condition />
-          <deactivate flag="0Correcto" />
-          <condition />
-          <deactivate flag="1Correcto" />
-          <condition />
-          <deactivate flag="2Correcto" />
-          <condition />
-          <deactivate flag="3Correcto" />
-          <condition />
-          <deactivate flag="4Correcto" />
-          <condition />
-          <deactivate flag="5Correcto" />
-          <condition />
-          <deactivate flag="6Correcto" />
-          <condition />
-          <deactivate flag="7Correcto" />
-          <condition />
-          <deactivate flag="8Correcto" />
-          <condition />
-          <deactivate flag="9Correcto" />
           <condition />
           <deactivate flag="HombresEscuchados" />
           <condition />
@@ -4755,17 +4930,9 @@
     </resources>
     <resources name="No name">
       <condition>
-        <active flag="0Correcto" />
-      </condition>
-      <asset type="image" uri="assets/image/0Correcto.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <resources name="No name">
-      <condition>
-        <inactive flag="0Correcto" />
         <active flag="Respondida0" />
       </condition>
-      <asset type="image" uri="assets/image/0Incorrecto.png" />
+      <asset type="image" uri="assets/image/0Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -4800,17 +4967,9 @@
     </resources>
     <resources name="No name">
       <condition>
-        <active flag="1Correcto" />
-      </condition>
-      <asset type="image" uri="assets/image/1Correcto.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <resources name="No name">
-      <condition>
-        <inactive flag="1Correcto" />
         <active flag="Respondida1" />
       </condition>
-      <asset type="image" uri="assets/image/1Incorrecto.png" />
+      <asset type="image" uri="assets/image/1Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -4845,18 +5004,9 @@
     </resources>
     <resources name="No name">
       <condition>
-        <active flag="2Correcto" />
         <active flag="Respondida2" />
       </condition>
-      <asset type="image" uri="assets/image/2Correcto.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <resources name="No name">
-      <condition>
-        <inactive flag="2Correcto" />
-        <active flag="Respondida2" />
-      </condition>
-      <asset type="image" uri="assets/image/2Incorrecto.png" />
+      <asset type="image" uri="assets/image/2Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -4891,18 +5041,9 @@
     </resources>
     <resources name="No name">
       <condition>
-        <active flag="3Correcto" />
         <active flag="Respondida3" />
       </condition>
-      <asset type="image" uri="assets/image/3Correcto.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <resources name="No name">
-      <condition>
-        <inactive flag="3Correcto" />
-        <active flag="Respondida3" />
-      </condition>
-      <asset type="image" uri="assets/image/3Incorrecto.png" />
+      <asset type="image" uri="assets/image/3Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -4937,18 +5078,9 @@
     </resources>
     <resources name="No name">
       <condition>
-        <active flag="4Correcto" />
         <active flag="Respondida4" />
       </condition>
-      <asset type="image" uri="assets/image/4Correcto.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <resources name="No name">
-      <condition>
-        <inactive flag="4Correcto" />
-        <active flag="Respondida4" />
-      </condition>
-      <asset type="image" uri="assets/image/4Incorrecto.png" />
+      <asset type="image" uri="assets/image/4Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -4983,18 +5115,9 @@
     </resources>
     <resources name="No name">
       <condition>
-        <active flag="5Correcto" />
         <active flag="Respondida5" />
       </condition>
-      <asset type="image" uri="assets/image/5Correcto.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <resources name="No name">
-      <condition>
-        <inactive flag="5Correcto" />
-        <active flag="Respondida5" />
-      </condition>
-      <asset type="image" uri="assets/image/5Incorrecto.png" />
+      <asset type="image" uri="assets/image/5Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -5029,18 +5152,9 @@
     </resources>
     <resources name="No name">
       <condition>
-        <active flag="6Correcto" />
         <active flag="Respondida6" />
       </condition>
-      <asset type="image" uri="assets/image/6Correcto.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <resources name="No name">
-      <condition>
-        <inactive flag="6Correcto" />
-        <active flag="Respondida6" />
-      </condition>
-      <asset type="image" uri="assets/image/6Incorrecto.png" />
+      <asset type="image" uri="assets/image/6Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -5075,18 +5189,9 @@
     </resources>
     <resources name="No name">
       <condition>
-        <active flag="7Correcto" />
         <active flag="Respondida7" />
       </condition>
-      <asset type="image" uri="assets/image/7Correcto.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <resources name="No name">
-      <condition>
-        <inactive flag="7Correcto" />
-        <active flag="Respondida7" />
-      </condition>
-      <asset type="image" uri="assets/image/7Incorrecto.png" />
+      <asset type="image" uri="assets/image/7Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -5121,18 +5226,9 @@
     </resources>
     <resources name="No name">
       <condition>
-        <active flag="8Correcto" />
         <active flag="Respondida8" />
       </condition>
-      <asset type="image" uri="assets/image/8Correcto.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <resources name="No name">
-      <condition>
-        <inactive flag="8Correcto" />
-        <active flag="Respondida8" />
-      </condition>
-      <asset type="image" uri="assets/image/8Incorrecto.png" />
+      <asset type="image" uri="assets/image/8Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -5167,18 +5263,9 @@
     </resources>
     <resources name="No name">
       <condition>
-        <active flag="9Correcto" />
         <active flag="Respondida9" />
       </condition>
-      <asset type="image" uri="assets/image/9Correcto.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <resources name="No name">
-      <condition>
-        <inactive flag="9Correcto" />
-        <active flag="Respondida9" />
-      </condition>
-      <asset type="image" uri="assets/image/9Incorrecto.png" />
+      <asset type="image" uri="assets/image/9Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -5291,20 +5378,6 @@
       </use>
     </actions>
   </object>
-  <atrezzoobject id="CreditosTexto">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/Creditos.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-  </atrezzoobject>
   <atrezzoobject id="Puerta">
     <resources name="Cerrada">
       <condition>

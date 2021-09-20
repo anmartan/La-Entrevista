@@ -433,9 +433,7 @@
     <default-initial-position x="400" y="450" />
     <objects>
       <object-ref idTarget="BotonJugar" x="1025" y="975" scale="1.895833" glow="yes" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonCreditos" x="1025" y="1185" scale="1.895833" glow="yes" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonPreguntas" x="1024" y="1348" scale="1.796053" glow="yes" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="Borrar" x="1500" y="1095" scale="1" glow="yes" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonCreditos" x="1025" y="1185" scale="1.895833" glow="yes" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Introduccion" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -497,7 +495,7 @@
       <object-ref idTarget="OpcionAnalista" x="1206" y="693" scale="0.2363486" glow="yes" layer="1" hasInfluenceArea="no" />
     </objects>
     <atrezzo>
-      <atrezzo-ref idTarget="PantallaOn" x="960" y="1080" scale="1" glow="yes" layer="0">
+      <atrezzo-ref idTarget="PantallaOn" x="-2698" y="1096" scale="1" glow="yes" layer="0">
         <condition>
           <active flag="PantallaEncendida" />
         </condition>
@@ -4739,30 +4737,6 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <object id="Borrar" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/0.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <actions>
-      <use needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <activate flag="Software" guid="1a8f62d4-05c0-416f-9c31-b6204923f733" />
-          <condition />
-          <trigger-scene idTarget="SalaCafe" x="1024" y="920" transitionTime="5" transitionType="5" guid="e9539d13-c080-48af-8f49-2d1aac707f5a" />
-          <condition />
-        </effect>
-      </use>
-    </actions>
-  </object>
   <object id="BotonJugar" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/button_jugar.png" />

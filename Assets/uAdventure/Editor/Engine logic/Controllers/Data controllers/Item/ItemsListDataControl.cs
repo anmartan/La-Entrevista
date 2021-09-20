@@ -159,7 +159,8 @@ namespace uAdventure.Editor
             if (type == Controller.ITEM)
             {
                 if (string.IsNullOrEmpty(itemId))
-                    controller.ShowInputDialog(TC.get("Operation.AddItemTitle"), TC.get("Operation.AddItemMessage"), TC.get("Operation.AddItemDefaultValue"), performAddElement);
+                    controller.ShowInputIdDialog(TC.get("Operation.AddItemTitle"), TC.get("Operation.AddItemMessage"),
+                        Controller.Instance.makeElementValid(TC.get("Operation.AddItemDefaultValue")), performAddElement);
                 else
                 {
                     performAddElement(null, itemId);
@@ -225,6 +226,7 @@ namespace uAdventure.Editor
                     itemsDataControlList.Remove((ItemDataControl)dataControl);
                     controller.deleteIdentifierReferences(itemId);
                     controller.IdentifierSummary.deleteId<Item>(itemId);
+                    controller.updateVarFlagSummary();
                     controller.DataModified();
                     elementDeleted = true;
                 }

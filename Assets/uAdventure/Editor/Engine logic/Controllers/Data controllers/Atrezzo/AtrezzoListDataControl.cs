@@ -113,7 +113,8 @@ namespace uAdventure.Editor
             {
                 // Show a dialog asking for the item id
                 if (string.IsNullOrEmpty(atrezzoId))
-                    controller.ShowInputDialog(TC.get("Operation.AddAtrezzoTitle"), TC.get("Operation.AddAtrezzoMessage"), TC.get("Operation.AddAtrezzoDefaultValue"), performAddElement);
+                    controller.ShowInputIdDialog(TC.get("Operation.AddAtrezzoTitle"), TC.get("Operation.AddAtrezzoMessage"),
+                        Controller.Instance.makeElementValid(TC.get("Operation.AddAtrezzoDefaultValue")), performAddElement);
                 else
                 {
                     elementAdded = true;
@@ -253,6 +254,7 @@ namespace uAdventure.Editor
                     atrezzoDataControlList.Remove((AtrezzoDataControl)dataControl);
                     controller.deleteIdentifierReferences(atrezzoId);
                     controller.IdentifierSummary.deleteId<Atrezzo>(atrezzoId);
+                    controller.updateVarFlagSummary();
                     controller.DataModified();
                     elementDeleted = true;
                 }

@@ -153,7 +153,8 @@ namespace uAdventure.Editor
             {
                 // Show a dialog asking for the macro id
                 if (macroId == null)
-                    controller.ShowInputDialog(TC.get("Operation.AddMacroTitle"), TC.get("Operation.AddMacroMessage"), TC.get("Operation.AddMacroDefaultValue"), performAddElement);
+                    controller.ShowInputIdDialog(TC.get("Operation.AddMacroTitle"), TC.get("Operation.AddMacroMessage"),
+                        Controller.Instance.makeElementValid(TC.get("Operation.AddMacroDefaultValue")), performAddElement);
                 else
                 {
                     performAddElement(null, macroId);
@@ -196,6 +197,8 @@ namespace uAdventure.Editor
             macrosList.Add(newElement);
             macrosDataControlList.Add(new MacroDataControl(newElement));
             controller.IdentifierSummary.addId<Macro>(id);
+            controller.updateVarFlagSummary();
+            controller.DataModified();
             return true;
 
         }
@@ -223,6 +226,7 @@ namespace uAdventure.Editor
                     macrosDataControlList.Remove((MacroDataControl)dataControl);
                     controller.deleteIdentifierReferences(macroId);
                     controller.IdentifierSummary.deleteId<Macro>(macroId);
+                    controller.updateVarFlagSummary();
                     controller.DataModified();
                     elementDeleted = true;
                 }

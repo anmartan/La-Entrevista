@@ -377,7 +377,7 @@
   <entry key="Conditions.Context.1.21"> The action {#ELEMENT_TYPE$} {#ELEMENT_ID$} &lt;b&gt;will become executable&lt;/b&gt; when the next condition is satisfied:</entry>
   <entry key="Flags.FlagReferences">References</entry>
   <entry key="ExitsList.DuplicateExit">Duplicate selected exit</entry>
-  <entry key="Operation.ExportProject.AsLO">Operation: Exporting project as Learning Object</entry>
+  <entry key="Operation.ExportProject.AsLO">Exporting project as Learning Object</entry>
   <entry key="Element.PostEffects">Post effects</entry>
   <entry key="ResourceBlock.deleteOnlyOneBlock.message"> Are you sure to delete the selected resource block? The conditions in the other block will be deleted </entry>
   <entry key="Effect.MoveCharacterInfo">Move character {#0} to x:{#1} y:{#2}</entry>
@@ -567,6 +567,8 @@
     Cannot delete the last scene of the chapter.
     All chapters must have at least one scene or cutscene
   </entry>
+  <entry key="Operation.CantDeleteLastElementTitle">Cannot delete</entry>
+  <entry key="Operation.CantDeleteLastElementMessage">Cannot delete the last element!</entry>
   <entry key="Effect.TriggerCutsceneInfo">Trigger cutscene {#0}</entry>
   <entry key="NPC.Name">Name of the character</entry>
   <entry key="Operation.DeleteResourcesErrorLastResources">The last look can not be deleted</entry>
@@ -2304,6 +2306,29 @@
   <entry key="Inventory.Type5">Fixed on bottom</entry>
   <entry key="Inventory.Type6">Icon freely positioned</entry>
   
+  <!-- Learning Object -->
+  
+  <entry key="ExportLearningObject.WebGLUnavailable">WebGL is not available in Unity, please install the WebGL build support using the Unity Hub.</entry>
+  <entry key="ExportLearningObject.BuildDetected">
+    A WebGL built has been detected in the default builds directory. Using it can drastically reduce 
+    the export time, but the Learning Object will not have the changes made after the WebGL Build. Do you want to use it?
+  </entry>
+  <entry key="ExportLearningObject.Starting">Starting...</entry>
+  <entry key="ExportLearningObject.BuildingWebGL">Building project for WebGL platform.</entry>
+  <entry key="ExportLearningObject.CreatingManifest">Creating ImsManifest file.</entry>
+  <entry key="ExportLearningObject.GatheringFiles">Gathering build files.</entry>
+  <entry key="ExportLearningObject.Compressing">Compressing Files</entry>
+  <entry key="ExportLearningObject.Done">Done!</entry>
+  
+  <!-- Id Validation -->
+  <entry key="Validation.Id.IsEmpty">Id must not be empty</entry>
+  <entry key="Validation.Id.ContainsSpaces">Id must not contain spaces</entry>
+  <entry key="Validation.Id.NotValidCharacter">Id contains a not valid character. Valid characters are alphanumeric and "_", "-", ".", ":".</entry>
+  <entry key="Validation.Id.NotStartsWithLetter">Id must start with a letter</entry>
+  <entry key="Validation.Id.IsReservedPlayerValue">Id must not be the reserved Player tag</entry>
+  <entry key="Validation.Id.IsAlreadyUsedy">Id is already in use</entry>
+  
+  
   <!-- Buttons -->
   <entry key="Buttons.Hint">Hover the icon to see the highlighted version</entry>
   <entry key="Buttons.Normal">Normal</entry>
@@ -2473,4 +2498,13 @@
   <entry key="QR.QRScannerEffect.ListType.WhiteList">White list</entry>
   <entry key="QR.QRScannerEffectEditor.Message">Message</entry>
   <entry key="QR.QRScannerEffectEditor.ListType">List type</entry>
+  
+  <!-- Unity Plugin -->
+
+  <entry key="UnityPlugin.SceneWindow.InBuildSettings">Scene is in Build Settings, everything will work fine.</entry>
+  <entry key="UnityPlugin.SceneWindow.MainSceneInBuildSettings">Main uAdventure Scene is in Build Settings, everything will work fine.</entry>
+  <entry key="UnityPlugin.SceneWindow.SceneNotInBuildSettings">The scene is not in Build Settings, the engine won't be able to load it!</entry>
+  <entry key="UnityPlugin.SceneWindow.MainSceneNotInBuildSettings">uAdventure main scene is not in Build Settings, the engine won't be able to return to it!</entry>
+  <entry key="UnityPlugin.SceneWindow.AddSceneToBuildSettings">Add scene to Build Settings</entry>
+  
 </properties>

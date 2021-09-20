@@ -11,7 +11,7 @@ namespace Simva
 
         public static SimvaConf Local
         {
-            get
+            get 
             {
                 return local;
             }
@@ -58,7 +58,7 @@ namespace Simva
             string contents = "";
 
             // WebGL and Android have to use WWW to load from streaming assets
-#if UNITY_WEBPLAYER || UNITY_WEBGL || UNITY_ANDROID 
+#if (UNITY_WEBPLAYER || UNITY_WEBGL || UNITY_ANDROID) && !UNITY_EDITOR
             Debug.Log("[SIMVA CONF] Doing WebGL / Android read...");
             UnityWebRequest reader = GetReader();
             yield return reader.SendWebRequest();
@@ -104,7 +104,7 @@ namespace Simva
 #if UNITY_WEBPLAYER || UNITY_WEBGL
             reader = UnityWebRequest.Get(Application.streamingAssetsPath + "/" + FileName);
 #elif UNITY_ANDROID
-            reader = new UnityWebRequest.Get("jar: file://" + Application.dataPath + "!/assets/" + FileName);
+            reader = UnityWebRequest.Get("jar:file://" + Application.dataPath + "!/assets/" + FileName);
 #endif
             Debug.Log("[SIMVA CONF] Requesting simva.conf from: " + reader.uri);
             return reader;
@@ -115,8 +115,8 @@ namespace Simva
             var FileName = "simva.conf";
 
             // Platform dependent StreamingAssets Load https://docs.unity3d.com/Manual/StreamingAssets.html
-#if UNITY_IOS
-            var filePath = Path.Combine(Application.dataPath + "/Raw", FileName);
+#if UNITY_IOS && !UNITY_EDITOR
+            var filePath = System.IO.Path.Combine(Application.dataPath + "/Raw", FileName);
 #else
             var filePath = System.IO.Path.Combine(Application.streamingAssetsPath + "/", FileName);
 #endif

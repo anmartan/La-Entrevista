@@ -193,6 +193,35 @@ namespace uAdventure.Geo
             }
         }
 
+        public void SomethingReached(GameObject gb)
+        {
+            if (navigating && currentStep != null && currentStep.Reference == gb.name)
+            {
+                var mb = GetReference(gb.name);
+                if(mb != null)
+                {
+                    // Check if reached
+                    bool reached = IsReached(mb);
+                    UpdateArrow(reached);
+
+                    // Go next
+                    if (reached && !currentStep.LockNavigation && CompleteStep(currentStep))
+                    {
+                        // If the step is completed successfully we set the current step to null
+                        currentStep = null;
+
+                        if (stepCompleted.All(kv => kv.Value))
+                        {
+                            // Navigation finished
+                            navigating = false;
+                            SaveNavigation(Game.Instance.GameState.GetMemory("geo_extension"));
+                            DestroyImmediate(this.gameObject);
+                        }
+                    }
+                }
+            }
+        }
+
 
 
         // -------------------- 
@@ -204,7 +233,6 @@ namespace uAdventure.Geo
             return steps.Find(s => !stepCompleted[s]); // The first not completed
         }
 
-
         private bool IsReached(NavigationStep currentStep)
         {
             if (!character)
@@ -215,21 +243,26 @@ namespace uAdventure.Geo
             var mb = GetReference(currentStep.Reference);
             if (mb == null)
                 return false; // If the element is not there, just try to skip it
+
+            return IsReached(mb);
+        }
+
+        private bool IsReached(MonoBehaviour mb)
+        {
+            if (mb == null)
+                return false; // If the element is not there, just try to skip it
             else if (mb is GeoPositioner)
             {
                 var wrap = mb as GeoPositioner;
                 var position = (Vector2d)wrap.Context.TransformManagerParameters["Position"];
-                var interactionRange = (float) wrap.Context.TransformManagerParameters["InteractionRange"];
-                
-                var distance = GM.SeparationInMeters(position, character.LatLon);
+                var interactionRange = (float)wrap.Context.TransformManagerParameters["InteractionRange"];
+
                 var realDistance = GM.SeparationInMeters(position, GeoExtension.Instance.Location);
 
                 // Is inside if the character is in range but also the real coords are saying so
                 // Otherwise, if there is no character or gps, only one of the checks is valid
 
-                return (!character || distance < interactionRange) 
-                    && (!GeoExtension.Instance.IsStarted() || realDistance < interactionRange)
-                    && (GeoExtension.Instance.IsStarted() || character);
+                return realDistance < interactionRange;
             }
             else if (mb is GeoElementMB)
             {
@@ -238,14 +271,14 @@ namespace uAdventure.Geo
                 // Is inside if the character is inside the influence but also the real coords are saying so
                 // Otherwise, if there is no character or gps, only one of the checks is valid                
 
-                var location = character ? character.LatLon : GeoExtension.Instance.Location;
+                var location = GeoExtension.Instance.Location;
                 if (geomb.Geometry.InsideInfluence(location))
                 {
                     if (geomb.Geometry.Type == GMLGeometry.GeometryType.LineString)
                     {
-                        var step = 0; 
-                        completedElementsForStep.TryGetValue(currentStep, out step);
-                        var position = geomb.Geometry.Points[step];
+                        /*var step = 0;
+                        completedElementsForStep.TryGetValue(currentStep, out step);*/
+                        var position = geomb.Geometry.Points[geomb.Geometry.Points.Length-1];
                         var distance = GM.SeparationInMeters(position, location);
                         return distance < geomb.Geometry.Influence;
                     }
@@ -255,6 +288,8 @@ namespace uAdventure.Geo
             }
             else return false;
         }
+
+
 
         /// <summary>
         /// To complete the step, all the elements inside the step must be completed.
@@ -300,13 +335,13 @@ namespace uAdventure.Geo
         private int GetElementsFor(NavigationStep currentStep)
         {
             var mb = GetReference(currentStep.Reference);
-            var geoElementMb = mb as GeoElementMB;
+            /*var geoElementMb = mb as GeoElementMB;
             if(geoElementMb != null && geoElementMb.Geometry.Type == GMLGeometry.GeometryType.LineString)
             {
                 // If it is a path, all the points are elements
                 return geoElementMb.Geometry.Points.Length;
             }
-            else
+            else*/
             {
                 // Just itself is the element
                 return 1;
@@ -319,14 +354,55 @@ namespace uAdventure.Geo
             var nan = false;
             if(currentStep != null && character)
             {
-                var pos = GetElementPosition(currentStep.Reference);
-                nan = double.IsNaN(pos.x);
-                if (!nan)
+                // TODO extract this value from prefab at start
+                arrow.transform.GetChild(0).localPosition = new Vector3(0, 5, 5);
+
+                var mb = GetReference(currentStep.Reference);
+                var geoElementMb = mb as GeoElementMB;
+                if(geoElementMb != null && geoElementMb.Geometry.Type == GMLGeometry.GeometryType.LineString)
                 {
-                    var direction = GM.LatLonToMeters(pos) - GM.LatLonToMeters(character.LatLon);
-                    arrow.position = character.transform.position;
-                    arrow.rotation = Quaternion.Euler(0, Mathf.Atan2((float)direction.normalized.x, (float)direction.normalized.y) * Mathf.Rad2Deg, 0);
+                    var location = GeoExtension.Instance.geochar.LatLon;
+                    // Paint the arrow on top of the yellow line
+                    var closestPoint = geoElementMb.Geometry.GetClosestPoint(location);
+                    if (geoElementMb.Geometry.InsideInfluence(location))
+                    {
+                        var closestSegment = geoElementMb.Geometry.GetClosestSegment(location);
+                        var tileCenter = geoElementMb.Tile.Rect.Center;
+                        var pos = GM.LatLonToMeters(closestPoint) - tileCenter;
+                        var basePosition = new Vector3((float)pos.x, 10, (float)pos.y);
+                        var bkparent = arrow.transform.parent;
+                        arrow.transform.SetParent(geoElementMb.Tile.transform);
+                        arrow.localPosition = basePosition;
+                        arrow.transform.SetParent(bkparent);
+
+                        var direction = (GM.LatLonToMeters(geoElementMb.Geometry.Points[closestSegment + 1]).ToVector3() 
+                            - GM.LatLonToMeters(geoElementMb.Geometry.Points[closestSegment]).ToVector3()).normalized;
+
+
+                        arrow.transform.GetChild(0).localPosition = new Vector3(0, -0.9f, 2);
+
+                        arrow.forward = direction;
+                    }
+                    else
+                    {
+                        var direction = GM.LatLonToMeters(closestPoint) - GM.LatLonToMeters(character.LatLon);
+                        arrow.position = character.transform.position;
+                        arrow.rotation = Quaternion.Euler(0, Mathf.Atan2((float)direction.normalized.x, (float)direction.normalized.y) * Mathf.Rad2Deg, 0);
+                    }
                 }
+                else
+                {
+                    var pos = GetElementPosition(currentStep.Reference);
+                    nan = double.IsNaN(pos.x);
+                    if (!nan)
+                    {
+                        var direction = GM.LatLonToMeters(pos) - GM.LatLonToMeters(character.LatLon);
+                        arrow.position = character.transform.position;
+                        arrow.rotation = Quaternion.Euler(0, Mathf.Atan2((float)direction.normalized.x, (float)direction.normalized.y) * Mathf.Rad2Deg, 0);
+                    }
+                }
+
+                
             }
             arrow.gameObject.SetActive(!reached && character && !nan);
 
@@ -423,9 +499,10 @@ namespace uAdventure.Geo
             switch (geometry.Type)
             {
                 case GMLGeometry.GeometryType.LineString:
-                    int step;
+                    /*int step;
                     completedElementsForStep.TryGetValue(currentStep, out step);
-                    return geometry.Points[step];
+                    return geometry.Points[step];*/
+                    return geometry.GetClosestPoint(GeoExtension.Instance.Location);
                 default:
                 case GMLGeometry.GeometryType.Polygon:
                 case GMLGeometry.GeometryType.Point:

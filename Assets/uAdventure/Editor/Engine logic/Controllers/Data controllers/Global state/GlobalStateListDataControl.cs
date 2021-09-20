@@ -157,7 +157,8 @@ namespace uAdventure.Editor
 
                 // Show a dialog asking for the globalState id
                 if (string.IsNullOrEmpty(globalStateId))
-                    controller.ShowInputDialog(TC.get("Operation.AddGlobalStateTitle"), TC.get("Operation.AddGlobalStateMessage"), TC.get("Operation.AddGlobalStateDefaultValue"), performAddElement);
+                    controller.ShowInputIdDialog(TC.get("Operation.AddGlobalStateTitle"), TC.get("Operation.AddGlobalStateMessage"),
+                        Controller.Instance.makeElementValid(TC.get("Operation.AddGlobalStateDefaultValue")), performAddElement);
                 // If some value was typed and the identifier is valid
                 else
                 {
@@ -201,6 +202,8 @@ namespace uAdventure.Editor
             globalStatesList.Add(newElement);
             globalStatesDataControlList.Add(new GlobalStateDataControl(newElement));
             controller.IdentifierSummary.addId<GlobalState>(id);
+            controller.updateVarFlagSummary();
+            controller.DataModified();
             return true;
         }
 
@@ -227,6 +230,7 @@ namespace uAdventure.Editor
                     globalStatesDataControlList.Remove((GlobalStateDataControl)dataControl);
                     controller.deleteIdentifierReferences(globalStateId);
                     controller.IdentifierSummary.deleteId<GlobalState>(globalStateId);
+                    controller.updateVarFlagSummary();
                     controller.DataModified();
                     elementDeleted = true;
                 }

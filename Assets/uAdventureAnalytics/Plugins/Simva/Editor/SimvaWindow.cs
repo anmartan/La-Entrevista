@@ -193,7 +193,7 @@ namespace uAdventure.Simva
                         {
                             var limeSurvey = activityTypes.Where(a => a.Type == "limesurvey").FirstOrDefault();
                             var utils = limeSurvey.Utils as Newtonsoft.Json.Linq.JObject;
-                            Application.OpenURL((string)utils["url"]);
+                            Application.OpenURL((string)utils["url"] + "/admin/survey/sa/newsurvey");
                         }
                     }
                     // Gameplay
@@ -213,7 +213,7 @@ namespace uAdventure.Simva
                         {
                             var limeSurvey = activityTypes.Where(a => a.Type == "limesurvey").FirstOrDefault();
                             var utils = limeSurvey.Utils as Newtonsoft.Json.Linq.JObject;
-                            Application.OpenURL((string)utils["url"]);
+                            Application.OpenURL((string)utils["url"] + "/admin/survey/sa/newsurvey");
                         }
                     }
                 }
@@ -238,7 +238,7 @@ namespace uAdventure.Simva
                     EditorUtility.DisplayProgressBar("Simva.Study.Creation.Title", "Simva.Study.Activities.Info", 0);
                     if (preTest)
                     {
-                        EditorUtility.DisplayProgressBar("Simva.Study.Creation.Title", "Simva.Study.Activities.Info", 0.33f);
+                        EditorUtility.DisplayProgressBar("Simva.Study.Creation.Title", "Simva.Study.Activities.PreSurvey", 0.25f);
                         createStudy = createStudy.Then(() =>
                         {
                             return simvaController.Api.AddActivityToTest(creationData["studyId"], creationData["testId"], new Activity
@@ -252,7 +252,7 @@ namespace uAdventure.Simva
 
                     createStudy = createStudy.Then(() =>
                     {
-                        EditorUtility.DisplayProgressBar("Simva.Study.Creation.Title", "Simva.Study.Activities.Info", 0.66f);
+                        EditorUtility.DisplayProgressBar("Simva.Study.Creation.Title", "Simva.Study.Activities.Gameplay", 0.50f);
 
                         return simvaController.Api.AddActivityToTest(creationData["studyId"], creationData["testId"], new Activity
                         {
@@ -268,18 +268,19 @@ namespace uAdventure.Simva
                     {
                         createStudy = createStudy.Then(() =>
                         {
-                            EditorUtility.DisplayProgressBar("Simva.Study.Creation.Title", "Simva.Study.Activities.Info", 1f);
+                            EditorUtility.DisplayProgressBar("Simva.Study.Creation.Title", "Simva.Study.Activities.PostSurvey", 0.75f);
                             return simvaController.Api.AddActivityToTest(creationData["studyId"], creationData["testId"], new Activity
                             {
                                 Name = "PostTest",
                                 Type = "limesurvey",
-                                CopySurvey = preId.ToString()
+                                CopySurvey = postId.ToString()
                             });
                         });
                     }
 
                     createStudy.Then(() =>
                     {
+                        EditorUtility.DisplayProgressBar("Simva.Study.Creation.Title", "Simva.Study.Activities.Completing", 0.99f);
                         return simvaController.Api.GetStudy(creationData["studyId"]);
                     })
                     .Then(study =>
@@ -424,31 +425,37 @@ namespace uAdventure.Simva
                 if (GUILayout.Button("Login") && ValidateLogin())
                 {
                     var myWindow = GetActiveWindow();
-                    SimvaApi<ITeachersApi>.Login(true)
-                            .Then(simvaController =>
-                            {
-                                if (simvaController != null)
+                    var carga = new AsyncCompletionSource();
+                    SimvaConf.Local = new SimvaConf();
+                    Observable.FromCoroutine(() => LoadSimvaConf(SimvaConf.Local.LoadAsync(), carga)).Subscribe();
+                    carga.Then(() =>
+                    {
+                        SimvaApi<ITeachersApi>.Login(true)
+                                .Then(simvaController =>
                                 {
-                                    this.simvaController = simvaController;
-                                    var apiClient = ((TeachersApi)this.simvaController.Api).ApiClient;
-                                    apiClient.onAuthorizationInfoUpdate += auth =>
+                                    if (simvaController != null)
                                     {
-                                        ProjectConfigData.setProperty("Simva.RefreshToken", auth.RefreshToken);
-                                    };
-                                    ProjectConfigData.setProperty("Simva.RefreshToken", apiClient.AuthorizationInfo.RefreshToken);
-                                    ProjectConfigData.storeToXML();
-                                }
-                            })
-                            .Catch(error =>
-                            {
-                                Debug.Log(error.Message);
-                                Controller.Instance.ShowErrorDialog("Simva.Register.Failed.Title", "Simva.Register.Failed.Message");
-                            })
-                            .Finally(() =>
-                            {
-                                BringWindowToTop(myWindow);
-                                isLogin = false;
-                            });
+                                        this.simvaController = simvaController;
+                                        var apiClient = ((TeachersApi)this.simvaController.Api).ApiClient;
+                                        apiClient.onAuthorizationInfoUpdate += auth =>
+                                        {
+                                            ProjectConfigData.setProperty("Simva.RefreshToken", auth.RefreshToken);
+                                        };
+                                        ProjectConfigData.setProperty("Simva.RefreshToken", apiClient.AuthorizationInfo.RefreshToken);
+                                        ProjectConfigData.storeToXML();
+                                    }
+                                })
+                                .Catch(error =>
+                                {
+                                    Debug.Log(error.Message);
+                                    Controller.Instance.ShowErrorDialog("Simva.Register.Failed.Title", "Simva.Register.Failed.Message");
+                                })
+                                .Finally(() =>
+                                {
+                                    BringWindowToTop(myWindow);
+                                    isLogin = false;
+                                });
+                    });
                 }
 
                 return;

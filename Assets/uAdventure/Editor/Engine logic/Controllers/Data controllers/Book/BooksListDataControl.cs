@@ -120,7 +120,8 @@ namespace uAdventure.Editor
             
             // Show a dialog asking for the book id
             if (string.IsNullOrEmpty(bookId))
-                controller.ShowInputDialog(TC.get("Operation.AddBookTitle"), TC.get("Operation.AddBookMessage"), TC.get("Operation.AddBookDefaultValue"), performAddBook);
+                controller.ShowInputIdDialog(TC.get("Operation.AddBookTitle"), TC.get("Operation.AddBookMessage"),
+                    Controller.Instance.makeElementValid(TC.get("Operation.AddBookDefaultValue")), performAddBook);
             else
             {
                 performAddBook(null, bookId);
@@ -198,6 +199,7 @@ namespace uAdventure.Editor
                     booksDataControlList.Remove((BookDataControl)dataControl);
                     controller.deleteIdentifierReferences(bookId);
                     controller.IdentifierSummary.deleteId<Book>(bookId);
+                    controller.updateVarFlagSummary();
                     controller.DataModified();
                     elementDeleted = true;
                 }

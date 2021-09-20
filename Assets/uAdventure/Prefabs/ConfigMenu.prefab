@@ -207,7 +207,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Guardar Partida
+  m_Text: Save Game
 --- !u!1 &113290
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Configuraci\xF3n"
+  m_Text: Configuration
 --- !u!1 &137784
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,7 +698,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cargar Partida
+  m_Text: Load Game
 --- !u!1 &173052
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,7 +776,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Resetear Partida
+  m_Text: Reset
 --- !u!1 &182138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,7 +1099,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Salir
+  m_Text: Exit
 --- !u!1 &198740
 GameObject:
   m_ObjectHideFlags: 0

@@ -201,6 +201,9 @@ namespace uAdventure.Simva
                         urlTypeDict.SetString("CFBundleURLName", PlayerSettings.applicationIdentifier);
                         var urlSchemes = urlTypeDict.CreateArray("CFBundleURLSchemes");
                         urlSchemes.AddString(PlayerSettings.applicationIdentifier);
+
+                        infoPlist.root.SetString("NSCameraUsageDescription", "Camera is required to read the QR codes in each recycling container.");
+                        infoPlist.root.SetString("NSLocationWhenInUseUsageDescription", "Location is used to position the player in the in-game map.");
                         infoPlist.WriteToFile(infoPlistPath);
                     }
 

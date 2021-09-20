@@ -45,8 +45,10 @@ namespace uAdventure.Core
 			string sceneId = element.GetAttribute("id");
 			bool initialScene = ExString.EqualsDefault(element.GetAttribute("start"), "yes", false);
             bool hideInventory = ExString.EqualsDefault(element.GetAttribute("hideInventory"), "yes", false);
+            bool allowsSavingGame = ExString.EqualsDefault(element.GetAttribute("allowsSavingGame"), "yes", true);
             int playerLayer = ExParsers.ParseDefault (element.GetAttribute("playerLayer"), -1);
 			float playerScale = ExParsers.ParseDefault (element.GetAttribute("playerScale"), CultureInfo.InvariantCulture, 1.0f);
+            playerScale = Mathf.Max(0, playerScale);
 
             scene = new Scene(sceneId)
             {
@@ -54,6 +56,7 @@ namespace uAdventure.Core
             };
             scene.setPlayerLayer(playerLayer);
             scene.setPlayerScale(playerScale);
+            scene.setAllowsSavingGame(allowsSavingGame);
 
             if (initialScene)
             {
@@ -73,8 +76,8 @@ namespace uAdventure.Core
             }
 
 			//XAPI ELEMENTS
-			scene.setXApiClass(element.GetAttribute("class"));
-			scene.setXApiType(element.GetAttribute("type"));
+			scene.setXApiClass(ExString.Default(element.GetAttribute("class"), "accesible"));
+            scene.setXApiType(ExString.Default(element.GetAttribute("type"), "area"));
             //END OF XAPI
 
 			foreach(var res in DOMParserUtility.DOMParse <ResourcesUni> (element.SelectNodes("resources"), parameters))
@@ -275,6 +278,7 @@ namespace uAdventure.Core
 
             float scale = ExParsers.ParseDefault (element.GetAttribute("scale"), CultureInfo.InvariantCulture, 0f);
 			int layer = ExParsers.ParseDefault (element.GetAttribute("layer"), -1);
+            bool glow = ExString.Default(element.GetAttribute("glow"), "yes").Equals("yes", System.StringComparison.InvariantCultureIgnoreCase);
 
 			int influenceX 		= ExParsers.ParseDefault (element.GetAttribute("influenceX"), 0), 
 				influenceY 		= ExParsers.ParseDefault (element.GetAttribute("influenceY"), 0), 
@@ -285,7 +289,8 @@ namespace uAdventure.Core
 
 			var currentElementReference = new ElementReference(idTarget, x, y, layer);
             currentElementReference.Orientation = orientation;
-			if (hasInfluence)
+            currentElementReference.Glow = glow;
+            if (hasInfluence)
 			{
 				InfluenceArea influenceArea = new InfluenceArea(influenceX, influenceY, influenceWidth, influenceHeight);
 				currentElementReference.setInfluenceArea(influenceArea);

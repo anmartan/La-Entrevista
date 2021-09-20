@@ -7,10 +7,9 @@ using UnityEngine;
 
 namespace uAdventure.Geo
 {
-    [EditorComponent(typeof(GeoElementDataControl), Name = "Geo.GeoElementWindow.Actions.Title", Order = 20)]
+    [EditorComponent(typeof(GeoElementDataControl), typeof(ExtElementRefDataControl), Name = "Geo.GeoElementWindow.Actions.Title", Order = 20)]
     public class GeoElementWindowActions : AbstractEditorComponent
     {
-        private GeoElementDataControl workingGeoElement;
         private readonly DataControlList geoActionsList;
         private readonly Texture2D conditionsTex, noConditionsTex;
 
@@ -55,19 +54,43 @@ namespace uAdventure.Geo
 
         public override void Draw(int aID)
         {
-            var isInspector = Target != null;
-            if (isInspector)
+            var t = Target;
+            if (t != null) // Is in the inspector
             {
                 m_Rect.height = 300;
             }
+            else
+            {
+                t = GeoController.Instance.GeoElements.DataControls[GeoController.Instance.SelectedGeoElement];
+            }
 
-            workingGeoElement = Target as GeoElementDataControl ?? GeoController.Instance.GeoElements.DataControls[GeoController.Instance.SelectedGeoElement];
+            if (t is ExtElementRefDataControl)
+            {
+                var extElemRefDataControl = t as ExtElementRefDataControl;
+                var geoActions = extElemRefDataControl.GeoActions;
 
-            // -------------
-            // Actions
-            // -------------
-            geoActionsList.SetData(workingGeoElement.GeoActions, ge => (ge as ListDataControl<GeoElementDataControl, GeoActionDataControl>).DataControls.Cast<DataControl>().ToList());
-            geoActionsList.DoList(m_Rect.height - 60f);
+                if (extElemRefDataControl.TransformManager.PositionManagerName != GeopositionedDescriptor.GeopositionedName)
+                {
+                    GUILayout.Label("The selected transform manager is incompatible with GeoActions. Only World Positioned elements are compatible.");
+                }
+                else
+                {
+                    // -------------
+                    // Actions
+                    // -------------
+                    geoActionsList.SetData(geoActions, ge => (ge as ListDataControl<ExtElementRefDataControl, GeoActionDataControl>).DataControls.Cast<DataControl>().ToList());
+                    geoActionsList.DoList(m_Rect.height - 60f);
+                }
+            }
+            else if (t is GeoElementDataControl)
+            {
+                // -------------
+                // Actions
+                // -------------
+                var geoActions = (t as GeoElementDataControl).GeoActions;
+                geoActionsList.SetData(geoActions, ge => (ge as ListDataControl<GeoElementDataControl, GeoActionDataControl>).DataControls.Cast<DataControl>().ToList());
+                geoActionsList.DoList(m_Rect.height - 60f);
+            }
         }
 
         private void DrawActionColumn(Rect rect, int row, int column, bool active, bool focused)

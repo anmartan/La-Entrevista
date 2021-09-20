@@ -134,8 +134,8 @@ namespace uAdventure.Editor
             {
                 // Show a dialog asking for the item id
                 if (string.IsNullOrEmpty(id))
-                    controller.ShowInputDialog(TC.get("Operation.AddActiveAreaTitle"), TC.get("Operation.AddActiveAreaMessage"),
-                        TC.get("Operation.AddActiveAreaDefaultValue"), performAddElement);
+                    controller.ShowInputIdDialog(TC.get("Operation.AddActiveAreaTitle"), TC.get("Operation.AddActiveAreaMessage"),
+                        Controller.Instance.makeElementValid(TC.get("Operation.AddActiveAreaDefaultValue")), performAddElement);
                 else
                 {
                     performAddElement(null, id);
@@ -186,6 +186,8 @@ namespace uAdventure.Editor
             activeAreasList.Add(newElement);
             activeAreasDataControlList.Add(new ActiveAreaDataControl(sceneDataControl, newElement));
             controller.IdentifierSummary.addId<ActiveArea>(id);
+            Controller.Instance.updateVarFlagSummary();
+            Controller.Instance.DataModified();
             return true;
 
         }
@@ -207,6 +209,8 @@ namespace uAdventure.Editor
                     activeAreasDataControlList.Remove((ActiveAreaDataControl)dataControl);
                     controller.deleteIdentifierReferences(id);
                     controller.IdentifierSummary.deleteId<ActiveArea>(((ActiveArea)dataControl.getContent()).getId());
+                    Controller.Instance.updateVarFlagSummary();
+                    Controller.Instance.DataModified();
                     elementDeleted = true;
                 }
             }

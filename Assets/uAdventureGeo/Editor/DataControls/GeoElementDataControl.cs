@@ -19,12 +19,12 @@ namespace uAdventure.Geo
         private readonly ListDataControl<GeoElementDataControl, GMLGeometryDataControl> geometryDataControls;
         private int selectedGeometry;
 
-        private const int GEO_ELEMENT    = 62345459;
-        private const int ENTER_ACTION   = 87234678;
-        private const int EXIT_ACTION    = 78234568;
-        private const int LOOK_TO_ACTION = 23848923;
-        private const int INSPECT_ACTION = 67213469;
-        private const int GEOMETRY       = 24312342;
+        public const int GEO_ELEMENT    = 62345459;
+        public const int ENTER_ACTION   = 87234678;
+        public const int EXIT_ACTION    = 78234568;
+        public const int LOOK_TO_ACTION = 23848923;
+        public const int INSPECT_ACTION = 67213469;
+        public const int GEOMETRY       = 24312342;
 
         public DescriptionsController DescriptionController
         {
@@ -39,7 +39,7 @@ namespace uAdventure.Geo
         public GeoElementDataControl(GeoElement geoElement)
         {
             this.geoElement = geoElement;
-            
+
             this.resourcesList = geoElement.Resources;
 
             selectedResources = 0;
@@ -59,7 +59,7 @@ namespace uAdventure.Geo
 
             descriptionController = new DescriptionsController(geoElement.Descriptions);
 
-            geoActionDataControls = new ListDataControl<GeoElementDataControl, GeoActionDataControl>(this, geoElement.Actions, new []
+            geoActionDataControls = new ListDataControl<GeoElementDataControl, GeoActionDataControl>(this, geoElement.Actions, new[]
             {
                 new ListDataControl<GeoElementDataControl, GeoActionDataControl>.ElementFactoryView
                 {
@@ -125,7 +125,7 @@ namespace uAdventure.Geo
                 }
             });
 
-            geometryDataControls = new ListDataControl<GeoElementDataControl, GMLGeometryDataControl>(this, geoElement.Geometries, new []
+            geometryDataControls = new ListDataControl<GeoElementDataControl, GMLGeometryDataControl>(this, geoElement.Geometries, new[]
             {
                 new ListDataControl<GeoElementDataControl, GMLGeometryDataControl>.ElementFactoryView()
                 {
@@ -142,11 +142,14 @@ namespace uAdventure.Geo
                             {
                                 ContentType = typeof(GMLGeometry),
                                 Type = GEOMETRY
-                            } 
+                            }
                         }
                     })
-                } 
-            });
+                }
+            })
+            {
+                CanDeleteLastElement = false
+            };
         }
 
         public ListDataControl<GeoElementDataControl, GMLGeometryDataControl> GMLGeometries

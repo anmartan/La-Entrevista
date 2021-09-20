@@ -13,6 +13,14 @@ using System.Globalization;
 using uAdventure.Runner;
 using UnityEditor.Callbacks;
 using System.Linq;
+using System.Xml.Serialization;
+using IMS.CP.v1p2;
+using IMS.MD.v1p2;
+using System.Xml;
+using uAdventure.Core.Metadata;
+using SimvaPlugin;
+using Simva.Api;
+using UnityFx.Async.Promises;
 
 namespace uAdventure.Editor
 {
@@ -414,6 +422,8 @@ namespace uAdventure.Editor
         public const int EXPORT_MOBILE = 7;
 
         public const int EXPORT_ALL = 8;
+
+        private const string UADVENTURE_RESOURCE = "res_uAdventure";
 
         /**
          * Singleton instance.
@@ -998,6 +1008,11 @@ namespace uAdventure.Editor
                 }
                 else
                     fileCreated = false;
+
+                if (fileCreated)
+                {
+                    uAdventureWindowMain.Instance.RefreshWindows();
+                }
             }
 
             return fileCreated;
@@ -2170,18 +2185,19 @@ namespace uAdventure.Editor
         private static readonly string WINDOWS32_FFMPEG_URL = "https://github.com/e-ucm/uAdventure-FFMPEG/releases/download/1/ffmpeg-3.4.2-win32.zip";
         private static readonly string MACOSX64_FFMPEG_URL  = "https://github.com/e-ucm/uAdventure-FFMPEG/releases/download/1/ffmpeg-3.4.2-mac64.zip";
 
-        private static void DownloadFFMPEG(string url, System.Action ready)
+        public static void DownloadDependencyZip(string name, string folderName, string url, System.Action<bool> ready)
         {
             var projectPath = Directory.GetCurrentDirectory().Replace("\\", "/");
-            var ffmpegPath = projectPath + "/FFMPEG";
+            var downloadPath = projectPath + folderName;
 
             using (WWW www = new WWW(url))
             {
                 while (!www.isDone)
                 {
-                    if (EditorUtility.DisplayCancelableProgressBar("Downloading", "Downloading ffmpeg...", www.progress))
+                    if (EditorUtility.DisplayCancelableProgressBar("Downloading", "Downloading "+ name + "...", www.progress))
                     {
                         EditorUtility.ClearProgressBar();
+                        ready(false);
                         return;
                     }
                     www.MoveNext();
@@ -2191,23 +2207,34 @@ namespace uAdventure.Editor
                 if (!string.IsNullOrEmpty(www.error))
                 {
                     EditorUtility.DisplayDialog("Error!", "Download failed! Check your connection and try again. " +
-                        "If the problem persist download it manually and put it in the FFMPEG at the root of the project. (" + www.error + ")", "Ok");
+                        "If the problem persist download it manually and put it in the " + folderName +" folder at the root of the project. (" + www.error + ")", "Ok");
+                    ready(false);
                     return;
                 }
 
                 if (www.progress != 1f)
+                {
+                    ready(false);
                     return;
+                }
                 // Write the zip file
-                File.WriteAllBytes(ffmpegPath + "/ffmpeg.zip", www.bytes);
+                var downloadFileName = name.Replace(" ", "").Trim() + ".zip";
+
+                if (!Directory.Exists(downloadPath))
+                {
+                    Directory.CreateDirectory(downloadPath);
+                }
+
+                File.WriteAllBytes(downloadPath + "/" + downloadFileName, www.bytes);
                 // Unzip it
-                EditorUtility.DisplayProgressBar("Extracting...", "Extracting MMPEG to " + ffmpegPath, 0f);
-                ZipUtil.Unzip(ffmpegPath + "/ffmpeg.zip", ffmpegPath);
-                EditorUtility.DisplayProgressBar("Extracting...", "Extracting MMPEG to " + ffmpegPath, 1f);
+                EditorUtility.DisplayProgressBar("Extracting...", "Extracting " + name + " to " + downloadPath, 0f);
+                //ZipUtil.Unzip(downloadPath + "/" + downloadFileName, downloadPath);
+                EditorUtility.DisplayProgressBar("Extracting...", "Extracting " + name + " to " + downloadPath, 1f);
                 EditorUtility.ClearProgressBar();
                 // Delete the zip
-                File.Delete(ffmpegPath + "/ffmpeg.zip");
+                File.Delete(downloadPath + "/" + downloadFileName);
                 // Continue
-                ready();
+                ready(true);
             }
         }
         
@@ -2223,9 +2250,12 @@ namespace uAdventure.Editor
                 if (!Directory.Exists(ffmpegPath))
                     Directory.CreateDirectory(ffmpegPath);
 
-                System.Action convert = () =>
+                System.Action<bool> convert = (downloaded) =>
                 {
-                    ConvertVideos(pathToBuiltProject);
+                    if (downloaded)
+                    {
+                        ConvertVideos(pathToBuiltProject);
+                    }
                 };
 
                 switch (SystemInfo.operatingSystemFamily)
@@ -2233,27 +2263,27 @@ namespace uAdventure.Editor
                     case OperatingSystemFamily.Windows:
                         if (!File.Exists(ffmpegPath + "/ffmpeg.exe"))
                         {
-                            if(EditorUtility.DisplayDialog("Video conversion", "FFMPEG was not found, do you want to download it?", "Yes", "No"))
+                            if(EditorUtility.DisplayDialog("Video conversion", "FFMPEG was not found, do you want to download it? Videos for WebGL must be in Webm format, this software will be used to covert them automatically.", "Yes", "No"))
                             {
 
                                 if (SystemInfo.operatingSystem.Contains("64bit"))
-                                    DownloadFFMPEG(WINDOWS64_FFMPEG_URL, convert);
+                                    DownloadDependencyZip("FFMPEG", "/FFMPEG", WINDOWS64_FFMPEG_URL, convert);
                                 else
-                                    DownloadFFMPEG(WINDOWS32_FFMPEG_URL, convert);
+                                    DownloadDependencyZip("FFMPEG", "/FFMPEG", WINDOWS32_FFMPEG_URL, convert);
                             }
                         }                            
-                        else convert();
+                        else convert(true);
                         break;
 
                     case OperatingSystemFamily.MacOSX:
                         if (!File.Exists(ffmpegPath + "/ffmpeg"))
                         {
-                            if (EditorUtility.DisplayDialog("Video conversion", "FFMPEG was not found, do you want to download it?", "Yes", "No"))
+                            if (EditorUtility.DisplayDialog("Video conversion", "FFMPEG was not found, do you want to download it? Videos for WebGL must be in Webm format, this software will be used to covert them automatically.", "Yes", "No"))
                             {
-                                DownloadFFMPEG(MACOSX64_FFMPEG_URL, convert);
+                                DownloadDependencyZip("FFMPEG", "/FFMPEG", MACOSX64_FFMPEG_URL, convert);
                             }
                         }
-                        else convert();
+                        else convert(true);
                         break;
 
                     default:
@@ -2265,6 +2295,189 @@ namespace uAdventure.Editor
 
                 Debug.Log("Done!");
             }
+        }
+
+        public void ExportLearningObject()
+        {
+            if (!IsPlatformAvailable(BuildTarget.WebGL))
+            {
+                ShowErrorDialog("Operation.ExportProject.AsLO".Traslate(), "ExportLearningObject.WebGLUnavailable".Traslate());
+                return;
+            }
+
+            var projectPath = "./Builds/WebGL/";
+            if (Directory.Exists(projectPath) && File.Exists(projectPath + "index.html"))
+            {
+                if(!ShowStrictConfirmDialog("Operation.ExportProject.AsLO".Traslate(), "ExportLearningObject.BuildDetected".Traslate()))
+                {
+                    projectPath = null;
+                }
+            }
+
+            var outputFile = EditorUtility.SaveFilePanel("Operation.ExportProject.AsLO".Traslate(), projectPath, PlayerSettings.productName + ".zip", ".zip");
+            if(string.IsNullOrEmpty(outputFile))
+            {
+                return;
+            }
+
+            EditorUtility.DisplayProgressBar("Operation.ExportProject.AsLO".Traslate(), "ExportLearningObject.Starting".Traslate(), 0f);
+
+            if (projectPath == null)
+            {
+                EditorUtility.DisplayProgressBar("Operation.ExportProject.AsLO".Traslate(), "ExportLearningObject.BuildingWebGL".Traslate(), 0.05f);
+                DoBuild(new BuildConfig
+                {
+                    BuildWebGL = true,
+                    fileName = PlayerSettings.productName,
+                    author = PlayerSettings.companyName,
+                    version = PlayerSettings.Android.bundleVersionCode,
+                    packageName = PlayerSettings.applicationIdentifier
+                });
+                projectPath = "./Builds/WebGL/"; // Default build path
+            }
+
+
+            EditorUtility.DisplayProgressBar("Operation.ExportProject.AsLO".Traslate(), "ExportLearningObject.CreatingManifest".Traslate(), 0.75f);
+            var serializer = new System.Xml.Serialization.XmlSerializer(typeof(ManifestType));
+            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+            ManifestType manifest = GetImsManifest();
+
+            XmlDocument doc = new XmlDocument();
+
+            using (XmlWriter writer = doc.CreateNavigator().AppendChild())
+            {
+                serializer.Serialize(writer, manifest, ns);
+            }
+
+            XmlDocument finalDoc = new XmlDocument();
+            var finalElement = MetadataUtility.CleanXMLGarbage(finalDoc, doc.DocumentElement);
+
+            finalDoc.CreateXmlDeclaration("1.0", "UTF-8", null);
+            finalDoc.AppendChild(finalElement);
+            finalDoc.DocumentElement.SetAttribute("xmlns:imsmd", "http://www.imsglobal.org/xsd/imsmd_v1p2");
+            finalDoc.DocumentElement.SetAttribute("xsi:schemaLocation", "http://www.imsglobal.org/xsd/imscp_v1p1 ../xsds/imscp_v1p2.xsd http://www.imsglobal.org/xsd/imsmd_v1p2 http://www.imsglobal.org/xsd/imsmd_v1p2p4.xsd ");
+
+            using (var fw = File.Open(projectPath+"imsmanifest.xml", FileMode.Create))
+            using (var xmlWr = XmlWriter.Create(fw, new XmlWriterSettings
+            {
+                Encoding = System.Text.Encoding.UTF8,
+                NamespaceHandling = NamespaceHandling.OmitDuplicates,
+                Indent = true
+            }))
+            {
+                finalDoc.WriteTo(xmlWr);
+                xmlWr.Flush();
+                fw.Flush();
+
+                Debug.Log(fw.ToString());
+            }
+
+            EditorUtility.DisplayProgressBar("Operation.ExportProject.AsLO".Traslate(), "ExportLearningObject.GatheringFiles".Traslate(), 0.80f);
+            var files = Directory.GetFiles(projectPath, "*", SearchOption.AllDirectories);
+            /*var zipFile = new Ionic.Zip.ZipFile(PlayerSettings.productName + ".zip", System.Text.Encoding.UTF8);
+            var prefix = new DirectoryInfo(projectPath).FullName;
+            foreach (var file in files.Select(f => new FileInfo(f)))
+            {
+                zipFile.AddFile(file.FullName, file.FullName.Remove(0, prefix.Length).RemoveFromEnd(file.Name));
+            }
+            EditorUtility.DisplayProgressBar("Operation.ExportProject.AsLO".Traslate(), "ExportLearningObject.Compressing".Traslate(), 0.9f);
+            zipFile.Save(outputFile);
+
+            EditorUtility.DisplayProgressBar("Operation.ExportProject.AsLO".Traslate(), "ExportLearningObject.Done".Traslate(), 1f);
+            EditorUtility.ClearProgressBar();
+            EditorUtility.RevealInFinder(outputFile);*/
+        }
+
+        private static ManifestType GetImsManifest()
+        {
+            return new ManifestType
+            {
+                version = "IMS CP 1.2",
+                identifier = MetadataUtility.GenerateManifestIdentifier(),
+                metadata = new ManifestMetadataType
+                {
+                    schema = "IMS Content",
+                    schemaversion = "1.2",
+                    Any = new XmlElement[]
+                    {
+                            MetadataUtility.SerializeToXmlElement(new lomType
+                            {
+                                general = new generalType
+                                {
+                                    title = new langType
+                                    {
+                                        langstring = new langstringType[]
+                                        {
+                                            new langstringType
+                                            {
+                                                lang = "es-ES",
+                                                Value = Controller.Instance.AdventureData.getTitle()
+                                            }
+                                        }
+                                    }
+                                }
+                            })
+                    }
+                },
+                organizations = new OrganizationsType
+                {
+                    @default = "uAdventure",
+                    organization = new OrganizationType[]
+                    {
+                            new OrganizationType
+                            {
+                                title = "uAdventure course",
+                                item = new ItemType[]
+                                {
+                                    new ItemType
+                                    {
+                                        identifier = "itm_uAdventure",
+                                        identifierref = UADVENTURE_RESOURCE,
+                                        isvisible = true,
+                                        title = Controller.Instance.AdventureData.getTitle()
+                                    }
+                                }
+                            }
+                    }
+                },
+                resources = new ResourcesType
+                {
+                    resource = new ResourceType[]
+                    {
+                            new ResourceType
+                            {
+                                href = "index.html",
+                                identifier = UADVENTURE_RESOURCE,
+                                type = "webcontent",
+                                metadata = new MetadataType
+                                {
+                                    schema = "IMS Content",
+                                    schemaversion = "1.2",
+                                    Any = new XmlElement[] 
+                                    { 
+                                        MetadataUtility.SerializeToXmlElement(controllerInstance.AdventureData.getImsCPMetadata()) 
+                                    }
+                                },
+                                file = new IMS.CP.v1p2.FileType[]
+                                {
+                                    new IMS.CP.v1p2.FileType
+                                    {
+                                        href = "index.html"
+                                    }
+                                }
+                            }
+                    }
+                }
+            };
+        }
+
+        private static bool IsPlatformAvailable(BuildTarget target)
+        {
+            var moduleManager = System.Type.GetType("UnityEditor.Modules.ModuleManager,UnityEditor.dll");
+            var isPlatformSupportLoaded = moduleManager.GetMethod("IsPlatformSupportLoaded", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic);
+            var getTargetStringFromBuildTarget = moduleManager.GetMethod("GetTargetStringFromBuildTarget", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic);
+
+            return (bool)isPlatformSupportLoaded.Invoke(null, new object[] { (string)getTargetStringFromBuildTarget.Invoke(null, new object[] { target }) });
         }
 
         public static int GetFrameCount(FileInfo file)
@@ -2709,9 +2922,11 @@ namespace uAdventure.Editor
         {
             if (elementId == null) elementId = "new";
             var clean = elementId.Replace(" ", "").Replace("'"," ");
-            while (clean != "" && !char.IsLetter(clean[0]))
-                clean.Remove(0, 1);
-            if (clean == "") clean = "new";
+            while (clean != "" && !char.IsLetter(clean[0]) && clean.Length > 0)
+            {
+                clean = clean.Remove(0, 1);
+            }
+            if (string.IsNullOrEmpty(clean)) clean = "new";
 
             if (clean.Equals(Player.IDENTIFIER) || clean.Equals(TC.get("ConversationLine.PlayerName")))
                 clean = "new";
@@ -2719,12 +2934,19 @@ namespace uAdventure.Editor
             while (IdentifierSummary.existsId(clean))
             {
                 int lastN = 0;
-                for (Match match = Regex.Match(clean, @"\d+$"); match.Success; match = match.NextMatch())
+                Match match = Regex.Match(clean, @"\d+$");
+
+                for (; match.Success; match = match.NextMatch())
+                {
                     lastN = int.Parse(match.Value, NumberFormatInfo.InvariantInfo); // do something with it
-                if (lastN == 0) clean += "0";
+                }
+                if (lastN == 0)
+                {
+                    clean += "0";
+                }
                 clean = clean.Substring(0, clean.Length - ("" + lastN).Length);
                 lastN++;
-                clean = clean + lastN;
+                clean += lastN;
             }
 
             return clean;
@@ -3176,6 +3398,43 @@ namespace uAdventure.Editor
             inputDialog.Init(receiver, token, title, message, values);
         }
 
+        public void ShowInputIdDialog(string title, string message, string defaultValue, InputReceiver.HandleInputCallback onInput, InputReceiver.CancelInputCallback onCancel = null)
+        {
+            var receiver = new InputReceiver(this, onInput, onCancel);
+            var inputDialog = ScriptableObject.CreateInstance<InputDialog>();
+            inputDialog.Init(receiver, null, title, message, defaultValue);
+            inputDialog.Validation(value =>
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    return "Validation.Id.IsEmpty";
+                }
+                if (value.Contains(" "))
+                {
+                    return "Validation.Id.ContainsSpaces";
+                }
+                Regex alphanumeric = new Regex("^[a-zA-Z0-9\\.\\:_-]*$");
+                if (!alphanumeric.IsMatch(value))
+                {
+                    return "Validation.Id.NotValidCharacter";
+                }
+                if (!char.IsLetter(value[0]))
+                {
+                    return "Validation.Id.NotStartsWithLetter";
+                }
+                if (value.ToLower().Equals(Player.IDENTIFIER.ToLower()) || value.ToLower().Equals(TC.get("ConversationLine.PlayerName").ToLower()))
+                {
+                    return "Validation.Id.IsReservedPlayerValue";
+                }
+                if (IdentifierSummary.existsId(value))
+                {
+                    return "Validation.Id.IsAlreadyUsed";
+                }
+                
+                return null;
+            });
+        }
+
         ///**
         // * Uses the GUI to show an error dialog.
         // * 
@@ -3457,6 +3716,26 @@ namespace uAdventure.Editor
 
             var window = EditorWindow.GetWindow(typeof(WelcomeWindow));
             window.Show();
+        }
+
+        [UnityEditor.MenuItem("uAdventure/UnComplete", priority = 1)]
+        public static void UnComplete()
+        {
+            SimvaApi<StudentsApi>.LoginWithToken("myiq").Then(api =>
+            {
+                api.Api.GetSchedule("6046a0f7c34511006e84f53d")
+                .Then(schedule =>
+                {
+                    var act = schedule.Activities.First(a => a.Value.Name == "Gameplay");
+                    api.Api.SetCompletion(act.Key, "myiq", false);
+                });
+            });
+        }
+        [UnityEditor.MenuItem("uAdventure/Screenshot", priority = 1)]
+        public static void Screenshot()
+        {
+            ScreenCapture.CaptureScreenshot("Capture");
+
         }
 
 

@@ -74,8 +74,13 @@ namespace uAdventure.Runner
             return effectHolder;
         }
 
-        private void TraceExit(bool exited, IChapterTarget targetOnExit)
+        private TrackerAsset.TrackerEvent TraceExit(bool exited, IChapterTarget targetOnExit)
         {
+            if (!TrackerAsset.Instance.Started)
+            {
+                return null;
+            }
+
             var ed = area.Element as Exit;
 
             // ALTERNATIVE
@@ -85,11 +90,13 @@ namespace uAdventure.Runner
                 if (ConditionChecker.check(ed.getConditions()))
                 {
                     if (targetOnExit.getXApiType() == "menu")
-                        TrackerAsset.Instance.Alternative.Selected(targetOnExit.getId(), ed.getNextSceneId(), parsedType);
+                    {
+                        return TrackerAsset.Instance.Alternative.Selected(targetOnExit.getId(), ed.getNextSceneId(), parsedType);
+                    }
                     else
                     {
                         TrackerAsset.Instance.setSuccess(true);
-                        TrackerAsset.Instance.Alternative.Selected(targetOnExit.getId(), ed.getNextSceneId(), parsedType);
+                        return TrackerAsset.Instance.Alternative.Selected(targetOnExit.getId(), ed.getNextSceneId(), parsedType);
                     }
                 }
                 else
@@ -97,29 +104,11 @@ namespace uAdventure.Runner
                     if (targetOnExit.getXApiType() != "menu")
                     {
                         TrackerAsset.Instance.setSuccess(false);
-                        TrackerAsset.Instance.Alternative.Selected(targetOnExit.getId(), "Incorrect", parsedType);
+                        return TrackerAsset.Instance.Alternative.Selected(targetOnExit.getId(), "Incorrect", parsedType);
                     }
                 }
-                TrackerAsset.Instance.Flush();
             }
-
-            // ACCESIBLE
-
-            // If no exited, accesible doesnt matter
-            if (!exited)
-                return;
-
-            // If no destination accesible doesnt matter
-            var destination = Game.Instance.GameState.GetChapterTarget(ed.getNextSceneId());
-            if (destination == null)
-                return;
-
-            if ("accesible".Equals(destination.getXApiClass(), IgnoreCase))
-            {
-                var type = ExParsers.ParseDefault(destination.getXApiType(), AccessibleTracker.Accessible.Accessible);
-                TrackerAsset.Instance.Accessible.Accessed(destination.getId(), type);
-            }
-
+            return null;
         }
 
         bool interactable = false;
@@ -179,6 +168,8 @@ namespace uAdventure.Runner
         public class ExecuteExitEffect : IEffect
         {
             public ExitMB ExitMb { get; set; }
+            public string GUID { get; set; } = Guid.NewGuid().ToString();
+
             public ExecuteExitEffect(ExitMB exitMb) { this.ExitMb = exitMb; }
 
             public object Clone()
@@ -198,6 +189,7 @@ namespace uAdventure.Runner
             private EffectHolder exitEffects;
             private bool exits;
             private IChapterTarget targetOnExit;
+            private TrackerAsset.TrackerEvent trace;
 
             public IEffect Effect { get { return toRun; } set { toRun = value as ExecuteExitEffect; Init(); } }
 
@@ -205,7 +197,16 @@ namespace uAdventure.Runner
             {
                 // First run
                 targetOnExit = Game.Instance.GameState.GetChapterTarget(Game.Instance.GameState.CurrentTarget);
-                Game.Instance.GameState.BeginChangeAmbit();
+                try
+                {
+                    trace = toRun.ExitMb.TraceExit(exits, targetOnExit);
+                    trace?.SetPartial();
+                }
+                catch (Exception ex)
+                {
+                    Debug.Log("Error while tracing the exit! (" + ex.Message + ", " + ex.StackTrace + ")");
+                }
+                Game.Instance.GameState.BeginChangeAmbit(trace);
                 exitEffects = toRun.ExitMb.GetExitEffects(out exits);
             }
 
@@ -215,15 +216,8 @@ namespace uAdventure.Runner
                 if (!forceWait)
                 {
                     // Last run
-                    Game.Instance.GameState.EndChangeAmbitAsExtensions();
-                    try
-                    {
-                        toRun.ExitMb.TraceExit(exits, targetOnExit);
-                    }
-                    catch (Exception ex)
-                    {
-                        Debug.Log("Error while tracing the exit! (" + ex.Message + ", " + ex.StackTrace + ")");
-                    }
+                    Game.Instance.GameState.EndChangeAmbitAsExtensions(trace);
+                    trace?.Completed();
                 }
                 return forceWait;
             }

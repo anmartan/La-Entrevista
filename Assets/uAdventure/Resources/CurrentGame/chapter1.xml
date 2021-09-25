@@ -637,7 +637,7 @@
     </exits>
     <characters>
       <character-ref idTarget="Antonio" x="294" y="704" scale="0.6694986" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Jaime" x="527" y="692" scale="0.2262085" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Jaime" x="496" y="698" scale="0.2804631" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
     </characters>
     <atrezzo>
       <atrezzo-ref idTarget="Puerta" x="931" y="638" scale="0.3192936" glow="no" layer="0" />
@@ -819,7 +819,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Jaime" x="699" y="1670" scale="1.030681" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Jaime" x="575" y="1646" scale="1.224622" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta3" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">

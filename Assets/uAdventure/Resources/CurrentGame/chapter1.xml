@@ -3771,18 +3771,10 @@
         <effect>
           <activate flag="Respondida0" guid="9c4dd4e5-1b23-4bb2-8c4e-99754e3ae1d7" />
           <condition />
-          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" guid="1e74b246-e10a-4b02-9703-617cbca1b4f7" />
+          <set-value var="UltimaPregunta" value="0" guid="c8aabab9-7edb-4f46-8ed0-f9d8f3c52f38" />
           <condition />
-          <increment var="PreguntasRespondidas" value="1" guid="e89f1f7c-bbc9-44aa-9b78-a713ed27facb" />
+          <macro-ref id="MacroPreguntas" guid="24985bb7-0e73-4c99-97ed-9dc02065ca45" />
           <condition />
-          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" guid="a37f555d-5bf6-4c0e-83d4-56a828c82be2" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
-          <trigger-conversation idTarget="ReflexionFinal" guid="e13e603a-9c31-46b7-b588-66edabdfb013" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -3869,18 +3861,10 @@
         <effect>
           <activate flag="Respondida1" guid="847e3f30-9f66-4e70-9d0d-186a6c738cd2" />
           <condition />
-          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" guid="918eccbe-d856-467b-9762-ee5cf24d2a1e" />
+          <set-value var="UltimaPregunta" value="1" guid="dca86e5c-44a1-4bb9-b111-04140b713667" />
           <condition />
-          <increment var="PreguntasRespondidas" value="1" guid="5b87c6a4-b0ff-4136-a0d6-957682714ef4" />
+          <macro-ref id="MacroPreguntas" guid="09a9dfcb-cea3-45cf-b915-9e5771579542" />
           <condition />
-          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" guid="8a3120ce-3c24-4691-a180-5ed4210534e1" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
-          <trigger-conversation idTarget="ReflexionFinal" guid="94bede47-9c10-40fd-81a6-0326391d4c71" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -3957,18 +3941,10 @@
         <effect>
           <activate flag="Respondida2" guid="945bc9f7-39b6-49b6-9d5d-138adcc7b808" />
           <condition />
-          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" guid="f0d8dcfe-f89d-49f1-b197-cdd4ace4bfbb" />
+          <set-value var="UltimaPregunta" value="2" guid="82de2b93-56b4-42c7-b183-de6257358a96" />
           <condition />
-          <increment var="PreguntasRespondidas" value="1" guid="0b628642-9db6-4e2c-a4d3-56574ff06022" />
+          <macro-ref id="MacroPreguntas" guid="5f490372-b7d4-4603-8b60-bba6042128d2" />
           <condition />
-          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" guid="ab198c50-e86f-4fd0-9f0f-1b2ef1dcd80e" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
-          <trigger-conversation idTarget="ReflexionFinal" guid="5b995a37-ae1a-4398-8149-7905ece2c44e" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4055,18 +4031,10 @@
         <effect>
           <activate flag="Respondida3" guid="461dd90d-a90b-49c5-881d-d7076dc9e2ee" />
           <condition />
-          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" guid="629efb58-5786-42b5-b8b1-3c224093d3a7" />
+          <set-value var="UltimaPregunta" value="3" guid="405affd0-4255-47d8-ace9-08ff894f578e" />
           <condition />
-          <increment var="PreguntasRespondidas" value="1" guid="e75be602-3e7b-4fd8-999d-974162bfff15" />
+          <macro-ref id="MacroPreguntas" guid="f0b78184-bb31-4a59-a46a-dd316cfb23dc" />
           <condition />
-          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" guid="8c1405b8-0d8b-4781-8288-1139f23d4ba0" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
-          <trigger-conversation idTarget="ReflexionFinal" guid="4dbfa7d0-8d8d-4f45-b34c-bb2c09df19a9" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4181,18 +4149,10 @@
         <effect>
           <activate flag="Respondida4" guid="72b5cbd4-5d85-4946-b457-88ee92747180" />
           <condition />
-          <trigger-scene idTarget="PreguntasFinales" x="960" y="810" transitionTime="5" transitionType="5" guid="2956ef74-4ca5-4cf3-8e66-15e41d72f9b0" />
+          <set-value var="UltimaPregunta" value="4" guid="5364f1d8-7b7b-49cc-9902-81a788d58460" />
           <condition />
-          <increment var="PreguntasRespondidas" value="1" guid="5ad789c4-270c-4074-8d37-fc73f0e554ce" />
+          <macro-ref id="MacroPreguntas" guid="65fd7935-5bb2-47fe-85c9-c6af248652ea" />
           <condition />
-          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" guid="6baf2972-3b64-4a08-9900-b07e5dc1e3de" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
-          <trigger-conversation idTarget="ReflexionFinal" guid="6a28b73c-4158-4309-90b7-552f10a4f72c" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4316,18 +4276,10 @@
         <effect>
           <activate flag="Respondida5" guid="bfa1e071-d2e2-40f5-ac8a-21dd2e43855c" />
           <condition />
-          <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" guid="8fecb3b5-d475-4de2-89b3-5f19cbbdc6a0" />
+          <set-value var="UltimaPregunta" value="5" guid="41328e59-b7dc-4c47-8cbd-afa39c9f34ed" />
           <condition />
-          <increment var="PreguntasRespondidas" value="1" guid="8e689e96-7201-4e7d-9208-2544c3a94776" />
+          <macro-ref id="MacroPreguntas" guid="b0c6fd8f-6b1b-4f85-a9e0-1fceb4a1a86a" />
           <condition />
-          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" guid="7aa550bb-cec0-46fe-b775-778586e79297" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
-          <trigger-conversation idTarget="ReflexionFinal" guid="0cbd98a5-28b6-47c0-a9b0-a68e466afea3" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4414,18 +4366,10 @@
         <effect>
           <activate flag="Respondida6" guid="6c4c6a37-60cf-4b78-9e07-0f3a989a16b2" />
           <condition />
-          <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" guid="4cc05cf7-713e-41c8-8598-1438fe5226be" />
+          <set-value var="UltimaPregunta" value="6" guid="49ce9813-942b-4076-a132-5061b7c33ddb" />
           <condition />
-          <increment var="PreguntasRespondidas" value="1" guid="92f705fb-1f96-4b05-ad9b-fe5409d6751c" />
+          <macro-ref id="MacroPreguntas" guid="f7b39ebb-adfc-4325-bb37-b4ea0c90423e" />
           <condition />
-          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" guid="cc69e029-1f8b-4f00-82e8-0467446135c6" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
-          <trigger-conversation idTarget="ReflexionFinal" guid="70ff0333-7c58-4def-bf98-e3d127d3eb0c" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4502,18 +4446,10 @@
         <effect>
           <activate flag="Respondida7" guid="d5741343-0cfd-40c5-a05f-eb2e4bafc40e" />
           <condition />
-          <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" guid="c8eaa1d7-9700-4c0f-b929-37aa095c54d6" />
+          <set-value var="UltimaPregunta" value="7" guid="1d98e7dd-6c08-423e-ae56-d50760558bfa" />
           <condition />
-          <increment var="PreguntasRespondidas" value="1" guid="b80f894a-7463-4c8a-969d-7727bf958d0c" />
+          <macro-ref id="MacroPreguntas" guid="7b2377d4-eebf-4707-ab97-74c3657d5b55" />
           <condition />
-          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" guid="499fc839-f174-48a5-a662-d7c1c852aa6f" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
-          <trigger-conversation idTarget="ReflexionFinal" guid="6edc884e-0f8f-4b10-ac15-6d5ca87fe5a2" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4595,18 +4531,10 @@
         <effect>
           <activate flag="Respondida8" guid="d4199d6f-f0e8-4a94-934c-76ff2504f025" />
           <condition />
-          <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" guid="3cbfc9be-2048-4a60-84c4-75c575fd38d7" />
+          <set-value var="UltimaPregunta" value="8" guid="a2a66ebc-16e0-4be3-a028-14acbb3ccae8" />
           <condition />
-          <increment var="PreguntasRespondidas" value="1" guid="c3e28fee-8015-4335-9dd1-2104c59ea411" />
+          <macro-ref id="MacroPreguntas" guid="751eebed-bf92-47fa-a56a-eb1b50253b5f" />
           <condition />
-          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" guid="03dc1347-aeb9-4aeb-9d9f-d8e52c79c32d" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
-          <trigger-conversation idTarget="ReflexionFinal" guid="c83c4c60-6d12-4170-a1c4-17ad9eb85a2b" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -4678,18 +4606,10 @@
         <effect>
           <activate flag="Respondida9" guid="c05881e4-19c6-4bf3-9c52-0a163d4b09eb" />
           <condition />
-          <trigger-scene idTarget="PreguntasFinales1" x="960" y="810" transitionTime="5" transitionType="5" guid="49ff3ff5-e8dd-4274-b778-60c7be1c6040" />
+          <set-value var="UltimaPregunta" value="9" guid="22544db6-3f62-4e19-a700-c2e1fe36bed5" />
           <condition />
-          <increment var="PreguntasRespondidas" value="1" guid="316bb1c7-ed09-4097-9232-b322aed8c1bf" />
+          <macro-ref id="MacroPreguntas" guid="1a4fa283-895d-4c65-b66a-233950077151" />
           <condition />
-          <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" guid="e04a42b4-4dfc-4b04-80fd-7cc1d171da9f" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
-          <trigger-conversation idTarget="ReflexionFinal" guid="058cb9bd-fa53-4cf1-9875-9099daee1d9d" />
-          <condition>
-            <greater-equals-than var="PreguntasRespondidas" value="10" />
-          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -5407,4 +5327,28 @@
     <progress type="SUM" />
     <score type="VARIABLE" method="SINGLE" id="Score" />
   </completable>
+  <macro id="MacroPreguntas">
+    <documentation>
+    </documentation>
+    <increment var="PreguntasRespondidas" value="1" guid="5eda1655-9e0a-444b-af6a-fc726bb83d9f" />
+    <condition />
+    <trigger-scene idTarget="PreguntasFinales" x="1024" y="864" transitionTime="5" transitionType="5" guid="09dd106a-86ed-470c-ba08-8de3073467be" />
+    <condition>
+      <less-than var="PreguntasRespondidas" value="10" />
+      <less-equals-than var="UltimaPregunta" value="4" />
+    </condition>
+    <trigger-scene idTarget="PreguntasFinales1" x="1024" y="864" transitionTime="5" transitionType="5" guid="f4de02f6-c2ce-4a08-8c62-858e0e1f2a3b" />
+    <condition>
+      <less-than var="PreguntasRespondidas" value="10" />
+      <greater-equals-than var="UltimaPregunta" value="5" />
+    </condition>
+    <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" guid="52f994aa-da22-4093-bad3-ac894698b543" />
+    <condition>
+      <greater-equals-than var="PreguntasRespondidas" value="10" />
+    </condition>
+    <trigger-conversation idTarget="ReflexionFinal" guid="1767b775-6fdb-4d35-912d-27b8f7630900" />
+    <condition>
+      <greater-equals-than var="PreguntasRespondidas" value="10" />
+    </condition>
+  </macro>
 </eAdventure>

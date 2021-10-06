@@ -332,7 +332,10 @@ namespace uAdventure.Runner
                     {
                         EffectHolderNode tmp = (EffectHolderNode)data;
                         tmp.doPulse();
-                        Game.Instance.ContinueEffectExecution();
+                        if (!Game.Instance.IsRunningInBackground(tmp))
+                        {
+                            Game.Instance.ContinueEffectExecution();
+                        }
                     }, null);
                 }
             }else

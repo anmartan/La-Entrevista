@@ -285,8 +285,8 @@ namespace uAdventure.Simva
                 {
                     this.auth = simvaController.AuthorizationInfo;
                     this.simvaController = simvaController;
-                    //PlayerPrefs.SetString("simva_auth", JsonConvert.SerializeObject(auth));
-                    //PlayerPrefs.Save();
+                    /*PlayerPrefs.SetString("simva_auth", JsonConvert.SerializeObject(auth));
+                    PlayerPrefs.Save();*/
                     return UpdateSchedule();
                 })
                 .Then(schedule =>

@@ -2092,11 +2092,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "La Entrevista es una aplicaci\xF3n con fines de investigaci\xF3n para
-    el estudio desarrollado para concienciaci\xF3n por el grupo e-UCM. \n\nTus datos
-    de juego (tus interacciones con elementos, elecciones) ser\xE1n recopilados durante
-    la partida an\xF3nimamente con un c\xF3digo que recibir\xE1s del investigador
-    tras entregar el consentimiento informado firmado. La aplicaci\xF3n NO recopila
-    datos de caracter personal. \n\nLa versi\xF3n \"Demo\" no recopila datos."
+    su estudio por el grupo e-UCM. \n\nTus datos de juego (tus interacciones con
+    elementos, elecciones, etc.) ser\xE1n recopilados durante la partida an\xF3nimamente
+    con un c\xF3digo que recibir\xE1s del investigador tras entregar un consentimiento
+    informado firmado.\n\nLa aplicaci\xF3n NO recopila datos de caracter personal. "
 --- !u!114 &5209462643667968111
 MonoBehaviour:
   m_ObjectHideFlags: 0

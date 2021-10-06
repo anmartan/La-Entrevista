@@ -85,7 +85,7 @@ namespace uAdventure.Simva
             DisclaimerAccepted = true;
             disclaimer.SetActive(false);
             login.SetActive(true);
-            preview.SetActive(true);
+            //preview.SetActive(true);
         }
 
         public void Demo()

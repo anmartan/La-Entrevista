@@ -924,23 +924,23 @@
     <documentation>
     </documentation>
     <effect>
-      <trigger-conversation idTarget="PortalEmpleo0" guid="9747d810-5dfe-4cc5-a805-38f8a00f0e1f" />
+      <trigger-conversation idTarget="PortalEmpleoIntro2" guid="9747d810-5dfe-4cc5-a805-38f8a00f0e1f" />
       <condition>
         <equals var="IntroPregunta" value="0" />
       </condition>
-      <trigger-conversation idTarget="PortalEmpleo1" guid="5765691f-834e-466b-b414-29006399684a" />
+      <trigger-conversation idTarget="PortalEmpleoIdiomas" guid="5765691f-834e-466b-b414-29006399684a" />
       <condition>
         <equals var="IntroPregunta" value="1" />
       </condition>
-      <trigger-conversation idTarget="PortalEmpleo2" guid="248b4f32-384a-4c65-8488-2f3c9ed339c6" />
+      <trigger-conversation idTarget="PortalEmpleoAptitudesTecnicas" guid="248b4f32-384a-4c65-8488-2f3c9ed339c6" />
       <condition>
         <equals var="IntroPregunta" value="2" />
       </condition>
-      <trigger-conversation idTarget="PortalEmpleo3" guid="d72720a7-40e7-4db1-99e3-591d72aa754d" />
+      <trigger-conversation idTarget="PortalEmpleoSoftSkills" guid="d72720a7-40e7-4db1-99e3-591d72aa754d" />
       <condition>
         <equals var="IntroPregunta" value="3" />
       </condition>
-      <trigger-conversation idTarget="PortalEmpleo4" guid="60de6ca2-4ed8-428e-ae56-383b67366f8d" />
+      <trigger-conversation idTarget="PortalEmpleoDisponibilidad" guid="60de6ca2-4ed8-428e-ae56-383b67366f8d" />
       <condition>
         <equals var="IntroPregunta" value="4" />
       </condition>
@@ -1078,17 +1078,7 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>
         <resources name="No name" />
-        <text>Acabo de terminar la carrera, y estoy buscando ofertas de empleo.</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Tengo muchas ganas de empezar a trabajar, y demostrar lo que valgo.</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Seguro que en internet encuentro alguna cosa interesante.</text>
+        <text>Acabo de terminar la carrera, y estoy buscando ofertas de empleo. Tengo muchas ganas de empezar a trabajar, y demostrar lo que valgo. Seguro que en internet encuentro alguna cosa interesante.</text>
       </speak-player>
       <condition />
       <end-conversation />
@@ -1098,27 +1088,12 @@
     <dialogue-node nodeindex="0" editor-x="36" editor-y="131">
       <speak-player>
         <resources name="No name" />
-        <text>Me han recomendado este portal de empleo varias veces.</text>
+        <text>Me han recomendado este portal de empleo varias veces. Puedes meter tus aptitudes, y te recomienda ofertas que se ajustan a tu currículum. Veamos...</text>
       </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Puedes meter tus aptitudes, y te recomienda ofertas que se ajustan a tu currículum. Veamos...</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Parece que hay que responder varias preguntas.</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Menos mal que he preparado todo lo que puedo necesitar.</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Me he hecho este currículum por si necesito usarlo. Por ejemplo...</text>
+        <text>Parece que hay que responder varias preguntas. Menos mal que he preparado todo lo que puedo necesitar. Me he hecho este currículum por si necesito usarlo. Por ejemplo...</text>
       </speak-player>
       <condition />
       <speak-player>
@@ -1145,7 +1120,7 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="PortalEmpleo0">
+  <graph-conversation id="PortalEmpleoIntro2">
     <dialogue-node nodeindex="0" editor-x="36" editor-y="131">
       <speak-player>
         <resources name="No name" />
@@ -1154,25 +1129,20 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Esta pregunta era fácil, pero puede que esto se complique.</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Siempre que lo necesite, puedo mirar mi CV. ¡No quiero liarla!</text>
+        <text>Esta pregunta era fácil, pero puede que esto se complique. Siempre que lo necesite, puedo mirar mi CV. ¡No quiero liarla!</text>
       </speak-player>
       <condition />
       <end-conversation>
         <effect>
           <increment var="IntroPregunta" value="1" guid="68ee3254-bacd-4f20-b178-e54a49d63ccd" />
           <condition />
-          <trigger-conversation idTarget="PortalEmpleo1" guid="58a0043e-a703-45a4-9996-7027577e4380" />
+          <trigger-conversation idTarget="PortalEmpleoIdiomas" guid="58a0043e-a703-45a4-9996-7027577e4380" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="PortalEmpleo1">
+  <graph-conversation id="PortalEmpleoIdiomas">
     <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
       <speak-player>
         <resources name="No name" />
@@ -1181,7 +1151,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="485" editor-y="31" x="485" y="31">
+    <option-node nodeindex="1" question="PEmpleoIdiomas" keepShowing="yes" preListening="yes" editor-x="305" editor-y="41" x="305" y="41">
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
@@ -1215,26 +1185,25 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="94" editor-y="447">
-      <speak-player>
-        <resources name="No name" />
-        <text>Vaya, parece que no hay ofertas. A lo mejor me he equivocado en algo...</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="0" />
+    <dialogue-node nodeindex="3" editor-x="787" editor-y="341">
+      <child nodeindex="4" />
+      <effect>
+        <increment var="ErroresCV" value="1" guid="40178dee-e112-481a-a9cf-52608987befc" />
+        <condition />
+      </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="1142" editor-y="193">
+    <dialogue-node nodeindex="4" editor-x="1077" editor-y="223">
       <end-conversation>
         <effect>
           <increment var="IntroPregunta" value="1" guid="27f7d3f1-bb0c-4a63-a280-f93c9fb5777a" />
           <condition />
-          <trigger-conversation idTarget="PortalEmpleo2" guid="1ebb9567-ef8b-4747-85f6-1d567520f27b" />
+          <trigger-conversation idTarget="PortalEmpleoAptitudesTecnicas" guid="1ebb9567-ef8b-4747-85f6-1d567520f27b" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="PortalEmpleo2">
+  <graph-conversation id="PortalEmpleoAptitudesTecnicas">
     <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
       <speak-player>
         <resources name="No name" />
@@ -1243,7 +1212,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="365" editor-y="71" x="365" y="71">
+    <option-node nodeindex="1" question="PEmpleoAptitudesTecnicas" keepShowing="yes" preListening="yes" editor-x="365" editor-y="71" x="365" y="71">
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
@@ -1277,26 +1246,25 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="115" editor-y="430">
-      <speak-player>
-        <resources name="No name" />
-        <text>Si me preguntan en la entrevista, se van a dar cuenta de que es mentira. Vamos a ver...</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="0" />
+    <dialogue-node nodeindex="3" editor-x="691" editor-y="333">
+      <child nodeindex="4" />
+      <effect>
+        <increment var="ErroresCV" value="1" guid="ac271c53-f610-484b-b7fd-44d0ba5b2eae" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="1058" editor-y="108">
       <end-conversation>
         <effect>
           <increment var="IntroPregunta" value="1" guid="56b13bb7-58af-4cd9-b7d0-8c4a91def59c" />
           <condition />
-          <trigger-conversation idTarget="PortalEmpleo3" guid="14c3c271-05cd-4f5b-84ef-8b9c3518b09c" />
+          <trigger-conversation idTarget="PortalEmpleoSoftSkills" guid="14c3c271-05cd-4f5b-84ef-8b9c3518b09c" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="PortalEmpleo3">
+  <graph-conversation id="PortalEmpleoSoftSkills">
     <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
       <speak-player>
         <resources name="No name" />
@@ -1305,7 +1273,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="290" editor-y="66" x="290" y="66">
+    <option-node nodeindex="1" question="PEmpleoSoftkills" keepShowing="yes" preListening="yes" editor-x="290" editor-y="66" x="290" y="66">
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
@@ -1339,31 +1307,25 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="98" editor-y="467">
-      <speak-player>
-        <resources name="No name" />
-        <text>Esto no es del todo cierto. </text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Venga, voy a poner mis puntos fuertes.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="1" />
+    <dialogue-node nodeindex="3" editor-x="553" editor-y="349">
+      <child nodeindex="4" />
+      <effect>
+        <increment var="ErroresCV" value="1" guid="3e72f1fd-b960-4cac-93d6-9d0cab9d91d0" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="794" editor-y="215">
       <end-conversation>
         <effect>
           <increment var="IntroPregunta" value="1" guid="e84b1c1a-f6e4-4943-94ca-6622e43c8c4c" />
           <condition />
-          <trigger-conversation idTarget="PortalEmpleo4" guid="67aeaa29-4496-4688-8e55-d9ecafe2b9b1" />
+          <trigger-conversation idTarget="PortalEmpleoDisponibilidad" guid="67aeaa29-4496-4688-8e55-d9ecafe2b9b1" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="PortalEmpleo4">
+  <graph-conversation id="PortalEmpleoDisponibilidad">
     <dialogue-node nodeindex="0" editor-x="61" editor-y="131">
       <speak-player>
         <resources name="No name" />
@@ -1372,7 +1334,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="386" editor-y="20" x="386" y="20">
+    <option-node nodeindex="1" question="PEmpleoDisponibilidad" keepShowing="yes" preListening="yes" editor-x="386" editor-y="20" x="386" y="20">
       <speak-player>
         <text>[Mirar mi CV]</text>
         <resources name="No name" />
@@ -1412,53 +1374,59 @@
           <increment var="IntroPregunta" value="1" guid="444feb17-a207-40b4-90d4-e60cb5cff624" />
           <condition />
           <trigger-scene idTarget="IntroduccionOfertas" x="960" y="810" transitionTime="5" transitionType="5" guid="76405df7-4d2e-47a5-aae5-25a0743ad46e" />
-          <condition />
+          <condition>
+            <less-equals-than var="ErroresCV" value="2" />
+          </condition>
           <trigger-conversation idTarget="PortalEmpleoFinal" guid="70dc79f6-427b-4f27-aac2-8b87fc95959f" />
-          <condition />
+          <condition>
+            <less-equals-than var="ErroresCV" value="2" />
+          </condition>
+          <trigger-conversation idTarget="PortalEmpleoRepeticion" guid="8e4efcf3-25fd-4e8c-9f1d-e88d222fca4e" />
+          <condition>
+            <greater-than var="ErroresCV" value="2" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="140" editor-y="445">
+    <dialogue-node nodeindex="4" editor-x="668" editor-y="298">
+      <child nodeindex="3" />
+      <effect>
+        <increment var="ErroresCV" value="1" guid="6b7ea419-27f3-4e71-8c92-40bbd4953a33" />
+        <condition />
+      </effect>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PortalEmpleoRepeticion">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>
         <resources name="No name" />
-        <text>Esta información me parece bastante importante.</text>
+        <text>Vaya, parece que no encuentra ninguna oferta. Voy a revisar la información, a lo mejor he hecho algo mal...</text>
       </speak-player>
       <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Voy a asegurarme de que lo he puesto bien.</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>¿Qué disponibilidad tengo?</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="1" />
+      <end-conversation>
+        <effect>
+          <set-value var="ErroresCV" value="0" guid="da7b61d1-0fe6-4a42-bedb-79ea96dd2827" />
+          <condition />
+          <set-value var="IntroPregunta" value="1" guid="bbb16d47-fa09-4326-9a5d-7287c9947e4f" />
+          <condition />
+          <trigger-conversation idTarget="PortalEmpleoIdiomas" guid="78615ab6-8c36-43a4-8223-64423e70a1cf" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PortalEmpleoFinal">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>
         <resources name="No name" />
-        <text>Parece que hay dos ofertas.</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Una es para desarrollar software, y la otra como analista de datos.</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>¿A cuál me presento?</text>
+        <text>Parece que hay dos ofertas. Una es para desarrollar software, y la otra como analista de datos. ¿A cuál me presento?</text>
       </speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="EscogerEmpleoConversacion">
-    <dialogue-node nodeindex="0" editor-x="67" editor-y="20">
+    <dialogue-node nodeindex="0" editor-x="35" editor-y="63">
       <speak-player>
         <resources name="No name" />
         <text>Creo que la idea de desarrollar software me gusta más.</text>
@@ -1475,7 +1443,7 @@
       </condition>
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="333" editor-y="3" x="333" y="3">
+    <option-node nodeindex="1" question="PEmpleoEleccion" keepShowing="yes" preListening="yes" editor-x="333" editor-y="34" x="333" y="34">
       <speak-player>
         <text>* Presentar mi candidatura *</text>
         <resources name="No name" />
@@ -1490,6 +1458,11 @@
       <child nodeindex="3" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="709" editor-y="28">
+      <speak-player>
+        <resources name="No name" />
+        <text>Voy a retocar un poco el currículum para que se ajuste mejor a la oferta, y... ¡listo! Ya lo he enviado.</text>
+      </speak-player>
+      <condition />
       <end-conversation>
         <effect>
           <remove-element idTarget="OpcionInformatica" guid="37d91aff-777f-49b2-980b-9752a5822aba" />
@@ -3589,6 +3562,8 @@
       </condition>
       <end-conversation>
         <effect>
+          <increment var="EntrevistaPregunta" value="11" guid="9d7e336f-3636-4474-4123-106b34789f9w" />
+          <condition />
           <trigger-scene idTarget="SalaEspera" x="550" y="465" transitionTime="5" transitionType="5" guid="adb683d3-5ec9-43c7-9f03-3edc34ca3a1b" />
           <condition />
           <speak-player guid="d75233e2-4dcf-4d8c-bfb2-fc1443ffee7c">Ha sido... toda una experiencia.</speak-player>

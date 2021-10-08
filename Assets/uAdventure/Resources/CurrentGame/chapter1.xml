@@ -941,47 +941,47 @@
     <documentation>
     </documentation>
     <effect>
-      <trigger-conversation idTarget="Entrevista0" guid="988f696d-b958-4ab8-b3b3-1e27d59e9632" />
+      <trigger-conversation idTarget="EntrevistaTrabajarNosotros" guid="988f696d-b958-4ab8-b3b3-1e27d59e9632" />
       <condition>
         <equals var="EntrevistaPregunta" value="0" />
       </condition>
-      <trigger-conversation idTarget="Entrevista1" guid="5f805d7d-14e7-4006-82a6-9e45109ade2b" />
+      <trigger-conversation idTarget="EntrevistaNivelIngles" guid="5f805d7d-14e7-4006-82a6-9e45109ade2b" />
       <condition>
         <equals var="EntrevistaPregunta" value="1" />
       </condition>
-      <trigger-conversation idTarget="Entrevista2" guid="7fca556b-1c4e-455b-b90a-c4251bee5fa7" />
+      <trigger-conversation idTarget="EntrevistaNivelProgramacion" guid="7fca556b-1c4e-455b-b90a-c4251bee5fa7" />
       <condition>
         <equals var="EntrevistaPregunta" value="2" />
       </condition>
-      <trigger-conversation idTarget="Entrevista3Analista" guid="eb2e1a86-add2-4fce-873a-7684f38c5d2a" />
+      <trigger-conversation idTarget="EntrevistaAnalistaBasesDatos" guid="eb2e1a86-add2-4fce-873a-7684f38c5d2a" />
       <condition>
         <equals var="EntrevistaPregunta" value="3" />
       </condition>
-      <trigger-conversation idTarget="Entrevista4" guid="ff33fb14-d37e-40b2-ba20-bc421d52a343" />
+      <trigger-conversation idTarget="EntrevistaObjetivos5Anos" guid="ff33fb14-d37e-40b2-ba20-bc421d52a343" />
       <condition>
         <equals var="EntrevistaPregunta" value="4" />
       </condition>
-      <trigger-conversation idTarget="Entrevista5" guid="220d69a4-3fe1-4e2f-9595-5e90157f937c" />
+      <trigger-conversation idTarget="EntrevistaPareja" guid="220d69a4-3fe1-4e2f-9595-5e90157f937c" />
       <condition>
         <equals var="EntrevistaPregunta" value="5" />
       </condition>
-      <trigger-conversation idTarget="Entrevista6" guid="a37d8d0d-be6f-444d-8851-8d448c9b7c4c" />
+      <trigger-conversation idTarget="EntrevistaViajar" guid="a37d8d0d-be6f-444d-8851-8d448c9b7c4c" />
       <condition>
         <equals var="EntrevistaPregunta" value="6" />
       </condition>
-      <trigger-conversation idTarget="Entrevista7" guid="cc995888-fa40-41ac-a3ca-3659b15e0369" />
+      <trigger-conversation idTarget="EntrevistaVozSuave" guid="cc995888-fa40-41ac-a3ca-3659b15e0369" />
       <condition>
         <equals var="EntrevistaPregunta" value="7" />
       </condition>
-      <trigger-conversation idTarget="Entrevista8" guid="ff3459dd-9949-4580-931d-c17f70b02ea8" />
+      <trigger-conversation idTarget="EntrevistaCalidezHumanidad" guid="ff3459dd-9949-4580-931d-c17f70b02ea8" />
       <condition>
         <equals var="EntrevistaPregunta" value="8" />
       </condition>
-      <trigger-conversation idTarget="Entrevista9" guid="25fa9dd5-31c8-49bb-a622-461272ef3ccc" />
+      <trigger-conversation idTarget="EntrevistaDerrumbarse" guid="25fa9dd5-31c8-49bb-a622-461272ef3ccc" />
       <condition>
         <equals var="EntrevistaPregunta" value="9" />
       </condition>
-      <trigger-conversation idTarget="Entrevista10" guid="4b4a1826-95cd-48dc-9051-6bfafbe7c208" />
+      <trigger-conversation idTarget="EntrevistaFamiliarCuidados" guid="4b4a1826-95cd-48dc-9051-6bfafbe7c208" />
       <condition>
         <equals var="EntrevistaPregunta" value="10" />
       </condition>
@@ -996,47 +996,47 @@
     <documentation>
     </documentation>
     <effect>
-      <trigger-conversation idTarget="Entrevista0" guid="ca06d81e-ec95-4520-b030-49080485e9ee" />
+      <trigger-conversation idTarget="EntrevistaTrabajarNosotros" guid="ca06d81e-ec95-4520-b030-49080485e9ee" />
       <condition>
         <equals var="EntrevistaPregunta" value="0" />
       </condition>
-      <trigger-conversation idTarget="Entrevista1" guid="ecf5a71e-4f41-4d3c-af7a-109989a06e65" />
+      <trigger-conversation idTarget="EntrevistaNivelIngles" guid="ecf5a71e-4f41-4d3c-af7a-109989a06e65" />
       <condition>
         <equals var="EntrevistaPregunta" value="1" />
       </condition>
-      <trigger-conversation idTarget="Entrevista2" guid="ee40b904-e38e-4605-9b26-e8558593d193" />
+      <trigger-conversation idTarget="EntrevistaNivelProgramacion" guid="ee40b904-e38e-4605-9b26-e8558593d193" />
       <condition>
         <equals var="EntrevistaPregunta" value="2" />
       </condition>
-      <trigger-conversation idTarget="Entrevista3Informatica" guid="b13239d0-a754-4d3c-89b4-6675da92797c" />
+      <trigger-conversation idTarget="EntrevistaInformaticaGit" guid="b13239d0-a754-4d3c-89b4-6675da92797c" />
       <condition>
         <equals var="EntrevistaPregunta" value="3" />
       </condition>
-      <trigger-conversation idTarget="Entrevista4" guid="26b8a72c-7c3c-4cf8-ae92-80eca21d66b2" />
+      <trigger-conversation idTarget="EntrevistaObjetivos5Anos" guid="26b8a72c-7c3c-4cf8-ae92-80eca21d66b2" />
       <condition>
         <equals var="EntrevistaPregunta" value="4" />
       </condition>
-      <trigger-conversation idTarget="Entrevista5" guid="ee3b0a9f-a177-4a44-a8f0-9745a03c6031" />
+      <trigger-conversation idTarget="EntrevistaPareja" guid="ee3b0a9f-a177-4a44-a8f0-9745a03c6031" />
       <condition>
         <equals var="EntrevistaPregunta" value="5" />
       </condition>
-      <trigger-conversation idTarget="Entrevista6" guid="17ceb68a-87c3-4693-871d-07054b9f78e2" />
+      <trigger-conversation idTarget="EntrevistaViajar" guid="17ceb68a-87c3-4693-871d-07054b9f78e2" />
       <condition>
         <equals var="EntrevistaPregunta" value="6" />
       </condition>
-      <trigger-conversation idTarget="Entrevista7" guid="ba5e62cb-a244-41b6-84aa-1f96a3ceb5f1" />
+      <trigger-conversation idTarget="EntrevistaVozSuave" guid="ba5e62cb-a244-41b6-84aa-1f96a3ceb5f1" />
       <condition>
         <equals var="EntrevistaPregunta" value="7" />
       </condition>
-      <trigger-conversation idTarget="Entrevista8" guid="2828a1bb-b364-4153-8f55-c15805d7691c" />
+      <trigger-conversation idTarget="EntrevistaCalidezHumanidad" guid="2828a1bb-b364-4153-8f55-c15805d7691c" />
       <condition>
         <equals var="EntrevistaPregunta" value="8" />
       </condition>
-      <trigger-conversation idTarget="Entrevista9" guid="691a01cb-d8b7-4df1-8853-949ec1645d71" />
+      <trigger-conversation idTarget="EntrevistaDerrumbarse" guid="691a01cb-d8b7-4df1-8853-949ec1645d71" />
       <condition>
         <equals var="EntrevistaPregunta" value="9" />
       </condition>
-      <trigger-conversation idTarget="Entrevista10" guid="77cbc446-df59-4c02-9896-7a475e4140e0" />
+      <trigger-conversation idTarget="EntrevistaFamiliarCuidados" guid="77cbc446-df59-4c02-9896-7a475e4140e0" />
       <condition>
         <equals var="EntrevistaPregunta" value="10" />
       </condition>
@@ -2184,11 +2184,11 @@
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Mujer1" x="12500" y="1359" guid="ea7a4008-3ba4-4861-9623-a312c755934e" />
+          <move-npc idTarget="Mujer1" x="2468" y="1359" guid="ea7a4008-3ba4-4861-9623-a312c755934e" />
           <condition />
-          <move-npc idTarget="Carlos" x="12300" y="1359" guid="2e522c0b-4333-4b29-bd33-58e60407eb8f" />
+          <move-npc idTarget="Carlos" x="2468" y="1359" guid="2e522c0b-4333-4b29-bd33-58e60407eb8f" />
           <condition />
-          <move-npc idTarget="Rebeca" x="12750" y="1500" guid="487eba2c-c6a1-4dc7-8158-2e8314d3a1a5" />
+          <move-npc idTarget="Rebeca" x="2468" y="1500" guid="487eba2c-c6a1-4dc7-8158-2e8314d3a1a5" />
           <condition />
           <increment var="PersonajesHablados" value="1" guid="8958145d-9563-4a22-af82-d40da17b1c65" />
           <condition />
@@ -2322,13 +2322,13 @@
       <condition />
       <end-conversation>
         <effect>
-          <trigger-conversation idTarget="Entrevista0" guid="b039ed9b-3799-4e82-b89f-4aacab3599ed" />
+          <trigger-conversation idTarget="EntrevistaTrabajarNosotros" guid="b039ed9b-3799-4e82-b89f-4aacab3599ed" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista0">
+  <graph-conversation id="EntrevistaTrabajarNosotros">
     <dialogue-node nodeindex="0" editor-x="7" editor-y="137">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -2399,13 +2399,13 @@
         <effect>
           <increment var="EntrevistaPregunta" value="1" guid="ff08adfd-0d58-4885-841d-8589564a0161" />
           <condition />
-          <trigger-conversation idTarget="Entrevista1" guid="89fc4dcb-92e4-4b74-bd7f-da98b49ff033" />
+          <trigger-conversation idTarget="EntrevistaNivelIngles" guid="89fc4dcb-92e4-4b74-bd7f-da98b49ff033" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista1">
+  <graph-conversation id="EntrevistaNivelIngles">
     <dialogue-node nodeindex="0" editor-x="59" editor-y="72">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -2476,13 +2476,13 @@
         <effect>
           <increment var="EntrevistaPregunta" value="1" guid="8843019e-35d6-4a20-987e-7e5915210115" />
           <condition />
-          <trigger-conversation idTarget="Entrevista2" guid="965966b3-9d06-46b0-8ba9-4c6e6a13e928" />
+          <trigger-conversation idTarget="EntrevistaNivelProgramacion" guid="965966b3-9d06-46b0-8ba9-4c6e6a13e928" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista2">
+  <graph-conversation id="EntrevistaNivelProgramacion">
     <dialogue-node nodeindex="0" editor-x="48" editor-y="60">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -2572,11 +2572,11 @@
         <effect>
           <increment var="EntrevistaPregunta" value="1" guid="ae2a711b-43cb-4b2a-b75e-3f46facfe2fa" />
           <condition />
-          <trigger-conversation idTarget="Entrevista3Informatica" guid="b1efcd0e-d4bb-47ba-a2da-ac948bf7fc41" />
+          <trigger-conversation idTarget="EntrevistaInformaticaGit" guid="b1efcd0e-d4bb-47ba-a2da-ac948bf7fc41" />
           <condition>
             <active flag="Software" />
           </condition>
-          <trigger-conversation idTarget="Entrevista3Analista" guid="bf2ce895-b8fd-4f02-9199-72fe8839d3b4" />
+          <trigger-conversation idTarget="EntrevistaAnalistaBasesDatos" guid="bf2ce895-b8fd-4f02-9199-72fe8839d3b4" />
           <condition>
             <inactive flag="Software" />
           </condition>
@@ -2584,7 +2584,7 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista3Informatica">
+  <graph-conversation id="EntrevistaInformaticaGit">
     <dialogue-node nodeindex="0" editor-x="11" editor-y="144">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -2650,13 +2650,13 @@
         <effect>
           <increment var="EntrevistaPregunta" value="1" guid="2e6f0428-5ca1-41b3-a93c-42e6cf496a11" />
           <condition />
-          <trigger-conversation idTarget="Entrevista4" guid="d54f2321-c6b4-40c6-9ad7-9872a5353972" />
+          <trigger-conversation idTarget="EntrevistaObjetivos5Anos" guid="d54f2321-c6b4-40c6-9ad7-9872a5353972" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista3Analista">
+  <graph-conversation id="EntrevistaAnalistaBasesDatos">
     <dialogue-node nodeindex="0" editor-x="11" editor-y="144">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -2722,13 +2722,13 @@
         <effect>
           <increment var="EntrevistaPregunta" value="1" guid="c46c5eee-fa16-4b60-b17c-84a919b36f82" />
           <condition />
-          <trigger-conversation idTarget="Entrevista4" guid="9a075456-8360-4c62-b7d4-6bfa0d08009e" />
+          <trigger-conversation idTarget="EntrevistaObjetivos5Anos" guid="9a075456-8360-4c62-b7d4-6bfa0d08009e" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista4">
+  <graph-conversation id="EntrevistaObjetivos5Anos">
     <dialogue-node nodeindex="0" editor-x="13" editor-y="112">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -2794,13 +2794,13 @@
         <effect>
           <increment var="EntrevistaPregunta" value="1" guid="bd39a0fa-3208-49e1-b27e-17c467b3d0df" />
           <condition />
-          <trigger-conversation idTarget="Entrevista5" guid="746787e5-c859-4945-9316-d4e7078d041c" />
+          <trigger-conversation idTarget="EntrevistaPareja" guid="746787e5-c859-4945-9316-d4e7078d041c" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista5">
+  <graph-conversation id="EntrevistaPareja">
     <dialogue-node nodeindex="0" editor-x="0" editor-y="128">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -2888,13 +2888,13 @@
         <effect>
           <increment var="EntrevistaPregunta" value="1" guid="3fe6d81b-6c08-441c-b6e9-2e7bf2b8f4f5" />
           <condition />
-          <trigger-conversation idTarget="Entrevista6" guid="a270343e-64b2-4829-a5ce-2895651543be" />
+          <trigger-conversation idTarget="EntrevistaViajar" guid="a270343e-64b2-4829-a5ce-2895651543be" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista6">
+  <graph-conversation id="EntrevistaViajar">
     <dialogue-node nodeindex="0" editor-x="18" editor-y="51">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -2947,7 +2947,7 @@
         <effect>
           <increment var="EntrevistaPregunta" value="1" guid="9029cc52-7c54-4c05-8019-bcc560ae867a" />
           <condition />
-          <trigger-conversation idTarget="Entrevista7" guid="22b63f73-04cf-48d3-bb98-8ae94b803c22" />
+          <trigger-conversation idTarget="EntrevistaVozSuave" guid="22b63f73-04cf-48d3-bb98-8ae94b803c22" />
           <condition />
         </effect>
       </end-conversation>
@@ -2960,7 +2960,7 @@
       </effect>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista7">
+  <graph-conversation id="EntrevistaVozSuave">
     <dialogue-node nodeindex="0" editor-x="38" editor-y="130">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -3031,13 +3031,13 @@
         <effect>
           <increment var="EntrevistaPregunta" value="1" guid="f8d40190-4534-4027-b964-e2eafadb791d" />
           <condition />
-          <trigger-conversation idTarget="Entrevista8" guid="03dd18ce-4886-4cdc-9d8b-9031632c298e" />
+          <trigger-conversation idTarget="EntrevistaCalidezHumanidad" guid="03dd18ce-4886-4cdc-9d8b-9031632c298e" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista8">
+  <graph-conversation id="EntrevistaCalidezHumanidad">
     <dialogue-node nodeindex="0" editor-x="37" editor-y="115">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -3121,13 +3121,13 @@
         <effect>
           <increment var="EntrevistaPregunta" value="1" guid="811f5e38-5f41-4f58-9685-e372593efde8" />
           <condition />
-          <trigger-conversation idTarget="Entrevista9" guid="736abd19-afb6-493c-a75a-ec17a7c5b6a9" />
+          <trigger-conversation idTarget="EntrevistaDerrumbarse" guid="736abd19-afb6-493c-a75a-ec17a7c5b6a9" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista9">
+  <graph-conversation id="EntrevistaDerrumbarse">
     <dialogue-node nodeindex="0" editor-x="0" editor-y="174">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -3191,7 +3191,7 @@
         <effect>
           <increment var="EntrevistaPregunta" value="1" guid="8d7f236f-3646-4474-a000-106b63789f9e" />
           <condition />
-          <trigger-conversation idTarget="Entrevista10" guid="89287edf-9a9c-4d20-abb8-df90940b8cba" />
+          <trigger-conversation idTarget="EntrevistaFamiliarCuidados" guid="89287edf-9a9c-4d20-abb8-df90940b8cba" />
           <condition />
         </effect>
       </end-conversation>
@@ -3212,7 +3212,7 @@
       </effect>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Entrevista10">
+  <graph-conversation id="EntrevistaFamiliarCuidados">
     <dialogue-node nodeindex="0" editor-x="43" editor-y="244">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
@@ -3284,12 +3284,7 @@
     <dialogue-node nodeindex="5" editor-x="995" editor-y="171">
       <speak-char idTarget="AndresRRHH">
         <resources name="No name" />
-        <text>Genial. Con esto, hemos terminado la entrevista.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="AndresRRHH">
-        <resources name="No name" />
-        <text>Muchas gracias por tu tiempo, Alexandra.</text>
+        <text>Genial. Con esto, hemos terminado la entrevista. Muchas gracias por tu tiempo.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="AndresRRHH">
@@ -3556,7 +3551,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="Respondida2" guid="945bc9f7-39b6-49b6-9d5d-138adcc7b808" />
+          <activate flag="Respondida1" guid="945bc9f7-39b6-49b6-9d5d-138adcc7b808" />
           <condition />
           <set-value var="UltimaPregunta" value="2" guid="82de2b93-56b4-42c7-b183-de6257358a96" />
           <condition />
@@ -3626,7 +3621,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="Respondida3" guid="461dd90d-a90b-49c5-881d-d7076dc9e2ee" />
+          <activate flag="Respondida2" guid="461dd90d-a90b-49c5-881d-d7076dc9e2ee" />
           <condition />
           <set-value var="UltimaPregunta" value="3" guid="405affd0-4255-47d8-ace9-08ff894f578e" />
           <condition />
@@ -3734,7 +3729,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="Respondida4" guid="72b5cbd4-5d85-4946-b457-88ee92747180" />
+          <activate flag="Respondida3" guid="72b5cbd4-5d85-4946-b457-88ee92747180" />
           <condition />
           <set-value var="UltimaPregunta" value="4" guid="5364f1d8-7b7b-49cc-9902-81a788d58460" />
           <condition />
@@ -3846,7 +3841,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="Respondida5" guid="bfa1e071-d2e2-40f5-ac8a-21dd2e43855c" />
+          <activate flag="Respondida4" guid="bfa1e071-d2e2-40f5-ac8a-21dd2e43855c" />
           <condition />
           <set-value var="UltimaPregunta" value="5" guid="41328e59-b7dc-4c47-8cbd-afa39c9f34ed" />
           <condition />
@@ -3916,7 +3911,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="Respondida6" guid="6c4c6a37-60cf-4b78-9e07-0f3a989a16b2" />
+          <activate flag="Respondida5" guid="6c4c6a37-60cf-4b78-9e07-0f3a989a16b2" />
           <condition />
           <set-value var="UltimaPregunta" value="6" guid="49ce9813-942b-4076-a132-5061b7c33ddb" />
           <condition />
@@ -3925,7 +3920,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="701" editor-y="262">
+    <dialogue-node nodeindex="3" editor-x="638" editor-y="233">
       <speak-player>
         <resources name="No name" />
         <text>Ahora me pregunto... ¿Por qué el rol de ella es el de tomar notas?</text>
@@ -3981,7 +3976,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="Respondida7" guid="d5741343-0cfd-40c5-a05f-eb2e4bafc40e" />
+          <activate flag="Respondida6" guid="d5741343-0cfd-40c5-a05f-eb2e4bafc40e" />
           <condition />
           <set-value var="UltimaPregunta" value="7" guid="1d98e7dd-6c08-423e-ae56-d50760558bfa" />
           <condition />
@@ -4051,7 +4046,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="Respondida8" guid="d4199d6f-f0e8-4a94-934c-76ff2504f025" />
+          <activate flag="Respondida7" guid="d4199d6f-f0e8-4a94-934c-76ff2504f025" />
           <condition />
           <set-value var="UltimaPregunta" value="8" guid="a2a66ebc-16e0-4be3-a028-14acbb3ccae8" />
           <condition />
@@ -4111,7 +4106,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="Respondida9" guid="c05881e4-19c6-4bf3-9c52-0a163d4b09eb" />
+          <activate flag="Respondida8" guid="c05881e4-19c6-4bf3-9c52-0a163d4b09eb" />
           <condition />
           <set-value var="UltimaPregunta" value="9" guid="22544db6-3f62-4e19-a700-c2e1fe36bed5" />
           <condition />
@@ -4794,21 +4789,21 @@
     <condition />
     <trigger-scene idTarget="PreguntasFinales" x="1024" y="864" transitionTime="5" transitionType="5" guid="09dd106a-86ed-470c-ba08-8de3073467be" />
     <condition>
-      <less-than var="PreguntasRespondidas" value="10" />
+      <less-than var="PreguntasRespondidas" value="9" />
       <less-equals-than var="UltimaPregunta" value="4" />
     </condition>
     <trigger-scene idTarget="PreguntasFinales1" x="1024" y="864" transitionTime="5" transitionType="5" guid="f4de02f6-c2ce-4a08-8c62-858e0e1f2a3b" />
     <condition>
-      <less-than var="PreguntasRespondidas" value="10" />
+      <less-than var="PreguntasRespondidas" value="9" />
       <greater-equals-than var="UltimaPregunta" value="5" />
     </condition>
     <trigger-scene idTarget="Espejo" x="1024" y="864" transitionTime="5" transitionType="5" guid="52f994aa-da22-4093-bad3-ac894698b543" />
     <condition>
-      <greater-equals-than var="PreguntasRespondidas" value="10" />
+      <greater-equals-than var="PreguntasRespondidas" value="9" />
     </condition>
     <trigger-conversation idTarget="ReflexionFinal" guid="1767b775-6fdb-4d35-912d-27b8f7630900" />
     <condition>
-      <greater-equals-than var="PreguntasRespondidas" value="10" />
+      <greater-equals-than var="PreguntasRespondidas" value="9" />
     </condition>
   </macro>
 </eAdventure>

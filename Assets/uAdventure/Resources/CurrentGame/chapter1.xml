@@ -34,12 +34,12 @@
   <character id="Recepcionista" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/RecepcionistaAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/RecepcionistaIdleAnimacion.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
-      <asset type="speakup" uri="assets/animation/RecepcionistaTalkingGestureAnimation.eaa.xml" />
-      <asset type="speakdown" uri="assets/animation/RecepcionistaTalkingAnimation.eaa.xml" />
-      <asset type="speakright" uri="assets/animation/RecepcionistaTalkingPointingAnimation.eaa.xml" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/animation/RecepcionistaTalkingAnimacion.eaa.xml" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
@@ -84,7 +84,7 @@
   <character id="Luis" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/LuisAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/LuisIdleAnimation.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -515,7 +515,7 @@
       <object-ref idTarget="BotonAtras" x="153" y="206" scale="0.35" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Hall" hideInventory="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Hall" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -553,7 +553,7 @@
       <atrezzo-ref idTarget="Mostrador" x="1070" y="785" scale="0.8" glow="no" layer="1" />
     </atrezzo>
   </scene>
-  <scene id="Pasillo" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Pasillo" hideInventory="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -571,7 +571,7 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Luis" x="766" y="2433" scale="3.072412" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Luis" x="1606" y="2775" scale="3.5" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
     <active-areas>
       <active-area id="FlechaReuniones" rectangular="yes" x="294" y="195" width="50" height="77" hasInfluenceArea="no" behaviour="first-action">
@@ -1594,7 +1594,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Luis" x="2500" y="772" guid="1ccc54c1-35e9-4776-b58d-49c0f80f2b03" />
+          <move-npc idTarget="Luis" x="-1000" y="2775" guid="1ccc54c1-35e9-4776-b58d-49c0f80f2b03" />
           <condition />
         </effect>
       </end-conversation>
@@ -4194,7 +4194,7 @@
   </object>
   <object id="IntroOn" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/CasaOff.JPG" />
+      <asset type="image" uri="assets/image/On.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -4683,7 +4683,7 @@
   </atrezzoobject>
   <atrezzoobject id="PantallaOn">
     <resources name="No name">
-      <asset type="image" uri="assets/image/CasaOff.JPG" />
+      <asset type="image" uri="assets/image/On.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>

@@ -1,253 +1,58 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<animation id="LuisTalkingAnimation.eaa.xml" usetransitions="yes" slides="no">
-  <documentation />
+<animation id="LuisTalkingAnimation.eaa.xml" usetransitions="no" slides="no">
+  <documentation>Animation created by upgrader</documentation>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_00.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Pasillo_personaje_habla_00.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_01.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Pasillo_personaje_habla_04.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_02.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Pasillo_personaje_habla_09.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_03.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Pasillo_personaje_habla_14.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_04.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Pasillo_personaje_habla_19.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_05.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Pasillo_personaje_habla_24.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_06.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Pasillo_personaje_habla_29.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_07.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Pasillo_personaje_habla_34.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_08.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Pasillo_personaje_habla_39.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_09.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Pasillo_personaje_habla_44.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_10.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_11.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_12.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_13.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_14.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_15.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_16.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_17.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_18.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_19.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_20.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_21.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_22.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_23.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_24.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_25.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_26.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_27.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_28.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_29.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_30.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_31.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_32.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_33.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_34.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_35.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_36.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_37.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_38.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_39.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_40.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_41.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_42.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_43.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_44.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_45.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_46.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_47.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_48.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Pasillo_personaje_habla_49.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Pasillo_personaje_habla_49.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>

@@ -37,9 +37,9 @@
       <asset type="standdown" uri="assets/animation/RecepcionistaAnim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
-      <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
-      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/animation/RecepcionistaTalkingGestureAnimation.eaa.xml" />
+      <asset type="speakdown" uri="assets/animation/RecepcionistaTalkingAnimation.eaa.xml" />
+      <asset type="speakright" uri="assets/animation/RecepcionistaTalkingPointingAnimation.eaa.xml" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
@@ -88,13 +88,13 @@
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/animation/LuisTalkingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/animation/LuisWalkingAnimation.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
@@ -126,13 +126,13 @@
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/animation/AntonioSpeakingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/animation/AntonioWalkingAnimation.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
@@ -160,17 +160,17 @@
   <character id="Jaime" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/JaimeAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/JaimeAnimation.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/animation/JaimeTalkingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/animation/JaimeWalkingAnimation.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
@@ -203,7 +203,7 @@
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/animation/AndresTalkingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
@@ -241,7 +241,7 @@
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/animation/LuisaTalkingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
@@ -279,13 +279,13 @@
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/animation/RebecaTalkingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/animation/RebecaWalkingAnimation.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
@@ -309,13 +309,13 @@
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/animation/Mujer1TalkingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/animation/Mujer1WalkingAnimation.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
@@ -339,13 +339,13 @@
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/animation/CarlosTalkingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/animation/CarlosWalkingAnimation.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
@@ -369,13 +369,13 @@
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/animation/Hombre2TalkingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/animation/Hombre2WalkingAnimation.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
@@ -399,13 +399,13 @@
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/animation/Hombre3TalkingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/animation/Hombre3WalkingAnimation.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
@@ -422,7 +422,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <scene id="Menu" hideInventory="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Menu" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -440,13 +440,13 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/On.png" />
+      <asset type="background" uri="assets/background/CasaOff.JPG" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <active-areas>
-      <active-area id="AreaPantalla" rectangular="yes" x="577" y="182" width="831" height="536" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="AreaPantalla" rectangular="yes" x="583" y="174" width="961" height="601" hasInfluenceArea="no" behaviour="first-action">
         <condition>
           <inactive flag="PantallaEncendida" />
         </condition>
@@ -473,8 +473,8 @@
       </active-area>
     </active-areas>
     <atrezzo>
-      <atrezzo-ref idTarget="PortalEmpleo" x="998" y="593" scale="0.65" glow="no" layer="0" />
-      <atrezzo-ref idTarget="PantallaOff" x="960" y="1080" scale="1" glow="no" layer="1">
+      <atrezzo-ref idTarget="PortalEmpleo" x="1064" y="586" scale="0.6433796" glow="no" layer="0" />
+      <atrezzo-ref idTarget="PantallaOff" x="1024" y="1066" scale="1" glow="no" layer="1">
         <condition>
           <inactive flag="PantallaEncendida" />
         </condition>
@@ -485,17 +485,17 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/Off.png" />
+      <asset type="background" uri="assets/background/CasaOff.JPG" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="OpcionInformatica" x="775" y="694" scale="0.2601764" glow="no" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="OpcionAnalista" x="1206" y="693" scale="0.2363486" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="OpcionInformatica" x="826" y="686" scale="0.2575265" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="OpcionAnalista" x="1286" y="685" scale="0.2339413" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
     <atrezzo>
-      <atrezzo-ref idTarget="PantallaOn" x="960" y="1080" scale="1" glow="no" layer="0">
+      <atrezzo-ref idTarget="PantallaOn" x="1024" y="1069" scale="1" glow="no" layer="0">
         <condition>
           <active flag="PantallaEncendida" />
         </condition>
@@ -515,24 +515,24 @@
       <object-ref idTarget="BotonAtras" x="153" y="206" scale="0.35" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Hall" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Hall" hideInventory="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/Hall.jpg" />
+      <asset type="foreground" uri="" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="no" x="42" y="16" width="253" height="478" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="5" not-effects="yes">
+      <exit rectangular="no" x="1441" y="144" width="621" height="803" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="5" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
-        <point x="223" y="180" />
-        <point x="220" y="17" />
-        <point x="292" y="16" />
-        <point x="295" y="180" />
-        <point x="208" y="494" />
-        <point x="42" y="494" />
+        <point x="1441" y="525" />
+        <point x="1982" y="144" />
+        <point x="2060" y="144" />
+        <point x="2062" y="942" />
+        <point x="1613" y="947" />
         <condition>
           <active flag="PorteroHablado" />
         </condition>
@@ -547,8 +547,11 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Recepcionista" x="450" y="407" scale="0.2628161" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Recepcionista" x="1059" y="806" scale="0.3304296" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="Mostrador" x="1070" y="785" scale="0.8" glow="no" layer="1" />
+    </atrezzo>
   </scene>
   <scene id="Pasillo" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -560,18 +563,18 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-25" y="-27" width="240" height="794" hasInfluenceArea="no" idTarget="SalaCafe" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-25" y="-24" width="279" height="1110" hasInfluenceArea="no" idTarget="SalaCafe" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="781" y="49" width="390" height="596" hasInfluenceArea="no" idTarget="SalaEspera" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1096" y="405" width="186" height="266" hasInfluenceArea="no" idTarget="SalaEspera" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Luis" x="468" y="717" scale="0.5823772" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Luis" x="766" y="2433" scale="3.072412" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
     <active-areas>
-      <active-area id="FlechaReuniones" rectangular="yes" x="668" y="153" width="74" height="74" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="FlechaReuniones" rectangular="yes" x="294" y="195" width="50" height="77" hasInfluenceArea="no" behaviour="first-action">
         <description>
           <name>
           </name>
@@ -591,7 +594,7 @@
           </use>
         </actions>
       </active-area>
-      <active-area id="FlechaCafe" rectangular="yes" x="669" y="254" width="74" height="74" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="FlechaCafe" rectangular="yes" x="294" y="332" width="53" height="74" hasInfluenceArea="no" behaviour="first-action">
         <description>
           <name>
           </name>
@@ -621,7 +624,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="799" y="55" width="261" height="513" hasInfluenceArea="no" idTarget="SalaEntrevistas" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
+      <exit rectangular="yes" x="1286" y="288" width="159" height="426" hasInfluenceArea="no" idTarget="SalaEntrevistas" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <greater-equals-than var="PersonajesHablados" value="4" />
@@ -631,17 +634,14 @@
           <condition />
         </not-effect>
       </exit>
-      <exit rectangular="yes" x="-61" y="-18" width="219" height="681" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-61" y="-18" width="190" height="1098" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Antonio" x="294" y="704" scale="0.6694986" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Jaime" x="496" y="698" scale="0.2804631" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Antonio" x="907" y="912" scale="0.7814339" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Jaime" x="591" y="886" scale="0.8506814" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
     </characters>
-    <atrezzo>
-      <atrezzo-ref idTarget="Puerta" x="931" y="638" scale="0.3192936" glow="no" layer="0" />
-    </atrezzo>
   </scene>
   <scene id="SalaCafe" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -653,19 +653,19 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1767" y="-45" width="328" height="1376" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1902" y="-26" width="238" height="1204" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <characters>
       <character-ref idTarget="Carlos" x="2468" y="1592" scale="1.380869" orientation="2" glow="no" layer="4" hasInfluenceArea="no" />
-      <character-ref idTarget="Mujer1" x="586" y="1172" scale="1.308521" orientation="2" glow="no" layer="3" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre2" x="1464" y="1096" scale="1" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre3" x="1236" y="959" scale="0.7378676" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Rebeca" x="344" y="1191" scale="1.520025" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Mujer1" x="546" y="1341" scale="1.130937" orientation="2" glow="no" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre2" x="1743" y="1052" scale="0.8725965" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre3" x="1439" y="982" scale="0.7378676" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Rebeca" x="330" y="1332" scale="1.138921" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
     </characters>
     <active-areas>
-      <active-area id="ConversacionHombreHombre" rectangular="no" x="1094" y="656" width="565" height="437" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="ConversacionHombreHombre" rectangular="no" x="1287" y="331" width="611" height="644" hasInfluenceArea="yes" influenceX="0" influenceY="0" influenceWidth="595" influenceHeight="628" behaviour="first-action">
         <condition>
           <inactive flag="HombresEscuchados" />
         </condition>
@@ -685,16 +685,15 @@
             </effect>
           </use>
         </actions>
-        <point x="1176" y="765" />
-        <point x="1272" y="656" />
-        <point x="1574" y="678" />
-        <point x="1659" y="799" />
-        <point x="1649" y="894" />
-        <point x="1427" y="1093" />
-        <point x="1289" y="974" />
-        <point x="1094" y="954" />
+        <point x="1293" y="505" />
+        <point x="1381" y="358" />
+        <point x="1805" y="331" />
+        <point x="1898" y="588" />
+        <point x="1716" y="919" />
+        <point x="1389" y="975" />
+        <point x="1287" y="780" />
       </active-area>
-      <active-area id="ConversacionHombreMujer" rectangular="no" x="216" y="502" width="458" height="670" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="ConversacionHombreMujer" rectangular="no" x="202" y="402" width="538" height="775" hasInfluenceArea="no" behaviour="first-action">
         <condition>
           <inactive flag="MujeresEscuchadas" />
         </condition>
@@ -714,12 +713,12 @@
             </effect>
           </use>
         </actions>
-        <point x="282" y="561" />
-        <point x="580" y="502" />
-        <point x="674" y="626" />
-        <point x="637" y="1154" />
-        <point x="282" y="1172" />
-        <point x="216" y="686" />
+        <point x="265" y="402" />
+        <point x="639" y="406" />
+        <point x="740" y="688" />
+        <point x="653" y="1177" />
+        <point x="268" y="1172" />
+        <point x="202" y="686" />
       </active-area>
     </active-areas>
   </scene>
@@ -733,8 +732,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="AndresRRHH" x="248" y="368" scale="0.2668706" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="269" y="246" scale="0.07329915" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="AndresRRHH" x="856" y="1251" scale="1" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="1437" y="1200" scale="1" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Espejo" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -786,13 +785,13 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/BlurredHall.jpg" />
+      <asset type="background" uri="assets/background/Hall.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Recepcionista" x="303" y="1313" scale="2.258064" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Recepcionista" x="1063" y="2370" scale="2.247694" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta1" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -805,7 +804,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Jaime" x="575" y="1646" scale="1.224622" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Jaime" x="1079" y="2351" scale="4" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta2" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -818,7 +817,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Antonio" x="465" y="1339" scale="2.5" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Antonio" x="1045" y="2192" scale="3.297464" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta3" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -831,8 +830,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Hombre2" x="1076" y="2198" scale="4.5" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre3" x="474" y="1448" scale="3.25" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre2" x="1524" y="3650" scale="4.5" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre3" x="611" y="2921" scale="3.5" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta4" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -845,9 +844,9 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Carlos" x="1758" y="2351" scale="4.702252" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Mujer1" x="1056" y="2543" scale="4.485393" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="Rebeca" x="504" y="2677" scale="6.003794" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Carlos" x="1804" y="3131" scale="4" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Mujer1" x="1005" y="2824" scale="3.5" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Rebeca" x="366" y="3098" scale="3.75" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta5" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -860,8 +859,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="AndresRRHH" x="375" y="959" scale="1.25" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="460" y="467" scale="0.35" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="AndresRRHH" x="547" y="2500" scale="2.4" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="1679" y="2600" scale="2.7" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta6" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -874,8 +873,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="AndresRRHH" x="375" y="959" scale="1.25" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="460" y="467" scale="0.35" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="AndresRRHH" x="547" y="2500" scale="2.4" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="1679" y="2600" scale="2.7" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta7" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -888,8 +887,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="AndresRRHH" x="375" y="959" scale="1.25" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="460" y="467" scale="0.35" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="AndresRRHH" x="547" y="2500" scale="2.4" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="1679" y="2600" scale="2.7" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta8" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -902,8 +901,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="AndresRRHH" x="375" y="959" scale="1.25" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="460" y="467" scale="0.35" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="AndresRRHH" x="547" y="2500" scale="2.4" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="1679" y="2600" scale="2.7" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <slidescene id="PerfilGenerico" start="no" idTarget="Introduccion" destinyX="-2147483648" destinyY="-2147483648" transitionTime="5" transitionType="5" next="new-scene" class="accesible" type="cutscene">
@@ -1922,7 +1921,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Antonio" x="1500" y="688" guid="6bd020b7-35ea-4b44-b409-528d2cc3bcf7" />
+          <move-npc idTarget="Antonio" x="-1500" y="688" guid="6bd020b7-35ea-4b44-b409-528d2cc3bcf7" />
           <condition />
           <increment var="PersonajesHablados" value="1" guid="a88f39de-295b-4a07-9587-e67b7a9b6500" />
           <condition />
@@ -4195,7 +4194,7 @@
   </object>
   <object id="IntroOn" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/On.png" />
+      <asset type="image" uri="assets/image/CasaOff.JPG" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -4654,30 +4653,6 @@
       </use>
     </actions>
   </object>
-  <atrezzoobject id="Puerta">
-    <resources name="Cerrada">
-      <condition>
-        <less-than var="PersonajesHablados" value="4" />
-      </condition>
-      <asset type="image" uri="assets/image/Closed.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <resources name="Abierta">
-      <condition>
-        <greater-equals-than var="PersonajesHablados" value="4" />
-      </condition>
-      <asset type="image" uri="assets/image/Open.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-  </atrezzoobject>
   <atrezzoobject id="PortalEmpleo">
     <resources name="No name">
       <asset type="image" uri="assets/image/PortalEmpleo.jpg" />
@@ -4694,7 +4669,7 @@
   </atrezzoobject>
   <atrezzoobject id="PantallaOff">
     <resources name="No name">
-      <asset type="image" uri="assets/image/Off.png" />
+      <asset type="image" uri="assets/image/CasaOff.JPG" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -4708,7 +4683,21 @@
   </atrezzoobject>
   <atrezzoobject id="PantallaOn">
     <resources name="No name">
-      <asset type="image" uri="assets/image/On.png" />
+      <asset type="image" uri="assets/image/CasaOff.JPG" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Mostrador">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/recepcion_mostrador.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>

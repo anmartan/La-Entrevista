@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<animation id="Hombre2IdleAnimacion.eaa.xml" usetransitions="yes" slides="no">
+  <documentation />
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_sentado_0070.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_sentado_0001.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_sentado_0008.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_sentado_0015.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_sentado_0022.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_sentado_0029.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_sentado_0036.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_sentado_0043.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_sentado_0050.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_sentado_0057.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_sentado_0064.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+</animation>

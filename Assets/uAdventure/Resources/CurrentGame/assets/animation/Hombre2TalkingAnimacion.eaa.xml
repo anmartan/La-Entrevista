@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<animation id="Hombre2TalkingAnimacion.eaa.xml" usetransitions="no" slides="no">
+  <documentation />
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_hablando_gesto_0070.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_hablando_gesto_0001.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_hablando_gesto_0008.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_hablando_gesto_0015.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_hablando_gesto_0022.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_hablando_gesto_0029.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_hablando_gesto_0036.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_hablando_gesto_0043.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_hablando_gesto_0050.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_hablando_gesto_0057.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje03_hablando_gesto_0064.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+</animation>

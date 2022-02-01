@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<animation id="Hombre3WalkingAnimacion.eaa.xml" usetransitions="no" slides="no">
+  <documentation />
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_camina0001.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_camina0007.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_camina0014.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_camina0021.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_camina0028.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_camina0035.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_camina0042.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_camina0049.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+</animation>

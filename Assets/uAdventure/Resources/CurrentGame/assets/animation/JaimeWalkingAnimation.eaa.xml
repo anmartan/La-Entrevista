@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<animation id="JaimeWalkingAnimation.eaa.xml" usetransitions="no" slides="no">
+  <documentation>Animation created by upgrader</documentation>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/espera_personaje02_camina_0001.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/espera_personaje02_camina_0006.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/espera_personaje02_camina_0012.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/espera_personaje02_camina_0018.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/espera_personaje02_camina_0024.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/espera_personaje02_camina_0030.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/espera_personaje02_camina_0036.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/espera_personaje02_camina_0042.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/espera_personaje02_camina_0048.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+</animation>

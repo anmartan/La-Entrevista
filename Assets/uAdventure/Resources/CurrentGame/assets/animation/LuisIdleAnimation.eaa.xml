@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<animation id="LuisIdleAnimation.eaa.xml" usetransitions="yes" slides="no">
+<animation id="LuisIdleAnimation.eaa.xml" usetransitions="no" slides="no">
   <documentation />
   <transition type="0" time="0" />
   <frame uri="assets/animation/Pasillo_personaje_0001.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">

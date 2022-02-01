@@ -29,7 +29,7 @@ namespace uAdventure.Core
         /**
          * The default time of a frame
          */
-        public const int DEFAULT_TIME = 40;
+        public const int DEFAULT_TIME = 250;
 
         /**
          * The url/resource path

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<animation id="RebecaWalkingAnimation.eaa.xml" usetransitions="no" slides="no">
+  <documentation>Animation created by upgrader</documentation>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje01_camina_0049.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje01_camina_0001.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje01_camina_0008.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje01_camina_0015.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje01_camina_0022.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje01_camina_0029.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje01_camina_0036.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje01_camina_0043.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+</animation>

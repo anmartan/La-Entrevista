@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<animation id="Hombre3TalkingAnimacion.eaa.xml" usetransitions="no" slides="yes">
+  <documentation />
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_habla_0001.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_habla_0007.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_habla_0013.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_habla_0019.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_habla_0025.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_habla_0031.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_habla_0037.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_habla_0043.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_habla_0049.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_habla_0055.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/cafeteria_personaje04_habla_0060.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+</animation>

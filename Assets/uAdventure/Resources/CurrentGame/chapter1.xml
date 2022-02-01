@@ -122,11 +122,11 @@
   <character id="Antonio" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/AntonioAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/AntonioIdleAnimation.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/animation/AntonioSpeakingAnimation.eaa.xml" />
+      <asset type="speakdown" uri="assets/animation/AntonioTalkingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
@@ -160,7 +160,7 @@
   <character id="Jaime" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/JaimeAnimation.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/JaimeIdleAnimation.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -199,7 +199,7 @@
   <character id="AndresRRHH" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/AndresAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/AndresIdleAnimation.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -237,11 +237,11 @@
   <character id="LuisaRRHH" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/LuisaAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/LuisaIdleAnimacion.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/animation/LuisaTalkingAnimation.eaa.xml" />
+      <asset type="speakdown" uri="assets/animation/LuisaTalkingAnimacion.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
@@ -275,7 +275,7 @@
   <character id="Rebeca" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/RebecaAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/RebecaIdleAnimation.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -305,7 +305,7 @@
   <character id="Mujer1" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/Mujer1Anim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/Mujer1IdleAnimation.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -335,17 +335,17 @@
   <character id="Carlos" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/CarlosAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/CarlosIdleAnimation.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/animation/CarlosTalkingAnimation.eaa.xml" />
+      <asset type="speakdown" uri="assets/animation/CarlosTalkingAnimacion.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/animation/CarlosWalkingAnimation.eaa.xml" />
+      <asset type="walkdown" uri="assets/animation/CarlosWalkingAnimacion.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
@@ -365,17 +365,17 @@
   <character id="Hombre2" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/Hombre2Anim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/Hombre2IdleAnimacion.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/animation/Hombre2TalkingAnimation.eaa.xml" />
+      <asset type="speakdown" uri="assets/animation/Hombre2TalkingAnimacion.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/animation/Hombre2WalkingAnimation.eaa.xml" />
+      <asset type="walkdown" uri="assets/animation/Hombre2WalkingAnimacion.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
@@ -395,17 +395,17 @@
   <character id="Hombre3" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/Hombre3Anim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/Hombre3IdleAnimacion.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/animation/Hombre3TalkingAnimation.eaa.xml" />
+      <asset type="speakdown" uri="assets/animation/Hombre3TalkingAnimacion.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/animation/Hombre3WalkingAnimation.eaa.xml" />
+      <asset type="walkdown" uri="assets/animation/Hombre3WalkingAnimacion.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
@@ -422,7 +422,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <scene id="Menu" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Menu" hideInventory="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -432,8 +432,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BotonJugar" x="1025" y="975" scale="1.895833" glow="yes" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonCreditos" x="1025" y="1185" scale="1.895833" glow="yes" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonJugar" x="977" y="1108" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonCreditos" x="931" y="1073" scale="1" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Introduccion" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -553,7 +553,7 @@
       <atrezzo-ref idTarget="Mostrador" x="1070" y="785" scale="0.8" glow="no" layer="1" />
     </atrezzo>
   </scene>
-  <scene id="Pasillo" hideInventory="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Pasillo" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -571,7 +571,7 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Luis" x="1606" y="2775" scale="3.5" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Luis" x="1520" y="1550" scale="1.75" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
     <active-areas>
       <active-area id="FlechaReuniones" rectangular="yes" x="294" y="195" width="50" height="77" hasInfluenceArea="no" behaviour="first-action">
@@ -659,10 +659,10 @@
     </exits>
     <characters>
       <character-ref idTarget="Carlos" x="2468" y="1592" scale="1.380869" orientation="2" glow="no" layer="4" hasInfluenceArea="no" />
-      <character-ref idTarget="Mujer1" x="546" y="1341" scale="1.130937" orientation="2" glow="no" layer="3" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre2" x="1743" y="1052" scale="0.8725965" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre3" x="1439" y="982" scale="0.7378676" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Rebeca" x="330" y="1332" scale="1.138921" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Mujer1" x="331" y="1329" scale="1.130937" orientation="2" glow="no" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre2" x="1417" y="995" scale="0.75" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre3" x="1762" y="989" scale="0.7378676" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Rebeca" x="550" y="1303" scale="1.138921" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
     </characters>
     <active-areas>
       <active-area id="ConversacionHombreHombre" rectangular="no" x="1287" y="331" width="611" height="644" hasInfluenceArea="yes" influenceX="0" influenceY="0" influenceWidth="595" influenceHeight="628" behaviour="first-action">
@@ -693,7 +693,7 @@
         <point x="1389" y="975" />
         <point x="1287" y="780" />
       </active-area>
-      <active-area id="ConversacionHombreMujer" rectangular="no" x="202" y="402" width="538" height="775" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="ConversacionHombreMujer" rectangular="no" x="205" y="382" width="538" height="775" hasInfluenceArea="no" behaviour="first-action">
         <condition>
           <inactive flag="MujeresEscuchadas" />
         </condition>
@@ -713,12 +713,12 @@
             </effect>
           </use>
         </actions>
-        <point x="265" y="402" />
-        <point x="639" y="406" />
-        <point x="740" y="688" />
-        <point x="653" y="1177" />
-        <point x="268" y="1172" />
-        <point x="202" y="686" />
+        <point x="268" y="382" />
+        <point x="642" y="386" />
+        <point x="743" y="668" />
+        <point x="656" y="1157" />
+        <point x="271" y="1152" />
+        <point x="205" y="666" />
       </active-area>
     </active-areas>
   </scene>
@@ -745,6 +745,9 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <atrezzo>
+      <atrezzo-ref idTarget="CristalEspejo" x="1025" y="1075" scale="1" glow="no" layer="0" />
+    </atrezzo>
   </scene>
   <scene id="PreguntasFinales" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -830,8 +833,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Hombre2" x="1524" y="3650" scale="4.5" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre3" x="611" y="2921" scale="3.5" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre2" x="782" y="3686" scale="4.5" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre3" x="1385" y="4062" scale="5" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta4" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -844,9 +847,9 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Carlos" x="1804" y="3131" scale="4" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Mujer1" x="1005" y="2824" scale="3.5" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="Rebeca" x="366" y="3098" scale="3.75" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Carlos" x="1804" y="3131" scale="4" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Mujer1" x="396" y="2953" scale="3.5" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Rebeca" x="1023" y="3008" scale="3.75" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta5" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1594,7 +1597,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Luis" x="-1000" y="2775" guid="1ccc54c1-35e9-4776-b58d-49c0f80f2b03" />
+          <move-npc idTarget="Luis" x="-1000" y="1550" guid="1ccc54c1-35e9-4776-b58d-49c0f80f2b03" />
           <condition />
         </effect>
       </end-conversation>
@@ -4112,6 +4115,7 @@
     <resources name="No name">
       <asset type="image" uri="assets/image/button_jugar.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/button_jugar_selected.png" />
     </resources>
     <description>
       <name>
@@ -4174,6 +4178,7 @@
     <resources name="No name">
       <asset type="image" uri="assets/image/button_creditos.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/button_creditos_selected.png" />
     </resources>
     <description>
       <name>
@@ -4698,6 +4703,20 @@
   <atrezzoobject id="Mostrador">
     <resources name="No name">
       <asset type="image" uri="assets/image/recepcion_mostrador.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="CristalEspejo">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Espejo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>

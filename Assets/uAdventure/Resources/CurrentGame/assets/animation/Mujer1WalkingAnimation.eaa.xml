@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<animation id="Mujer1WalkingAnimation.eaa.xml" usetransitions="no" slides="no">
+  <documentation>Animation created by upgrader</documentation>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje02_camina_0049.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje02_camina_0001.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje02_camina_0006.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje02_camina_0011.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje02_camina_0016.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje02_camina_0021.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje02_camina_0026.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje02_camina_0031.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje02_camina_0036.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje02_camina_0041.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Cafeteria_personaje02_camina_0046.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+</animation>

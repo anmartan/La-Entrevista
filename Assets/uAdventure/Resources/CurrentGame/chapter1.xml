@@ -422,6 +422,37 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
+  <character id="Alex" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/AlexIdleAnimacion.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
   <scene id="Menu" hideInventory="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -432,7 +463,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BotonJugar" x="977" y="1108" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonJugar" x="715" y="702" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
       <object-ref idTarget="BotonCreditos" x="931" y="1073" scale="1" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
@@ -547,10 +578,10 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Recepcionista" x="1059" y="806" scale="0.3304296" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Recepcionista" x="1059" y="800" scale="0.3304296" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
     <atrezzo>
-      <atrezzo-ref idTarget="Mostrador" x="1070" y="785" scale="0.8" glow="no" layer="1" />
+      <atrezzo-ref idTarget="Mostrador" x="1070" y="786" scale="0.8" glow="no" layer="1" />
     </atrezzo>
   </scene>
   <scene id="Pasillo" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -658,14 +689,14 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Carlos" x="2468" y="1592" scale="1.380869" orientation="2" glow="no" layer="4" hasInfluenceArea="no" />
+      <character-ref idTarget="Carlos" x="2468" y="1592" scale="1.380869" orientation="2" glow="no" layer="6" hasInfluenceArea="no" />
       <character-ref idTarget="Mujer1" x="331" y="1329" scale="1.130937" orientation="2" glow="no" layer="3" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre2" x="1417" y="995" scale="0.75" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre2" x="1439" y="971" scale="0.75" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
       <character-ref idTarget="Hombre3" x="1762" y="989" scale="0.7378676" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
       <character-ref idTarget="Rebeca" x="550" y="1303" scale="1.138921" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
     </characters>
     <active-areas>
-      <active-area id="ConversacionHombreHombre" rectangular="no" x="1287" y="331" width="611" height="644" hasInfluenceArea="yes" influenceX="0" influenceY="0" influenceWidth="595" influenceHeight="628" behaviour="first-action">
+      <active-area id="ConversacionHombreHombre" rectangular="no" x="1287" y="330" width="611" height="644" hasInfluenceArea="yes" influenceX="0" influenceY="0" influenceWidth="595" influenceHeight="628" behaviour="first-action">
         <condition>
           <inactive flag="HombresEscuchados" />
         </condition>
@@ -685,13 +716,13 @@
             </effect>
           </use>
         </actions>
-        <point x="1293" y="505" />
-        <point x="1381" y="358" />
-        <point x="1805" y="331" />
-        <point x="1898" y="588" />
-        <point x="1716" y="919" />
-        <point x="1389" y="975" />
-        <point x="1287" y="780" />
+        <point x="1293" y="504" />
+        <point x="1380" y="357" />
+        <point x="1805" y="330" />
+        <point x="1898" y="587" />
+        <point x="1715" y="918" />
+        <point x="1389" y="974" />
+        <point x="1287" y="779" />
       </active-area>
       <active-area id="ConversacionHombreMujer" rectangular="no" x="205" y="382" width="538" height="775" hasInfluenceArea="no" behaviour="first-action">
         <condition>
@@ -721,6 +752,10 @@
         <point x="205" y="666" />
       </active-area>
     </active-areas>
+    <atrezzo>
+      <atrezzo-ref idTarget="MesaCafeTabla" x="1589" y="631" scale="1.15" glow="no" layer="5" />
+      <atrezzo-ref idTarget="MesaCafePatas" x="1563" y="957" scale="1.053904" glow="no" layer="4" />
+    </atrezzo>
   </scene>
   <scene id="SalaEntrevistas" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -735,6 +770,9 @@
       <character-ref idTarget="AndresRRHH" x="856" y="1251" scale="1" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
       <character-ref idTarget="LuisaRRHH" x="1437" y="1200" scale="1" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="MesaEntrevista" x="1027" y="1054" scale="1" glow="no" layer="2" />
+    </atrezzo>
   </scene>
   <scene id="Espejo" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -745,8 +783,13 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Alex" x="1102" y="1570" scale="2" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+    </characters>
     <atrezzo>
-      <atrezzo-ref idTarget="CristalEspejo" x="1025" y="1075" scale="1" glow="no" layer="0" />
+      <atrezzo-ref idTarget="EspejoFondo" x="1023" y="1072" scale="1" glow="no" layer="2" />
+      <atrezzo-ref idTarget="EspejoCristal" x="1028" y="1077" scale="1" glow="no" layer="0" />
+      <atrezzo-ref idTarget="EspejoCristalTransparente" x="1027" y="1080" scale="1" glow="yes" layer="3" />
     </atrezzo>
   </scene>
   <scene id="PreguntasFinales" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -820,7 +863,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Antonio" x="1045" y="2192" scale="3.297464" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Antonio" x="1035" y="2140" scale="3.297464" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta3" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -4714,9 +4757,79 @@
       </detailed>
     </description>
   </atrezzoobject>
-  <atrezzoobject id="CristalEspejo">
+  <atrezzoobject id="MesaCafeTabla">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/CafeMesaTabla.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="MesaCafePatas">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/MesaCafePatas.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="MesaEntrevista">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/MesaEntrevista.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="EspejoFondo">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/EspejoFondo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="EspejoCristal">
     <resources name="No name">
       <asset type="image" uri="assets/image/Espejo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="EspejoCristalTransparente">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/EspejoTransparente.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>

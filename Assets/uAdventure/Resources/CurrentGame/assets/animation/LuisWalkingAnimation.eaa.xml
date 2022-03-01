@@ -37,9 +37,4 @@
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/pasillo_personaje_andar_0049.png" type="image" time="112" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
 </animation>

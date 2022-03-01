@@ -33,12 +33,34 @@
   </player>
   <character id="Recepcionista" behaviour="first-action">
     <resources name="No name">
+      <condition>
+        <inactive flag="Senalando" />
+      </condition>
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/RecepcionistaIdleAnimacion.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
       <asset type="speakdown" uri="assets/animation/RecepcionistaTalkingAnimacion.eaa.xml" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <resources name="Pointing">
+      <condition>
+        <active flag="Senalando" />
+      </condition>
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/RecepcionistaSenalaAnimacion.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
@@ -94,9 +116,9 @@
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/animation/LuisWalkingAnimation.eaa.xml" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/animation/LuisWalkingAnimation.eaa.xml" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
       <frontcolor color="#AEA4C7" />
@@ -119,22 +141,22 @@
       </talk-to>
     </actions>
   </character>
-  <character id="Antonio" behaviour="first-action">
+  <character id="Jaime" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/AntonioIdleAnimation.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/JaimeIdleAnimation.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/animation/AntonioTalkingAnimation.eaa.xml" />
+      <asset type="speakdown" uri="assets/animation/JaimeTalkingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/animation/AntonioWalkingAnimation.eaa.xml" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/animation/JaimeWalkingAnimation.eaa.xml" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
       <frontcolor color="#2E3E7D" />
@@ -157,22 +179,22 @@
       </talk-to>
     </actions>
   </character>
-  <character id="Jaime" behaviour="first-action">
+  <character id="Antonio" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/JaimeIdleAnimation.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/AntonioIdleAnimation.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/animation/JaimeTalkingAnimation.eaa.xml" />
+      <asset type="speakdown" uri="assets/animation/AntonioTalkingAnimation.eaa.xml" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/animation/JaimeWalkingAnimation.eaa.xml" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/animation/AntonioWalkingAnimation.eaa.xml" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
       <frontcolor color="#60A6E9" />
@@ -285,9 +307,9 @@
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/animation/RebecaWalkingAnimation.eaa.xml" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/animation/RebecaWalkingAnimation.eaa.xml" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
       <frontcolor color="#765050" />
@@ -315,9 +337,9 @@
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/animation/Mujer1WalkingAnimation.eaa.xml" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/animation/Mujer1WalkingAnimation.eaa.xml" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
       <frontcolor color="#FFD258" />
@@ -345,9 +367,9 @@
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
       <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/animation/CarlosWalkingAnimacion.eaa.xml" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/animation/CarlosWalkingAnimacion.eaa.xml" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
       <frontcolor color="#324F80" />
@@ -374,10 +396,10 @@
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
-      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/animation/Hombre2WalkingAnimacion.eaa.xml" />
       <asset type="walkdown" uri="assets/animation/Hombre2WalkingAnimacion.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/animation/Hombre2WalkingAnimacion.eaa.xml" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
       <frontcolor color="#263F84" />
@@ -404,10 +426,10 @@
       <asset type="speakleft" uri="assets/special/EmptyAnimation" />
       <asset type="useright" uri="assets/special/EmptyAnimation" />
       <asset type="useleft" uri="assets/special/EmptyAnimation" />
-      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/animation/Hombre3WalkingAnimacion.eaa.xml" />
       <asset type="walkdown" uri="assets/animation/Hombre3WalkingAnimacion.eaa.xml" />
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/animation/Hombre3WalkingAnimacion.eaa.xml" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
       <frontcolor color="#E2A067" />
@@ -422,7 +444,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <character id="Alex" behaviour="normal">
+  <character id="Tú" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/AlexIdleAnimacion.eaa.xml" />
@@ -463,21 +485,25 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BotonJugar" x="715" y="702" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonCreditos" x="931" y="1073" scale="1" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonJugar" x="680" y="702" scale="0.9" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonCreditos" x="590" y="1028" scale="1" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonPreguntas" x="217" y="859" scale="0.8" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Introduccion" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/CasaOff.JPG" />
+      <asset type="background" uri="assets/background/FondoCasa.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="Portatil" x="1027" y="1068" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
+    </objects>
     <active-areas>
-      <active-area id="AreaPantalla" rectangular="yes" x="583" y="174" width="961" height="601" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="AreaPantalla" rectangular="yes" x="583" y="174" width="961" height="602" hasInfluenceArea="no" behaviour="first-action">
         <condition>
           <inactive flag="PantallaEncendida" />
         </condition>
@@ -504,10 +530,9 @@
       </active-area>
     </active-areas>
     <atrezzo>
-      <atrezzo-ref idTarget="PortalEmpleo" x="1064" y="586" scale="0.6433796" glow="no" layer="0" />
-      <atrezzo-ref idTarget="PantallaOff" x="1024" y="1066" scale="1" glow="no" layer="1">
+      <atrezzo-ref idTarget="PortalEmpleo" x="1064" y="720" scale="0.6451852" glow="no" layer="1">
         <condition>
-          <inactive flag="PantallaEncendida" />
+          <active flag="PantallaEncendida" />
         </condition>
       </atrezzo-ref>
     </atrezzo>
@@ -516,34 +541,28 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/CasaOff.JPG" />
+      <asset type="background" uri="assets/background/FondoCasa.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="OpcionInformatica" x="826" y="686" scale="0.2575265" glow="no" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="OpcionAnalista" x="1286" y="685" scale="0.2339413" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="OpcionInformatica" x="831" y="825" scale="0.4" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="OpcionAnalista" x="1276" y="825" scale="0.4" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Portatil" x="1027" y="1068" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
-    <atrezzo>
-      <atrezzo-ref idTarget="PantallaOn" x="1024" y="1069" scale="1" glow="no" layer="0">
-        <condition>
-          <active flag="PantallaEncendida" />
-        </condition>
-      </atrezzo-ref>
-    </atrezzo>
   </scene>
   <scene id="Creditos" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/MenuBlurred.png" />
+      <asset type="background" uri="assets/background/creditos.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BotonAtras" x="153" y="206" scale="0.35" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonAtras" x="157" y="182" scale="1.569231" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Hall" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -670,8 +689,8 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Antonio" x="907" y="912" scale="0.7814339" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Jaime" x="591" y="886" scale="0.8506814" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Jaime" x="600" y="920" scale="1" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Antonio" x="916" y="946" scale="0.9" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="SalaCafe" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -684,19 +703,24 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1902" y="-26" width="238" height="1204" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="no" x="765" y="-34" width="1389" height="1210" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <point x="1924" y="-30" />
+        <point x="1897" y="927" />
+        <point x="765" y="1176" />
+        <point x="2139" y="1176" />
+        <point x="2154" y="-34" />
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Carlos" x="2468" y="1592" scale="1.380869" orientation="2" glow="no" layer="6" hasInfluenceArea="no" />
+      <character-ref idTarget="Carlos" x="1722" y="2155" scale="1.25" orientation="2" glow="no" layer="7" hasInfluenceArea="no" />
       <character-ref idTarget="Mujer1" x="331" y="1329" scale="1.130937" orientation="2" glow="no" layer="3" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre2" x="1439" y="971" scale="0.75" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre3" x="1762" y="989" scale="0.7378676" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre2" x="1365" y="1022" scale="0.8" orientation="2" glow="no" layer="5" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre3" x="1729" y="1001" scale="0.8" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
       <character-ref idTarget="Rebeca" x="550" y="1303" scale="1.138921" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
     </characters>
     <active-areas>
-      <active-area id="ConversacionHombreHombre" rectangular="no" x="1287" y="330" width="611" height="644" hasInfluenceArea="yes" influenceX="0" influenceY="0" influenceWidth="595" influenceHeight="628" behaviour="first-action">
+      <active-area id="ConversacionHombreHombre" rectangular="no" x="1199" y="330" width="699" height="674" hasInfluenceArea="yes" influenceX="0" influenceY="0" influenceWidth="595" influenceHeight="628" behaviour="first-action">
         <condition>
           <inactive flag="HombresEscuchados" />
         </condition>
@@ -716,13 +740,13 @@
             </effect>
           </use>
         </actions>
-        <point x="1293" y="504" />
-        <point x="1380" y="357" />
+        <point x="1199" y="583" />
+        <point x="1283" y="356" />
         <point x="1805" y="330" />
         <point x="1898" y="587" />
         <point x="1715" y="918" />
-        <point x="1389" y="974" />
-        <point x="1287" y="779" />
+        <point x="1234" y="1004" />
+        <point x="1209" y="792" />
       </active-area>
       <active-area id="ConversacionHombreMujer" rectangular="no" x="205" y="382" width="538" height="775" hasInfluenceArea="no" behaviour="first-action">
         <condition>
@@ -753,8 +777,9 @@
       </active-area>
     </active-areas>
     <atrezzo>
-      <atrezzo-ref idTarget="MesaCafeTabla" x="1589" y="631" scale="1.15" glow="no" layer="5" />
-      <atrezzo-ref idTarget="MesaCafePatas" x="1563" y="957" scale="1.053904" glow="no" layer="4" />
+      <atrezzo-ref idTarget="MesaCafeTabla" x="1589" y="631" scale="1.15" glow="no" layer="4" />
+      <atrezzo-ref idTarget="MesaCafePatas" x="1563" y="957" scale="1.053904" glow="no" layer="6" />
+      <atrezzo-ref idTarget="Silla" x="1343" y="988" scale="1" glow="no" layer="0" />
     </atrezzo>
   </scene>
   <scene id="SalaEntrevistas" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -767,8 +792,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="AndresRRHH" x="856" y="1251" scale="1" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="1437" y="1200" scale="1" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="AndresRRHH" x="839" y="1378" scale="1.1" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="1422" y="1258" scale="1" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
     <atrezzo>
       <atrezzo-ref idTarget="MesaEntrevista" x="1027" y="1054" scale="1" glow="no" layer="2" />
@@ -784,7 +809,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Alex" x="1102" y="1570" scale="2" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Tú" x="1102" y="1766" scale="2" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
     <atrezzo>
       <atrezzo-ref idTarget="EspejoFondo" x="1023" y="1072" scale="1" glow="no" layer="2" />
@@ -802,11 +827,11 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Boton1" x="1250" y="475" scale="1.066667" glow="no" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton3" x="1250" y="850" scale="1.066667" glow="no" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton2" x="675" y="850" scale="1.066667" glow="no" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonDerecha" x="1791" y="725" scale="0.75" glow="no" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton0" x="675" y="472" scale="1.066667" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton1" x="1250" y="475" scale="1.5" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton3" x="1250" y="850" scale="1.5" glow="no" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton2" x="675" y="850" scale="1.5" glow="no" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonDerecha" x="1791" y="725" scale="3" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton0" x="675" y="472" scale="1.5" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="PreguntasFinales1" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -819,12 +844,12 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Boton6" x="1500" y="475" scale="1.066667" glow="no" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton7" x="675" y="850" scale="1.066667" glow="no" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton8" x="1225" y="850" scale="1.066667" glow="no" layer="5" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton5" x="950" y="475" scale="1.066667" glow="no" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonIzquierda" x="150" y="725" scale="0.75" glow="no" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton4" x="400" y="475" scale="1" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton6" x="1500" y="475" scale="1.5" glow="no" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton7" x="675" y="850" scale="1.5" glow="no" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton8" x="1225" y="850" scale="1.5" glow="no" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton5" x="950" y="475" scale="1.5" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonIzquierda" x="150" y="725" scale="3" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton4" x="400" y="475" scale="1.5" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Pregunta0" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -850,7 +875,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Jaime" x="1079" y="2351" scale="4" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Antonio" x="1043" y="2588" scale="4" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta2" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -863,7 +888,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Antonio" x="1035" y="2140" scale="3.297464" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Jaime" x="1044" y="2902" scale="5" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta3" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1105,6 +1130,40 @@
     <name>
     </name>
   </slidescene>
+  <videoscene canSkip="no" id="VideoIntroduccion" start="no" idTarget="Introduccion" destinyX="-2147483648" destinyY="2147483647" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <effect>
+      <macro-ref id="MacroEmpezarPartida" guid="dbd0a753-1493-47e2-bf3c-2ac6da2794c4" />
+      <condition />
+    </effect>
+    <resources name="No name">
+      <asset type="video" uri="assets/video/animacionmenu.mp4" />
+      <asset type="slides" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <name>
+    </name>
+  </videoscene>
+  <videoscene canSkip="no" id="VideoCreditos" start="no" idTarget="Creditos" destinyX="-2147483648" destinyY="2147483647" transitionTime="5" transitionType="5" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="video" uri="assets/video/animacioncreditos.mp4" />
+      <asset type="slides" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <name>
+    </name>
+  </videoscene>
+  <videoscene canSkip="no" id="VideoCreditosBack" start="no" idTarget="Menu" destinyX="-2147483648" destinyY="2147483647" transitionTime="5" transitionType="5" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="video" uri="assets/video/animacioncreditos_back.mp4" />
+      <asset type="slides" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <name>
+    </name>
+  </videoscene>
   <graph-conversation id="IntroduccionConversacion">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>
@@ -1597,7 +1656,7 @@
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="887" editor-y="351">
+    <dialogue-node nodeindex="4" editor-x="822" editor-y="372">
       <speak-char idTarget="Recepcionista">
         <resources name="No name" />
         <text>* Se sorprende *</text>
@@ -1608,6 +1667,17 @@
         <text>Las entrevistas para puestos técnicos son en la segunda planta. Te recomiendo usar las escaleras.</text>
       </speak-char>
       <condition />
+      <child nodeindex="5" />
+      <effect>
+        <activate flag="Senalando" guid="72de9819-92d1-4632-805e-4179dc010880" />
+        <condition />
+        <wait-time time="2" guid="57ac255d-f42d-417f-baad-763dcda8f348" />
+        <condition />
+        <deactivate flag="Senalando" guid="08bb17e7-6f42-4854-b3e4-02b7b50d69b2" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1204" editor-y="361">
       <speak-player>
         <resources name="No name" />
         <text>Gracias.</text>
@@ -1653,7 +1723,7 @@
         <text>Hola, ¿qué tal?</text>
       </speak-player>
       <condition />
-      <speak-char idTarget="Jaime">
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>¿Qué hay?</text>
       </speak-char>
@@ -1663,7 +1733,7 @@
         <text>¿También vienes a la entrevista? ¿Sabes si hay que esperar mucho?</text>
       </speak-player>
       <condition />
-      <speak-char idTarget="Jaime">
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>¿"También"? ¿Es que te presentas para el puesto?</text>
       </speak-char>
@@ -1673,7 +1743,7 @@
         <text>A eso he venido, claro. ¿Por? ¿Hay algún problema?</text>
       </speak-player>
       <condition />
-      <speak-char idTarget="Jaime">
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>No, hombre. ¿Qué problema va a haber? Es solo que...</text>
       </speak-char>
@@ -1695,7 +1765,7 @@
       <child nodeindex="2" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="622" editor-y="95">
-      <speak-char idTarget="Jaime">
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>Es solo que cada vez tengo más claro que no me van a dar el puesto.</text>
       </speak-char>
@@ -1717,7 +1787,7 @@
       <child nodeindex="5" />
     </option-node>
     <dialogue-node nodeindex="4" editor-x="1286" editor-y="43">
-      <speak-char idTarget="Jaime">
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>Supongo que eso es verdad. Pero no creo que yo tenga opciones. Tú, en cambio...</text>
       </speak-char>
@@ -1725,12 +1795,12 @@
       <child nodeindex="6" />
     </dialogue-node>
     <dialogue-node nodeindex="5" editor-x="1253" editor-y="250">
-      <speak-char idTarget="Jaime">
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>Ya sabes, hay muchas candidaturas. Pero también están las cuotas que cumplir, y las ayudas que dan a las empresas. </text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Jaime">
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>Ya sabes, por contratar a cierto tipo de personas.</text>
       </speak-char>
@@ -1752,19 +1822,19 @@
       <child nodeindex="7" />
     </option-node>
     <dialogue-node nodeindex="7" editor-x="2009" editor-y="146">
-      <speak-char idTarget="Jaime">
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>¡Es que así es imposible! Mucha igualdad, pero luego todo es que si machismo, que si discriminación positiva, que si cuotas, que si ayudas a extranjeros, a minusválidos...</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Jaime">
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>¿Y los que hemos estudiado pero somos normales? A la calle todos. ¿Sabes qué te digo? Que os quedéis con el puesto. Paso de esperar aquí para nada.</text>
       </speak-char>
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Jaime" x="-2500" y="692" guid="5aa342e8-a847-45ef-905b-9e953bb04b9b" />
+          <move-npc idTarget="Antonio" x="-2500" y="1000" guid="5aa342e8-a847-45ef-905b-9e953bb04b9b" />
           <condition />
           <increment var="PersonajesHablados" value="1" guid="c6a20054-fd90-4428-95cd-9db6cdc2f03e" />
           <condition />
@@ -1792,7 +1862,7 @@
       <condition>
         <inactive flag="Software" />
       </condition>
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Sí, a ver qué tal se me da. ¿Entonces tú también estás aquí por las entrevistas?</text>
       </speak-char>
@@ -1814,7 +1884,7 @@
       <child nodeindex="3" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="555" editor-y="78">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Seguro que te va bien, no te preocupes.</text>
       </speak-char>
@@ -1822,7 +1892,7 @@
       <child nodeindex="4" />
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="558" editor-y="273">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Entonces no hace falta que te desee suerte, je, je.</text>
       </speak-char>
@@ -1830,7 +1900,7 @@
       <child nodeindex="4" />
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="839" editor-y="175">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Esto de las entrevistas es bastante sencillo. Al final, acabas cogiéndole gustillo y todo.</text>
       </speak-char>
@@ -1858,7 +1928,7 @@
       <child nodeindex="8" />
     </option-node>
     <dialogue-node nodeindex="6" editor-x="1378" editor-y="0">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>La verdad es que sí, he venido antes de tiempo.</text>
       </speak-char>
@@ -1866,7 +1936,7 @@
       <child nodeindex="9" />
     </dialogue-node>
     <dialogue-node nodeindex="7" editor-x="1375" editor-y="201">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Bueno, no es que me interese especialmente. Pero me gusta hacer entrevistas e intentarlo en todos los sitios.</text>
       </speak-char>
@@ -1874,7 +1944,7 @@
       <child nodeindex="9" />
     </dialogue-node>
     <dialogue-node nodeindex="8" editor-x="1382" editor-y="398">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Llevo ya una hora, y solo han pasado un par de personas. No es que me hayan hecho esperar tanto, je, je. Es que he venido antes de tiempo.</text>
       </speak-char>
@@ -1882,7 +1952,7 @@
       <child nodeindex="9" />
     </dialogue-node>
     <dialogue-node nodeindex="9" editor-x="1751" editor-y="209">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Así no paso tanto tiempo en casa.</text>
       </speak-char>
@@ -1904,7 +1974,7 @@
       <child nodeindex="12" />
     </option-node>
     <dialogue-node nodeindex="11" editor-x="2263" editor-y="117">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>No me mires así.</text>
       </speak-char>
@@ -1912,12 +1982,12 @@
       <child nodeindex="12" />
     </dialogue-node>
     <dialogue-node nodeindex="12" editor-x="2506" editor-y="275">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Así mi chica no tiene tanto tiempo para echarme la bronca. Que si "Antonio, has quemado la camisa". Que si "Antonio, la ropa hay que separarla por colores".</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>No valgo para las tareas del hogar, a ella se le da mucho mejor. No se da cuenta de que pone las expectativas muy altas, y aunque lo intente, no llego, je, je.</text>
       </speak-char>
@@ -1939,7 +2009,7 @@
       <child nodeindex="15" />
     </option-node>
     <dialogue-node nodeindex="14" editor-x="3158" editor-y="41">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Que yo intento ayudar, pero no sirvo para esto. Doy gracias todos los días por haber conocido a Nieves... ¡Es una santa!</text>
       </speak-char>
@@ -1947,12 +2017,12 @@
       <child nodeindex="16" />
     </dialogue-node>
     <dialogue-node nodeindex="15" editor-x="3161" editor-y="342">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>¡Qué va! Cada vez que intento ayudar, lo estropeo más. Nieves es una santa por aguantarme. No todo el mundo vale para todo. </text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Yo, por ejemplo, no sirvo para planchar. Seguro que en tu casa pasa lo mismo. Qué le vamos a hacer.</text>
       </speak-char>
@@ -1960,14 +2030,14 @@
       <child nodeindex="16" />
     </dialogue-node>
     <dialogue-node nodeindex="16" editor-x="3530" editor-y="264">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Bueno, parece que me llaman. ¡Un gusto conocerte!</text>
       </speak-char>
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Antonio" x="-1500" y="688" guid="6bd020b7-35ea-4b44-b409-528d2cc3bcf7" />
+          <move-npc idTarget="Jaime" x="-1500" y="1000" guid="6bd020b7-35ea-4b44-b409-528d2cc3bcf7" />
           <condition />
           <increment var="PersonajesHablados" value="1" guid="a88f39de-295b-4a07-9587-e67b7a9b6500" />
           <condition />
@@ -2051,9 +2121,9 @@
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Hombre2" x="2500" y="1120" guid="17251075-9237-4f5a-9add-042c5805c4d0" />
+          <move-npc idTarget="Hombre2" x="1000" y="2160" guid="17251075-9237-4f5a-9add-042c5805c4d0" />
           <condition />
-          <move-npc idTarget="Hombre3" x="2500" y="940" guid="b1170965-4dde-43bd-8bff-9e7ae3c35c6f" />
+          <move-npc idTarget="Hombre3" x="1250" y="2250" guid="b1170965-4dde-43bd-8bff-9e7ae3c35c6f" />
           <condition />
           <activate flag="HombresEscuchados" guid="d9085b33-6a6f-4362-9d93-9f80c9c19627" />
           <condition />
@@ -2073,7 +2143,7 @@
       <effect>
         <activate flag="MujeresEscuchadas" guid="944c4cfd-16ac-4e7d-80b2-7098ac285561" />
         <condition />
-        <move-npc idTarget="Carlos" x="800" y="1195" guid="ea391da5-3cc4-482c-a0e9-385cb3173808" />
+        <move-npc idTarget="Carlos" x="800" y="1350" guid="ea391da5-3cc4-482c-a0e9-385cb3173808" />
         <condition />
       </effect>
     </dialogue-node>
@@ -3506,17 +3576,17 @@
   </graph-conversation>
   <graph-conversation id="QuizPreguntaCuotas">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="Jaime">
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>¿Qué problema va a haber? Es solo que cada vez tengo más claro que no me van a dar el puesto. </text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Jaime">
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>Mucha igualdad, pero luego todo es que si machismo, que si discriminación positiva,  que si tasas, que si ayudas a extranjeros, a minusválidos...</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Jaime">
+      <speak-char idTarget="Antonio">
         <resources name="No name" />
         <text>¿Y los que hemos estudiado pero somos normales? A la calle todos. Quedaros con el puesto. Paso de esperar.</text>
       </speak-char>
@@ -3576,12 +3646,12 @@
   </graph-conversation>
   <graph-conversation id="QuizPreguntaTareasHogar">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Así no paso tanto tiempo en casa, y mi chica no tiene tanto tiempo para echarme la bronca. No valgo para las tareas del hogar, a ella se le da mucho mejor.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Antonio">
+      <speak-char idTarget="Jaime">
         <resources name="No name" />
         <text>Que yo intento ayudar, pero no sirvo para esto. Seguro que en tu casa pasa lo mismo.</text>
       </speak-char>
@@ -4171,47 +4241,7 @@
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <trigger-scene idTarget="Introduccion" x="960" y="810" transitionTime="5" transitionType="5" guid="5d523d86-e078-4769-b3c1-0d547738eb23" />
-          <condition />
-          <trigger-conversation idTarget="IntroduccionConversacion" guid="0a0eeda6-36fd-4e82-a0d0-656d75e2ca82" />
-          <condition />
-          <deactivate flag="HombresEscuchados" guid="9cc13463-7784-45c2-b122-79db9ce2330a" />
-          <condition />
-          <deactivate flag="MujeresEscuchadas" guid="2d3991f5-75a0-4bbf-b6c6-7932a24705a1" />
-          <condition />
-          <deactivate flag="PantallaEncendida" guid="b8e40df0-fe53-4033-9bf6-91f51e280664" />
-          <condition />
-          <deactivate flag="PorteroHablado" guid="c0ab388f-4620-4cff-b986-5e10a9bdbe48" />
-          <condition />
-          <deactivate flag="Software" guid="d8216864-828e-42b8-80c7-b4d9d1315a1c" />
-          <condition />
-          <deactivate flag="Respondida0" guid="f04b5322-6ad7-428e-9d51-13387260e913" />
-          <condition />
-          <deactivate flag="Respondida1" guid="6473b6ab-83cf-46f0-82b1-d45c1d706f42" />
-          <condition />
-          <deactivate flag="Respondida2" guid="405ab982-f991-4c9d-832d-d0c761d19df7" />
-          <condition />
-          <deactivate flag="Respondida3" guid="1a1deb56-ef27-41cb-aa57-2790a3f9d2d0" />
-          <condition />
-          <deactivate flag="Respondida4" guid="3533f4df-3531-4032-aff7-4239c20f3482" />
-          <condition />
-          <deactivate flag="Respondida5" guid="23a6c514-c65a-4b37-995b-48dbee4cc3b3" />
-          <condition />
-          <deactivate flag="Respondida6" guid="33e6b3a6-f8c1-423a-89eb-9edab89469d8" />
-          <condition />
-          <deactivate flag="Respondida7" guid="63e79802-afd3-4670-8291-f96bf76fd0f5" />
-          <condition />
-          <deactivate flag="Respondida8" guid="84b15d8b-2145-455a-8795-2ca9999487bc" />
-          <condition />
-          <deactivate flag="Respondida9" guid="ef688fe2-2de4-4de5-acad-9001abca71de" />
-          <condition />
-          <set-value var="PersonajesHablados" value="0" guid="4084d163-5a46-4653-876c-f14409a1e37e" />
-          <condition />
-          <set-value var="PreguntasRespondidas" value="0" guid="52b00fd4-b53a-4a55-a7bc-9c8a4930cdf8" />
-          <condition />
-          <set-value var="Score" value="0" guid="cd00a21d-cd8f-40a9-bf7c-287e14cbb10f" />
-          <condition />
-          <set-value var="ErroresEntrevista" value="0" guid="b594de2a-d9f4-4c40-94b1-ae75dfc4cc24" />
+          <trigger-cutscene idTarget="VideoIntroduccion" guid="007263c3-e783-4457-866f-5972d559bc32" />
           <condition />
         </effect>
       </use>
@@ -4234,16 +4264,17 @@
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <trigger-scene idTarget="Creditos" x="400" y="450" transitionTime="5" transitionType="5" guid="4c964545-b72d-40dc-9325-c2300ed7f109" />
+          <trigger-cutscene idTarget="VideoCreditos" guid="0538903a-094e-4e5c-b6c2-f76e5be158db" />
           <condition />
         </effect>
       </use>
     </actions>
   </object>
-  <object id="IntroOn" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+  <object id="BotonPreguntas" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/On.png" />
+      <asset type="image" uri="assets/image/button_preguntas.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/button_preguntas_selected.png" />
     </resources>
     <description>
       <name>
@@ -4253,11 +4284,20 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="PreguntasFinales" x="1024" y="864" transitionTime="5" transitionType="5" guid="b970fb08-e5cd-4038-bf88-cb595572f497" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
   </object>
   <object id="OpcionInformatica" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/Coder.jpg" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/Coder.jpg" />
     </resources>
     <description>
       <name>
@@ -4282,6 +4322,7 @@
     <resources name="No name">
       <asset type="image" uri="assets/image/Analyst.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/Analyst.png" />
     </resources>
     <description>
       <name>
@@ -4309,6 +4350,7 @@
       </condition>
       <asset type="image" uri="assets/image/0.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/0.png" />
     </resources>
     <resources name="No name">
       <condition>
@@ -4316,6 +4358,7 @@
       </condition>
       <asset type="image" uri="assets/image/0Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/0Respondido.png" />
     </resources>
     <description>
       <name>
@@ -4346,6 +4389,7 @@
       </condition>
       <asset type="image" uri="assets/image/1.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/1.png" />
     </resources>
     <resources name="No name">
       <condition>
@@ -4353,6 +4397,7 @@
       </condition>
       <asset type="image" uri="assets/image/1Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/1Respondido.png" />
     </resources>
     <description>
       <name>
@@ -4383,6 +4428,7 @@
       </condition>
       <asset type="image" uri="assets/image/2.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/2.png" />
     </resources>
     <resources name="No name">
       <condition>
@@ -4390,6 +4436,7 @@
       </condition>
       <asset type="image" uri="assets/image/2Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/2Respondido.png" />
     </resources>
     <description>
       <name>
@@ -4420,6 +4467,7 @@
       </condition>
       <asset type="image" uri="assets/image/3.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/3.png" />
     </resources>
     <resources name="No name">
       <condition>
@@ -4427,6 +4475,7 @@
       </condition>
       <asset type="image" uri="assets/image/3Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/3Respondido.png" />
     </resources>
     <description>
       <name>
@@ -4457,6 +4506,7 @@
       </condition>
       <asset type="image" uri="assets/image/4.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/4.png" />
     </resources>
     <resources name="No name">
       <condition>
@@ -4464,6 +4514,7 @@
       </condition>
       <asset type="image" uri="assets/image/4Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/4Respondido.png" />
     </resources>
     <description>
       <name>
@@ -4494,6 +4545,7 @@
       </condition>
       <asset type="image" uri="assets/image/5.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/5.png" />
     </resources>
     <resources name="No name">
       <condition>
@@ -4501,6 +4553,7 @@
       </condition>
       <asset type="image" uri="assets/image/5Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/5Respondido.png" />
     </resources>
     <description>
       <name>
@@ -4531,6 +4584,7 @@
       </condition>
       <asset type="image" uri="assets/image/6.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/6.png" />
     </resources>
     <resources name="No name">
       <condition>
@@ -4538,6 +4592,7 @@
       </condition>
       <asset type="image" uri="assets/image/6Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/6Respondido.png" />
     </resources>
     <description>
       <name>
@@ -4568,6 +4623,7 @@
       </condition>
       <asset type="image" uri="assets/image/7.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/7.png" />
     </resources>
     <resources name="No name">
       <condition>
@@ -4575,6 +4631,7 @@
       </condition>
       <asset type="image" uri="assets/image/7Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/7Respondido.png" />
     </resources>
     <description>
       <name>
@@ -4605,6 +4662,7 @@
       </condition>
       <asset type="image" uri="assets/image/8.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/8.png" />
     </resources>
     <resources name="No name">
       <condition>
@@ -4612,6 +4670,7 @@
       </condition>
       <asset type="image" uri="assets/image/8Respondido.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/8Respondido.png" />
     </resources>
     <description>
       <name>
@@ -4639,6 +4698,7 @@
     <resources name="No name">
       <asset type="image" uri="assets/image/LeftArrow.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/LeftArrow.png" />
     </resources>
     <description>
       <name>
@@ -4661,6 +4721,7 @@
     <resources name="No name">
       <asset type="image" uri="assets/image/RightArrow.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/RightArrow.png" />
     </resources>
     <description>
       <name>
@@ -4683,6 +4744,7 @@
     <resources name="No name">
       <asset type="image" uri="assets/image/LeftArrow.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/LeftArrow.png" />
     </resources>
     <description>
       <name>
@@ -4695,43 +4757,41 @@
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <trigger-scene idTarget="Menu" x="1024" y="1023" transitionTime="5" transitionType="5" guid="3e1e7574-a99a-4d2a-89fc-22227732745b" />
+          <trigger-cutscene idTarget="VideoCreditosBack" guid="7d978954-4ed7-4c64-8fa8-6bfc35751a11" />
           <condition />
         </effect>
       </use>
     </actions>
   </object>
+  <object id="Portatil" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="Apagado">
+      <condition>
+        <inactive flag="PantallaEncendida" />
+      </condition>
+      <asset type="image" uri="assets/image/Portatil_Encendido.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/Portatil_Encendido.png" />
+    </resources>
+    <resources name="Internet">
+      <condition>
+        <active flag="PantallaEncendida" />
+      </condition>
+      <asset type="image" uri="assets/image/Portatil_Internet.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="imageover" uri="assets/image/Portatil_Internet.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
   <atrezzoobject id="PortalEmpleo">
     <resources name="No name">
       <asset type="image" uri="assets/image/PortalEmpleo.jpg" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-  </atrezzoobject>
-  <atrezzoobject id="PantallaOff">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/CasaOff.JPG" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-  </atrezzoobject>
-  <atrezzoobject id="PantallaOn">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/On.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -4841,6 +4901,20 @@
       </detailed>
     </description>
   </atrezzoobject>
+  <atrezzoobject id="Silla">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Cafetería_silla.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
   <completable id="EsperaEntrevista" repeatable="false" type="completable">
     <start-milestone type="SCENE" targetId="Menu" />
     <end-milestone type="SCENE" targetId="SalaEntrevistas" />
@@ -4886,5 +4960,51 @@
     <condition>
       <greater-equals-than var="PreguntasRespondidas" value="9" />
     </condition>
+  </macro>
+  <macro id="MacroEmpezarPartida">
+    <documentation>
+    </documentation>
+    <trigger-scene idTarget="Introduccion" x="1024" y="804" transitionTime="5" transitionType="5" guid="577ff684-3be7-4894-a013-6a17d78b8277" />
+    <condition />
+    <trigger-conversation idTarget="IntroduccionConversacion" guid="b090cc1c-6229-4c8b-9f14-3a47b3de0e9b" />
+    <condition />
+    <deactivate flag="HombresEscuchados" guid="563f997f-04ea-498f-8322-9a457c787c0a" />
+    <condition />
+    <deactivate flag="MujeresEscuchadas" guid="bf5f669d-a15f-4db8-9a2a-cfdf9174e3bf" />
+    <condition />
+    <deactivate flag="PantallaEncendida" guid="413c4ad6-d8c2-4811-b909-f08a6c45eb62" />
+    <condition />
+    <deactivate flag="PorteroHablado" guid="069147d0-ddea-4bc2-8000-8d9f778d4bf5" />
+    <condition />
+    <deactivate flag="Software" guid="90431ca5-da56-4925-b618-9fa0164f2055" />
+    <condition />
+    <deactivate flag="Respondida0" guid="bbb9f550-7f2e-41ed-84f7-7420ea60f00d" />
+    <condition />
+    <deactivate flag="Respondida1" guid="aa498bb3-e2c8-4ba7-b80e-b9ba293bfb9c" />
+    <condition />
+    <deactivate flag="Respondida2" guid="15041333-3730-449f-a2a5-c98f8981292b" />
+    <condition />
+    <deactivate flag="Respondida3" guid="91e21c6d-a11d-43cd-b947-ae33c36d5c18" />
+    <condition />
+    <deactivate flag="Respondida4" guid="8b10f42d-424b-4b1a-a121-abbc78c5c13d" />
+    <condition />
+    <deactivate flag="Respondida5" guid="37dd9560-7711-41df-85dd-a973f22f51a6" />
+    <condition />
+    <deactivate flag="Respondida6" guid="0c03cec7-10c6-4193-b14f-e84b5f313a63" />
+    <condition />
+    <deactivate flag="Respondida7" guid="46d36db3-5f85-487b-9575-0f55c281e875" />
+    <condition />
+    <deactivate flag="Respondida8" guid="e81a9ffa-4007-4cee-929b-5ce9d70fc2eb" />
+    <condition />
+    <deactivate flag="Respondida9" guid="85800676-169b-43f3-9a89-490d0fb4ed61" />
+    <condition />
+    <set-value var="PersonajesHablados" value="0" guid="97e3cc11-18ce-43bb-b506-fa401b327bc8" />
+    <condition />
+    <set-value var="PreguntasRespondidas" value="0" guid="323d2a43-1a9f-40ab-8191-7604c7457772" />
+    <condition />
+    <set-value var="Score" value="0" guid="5cbefb1b-ae4d-4108-ac10-22f30f0f4137" />
+    <condition />
+    <set-value var="ErroresEntrevista" value="0" guid="63d71686-08fd-4848-96d8-6b3b5227530c" />
+    <condition />
   </macro>
 </eAdventure>

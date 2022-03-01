@@ -2,11 +2,6 @@
 <animation id="AndresIdleAnimation.eaa.xml" usetransitions="no" slides="no">
   <documentation />
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Entrevista_personaje01_0100.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
   <frame uri="assets/animation/Entrevista_personaje01_0001.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
@@ -53,6 +48,11 @@
   </frame>
   <transition type="0" time="0" />
   <frame uri="assets/animation/Entrevista_personaje01_0091.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Entrevista_personaje01_0100.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>

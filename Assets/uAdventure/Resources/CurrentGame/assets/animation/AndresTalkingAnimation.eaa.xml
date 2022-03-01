@@ -2,57 +2,52 @@
 <animation id="AndresTalkingAnimation.eaa.xml" usetransitions="no" slides="no">
   <documentation>Animation created by upgrader</documentation>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Entrevista_personaje01_habla_0100.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Entrevista_personaje01_habla_001.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Entrevista_personaje01_habla_0001.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Entrevista_personaje01_habla_011.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Entrevista_personaje01_habla_0011.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Entrevista_personaje01_habla_021.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Entrevista_personaje01_habla_0021.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Entrevista_personaje01_habla_031.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Entrevista_personaje01_habla_0031.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Entrevista_personaje01_habla_041.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Entrevista_personaje01_habla_0041.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Entrevista_personaje01_habla_051.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Entrevista_personaje01_habla_0051.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Entrevista_personaje01_habla_061.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Entrevista_personaje01_habla_0061.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Entrevista_personaje01_habla_071.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Entrevista_personaje01_habla_0071.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Entrevista_personaje01_habla_081.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Entrevista_personaje01_habla_0081.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/Entrevista_personaje01_habla_0091.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Entrevista_personaje01_habla_091.png" type="image" time="250" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>

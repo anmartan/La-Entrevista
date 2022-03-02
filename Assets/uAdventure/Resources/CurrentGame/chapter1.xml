@@ -500,10 +500,10 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Portatil" x="1027" y="1068" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Portatil" x="1020" y="1080" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
     <active-areas>
-      <active-area id="AreaPantalla" rectangular="yes" x="583" y="174" width="961" height="602" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="AreaPantalla" rectangular="yes" x="580" y="186" width="961" height="605" hasInfluenceArea="no" behaviour="first-action">
         <condition>
           <inactive flag="PantallaEncendida" />
         </condition>
@@ -547,9 +547,9 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="OpcionInformatica" x="831" y="825" scale="0.4" glow="no" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="OpcionAnalista" x="1276" y="825" scale="0.4" glow="no" layer="1" hasInfluenceArea="no" />
-      <object-ref idTarget="Portatil" x="1027" y="1068" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="OpcionInformatica" x="850" y="850" scale="0.4" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="OpcionAnalista" x="1276" y="850" scale="0.4" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Portatil" x="1020" y="1080" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Creditos" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -713,11 +713,11 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Carlos" x="1722" y="2155" scale="1.25" orientation="2" glow="no" layer="7" hasInfluenceArea="no" />
-      <character-ref idTarget="Mujer1" x="331" y="1329" scale="1.130937" orientation="2" glow="no" layer="3" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre2" x="1365" y="1022" scale="0.8" orientation="2" glow="no" layer="5" hasInfluenceArea="no" />
+      <character-ref idTarget="Carlos" x="2208" y="1800" scale="1.25" orientation="2" glow="no" layer="7" hasInfluenceArea="no" />
+      <character-ref idTarget="Mujer1" x="329" y="1334" scale="1.130937" orientation="2" glow="no" layer="5" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre2" x="1365" y="1022" scale="0.8" orientation="2" glow="no" layer="3" hasInfluenceArea="no" />
       <character-ref idTarget="Hombre3" x="1729" y="1001" scale="0.8" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Rebeca" x="550" y="1303" scale="1.138921" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Rebeca" x="550" y="1303" scale="1.138921" orientation="2" glow="no" layer="6" hasInfluenceArea="no" />
     </characters>
     <active-areas>
       <active-area id="ConversacionHombreHombre" rectangular="no" x="1199" y="330" width="699" height="674" hasInfluenceArea="yes" influenceX="0" influenceY="0" influenceWidth="595" influenceHeight="628" behaviour="first-action">
@@ -748,7 +748,7 @@
         <point x="1234" y="1004" />
         <point x="1209" y="792" />
       </active-area>
-      <active-area id="ConversacionHombreMujer" rectangular="no" x="205" y="382" width="538" height="775" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="ConversacionHombreMujer" rectangular="no" x="191" y="381" width="538" height="823" hasInfluenceArea="no" behaviour="first-action">
         <condition>
           <inactive flag="MujeresEscuchadas" />
         </condition>
@@ -768,18 +768,30 @@
             </effect>
           </use>
         </actions>
-        <point x="268" y="382" />
-        <point x="642" y="386" />
-        <point x="743" y="668" />
-        <point x="656" y="1157" />
-        <point x="271" y="1152" />
-        <point x="205" y="666" />
+        <point x="254" y="381" />
+        <point x="628" y="386" />
+        <point x="729" y="668" />
+        <point x="633" y="1187" />
+        <point x="251" y="1204" />
+        <point x="191" y="665" />
       </active-area>
     </active-areas>
     <atrezzo>
-      <atrezzo-ref idTarget="MesaCafeTabla" x="1589" y="631" scale="1.15" glow="no" layer="4" />
-      <atrezzo-ref idTarget="MesaCafePatas" x="1563" y="957" scale="1.053904" glow="no" layer="6" />
-      <atrezzo-ref idTarget="Silla" x="1343" y="988" scale="1" glow="no" layer="0" />
+      <atrezzo-ref idTarget="MesaCafeTabla" x="1589" y="631" scale="1.15" glow="no" layer="2">
+        <condition>
+          <inactive flag="HombresEscuchados" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="MesaCafePatas" x="1563" y="957" scale="1.053904" glow="no" layer="4">
+        <condition>
+          <inactive flag="HombresEscuchados" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Silla" x="1343" y="988" scale="1" glow="no" layer="0">
+        <condition>
+          <inactive flag="HombresEscuchados" />
+        </condition>
+      </atrezzo-ref>
     </atrezzo>
   </scene>
   <scene id="SalaEntrevistas" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -827,11 +839,11 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Boton1" x="1250" y="475" scale="1.5" glow="no" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton3" x="1250" y="850" scale="1.5" glow="no" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton2" x="675" y="850" scale="1.5" glow="no" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonDerecha" x="1791" y="725" scale="3" glow="no" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton0" x="675" y="472" scale="1.5" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton1" x="1500" y="500" scale="1.5" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton3" x="1500" y="850" scale="1.5" glow="no" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton2" x="700" y="850" scale="1.5" glow="no" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonDerecha" x="1850" y="650" scale="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton0" x="700" y="500" scale="1.5" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="PreguntasFinales1" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -840,16 +852,19 @@
     <resources name="No name">
       <asset type="background" uri="assets/background/EspejoBlurred.jpg" />
     </resources>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Espejo.png" />
+    </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Boton6" x="1500" y="475" scale="1.5" glow="no" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton7" x="675" y="850" scale="1.5" glow="no" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton8" x="1225" y="850" scale="1.5" glow="no" layer="5" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton5" x="950" y="475" scale="1.5" glow="no" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="BotonIzquierda" x="150" y="725" scale="3" glow="no" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="Boton4" x="400" y="475" scale="1.5" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton6" x="1650" y="500" scale="1.5" glow="no" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton7" x="900" y="850" scale="1.5" glow="no" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton8" x="1400" y="850" scale="1.5" glow="no" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton5" x="1150" y="500" scale="1.5" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonIzquierda" x="150" y="650" scale="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Boton4" x="650" y="500" scale="1.5" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Pregunta0" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -862,7 +877,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Recepcionista" x="1063" y="2370" scale="2.247694" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Recepcionista" x="1020" y="2274" scale="2" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta1" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -875,7 +890,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Antonio" x="1043" y="2588" scale="4" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Antonio" x="989" y="1676" scale="2" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta2" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -888,7 +903,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Jaime" x="1044" y="2902" scale="5" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Jaime" x="1009" y="1569" scale="2" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta3" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -901,8 +916,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Hombre2" x="782" y="3686" scale="4.5" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="Hombre3" x="1385" y="4062" scale="5" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre2" x="670" y="2037" scale="2" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Hombre3" x="1338" y="2013" scale="2" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta4" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -915,9 +930,9 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Carlos" x="1804" y="3131" scale="4" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="Mujer1" x="396" y="2953" scale="3.5" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Rebeca" x="1023" y="3008" scale="3.75" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Carlos" x="1393" y="1954" scale="2" orientation="2" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Mujer1" x="587" y="1979" scale="2" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Rebeca" x="962" y="1947" scale="2" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta5" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -930,8 +945,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="AndresRRHH" x="547" y="2500" scale="2.4" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="1679" y="2600" scale="2.7" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="AndresRRHH" x="650" y="2175" scale="2" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="1500" y="2100" scale="2" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta6" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -944,8 +959,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="AndresRRHH" x="547" y="2500" scale="2.4" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="1679" y="2600" scale="2.7" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="AndresRRHH" x="650" y="2175" scale="2" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="1500" y="2100" scale="2" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta7" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -958,8 +973,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="AndresRRHH" x="547" y="2500" scale="2.4" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="1679" y="2600" scale="2.7" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="AndresRRHH" x="650" y="2175" scale="2" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="1500" y="2100" scale="2" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Pregunta8" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -972,8 +987,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="AndresRRHH" x="547" y="2500" scale="2.4" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="LuisaRRHH" x="1679" y="2600" scale="2.7" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="AndresRRHH" x="650" y="2175" scale="2" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LuisaRRHH" x="1500" y="2100" scale="2" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <slidescene id="PerfilGenerico" start="no" idTarget="Introduccion" destinyX="-2147483648" destinyY="-2147483648" transitionTime="5" transitionType="5" next="new-scene" class="accesible" type="cutscene">
@@ -2121,9 +2136,9 @@
       <condition />
       <end-conversation>
         <effect>
-          <move-npc idTarget="Hombre2" x="1000" y="2160" guid="17251075-9237-4f5a-9add-042c5805c4d0" />
+          <move-npc idTarget="Hombre2" x="3000" y="2160" guid="17251075-9237-4f5a-9add-042c5805c4d0" />
           <condition />
-          <move-npc idTarget="Hombre3" x="1250" y="2250" guid="b1170965-4dde-43bd-8bff-9e7ae3c35c6f" />
+          <move-npc idTarget="Hombre3" x="3000" y="2250" guid="b1170965-4dde-43bd-8bff-9e7ae3c35c6f" />
           <condition />
           <activate flag="HombresEscuchados" guid="d9085b33-6a6f-4362-9d93-9f80c9c19627" />
           <condition />

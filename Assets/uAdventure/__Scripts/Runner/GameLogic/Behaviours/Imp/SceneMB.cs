@@ -769,7 +769,7 @@ namespace uAdventure.Runner
                         || (movieplayer == MovieState.PLAYING && !movie.isPlaying())
                         || videoscene.isCanSkip())
                     {
-                        if (movieplayer == MovieState.PLAYING && TrackerAsset.Instance.Started)
+                        if (movieplayer == MovieState.PLAYING && TrackerAsset.Instance.Started && videoscene.isCanSkip())
                         {
                             TrackerAsset.Instance.Accessible.Skipped(SceneData.getId(), AccessibleTracker.Accessible.Cutscene);
                         }

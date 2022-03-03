@@ -4979,8 +4979,6 @@
   <macro id="MacroEmpezarPartida">
     <documentation>
     </documentation>
-    <trigger-scene idTarget="Introduccion" x="1024" y="804" transitionTime="5" transitionType="5" guid="577ff684-3be7-4894-a013-6a17d78b8277" />
-    <condition />
     <trigger-conversation idTarget="IntroduccionConversacion" guid="b090cc1c-6229-4c8b-9f14-3a47b3de0e9b" />
     <condition />
     <deactivate flag="HombresEscuchados" guid="563f997f-04ea-498f-8322-9a457c787c0a" />

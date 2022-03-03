@@ -4934,13 +4934,13 @@
     <start-milestone type="SCENE" targetId="Menu" />
     <end-milestone type="SCENE" targetId="SalaEntrevistas" />
     <progress type="SUM" />
-    <score type="VARIABLE" method="SINGLE" id="Score" />
+    <score type="VARIABLE" method="SINGLE" id="None" />
   </completable>
   <completable id="Entrevista" repeatable="false" type="completable">
     <start-milestone type="SCENE" targetId="SalaEntrevistas" />
     <end-milestone type="SCENE" targetId="CaminoCasa" />
     <progress type="SUM" />
-    <score type="VARIABLE" method="SINGLE" id="Score" />
+    <score type="VARIABLE" method="SINGLE" id="None" />
   </completable>
   <completable id="PreguntasFinalesAnalytics" repeatable="false" type="completable">
     <start-milestone type="SCENE" targetId="Espejo" />
@@ -4950,7 +4950,7 @@
       </condition>
     </end-milestone>
     <progress type="SUM" />
-    <score type="VARIABLE" method="SINGLE" id="Score" />
+    <score type="VARIABLE" method="SINGLE" id="None" />
   </completable>
   <macro id="MacroPreguntas">
     <documentation>
@@ -5017,7 +5017,7 @@
     <condition />
     <set-value var="PreguntasRespondidas" value="0" guid="323d2a43-1a9f-40ab-8191-7604c7457772" />
     <condition />
-    <set-value var="Score" value="0" guid="5cbefb1b-ae4d-4108-ac10-22f30f0f4137" />
+    <set-value var="None" value="0" guid="5cbefb1b-ae4d-4108-ac10-22f30f0f4137" />
     <condition />
     <set-value var="ErroresEntrevista" value="0" guid="63d71686-08fd-4848-96d8-6b3b5227530c" />
     <condition />
